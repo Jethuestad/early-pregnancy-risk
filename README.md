@@ -23,3 +23,6 @@ Programming skills
 * https://riskscore.diabetes.org.uk/start
 * http://tools.acc.org/ASCVD-Risk-Estimator-Plus/#!/calculate/estimate/
 * https://pubmed.ncbi.nlm.nih.gov/29852237/
+
+### Contact
+For more information, please contact Anagha Joshi (Anagha.Joshi@uib.no)
