@@ -1,9 +1,11 @@
 from ..utilities.request_utils import body_to_dict
 from django.views.decorators.csrf import csrf_exempt
+from ..utilities.decorators import safe_fail_request
 from django.http import JsonResponse
 from ..exceptions.api_exceptions import *
 
 @csrf_exempt
+@safe_fail_request
 def get_score(request):
     if request.method != "POST":
         return bad_method_exception(request.method, "POST")
