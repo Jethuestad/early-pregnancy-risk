@@ -7,11 +7,12 @@ from ..exceptions.api_exceptions import BadMethodException
 @csrf_exempt
 @exception_handler_request
 def get_score(request):
-    print("Hey")
     if request.method != "POST":
         raise BadMethodException(request.method, "POST")
 
     print(body_to_dict(request))
+    json_dict = body_to_dict(request)
 
+    # TODO: Add proper json response
     return JsonResponse(body_to_dict(request), safe=False)
 
