@@ -1,7 +1,19 @@
 # Early Pregnancy Risk Project
 
-Got to the [Wiki](https://github.com/ThomasStorli/early-pregnancy-risk/wiki) for information about the project.
+Pregnant or planning for a baby? This tool will make you assess your health status for a healthy pregnancy and a complication free birth. By filling in your personal health measurements, this tool will estimate risk for developing common pregnancy complications below.
 
+- Miscarriage
+- Gestational Diabetes Mellitus
+- Preeclampsia
+- Pre-term birth
+- Still birth
+- Caesarean section
+- Postpartum depression
+
+It is important to note that the tool will provide you with the risk of an ‘average‘ woman with your health measures and NOT your personal risk score. It is also important to note that the model does not take into many other psychosocial factors affecting maternal outcome.
+
+
+#### Go to the [Wiki](https://github.com/ThomasStorli/early-pregnancy-risk/wiki) for information about the project.
 
 ### Server and  Client
 The server and client folder contain seperate projects. When committing changes, please do not change code in both projects at the same time. The server and client does not communicate though code, it communicates though a REST API and will be deployed in different environments.
