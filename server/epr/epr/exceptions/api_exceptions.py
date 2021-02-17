@@ -20,7 +20,7 @@ class InternalServerError(APIException):
     default_detail = "Unexpected error"
     status_code = 500
 
-def exception_constructor(exception: APIException):
+def exception_response_constructor(exception: APIException):
     error_dict = {"error": {"Name": exception.default_code, "Message": exception.detail,
          "Code": exception.status_code}}
     return JsonResponse(error_dict, safe=False, status = exception.status_code)
