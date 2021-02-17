@@ -27,5 +27,5 @@ When creating a branch for a feature / bug-fix it should be named like this: `ty
 * `enhancment/4`
 * `refactoring/51`
 
-**If an issue doesn't already exist, create it before making the branch.**
+<span style="color: #de1414; font-weight: bold">NOTE: If an issue doesn't already exist, create it before making the branch.</span>
 
