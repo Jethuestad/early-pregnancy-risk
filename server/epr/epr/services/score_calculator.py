@@ -17,4 +17,4 @@ def get_score(request):
     calc = Calculation(json_dict)   # Creates a risk calculation based on userinput
     calc.diabetes                   # Yields the risk of having diabetes based on calculation
     # TODO: Add proper json response
-    return JsonResponse(answer_dict, safe=False)
+    return JsonResponse(calc.diabetes, safe=False)
