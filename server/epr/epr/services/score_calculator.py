@@ -1,5 +1,5 @@
 from ..utilities.request_utils import json_request_to_dict
-from server.epr.epr.services.calculation import Calculation
+from ..services.calculation import Calculation
 from django.views.decorators.csrf import csrf_exempt
 from ..utilities.decorators import exception_handler_request
 from django.http import JsonResponse
