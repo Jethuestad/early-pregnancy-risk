@@ -1,4 +1,4 @@
-from server.epr.epr.services.calculation import Calculation
+from ..services.calculation import Calculation
 from ..utilities.request_utils import body_to_dict
 from django.views.decorators.csrf import csrf_exempt
 from ..utilities.decorators import exception_handler_request

@@ -1,6 +1,6 @@
 
 class Calculation:
-    def __init__(self, json_dict):
+    def __init__(self, json_dict: dict):
         self.risk_score = calculate(json_dict)
 
         # Add multiple risks here
@@ -8,7 +8,7 @@ class Calculation:
 
 
 # Spitting out the risk factor based on points
-def diabetes_risk(risk_score):
+def diabetes_risk(risk_score: int) -> int:
     if 0 <= risk_score <= 5:
         return 0
     elif 6 <= risk_score <= 12:
@@ -20,7 +20,8 @@ def diabetes_risk(risk_score):
     elif 30 <= risk_score:
         return 4
 
-def calculate(json_dict):
+
+def calculate(json_dict: dict) -> int:
     risk_score = 0
 
     # Age
@@ -31,8 +32,8 @@ def calculate(json_dict):
     elif json_dict["age"] >= 35:
         risk_score += 6
 
-    # Parity (Number of children) | (Unsure of what is meant by "(if parity > 0)")
-    if  json_dict["parity"] >= 2:
+    # Parity (Number of children)
+    if json_dict["parity"] >= 2:
         risk_score += 2
 
     # History of GDM
@@ -40,23 +41,23 @@ def calculate(json_dict):
         risk_score += 15
 
     # Congenital anomalies
-    if  json_dict["congenital"]:
+    if json_dict["congenital"]:
         risk_score += 5
 
     # Stillbirth
-    if  json_dict["stillbirth"]:
+    if json_dict["stillbirth"]:
         risk_score += 5
 
     # Miscarriage
-    if  json_dict["miscarriage"]:
+    if json_dict["miscarriage"]:
         risk_score += 5
 
     # Preterm delivery
-    if  json_dict["preterm"]:
+    if json_dict["preterm"]:
         risk_score += 5
 
     # Macrosomia
-    if  json_dict["macrosomia"]:
+    if json_dict["macrosomia"]:
         risk_score += 8
 
     # BMI
@@ -104,7 +105,7 @@ def calculate(json_dict):
     if json_dict["diet_vitamin_d"]:
         diet_count += 1
 
-    if  diet_count >= 5:
+    if diet_count >= 5:
         risk_score += 4
 
     # Physical activity
@@ -116,7 +117,7 @@ def calculate(json_dict):
         activity_count += 1
     if not json_dict["activity_stairs"]:
         activity_count += 1
-    
+
     if activity_count == 3:
         risk_score += 4
 
