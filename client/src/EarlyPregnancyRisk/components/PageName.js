@@ -8,7 +8,9 @@ export default class PageName extends Component {
     return (
       <View style={styles.container}>
         <Text style={[text.h1, colors.secondary]}>Early Pregnancy Risk</Text>
-        <Text style={[text.h3, colors.black]}>WebTool</Text>
+        <Text style={[text.h3, colors.black]}>
+          {__DEV__ ? "Development environment" : ""}
+        </Text>
       </View>
     );
   }
