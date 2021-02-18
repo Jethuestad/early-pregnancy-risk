@@ -16,6 +16,7 @@ valid_json_format_calc = {
     "blood_pressure_not_family": bool,
     "diet_not_varied": bool,
     "diet_sugar": bool,
+    "diet_sweets": bool,
     "diet_processed_meat": bool,
     "diet_whole_grain": bool,
     "diet_diary": bool,
