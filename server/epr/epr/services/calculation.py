@@ -1,3 +1,4 @@
+from ..exceptions.api_exceptions import InternalServerError
 
 class Calculation:
     def __init__(self, json_dict: dict):
@@ -6,20 +7,26 @@ class Calculation:
         # Add multiple risks here
         self.diabetes = diabetes_risk(self.risk_score)
 
+def risk_dict_constructor(risk_score: int,  complication: str, severity: int) -> dict:
+    return {complication : {"severity": severity, "risk_score": risk_score}}
 
 # Spitting out the risk factor based on points
-def diabetes_risk(risk_score: int) -> int:
+def diabetes_risk(risk_score: int) -> dict:
+    severity = 0
     if 0 <= risk_score <= 5:
-        return 0
+        severity = 0
     elif 6 <= risk_score <= 12:
-        return 1
+        severity = 1
     elif 13 <= risk_score <= 20:
-        return 2
+        severity = 2
     elif 21 <= risk_score <= 29:
-        return 3
+        severity = 3
     elif 30 <= risk_score:
-        return 4
-
+        severity = 4
+    else:
+        raise InternalServerError("Invalid score when calculating diabetes")
+    
+    return risk_dict_constructor(risk_score, "diabetes", severity)
 
 def calculate(json_dict: dict) -> int:
     risk_score = 0
