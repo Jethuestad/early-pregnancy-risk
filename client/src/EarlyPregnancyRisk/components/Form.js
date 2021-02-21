@@ -34,7 +34,7 @@ export default function Form() {
     if (nr >= Factors.factors.length) {
       postFactors(data);
     }
-  });
+  }, [nr]);
 
   return (
     <View style={styles.container}>
