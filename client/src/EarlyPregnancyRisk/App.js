@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import PageName from "./components/PageName";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import { getTestJson } from "./networking/Requests";
 
 export default function App() {
@@ -22,11 +23,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <PageName />
-
+      <Header />
       {/* Test code to show a request */}
       <TouchableOpacity onPress={() => setLoading(true)} style={styles.button}>
-        <Text style={styles.buttonText}>Make Request</Text>
+        <Text style={styles.buttonText}>Test</Text>
       </TouchableOpacity>
       <View style={styles.centre}>
         {isLoading ? (
@@ -35,6 +35,7 @@ export default function App() {
           <Text>{testRequest != null ? testRequest.title : "no content"}</Text>
         )}
       </View>
+      <Footer />
     </View>
   );
 }
@@ -45,13 +46,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   button: {
-    width: "15%",
-    height: "30px",
+    width: 100,
+    height: 30,
     alignSelf: "center",
     margin: 10,
-    backgroundColor: "#000",
+    paddingTop: 5,
+    backgroundColor: "#BF1616",
   },
-  buttonText: { color: "white", textAlign: "center", paddingTop: "4px" },
+  buttonText: { color: "white", textAlign: "center" },
   centre: {
     alignSelf: "center",
   },
