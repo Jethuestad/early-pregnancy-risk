@@ -15,13 +15,16 @@ export default function Form() {
   const [nr, setNr] = useState(0);
   const [factorInteger, setFactorInteger] = useState(0);
   const [factorBoolean, setFactorBoolean] = useState(false);
+  const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
   const Factors = require("../constants/Factors");
 
   useEffect(() => {
     if (!isSubmitting) return;
     let tData = data;
-    if (Factors.factors[nr].answertype === "int") {
+    if (skipped) {
+      tData[Factors.factors[nr].factor] = "skipped";
+    } else if (Factors.factors[nr].answertype === "int") {
       tData[Factors.factors[nr].factor] = factorInteger;
     } else {
       tData[Factors.factors[nr].factor] = factorBoolean;
@@ -49,7 +52,6 @@ export default function Form() {
             <View>
               <TextInput
                 style={styles.textinput}
-                
                 onChangeText={(value) => setFactorInteger(value)}
                 numeric
                 keyboardType="numeric"
@@ -57,7 +59,7 @@ export default function Form() {
                 maxLength={2}
               ></TextInput>
               <TouchableHighlight
-              style={styles.appInputButtons}
+                style={styles.appInputButtons}
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 onPress={() => setIsSubmitting(true)}
@@ -68,10 +70,10 @@ export default function Form() {
           ) : null}
           {/* YES or NO*/}
           {Factors.factors[nr].answertype === "boolean" ? (
-            <View style={{ flexDirection:"row"}}>
+            <View style={{ flexDirection: "row" }}>
               <View style={styles.space} />
               <TouchableHighlight
-              style={styles.appInputButtons}
+                style={styles.appInputButtons}
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 onPress={() => {
@@ -79,12 +81,10 @@ export default function Form() {
                   setIsSubmitting(true);
                 }}
               >
-               
-
                 <Text style={styles.textTitleBtn}>No</Text>
               </TouchableHighlight>
               <TouchableHighlight
-              style={styles.appInputButtons}
+                style={styles.appInputButtons}
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 onPress={() => {
@@ -94,22 +94,20 @@ export default function Form() {
               >
                 <Text style={styles.textTitleBtn}>Yes</Text>
               </TouchableHighlight>
-              {/* Need to handle skip as "default values" some way*/}
-              {/*
-              <TouchableHighlight
-              style={styles.appInputButtons}
-                activeOpacity={0.6}
-                underlayColor="#DDDDDD"
-                onPress={() => {
-                  setFactorBoolean(false);
-                  setIsSubmitting(true);
-                }}
-              >
-                <Text style={styles.skipBtn}>Skip</Text>
-              </TouchableHighlight>
-              */}
             </View>
           ) : null}
+          {/* Need to handle skip as "default values" some way*/}
+          <TouchableHighlight
+            style={styles.appInputButtons}
+            activeOpacity={0.6}
+            underlayColor="#DDDDDD"
+            onPress={() => {
+              setSkipped(true);
+              setIsSubmitting(true);
+            }}
+          >
+            <Text style={styles.skipBtn}>Skip</Text>
+          </TouchableHighlight>
         </View>
       ) : null}
     </View>
@@ -147,7 +145,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 8,
     maxWidth: 150,
-    minWidth:150,
+    minWidth: 150,
     alignSelf: "center",
   },
   textTitleBtn: {
