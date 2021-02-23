@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+
 import Footer from "./Footer";
 import Header from "./Header";
-import {getTestJson} from "../networking/Requests";
+import ProgresBar from "./ProgresBar";
 import TestForm from "./TestForm";
 
 
@@ -29,6 +30,7 @@ export default function FrontPage() {
                 <Header/>
                 <View style={styles.background}>
                 </View>
+                <ProgresBar/>
                 {displayNone ?
                 <View style={styles.centre}>
                     <View style={styles.infoBox}>
@@ -47,7 +49,7 @@ export default function FrontPage() {
                     </View>
                     <View style={styles.buttonBox}>
                         <TouchableOpacity onPress={() => setLoading(true)} style={styles.button}>
-                            <Text style={styles.buttonText}>Test</Text>
+                            <Text style={styles.buttonText}>Start</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -84,14 +86,19 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     button: {
-        width: 100,
-        height: 30,
+        width: 200,
+        height: 60,
         alignSelf: "center",
+        justifyContent: "center",
         margin: 10,
-        paddingTop: 5,
         backgroundColor: "#BF1616",
+        borderRadius:"5px",
     },
-    buttonText: { color: "white", textAlign: "center" },
+    buttonText: {
+        color: "white",
+        textAlign: "center",
+        fontSize:"2rem",
+    },
     centre: {
         alignSelf: "center",
     },
