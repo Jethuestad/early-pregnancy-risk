@@ -17,11 +17,9 @@ const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         alignItems: "center",
-        marginHorizontal: 30,
         marginTop: 20,
         marginBottom: 10,
         paddingBottom: 20,
-
         borderBottomColor: "black",
         borderBottomWidth: 2,
       },
