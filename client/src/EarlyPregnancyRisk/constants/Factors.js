@@ -2,17 +2,17 @@ module.exports = {
   factors: [
     {
       factor: "age",
-      question: "",
+      question: "Please enter your current age",
       answertype: "int",
     },
     {
       factor: "parity",
-      question: "",
+      question: "Please enter the number of times you previously have been pregnant, including births and stillbirths",
       answertype: "int",
     },
     {
       factor: "gdm",
-      question: "",
+      question: "Do you currently have, or have previously had Gestational diabetes?",
       answertype: "boolean",
     },
     {

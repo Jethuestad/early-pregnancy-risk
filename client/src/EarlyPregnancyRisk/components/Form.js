@@ -5,6 +5,7 @@ import {
   View,
   TouchableHighlight,
   TextInput,
+  TouchableWithoutFeedback,
 } from "react-native";
 import colors from "../style/colors";
 import { postFactors } from "../networking/Requests";
@@ -48,6 +49,7 @@ export default function Form() {
             <View>
               <TextInput
                 style={styles.textinput}
+                
                 onChangeText={(value) => setFactorInteger(value)}
                 numeric
                 keyboardType="numeric"
@@ -55,18 +57,21 @@ export default function Form() {
                 maxLength={2}
               ></TextInput>
               <TouchableHighlight
+              style={styles.appInputButtons}
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 onPress={() => setIsSubmitting(true)}
               >
-                <Text>Continue</Text>
+                <Text style={styles.textTitleBtn}>Continue</Text>
               </TouchableHighlight>
             </View>
           ) : null}
           {/* YES or NO*/}
           {Factors.factors[nr].answertype === "boolean" ? (
-            <View>
+            <View style={{ flexDirection:"row"}}>
+              <View style={styles.space} />
               <TouchableHighlight
+              style={styles.appInputButtons}
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 onPress={() => {
@@ -74,9 +79,12 @@ export default function Form() {
                   setIsSubmitting(true);
                 }}
               >
-                <Text>No</Text>
+               
+
+                <Text style={styles.textTitleBtn}>No</Text>
               </TouchableHighlight>
               <TouchableHighlight
+              style={styles.appInputButtons}
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 onPress={() => {
@@ -84,8 +92,22 @@ export default function Form() {
                   setIsSubmitting(true);
                 }}
               >
-                <Text>Yes</Text>
+                <Text style={styles.textTitleBtn}>Yes</Text>
               </TouchableHighlight>
+              {/* Need to handle skip as "default values" some way*/}
+              {/*
+              <TouchableHighlight
+              style={styles.appInputButtons}
+                activeOpacity={0.6}
+                underlayColor="#DDDDDD"
+                onPress={() => {
+                  setFactorBoolean(false);
+                  setIsSubmitting(true);
+                }}
+              >
+                <Text style={styles.skipBtn}>Skip</Text>
+              </TouchableHighlight>
+              */}
             </View>
           ) : null}
         </View>
@@ -105,6 +127,7 @@ const styles = StyleSheet.create({
   question: {
     fontSize: 30,
     fontWeight: "bold",
+    paddingBottom: 20,
   },
   textinput: {
     width: 200,
@@ -116,5 +139,28 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     color: "black",
     paddingRight: 30, // to ensure the text is never behind the icon
+  },
+  appInputButtons: {
+    elevation: 7,
+    backgroundColor: "#E15A46",
+    borderRadius: 15,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    maxWidth: 150,
+    minWidth:150,
+    alignSelf: "center",
+  },
+  textTitleBtn: {
+    fontSize: 18,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginVertical: 4,
+  },
+  skipBtn: {
+    fontSize: 16,
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    textAlign: "center",
+    marginVertical: 4,
   },
 });
