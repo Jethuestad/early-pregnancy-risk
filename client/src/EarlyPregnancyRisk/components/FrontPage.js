@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 import Footer from "./Footer";
-import Header from "./Header";
-import ProgresBar from "./ProgresBar";
+import Header from "./Header"
 import TestForm from "./TestForm";
 
 
@@ -30,7 +29,6 @@ export default function FrontPage() {
                 <Header/>
                 <View style={styles.background}>
                 </View>
-                <ProgresBar/>
                 {displayNone ?
                 <View style={styles.centre}>
                     <View style={styles.infoBox}>
