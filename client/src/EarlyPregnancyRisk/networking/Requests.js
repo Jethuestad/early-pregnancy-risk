@@ -36,7 +36,8 @@ export const getLanguageComponent = async (country_code, component_id) => {
   }
 };
 
-export const getRiskScore = async (factors) => {
+export const postFactors = async (factors) => {
+  console.log(factors);
   let data = {
     method: "POST",
     body: JSON.stringify(factors),
@@ -45,7 +46,10 @@ export const getRiskScore = async (factors) => {
     let response = await fetch(ENDPOINTS.calculate, data);
     let json = await response.json();
     return json;
-  } catch {
-    console.error(error);
+  } catch (e) {
+    if (e instanceof ReferenceError) {
+      //TODO: Handle error
+      return;
+    }
   }
 };
