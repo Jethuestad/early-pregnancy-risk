@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Platform } from "react-native";
 
 import Footer from "./Footer";
 import Header from "./Header"
@@ -24,7 +24,7 @@ export default function FrontPage() {
     }, [isLoading]);
 
        return (
-        <div>
+        <View>
             <View style={styles.container}>
                 <Header/>
                 <View style={styles.background}>
@@ -46,7 +46,7 @@ export default function FrontPage() {
                         </Text>
                     </View>
                     <View style={styles.buttonBox}>
-                        <TouchableOpacity onPress={() => setLoading(true)} style={styles.button}>
+                        <TouchableOpacity on={() => setLoading(true)} style={styles.button}>
                             <Text style={styles.buttonText}>Start</Text>
                         </TouchableOpacity>
                     </View>
@@ -55,30 +55,71 @@ export default function FrontPage() {
 
                 <Footer/>
             </View>
-        </div>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
     buttonBox:{
-        minHeight: "45vh",
-        maxHeight: "54.5vh",
-        minWidth: "50rem",
-        maxWidth: "100vw",
         justifyContent: "center",
         alignItems: "center",
         margin: "auto",
-
+        ...Platform.select({
+            ios: {
+                minHeight: 450,
+                maxHeight: 545,
+                minWidth: 500,
+                maxWidth: 1000,
+            },
+            android: {
+                minHeight: 450,
+                maxHeight: 545,
+                minWidth: 500,
+                maxWidth: 1000,
+            },
+        default: {
+            minHeight: "45vh",
+            maxHeight: "54.5vh",
+            minWidth: "50rem",
+            maxWidth: "100vw",
+        },
+    })
     },
     infoBox:{
-        paddingTop: "4rem",
         flexDirection:"row",
-        maxWidth: "60rem",
-        minWidth: "50rem",
+        ...Platform.select({
+            ios: {
+                paddingTop: 10,
+                maxWidth: 600,
+                minWidth: 500,
+            },
+            android: {
+                paddingTop: 10,
+                maxWidth: 600,
+                minWidth: 500,
+            },
+        default: {
+            paddingTop: "4rem",
+            maxWidth: "60rem",
+            minWidth: "50rem",
+        },
+    })
     },
     textBox:{
-        maxWidth: "30rem",
-        minWidth: "25rem",
+        ...Platform.select({
+            ios: {
+                maxWidth: 300,
+                minWidth: 250,
+            },
+            android: {
+                maxWidth: 300,
+                minWidth: 250,
+            },
+        default: {
+            maxWidth: "30rem",
+            minWidth: "25rem",
+        },
+    })
     },
     container: {
         flex: 1,
@@ -90,21 +131,55 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         margin: 10,
         backgroundColor: "#BF1616",
+        ...Platform.select({
+            ios: {
+                borderRadius: 5,
+            },
+            android: {
+                borderRadius: 5,
+            },
+        default: {
         borderRadius:"5px",
+        },
+    })
     },
     buttonText: {
         color: "white",
         textAlign: "center",
+        ...Platform.select({
+            ios: {
+                fontSize: 18,
+            },
+            android: {
+                fontSize: 18,
+            }, 
+        default: {
         fontSize:"2rem",
+    },
+    })
     },
     centre: {
         alignSelf: "center",
     },
     background:{
         backgroundColor:"#BF3B29",
+        position:"absolute",
+        ...Platform.select({
+            ios: {
+                opacity: 0.1,
+                width: 1000,
+                height: 1000,
+            },
+            android: {
+                opacity: 0.1,
+                width: 1000,
+                height: 1000,
+            },
+        default: {
         opacity:"10%",
         width: "100vw",
         height: "100vh",
-        position:"absolute"
-    }
+    },
+    })
+    },
 });
