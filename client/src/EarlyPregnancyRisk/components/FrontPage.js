@@ -28,68 +28,66 @@ export default function FrontPage() {
   }, [isLoading]);
 
   return (
-    <View>
-      <View style={styles.container}>
-        <Header />
-        <View style={styles.background}></View>
-        {displayNone ? (
-          <View style={styles.centre}>
-            <View style={styles.infoBox}>
-              <Text style={styles.textBox}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                sapien lorem, sagittis et quam ut, pellentesque blandit felis.
-                Nullam interdum sagittis est nec bibendum. Cras feugiat neque
-                est, sit amet consequat lacus porttitor sed. Praesent gravida in
-                ex ut rutrum. Praesent et ex bibendum, pulvinar diam sit amet,
-                bibendum velit. Etiam rutrum sed nisi et semper. Proin id lectus
-                massa. Aenean eu ornare lacus. Nulla facilisi. Pellentesque et
-                vestibulum velit. Nullam vitae neque vel lorem suscipit accumsan
-                in vel nisi. Nam tristique venenatis arcu, quis tristique quam
-                eleifend a. Suspendisse vitae varius tortor. Aliquam aliquam dui
-                tincidunt eros tincidunt, nec posuere erat ullamcorper.
-                Suspendisse tincidunt, lectus non suscipit tincidunt, sem quam
-                sollicitudin sapien, sodales ornare orci tortor id ex. Fusce
-                mattis, neque ut pellentesque rhoncus, velit ante rutrum magna,
-                at ultrices arcu lorem et massa. Donec mattis rhoncus sapien sit
-                amet sagittis. Duis commodo turpis vel turpis laoreet auctor.
-                Etiam placerat consectetur laoreet.
-              </Text>
+    <View style={styles.container}>
+      <Header />
+      <View style={styles.background}></View>
+      {displayNone ? (
+        <View style={styles.centre}>
+          <View style={styles.infoBox}>
+            <Text style={styles.textBox}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              sapien lorem, sagittis et quam ut, pellentesque blandit felis.
+              Nullam interdum sagittis est nec bibendum. Cras feugiat neque est,
+              sit amet consequat lacus porttitor sed. Praesent gravida in ex ut
+              rutrum. Praesent et ex bibendum, pulvinar diam sit amet, bibendum
+              velit. Etiam rutrum sed nisi et semper. Proin id lectus massa.
+              Aenean eu ornare lacus. Nulla facilisi. Pellentesque et vestibulum
+              velit. Nullam vitae neque vel lorem suscipit accumsan in vel nisi.
+              Nam tristique venenatis arcu, quis tristique quam eleifend a.
+              Suspendisse vitae varius tortor. Aliquam aliquam dui tincidunt
+              eros tincidunt, nec posuere erat ullamcorper. Suspendisse
+              tincidunt, lectus non suscipit tincidunt, sem quam sollicitudin
+              sapien, sodales ornare orci tortor id ex. Fusce mattis, neque ut
+              pellentesque rhoncus, velit ante rutrum magna, at ultrices arcu
+              lorem et massa. Donec mattis rhoncus sapien sit amet sagittis.
+              Duis commodo turpis vel turpis laoreet auctor. Etiam placerat
+              consectetur laoreet.
+            </Text>
 
-              <Text style={styles.textBox}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                sapien lorem, sagittis et quam ut, pellentesque blandit felis.
-                Nullam interdum sagittis est nec bibendum. Cras feugiat neque
-                est, sit amet consequat lacus porttitor sed. Praesent gravida in
-                ex ut rutrum. Praesent et ex bibendum, pulvinar diam sit amet,
-                bibendum velit. Etiam rutrum sed nisi et semper. Proin id lectus
-                massa. Aenean eu ornare lacus. Nulla facilisi. Pellentesque et
-                vestibulum velit. Nullam vitae neque vel lorem suscipit accumsan
-                in vel nisi. Nam tristique venenatis arcu, quis tristique quam
-                eleifend a. Suspendisse vitae varius tortor. Aliquam aliquam dui
-                tincidunt eros tincidunt, nec posuere erat ullamcorper.
-                Suspendisse tincidunt, lectus non suscipit tincidunt, sem quam
-                sollicitudin sapien, sodales ornare orci tortor id ex. Fusce
-                mattis, neque ut pellentesque rhoncus, velit ante rutrum magna,
-                at ultrices arcu lorem et massa. Donec mattis rhoncus sapien sit
-                amet sagittis. Duis commodo turpis vel turpis laoreet auctor.
-                Etiam placerat consectetur laoreet.
-              </Text>
-            </View>
-            <View style={styles.buttonBox}>
-              <TouchableOpacity
-                onPress={() => setLoading(true)}
-                style={styles.button}
-              >
-                <Text style={styles.buttonText}>Start</Text>
-              </TouchableOpacity>
-            </View>
+            <Text style={styles.textBox}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              sapien lorem, sagittis et quam ut, pellentesque blandit felis.
+              Nullam interdum sagittis est nec bibendum. Cras feugiat neque est,
+              sit amet consequat lacus porttitor sed. Praesent gravida in ex ut
+              rutrum. Praesent et ex bibendum, pulvinar diam sit amet, bibendum
+              velit. Etiam rutrum sed nisi et semper. Proin id lectus massa.
+              Aenean eu ornare lacus. Nulla facilisi. Pellentesque et vestibulum
+              velit. Nullam vitae neque vel lorem suscipit accumsan in vel nisi.
+              Nam tristique venenatis arcu, quis tristique quam eleifend a.
+              Suspendisse vitae varius tortor. Aliquam aliquam dui tincidunt
+              eros tincidunt, nec posuere erat ullamcorper. Suspendisse
+              tincidunt, lectus non suscipit tincidunt, sem quam sollicitudin
+              sapien, sodales ornare orci tortor id ex. Fusce mattis, neque ut
+              pellentesque rhoncus, velit ante rutrum magna, at ultrices arcu
+              lorem et massa. Donec mattis rhoncus sapien sit amet sagittis.
+              Duis commodo turpis vel turpis laoreet auctor. Etiam placerat
+              consectetur laoreet.
+            </Text>
           </View>
-        ) : (
-          <Form />
-        )}
+          <View style={styles.buttonBox}>
+            <TouchableOpacity
+              onPress={() => setLoading(true)}
+              style={styles.button}
+            >
+              <Text style={styles.buttonText}>Start</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      ) : (
+        <Form />
+      )}
 
-        <Footer />
-      </View>
+      <Footer />
     </View>
   );
 }
