@@ -45,10 +45,6 @@ export default function FrontPage() {
     })
 
 
-
-
-
-
        return (
         <div>
             <View style={styles.container}>
