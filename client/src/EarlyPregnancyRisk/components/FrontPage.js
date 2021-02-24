@@ -1,23 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import React, { useEffect, useRef, useState } from "react";
+import { StyleSheet, Text, View, TouchableOpacity, Animated } from "react-native";
 
 import Footer from "./Footer";
 import Header from "./Header"
 import TestForm from "./TestForm";
-import ProgBar, {test}  from "./ProgressBar";
-
 
 export default function FrontPage() {
 
     const [isLoading, setLoading] = useState(false);
     const [displayNone, setDisplay] = useState(true);
 
+    let animation = useRef(new Animated.Value(0));
+    const [progress, setProgress] = useState(0);
+
     useEffect(() => {
         (async function () {
             if (isLoading) {
                 try {
                 } finally {
-                    test;
+
+                    if(progress < 100) {
+                        setProgress(progress + 4,16666667);
+                    }
+
                     setDisplay(false)
                     setLoading(false);
                 }
@@ -25,12 +30,41 @@ export default function FrontPage() {
         })();
     }, [isLoading]);
 
+
+    useEffect(() => {
+        Animated.timing(animation.current, {
+            toValue: progress,
+            duration: 100
+        }).start();
+    },[progress])
+
+    const width = animation.current.interpolate({
+        inputRange: [0, 100],
+        outputRange: ["0%", "100%"],
+        extrapolate: "clamp"
+    })
+
+
+
+
+
+
        return (
         <div>
             <View style={styles.container}>
                 <View style={styles.background}></View>
                 <Header/>
-                <ProgBar></ProgBar>
+
+                <View style={progBarStyles.container}>
+                    <View style={progBarStyles.progressBar}>
+                        <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: "#8BED4F", width }]}/>
+                    </View>
+                    <Text>
+                        {`${progress}%`}
+                    </Text>
+
+                </View>
+
                 {displayNone ?
                 <View style={styles.centre}>
                     <View style={styles.infoBox}>
@@ -108,5 +142,25 @@ const styles = StyleSheet.create({
         width: "100vw",
         height: "100vh",
         position:"absolute"
+    }
+});
+
+const progBarStyles = StyleSheet.create({
+    container: {
+        flex: 1,
+        flexDirection: 'Column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderBottomColor: "black",
+        borderBottomWidth: 2,
+    },
+    progressBar: {
+        flexDirection: 'row',
+        height: 20,
+        width: '80vw',
+        backgroundColor: 'white',
+        borderColor: '#000',
+        borderWidth: 2,
+        borderRadius: 5
     }
 });
