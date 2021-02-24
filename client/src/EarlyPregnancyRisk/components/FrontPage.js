@@ -5,6 +5,7 @@ import {
   View,
   TouchableOpacity,
   Animated,
+  Platform,
 } from "react-native";
 
 import Footer from "./Footer";
