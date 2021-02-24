@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Footer from "./Footer";
 import Header from "./Header"
 import TestForm from "./TestForm";
+import ProgBar, {test}  from "./ProgressBar";
 
 
 export default function FrontPage() {
@@ -16,6 +17,7 @@ export default function FrontPage() {
             if (isLoading) {
                 try {
                 } finally {
+                    test;
                     setDisplay(false)
                     setLoading(false);
                 }
@@ -26,9 +28,9 @@ export default function FrontPage() {
        return (
         <div>
             <View style={styles.container}>
+                <View style={styles.background}></View>
                 <Header/>
-                <View style={styles.background}>
-                </View>
+                <ProgBar></ProgBar>
                 {displayNone ?
                 <View style={styles.centre}>
                     <View style={styles.infoBox}>
@@ -61,8 +63,8 @@ export default function FrontPage() {
 
 const styles = StyleSheet.create({
     buttonBox:{
-        minHeight: "45vh",
-        maxHeight: "54.5vh",
+        minHeight: "43vh",
+        maxHeight: "54vh",
         minWidth: "50rem",
         maxWidth: "100vw",
         justifyContent: "center",
