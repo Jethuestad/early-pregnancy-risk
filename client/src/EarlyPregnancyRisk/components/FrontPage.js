@@ -46,7 +46,7 @@ export default function FrontPage() {
                         </Text>
                     </View>
                     <View style={styles.buttonBox}>
-                        <TouchableOpacity on={() => setLoading(true)} style={styles.button}>
+                        <TouchableOpacity onPress={() => setLoading(true)} style={styles.button}>
                             <Text style={styles.buttonText}>Start</Text>
                         </TouchableOpacity>
                     </View>
