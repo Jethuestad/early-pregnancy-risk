@@ -16,22 +16,11 @@ export default function FrontPage() {
   const [isLoading, setLoading] = useState(false);
   const [displayNone, setDisplay] = useState(true);
 
-  let animation = useRef(new Animated.Value(0));
-  const [progress, setProgress] = useState(0);
-
-    function prog(){
-      if(progress < 100) {
-        setProgress(progress + 4,16666667);
-      }
-    }
-
     useEffect(() => {
         (async function () {
             if (isLoading) {
                 try {
                 } finally {
-
-                    prog();
                     setDisplay(false);
                     setLoading(false);
                 }
@@ -39,35 +28,11 @@ export default function FrontPage() {
         })();
     }, [isLoading]);
 
-  useEffect(() => {
-    Animated.timing(animation.current, {
-      toValue: progress,
-      duration: 100,
-    }).start();
-  }, [progress]);
-
-  const width = animation.current.interpolate({
-    inputRange: [0, 100],
-    outputRange: ["0%", "100%"],
-    extrapolate: "clamp",
-  });
 
   return (
     <View style={styles.container}>
       <View style={styles.background}></View>
       <Header />
-
-      <View style={progBarStyles.container}>
-        <View style={progBarStyles.progressBar}>
-          <Animated.View
-            style={[
-              StyleSheet.absoluteFill,
-              { backgroundColor: "#8BED4F", width },
-            ]}
-          />
-        </View>
-        <Text>{`${progress}%`}</Text>
-      </View>
 
       {displayNone ? (
         <View style={styles.centre}>
@@ -122,7 +87,7 @@ export default function FrontPage() {
           </View>
         </View>
       ) : (
-        <Form />
+        <Form/>
       )}
 
       <Footer />
