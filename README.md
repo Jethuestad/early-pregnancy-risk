@@ -22,10 +22,10 @@ The server and client folder contain seperate projects. When committing changes,
 ### Workflow
 When commiting large changes to the project please set up a pull request, this is so that it can be peer-reviewed before it's merged into the codebase.
 
-When creating a branch for a feature / bug-fix it should be named like this: `type/issue-number`, eg: 
-* `bug/32`
-* `enhancment/4`
-* `refactoring/51`
+When creating a branch for a feature / bug-fix it should be named like this: `type/issue-number/note`, eg: 
+* `bug/32/post_request`
+* `enhancement/4/header`
+* `refactoring/51/request_module`
 
 <span style="color: #de1414; font-weight: bold">NOTE: If an issue doesn't already exist, create it before making the branch.</span>
 
