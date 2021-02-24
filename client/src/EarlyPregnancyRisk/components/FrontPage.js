@@ -13,17 +13,20 @@ export default function FrontPage() {
     let animation = useRef(new Animated.Value(0));
     const [progress, setProgress] = useState(0);
 
+    function prog(){
+      if(progress < 100) {
+        setProgress(progress + 4,16666667);
+      }
+    }
+
     useEffect(() => {
         (async function () {
             if (isLoading) {
                 try {
                 } finally {
 
-                    if(progress < 100) {
-                        setProgress(progress + 4,16666667);
-                    }
-
-                    setDisplay(false)
+                    prog();
+                    setDisplay(false);
                     setLoading(false);
                 }
             }
@@ -83,7 +86,9 @@ export default function FrontPage() {
                         </TouchableOpacity>
                     </View>
                 </View>
-                    :<Form/>}
+                    :
+                    <Form/>
+                }
 
                 <Footer/>
             </View>
