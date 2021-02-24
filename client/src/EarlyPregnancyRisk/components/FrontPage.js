@@ -1,12 +1,10 @@
-
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
   Platform,
-  Animated
 } from "react-native";
 
 import Footer from "./Footer";
@@ -17,66 +15,17 @@ export default function FrontPage() {
   const [isLoading, setLoading] = useState(false);
   const [displayNone, setDisplay] = useState(true);
 
-  
-    let animation = useRef(new Animated.Value(0));
-    const [progress, setProgress] = useState(0);
-
-    useEffect(() => {
-        (async function () {
-            if (isLoading) {
-                try {
-                } finally {
-
-                    if(progress < 100) {
-                        setProgress(progress + 4,16666667);
-                    }
-
-                    setDisplay(false)
-                    setLoading(false);
-                }
-            }
-        })();
-    }, [isLoading]);
-
-
-    useEffect(() => {
-        Animated.timing(animation.current, {
-            toValue: progress,
-            duration: 100
-        }).start();
-    },[progress])
-
-    const width = animation.current.interpolate({
-        inputRange: [0, 100],
-        outputRange: ["0%", "100%"],
-        extrapolate: "clamp"
-    })
-
-
-
-
-
-
-       return (
-        <div>
-            <View style={styles.container}>
-                <View style={styles.background}></View>
-                <Header/>
-
-                <View style={progBarStyles.container}>
-                    <View style={progBarStyles.progressBar}>
-                        <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: "#8BED4F", width }]}/>
-                    </View>
-                    <Text>
-                        {`${progress}%`}
-                    </Text>
-
-                </View>
-
-                {displayNone ?
-                <View style={styles.centre}>
-                    <View style={styles.infoBox}>
-
+  useEffect(() => {
+    (async function () {
+      if (isLoading) {
+        try {
+        } finally {
+          setDisplay(false);
+          setLoading(false);
+        }
+      }
+    })();
+  }, [isLoading]);
 
   return (
     <View style={styles.container}>
@@ -144,11 +93,6 @@ export default function FrontPage() {
 }
 
 const styles = StyleSheet.create({
-
-    buttonBox:{
-        minHeight: "43vh",
-        maxHeight: "54vh",
-
   buttonBox: {
     justifyContent: "center",
     alignItems: "center",
@@ -169,7 +113,6 @@ const styles = StyleSheet.create({
       default: {
         minHeight: "45vh",
         maxHeight: "54.5vh",
-
         minWidth: "50rem",
         maxWidth: "100vw",
       },
@@ -272,24 +215,4 @@ const styles = StyleSheet.create({
       },
     }),
   },
-});
-
-const progBarStyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'Column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderBottomColor: "black",
-        borderBottomWidth: 2,
-    },
-    progressBar: {
-        flexDirection: 'row',
-        height: 20,
-        width: '80vw',
-        backgroundColor: 'white',
-        borderColor: '#000',
-        borderWidth: 2,
-        borderRadius: 5
-    }
 });
