@@ -8,7 +8,7 @@ class Calculation:
         self.diabetes = diabetes_risk(self.risk_score)
 
 def risk_dict_constructor(risk_score: int,  complication: str, severity: int) -> dict:
-    return {complication : {"severity": severity, "risk_score": risk_score}}
+    return  {"complication" : complication, "severity": severity, "risk_score": risk_score}
 
 # Spitting out the risk factor based on points
 def diabetes_risk(risk_score: int) -> dict:
@@ -32,84 +32,89 @@ def calculate(json_dict: dict) -> int:
     risk_score = 0
 
     # Age
-    if json_dict["age"] <= 25:
+    if (age:=json_dict.get("age")) == None:
+        pass
+    elif age <= 25:
         risk_score += 0
-    elif 26 <= json_dict["age"] <= 35:
+    elif 26 <= age <= 35:
         risk_score += 4
-    elif json_dict["age"] >= 35:
+    elif age >= 35:
         risk_score += 6
 
     # Parity (Number of children)
-    if json_dict["parity"] >= 2:
+    if (parity:=json_dict.get("parity")) == None:
+        pass
+    elif parity >= 2:
         risk_score += 2
 
     # History of GDM
-    if json_dict["gdm"]:
+    if json_dict.get("gdm"):
         risk_score += 15
 
     # Congenital anomalies
-    if json_dict["congenital"]:
+    if json_dict.get("congenital"):
         risk_score += 5
 
     # Stillbirth
-    if json_dict["stillbirth"]:
+    if json_dict.get("stillbirth"):
         risk_score += 5
 
     # Miscarriage
-    if json_dict["miscarriage"]:
+    if json_dict.get("miscarriage"):
         risk_score += 5
 
     # Preterm delivery
-    if json_dict["preterm"]:
+    if json_dict.get("preterm"):
         risk_score += 5
 
     # Macrosomia
-    if json_dict["macrosomia"]:
+    if json_dict.get("macrosomia"):
         risk_score += 8
 
     # BMI
-    bmi = json_dict["weight"]/((json_dict["height"]/100)**2)
-    if bmi >= 30:
-        risk_score += 9
-    elif bmi >= 25:
-        risk_score += 5
+    if None not in (bmi_info:=(json_dict.get("weight"), json_dict.get("height"))):
+        bmi = bmi_info[0]/((bmi_info[1]/100)**2)
+        if bmi >= 30:
+            risk_score += 9
+        elif bmi >= 25:
+            risk_score += 5
 
     # Ethnicity | (might change to int later)
-    if not json_dict["white"]:
+    if not json_dict.get("white"):
         risk_score += 5
 
     # Family history of diabetes
-    if json_dict["family_diabetes"]:
+    if json_dict.get("family_diabetes"):
         risk_score += 6
 
     # Polycystic ovary syndrome
-    if json_dict["polycystic"]:
+    if json_dict.get("polycystic"):
         risk_score += 5
 
     # High blood pressure, with family history
-    if json_dict["blood_pressure_family"]:
+    if json_dict.get("blood_pressure_family"):
         risk_score += 5
 
     # High blood pressure, without family history
-    if json_dict["blood_pressure_not_family"]:
+    if json_dict.get("blood_pressure_not_family"):
         risk_score += 2
 
     # Diet
     diet_count = 0
 
-    if json_dict["diet_not_varied"]:
+    if json_dict.get("diet_not_varied"):
         diet_count += 1
-    if json_dict["diet_sugar"]:
+    if json_dict.get("diet_sugar"):
         diet_count += 1
-    if json_dict["diet_sweets"]:
+    if json_dict.get("diet_sweets"):
         diet_count += 1
-    if json_dict["diet_processed_meat"]:
+    if json_dict.get("diet_processed_meat"):
         diet_count += 1
-    if json_dict["diet_whole_grain"]:
+    if json_dict.get("diet_whole_grain"):
         diet_count += 1
-    if json_dict["diet_diary"]:
+    if json_dict.get("diet_diary"):
         diet_count += 1
-    if json_dict["diet_vitamin_d"]:
+    if json_dict.get("diet_vitamin_d"):
         diet_count += 1
 
     if diet_count >= 5:
@@ -118,11 +123,11 @@ def calculate(json_dict: dict) -> int:
     # Physical activity
     activity_count = 0
 
-    if not json_dict["activity_walking_minute"]:
+    if not json_dict.get("activity_walking_minute"):
         activity_count += 1
-    if not json_dict["activity_vigorous"]:
+    if not json_dict.get("activity_vigorous"):
         activity_count += 1
-    if not json_dict["activity_stairs"]:
+    if not json_dict.get("activity_stairs"):
         activity_count += 1
 
     if activity_count == 3:
