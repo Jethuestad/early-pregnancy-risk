@@ -12,7 +12,6 @@ def get_score(request):
     if request.method != "POST":
         raise BadMethodException(request.method, "POST")
 
-    print(json_request_to_dict(request, valid_json_format_calc))
     json_dict = json_request_to_dict(request, valid_json_format_calc)
     calc = Calculation(json_dict)   # Creates a risk calculation based on userinput
     diabetes1 = calc.diabetes
