@@ -55,6 +55,7 @@ export default function Form( props ) {
     Animated.timing(animation.current, {
       toValue: progress,
       duration: 100,
+      useNativeDriver: false,
     }).start();
   }, [progress]);
 
@@ -66,6 +67,7 @@ export default function Form( props ) {
 
   return (
       <View style={styles.main_container}>
+        {nr < Factors.factors.length && !isSubmitting ?
 
         <View style={progBarStyles.container}>
           <View style={progBarStyles.progressBar}>
@@ -78,6 +80,7 @@ export default function Form( props ) {
           </View>
           <Text>{`${progress}%`}</Text>
         </View>
+            : null}
 
         <View style={styles.container}>
           {nr < Factors.factors.length && !isSubmitting ? (
