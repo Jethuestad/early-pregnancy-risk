@@ -1,5 +1,5 @@
 from rest_framework.exceptions import APIException
-from django.http import JsonResponse
+from ..utilities.request_utils import standard_json_response
 
 class BadJsonException(APIException):
     status_code = 400
@@ -20,7 +20,13 @@ class InternalServerError(APIException):
     default_detail = "Unexpected error"
     status_code = 500
 
+    def __init__(self, custom_msg = None):
+        if custom_msg is not None:
+            InternalServerError.detail = custom_msg
+        else:
+            InternalServerError.detail = self.default_detail
+
 def exception_response_constructor(exception: APIException):
-    error_dict = {"error": {"Name": exception.default_code, "Message": exception.detail,
-         "Code": exception.status_code}}
-    return JsonResponse(error_dict, safe=False, status = exception.status_code)
+    error_dict ={"Name": exception.default_code, "Message": exception.detail,
+         "Code": exception.status_code}
+    return standard_json_response(False, error_dict, status_code = exception.status_code)
