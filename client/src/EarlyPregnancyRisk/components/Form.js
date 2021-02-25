@@ -23,7 +23,7 @@ export default function Form( props ) {
 
   function prog(){
     if(progress < 100) {
-      setProgress(progress + 4,16666667);
+      setProgress(progress + 4);
     }
   }
 
@@ -38,7 +38,7 @@ export default function Form( props ) {
     } else {
       tData[Factors.factors[nr].factor] = factorBoolean;
     }
-    prog
+    prog()
     setData(tData);
     setIsSubmitting(false);
     setNr(nr + 1);
@@ -213,6 +213,7 @@ const progBarStyles = StyleSheet.create({
     alignItems: "center",
     borderBottomColor: "black",
     borderBottomWidth: 2,
+    maxHeight: 40
   },
   progressBar: {
     flexDirection: "row",
