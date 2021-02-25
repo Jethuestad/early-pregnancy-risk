@@ -19,11 +19,11 @@ export default function Form( props ) {
   const [data, setData] = useState({});
   const Factors = require("../constants/Factors");
   let animation = useRef(new Animated.Value(0));
-  const [progress, setProgress] = useState(4,16666667);
+  const [progress, setProgress] = useState(1);
 
   function prog(){
-    if(progress < 100) {
-      setProgress(progress + 4);
+    if(progress < 24) {
+      setProgress(progress + 1);
     }
   }
 
@@ -54,14 +54,14 @@ export default function Form( props ) {
   useEffect(() => {
     Animated.timing(animation.current, {
       toValue: progress,
-      duration: 100,
+      duration: 24,
       useNativeDriver: false,
     }).start();
   }, [progress]);
 
   const width = animation.current.interpolate({
-    inputRange: [0, 100],
-    outputRange: ["0%", "100%"],
+    inputRange: [0, 24],
+    outputRange: ["0%","100%"],
     extrapolate: "clamp",
   });
 
@@ -74,11 +74,11 @@ export default function Form( props ) {
             <Animated.View
                 style={[
                   StyleSheet.absoluteFill,
-                  { backgroundColor: "#8BED4F", width },
+                  { backgroundColor: "#E15A46", width },
                 ]}
             />
           </View>
-          <Text>{`${progress}%`}</Text>
+          <Text styles={{fontSize:15}}>{`${progress}/24`}</Text>
         </View>
             : null}
 
@@ -224,7 +224,7 @@ const progBarStyles = StyleSheet.create({
     width: "80%",
     backgroundColor: "white",
     borderColor: "#000",
-    borderWidth: 2,
+    borderWidth: 1,
     borderRadius: 5,
   },
 });
