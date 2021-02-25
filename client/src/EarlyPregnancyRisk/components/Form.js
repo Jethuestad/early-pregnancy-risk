@@ -22,14 +22,15 @@ export default function Form() {
   useEffect(() => {
     if (!isSubmitting) return;
     let tData = data;
-    if (skipped) {
-      tData[Factors.factors[nr].factor] = "skipped";
-    } else if (Factors.factors[nr].answertype === "int") {
-      tData[Factors.factors[nr].factor] = factorInteger;
-    } else {
-      tData[Factors.factors[nr].factor] = factorBoolean;
+    if (!skipped) {
+      if (Factors.factors[nr].answertype === "int") {
+        tData[Factors.factors[nr].factor] = factorInteger;
+      } else {
+        tData[Factors.factors[nr].factor] = factorBoolean;
+      }
+      setData(tData);
     }
-    setData(tData);
+    setSkipped(false);
     setIsSubmitting(false);
     setNr(nr + 1);
   }, [isSubmitting]);
