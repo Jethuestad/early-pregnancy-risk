@@ -9,18 +9,22 @@ def json_request_to_dict(request, valid_format: dict) -> dict:
     except:
         raise BadJsonException()
 
-    if len(request_dict) != len(valid_format):
-        print("Invalid length of dict")
-        raise BadJsonException()
+    if len(request_dict) > len(valid_format):
+        raise BadJsonException("JSON object too large")
+
+    validated_dict = {}
+    valid_format_copy = valid_format.copy()
     
     for key, value in request_dict.items():
-        if key not in valid_format:
-            print("The key \"{}\" should not exist".format(key))
-            raise BadJsonException()
+        if key not in valid_format_copy:
+            raise BadJsonException("Unknown key in the JSON object")
 
-        if type(value) != valid_format[key]:
-            print("Invalid type of element located in {}. Should be {} but is {}"
-                .format(key, valid_format[key], type(value)))
-            raise BadJsonException()
+        if type(value) != valid_format_copy[key]:
+            raise BadJsonException("Invalid type of element located at key '{}'. Should be of type {}."
+                .format(key, valid_format_copy[key]))
+
+        validated_dict[key] = value
+        # In case the same entry appears more than once
+        del valid_format_copy[key]
     
-    return request_dict
+    return validated_dict

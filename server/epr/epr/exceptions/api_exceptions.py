@@ -5,6 +5,12 @@ class BadJsonException(APIException):
     status_code = 400
     default_detail = "Ill-formated JSON! Please reformat and try again"
     default_code = "bad_json_exception"
+    
+    def __init__(self, custom_msg = None):
+        if custom_msg is not None:
+            BadJsonException.detail = custom_msg
+        else:
+            BadJsonException.detail = self.default_detail
 
 class BadMethodException(APIException):
     default_code= "method_not_allowed"
