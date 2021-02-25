@@ -8,7 +8,7 @@ class Calculation:
         self.diabetes = diabetes_risk(self.risk_score)
 
 def risk_dict_constructor(risk_score: int,  complication: str, severity: int) -> dict:
-    return {complication : {"severity": severity, "risk_score": risk_score}}
+    return  {"complication" : complication, "severity": severity, "risk_score": risk_score}
 
 # Spitting out the risk factor based on points
 def diabetes_risk(risk_score: int) -> dict:
