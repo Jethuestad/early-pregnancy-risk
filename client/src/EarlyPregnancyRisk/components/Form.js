@@ -6,6 +6,7 @@ import {
   TouchableHighlight,
   TextInput,
   TouchableWithoutFeedback,
+  Platform,
 } from "react-native";
 import colors from "../style/colors";
 import { postFactors } from "../networking/Requests";
@@ -52,8 +53,9 @@ export default function Form() {
       {nr < Factors.factors.length && !isSubmitting ? (
         <View>
           <Text style={[styles.question, colors.primary]}>
-            {Factors.factors[nr].factor}
+            {Factors.factors[nr].question}
           </Text>
+          <View style={styles.spacing}/>
           {/* NUMERICAL*/}
           {Factors.factors[nr].answertype === "int" ? (
             <View>
@@ -65,8 +67,9 @@ export default function Form() {
                 defaultValue=""
                 maxLength={2}
               ></TextInput>
+               <View style={styles.spacingBtn} />
               <TouchableHighlight
-                style={styles.appInputButtons}
+                style={styles.inputBtn}
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 onPress={() => setIsSubmitting(true)}
@@ -77,10 +80,10 @@ export default function Form() {
           ) : null}
           {/* YES or NO*/}
           {Factors.factors[nr].answertype === "boolean" ? (
-            <View style={{ flexDirection: "row" }}>
-              <View style={styles.space} />
+            <View style={styles.spacingBtn}>
+              <View>
               <TouchableHighlight
-                style={styles.appInputButtons}
+                style={styles.inputBtn}
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 onPress={() => {
@@ -90,8 +93,11 @@ export default function Form() {
               >
                 <Text style={styles.textTitleBtn}>No</Text>
               </TouchableHighlight>
+              </View>
+              <View style={styles.spacingBtn} />
+              <View>
               <TouchableHighlight
-                style={styles.appInputButtons}
+                style={styles.inputBtn}
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 onPress={() => {
@@ -101,11 +107,13 @@ export default function Form() {
               >
                 <Text style={styles.textTitleBtn}>Yes</Text>
               </TouchableHighlight>
+              </View>
             </View>
           ) : null}
           {/* Need to handle skip as "default values" some way*/}
+          <View style={styles.spacingBtn}/>
           <TouchableHighlight
-            style={styles.appInputButtons}
+            style={styles.inputBtn}
             activeOpacity={0.6}
             underlayColor="#DDDDDD"
             onPress={() => {
@@ -130,9 +138,22 @@ const styles = StyleSheet.create({
     margin: "auto",
   },
   question: {
-    fontSize: 30,
     fontWeight: "bold",
     paddingBottom: 20,
+    borderColor: "#FFFFFF",
+    textAlign: "center",
+    ...Platform.select({
+      ios: {
+        fontSize: 22,
+      },
+      android: {
+        fontSize: 22,
+      },
+      default: {
+        borderWidth: 150,
+        fontSize: "2rem",
+      },
+    }),
   },
   textinput: {
     width: 200,
@@ -144,28 +165,85 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     color: "black",
     paddingRight: 30, // to ensure the text is never behind the icon
-  },
-  appInputButtons: {
-    elevation: 7,
-    backgroundColor: "#E15A46",
-    borderRadius: 15,
-    paddingHorizontal: 10,
-    paddingVertical: 8,
-    maxWidth: 150,
-    minWidth: 150,
     alignSelf: "center",
   },
+  inputBtn: {
+    elevation: 7,
+    backgroundColor: "#E15A46",
+    borderRadius: 7,
+    alignSelf: "center",
+    ...Platform.select({
+      ios: {
+        paddingHorizontal: 10,
+        paddingVertical: 8,
+        maxWidth: 150,
+        minWidth: 150,
+      },
+      android: {
+        paddingHorizontal: 10,
+        paddingVertical: 8,
+        maxWidth: 150,
+        minWidth: 150,
+      },
+      default: {
+        paddingHorizontal: 10,
+        paddingVertical: 8,
+        maxWidth: 150,
+        minWidth: 150,
+      },
+    }),
+  },
   textTitleBtn: {
-    fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
     marginVertical: 4,
+    ...Platform.select({
+      ios: {
+        fontSize: 18,
+      },
+      android: {
+        fontSize: 18,
+      },
+      default: {
+        fontSize: "1rem"
+      },
+    }),
   },
   skipBtn: {
-    fontSize: 16,
-    color: "#FFFFFF",
     fontWeight: "bold",
     textAlign: "center",
+    color: "#FFFFFF",
     marginVertical: 4,
+    ...Platform.select({
+      ios: {
+        fontSize: 18,
+      },
+      android: {
+        fontSize: 18,
+      },
+      default: {
+        fontSize: "1rem"
+      },
+    }),
+  },
+  spacingBtn: {
+    flexDirection: "row",
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    alignSelf: "center",
+  },
+  spacing: {
+    flexDirection: "row",
+    ...Platform.select({
+      ios: {
+        paddingVertical: 20,
+      },
+      android: {
+        paddingVertical: 20,
+      },
+      default: {
+        paddingVertical: 2,
+      },
+    }),
   },
 });
