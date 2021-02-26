@@ -14,7 +14,7 @@ import { postFactors } from "../networking/Requests";
 export default function Form() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [nr, setNr] = useState(0);
-  const [factorInteger, setFactorInteger] = useState(1);
+  const [factorInteger, setFactorInteger] = useState("");
   const [factorBoolean, setFactorBoolean] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
@@ -33,6 +33,7 @@ export default function Form() {
       setData(tData);
     }
     setSkipped(false);
+    setFactorInteger("");
     setIsSubmitting(false);
     setNr(nr + 1);
   }, [isSubmitting]);
@@ -49,30 +50,37 @@ export default function Form() {
   return (
     <View style={styles.container}>
       {risk != null ? <Text>{risk.toString()}</Text> : null}
-
+      {factorInteger == "" ? <Text>Is null</Text> : factorInteger}
       {nr < Factors.factors.length && !isSubmitting ? (
         <View>
           <Text style={[styles.question, colors.primary]}>
             {Factors.factors[nr].question}
           </Text>
-          <View style={styles.spacing}/>
+          <View style={styles.spacing} />
           {/* NUMERICAL*/}
           {Factors.factors[nr].answertype === "int" ? (
             <View>
               <TextInput
                 style={styles.textinput}
-                onChangeText={(value) => setFactorInteger(value)}
+                onChangeText={(value) =>
+                  setFactorInteger(value.replace(/[^0-9]/g, ""))
+                }
                 numeric
                 keyboardType="numeric"
                 defaultValue=""
-                maxLength={2}
+                value={factorInteger}
+                maxLength={Factors.factors[nr].maxdigits}
               ></TextInput>
-               <View style={styles.spacingBtn} />
+              <View style={styles.spacingBtn} />
               <TouchableHighlight
                 style={styles.inputBtn}
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
-                onPress={() => setIsSubmitting(true)}
+                onPress={() =>
+                  factorInteger == ""
+                    ? setIsSubmitting(false)
+                    : setIsSubmitting(true)
+                }
               >
                 <Text style={styles.textTitleBtn}>Continue</Text>
               </TouchableHighlight>
@@ -82,36 +90,36 @@ export default function Form() {
           {Factors.factors[nr].answertype === "boolean" ? (
             <View style={styles.spacingBtn}>
               <View>
-              <TouchableHighlight
-                style={styles.inputBtn}
-                activeOpacity={0.6}
-                underlayColor="#DDDDDD"
-                onPress={() => {
-                  setFactorBoolean(true);
-                  setIsSubmitting(true);
-                }}
-              >
-                <Text style={styles.textTitleBtn}>No</Text>
-              </TouchableHighlight>
+                <TouchableHighlight
+                  style={styles.inputBtn}
+                  activeOpacity={0.6}
+                  underlayColor="#DDDDDD"
+                  onPress={() => {
+                    setFactorBoolean(true);
+                    setIsSubmitting(true);
+                  }}
+                >
+                  <Text style={styles.textTitleBtn}>No</Text>
+                </TouchableHighlight>
               </View>
               <View style={styles.spacingBtn} />
               <View>
-              <TouchableHighlight
-                style={styles.inputBtn}
-                activeOpacity={0.6}
-                underlayColor="#DDDDDD"
-                onPress={() => {
-                  setFactorBoolean(false);
-                  setIsSubmitting(true);
-                }}
-              >
-                <Text style={styles.textTitleBtn}>Yes</Text>
-              </TouchableHighlight>
+                <TouchableHighlight
+                  style={styles.inputBtn}
+                  activeOpacity={0.6}
+                  underlayColor="#DDDDDD"
+                  onPress={() => {
+                    setFactorBoolean(false);
+                    setIsSubmitting(true);
+                  }}
+                >
+                  <Text style={styles.textTitleBtn}>Yes</Text>
+                </TouchableHighlight>
               </View>
             </View>
           ) : null}
           {/* Need to handle skip as "default values" some way*/}
-          <View style={styles.spacingBtn}/>
+          <View style={styles.spacingBtn} />
           <TouchableHighlight
             style={styles.inputBtn}
             activeOpacity={0.6}
@@ -205,7 +213,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
       },
       default: {
-        fontSize: "1rem"
+        fontSize: "1rem",
       },
     }),
   },
@@ -222,7 +230,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
       },
       default: {
-        fontSize: "1rem"
+        fontSize: "1rem",
       },
     }),
   },

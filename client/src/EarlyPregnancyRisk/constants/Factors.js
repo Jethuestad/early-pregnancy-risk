@@ -4,15 +4,19 @@ module.exports = {
       factor: "age",
       question: "Please enter your current age",
       answertype: "int",
+      maxdigits: 2,
     },
     {
       factor: "parity",
-      question: "Please enter the number of times you previously have been pregnant, including births and stillbirths",
+      question:
+        "Please enter the number of times you previously have been pregnant, including births and stillbirths",
       answertype: "int",
+      maxdigits: 1,
     },
     {
       factor: "gdm",
-      question: "Do you currently have, or have previously had Gestational diabetes?",
+      question:
+        "Do you currently have, or have previously had Gestational diabetes?",
       answertype: "boolean",
     },
     {
@@ -44,11 +48,13 @@ module.exports = {
       factor: "height",
       question: "Please enter your height",
       answertype: "int",
+      maxdigits: 3,
     },
     {
       factor: "weight",
       question: "Please enter your weight",
       answertype: "int",
+      maxdigits: 3,
     },
     {
       factor: "family_diabetes",
