@@ -13,18 +13,19 @@ import { postFactors } from "../networking/Requests";
 export default function Form() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [nr, setNr] = useState(0);
-  const [factorInteger, setFactorInteger] = useState(0);
+  const [factorInteger, setFactorInteger] = useState(1);
   const [factorBoolean, setFactorBoolean] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
   const Factors = require("../constants/Factors");
+  const [risk, setRisk] = useState(null);
 
   useEffect(() => {
     if (!isSubmitting) return;
     let tData = data;
     if (!skipped) {
       if (Factors.factors[nr].answertype === "int") {
-        tData[Factors.factors[nr].factor] = factorInteger;
+        tData[Factors.factors[nr].factor] = Number(factorInteger);
       } else {
         tData[Factors.factors[nr].factor] = factorBoolean;
       }
@@ -37,12 +38,17 @@ export default function Form() {
 
   useEffect(() => {
     if (nr >= Factors.factors.length) {
-      postFactors(data);
+      (async function () {
+        const response = await postFactors(data);
+        setRisk(response);
+      })();
     }
   }, [nr]);
 
   return (
     <View style={styles.container}>
+      {risk != null ? <Text>{risk.toString()}</Text> : null}
+
       {nr < Factors.factors.length && !isSubmitting ? (
         <View>
           <Text style={[styles.question, colors.primary]}>
