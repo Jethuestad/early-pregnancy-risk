@@ -50,7 +50,6 @@ export default function Form() {
   return (
     <View style={styles.container}>
       {risk != null ? <Text>{risk.toString()}</Text> : null}
-      {factorInteger == "" ? <Text>Is null</Text> : factorInteger}
       {nr < Factors.factors.length && !isSubmitting ? (
         <View>
           <Text style={[styles.question, colors.primary]}>
