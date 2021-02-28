@@ -174,8 +174,6 @@ const styles = StyleSheet.create({
   },
   question: {
     fontWeight: "bold",
-    paddingBottom: 20,
-    borderColor: "#FFFFFF",
     textAlign: "center",
     ...Platform.select({
       ios: {
@@ -185,7 +183,7 @@ const styles = StyleSheet.create({
         fontSize: 22,
       },
       default: {
-        borderWidth: 150,
+        margin: 150,
         fontSize: "2rem",
       },
     }),
