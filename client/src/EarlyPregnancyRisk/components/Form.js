@@ -152,10 +152,16 @@ export default function Form() {
             </View>
           ) : (
             <View>
-              <Results risk={TestResponse} />
-              <Text>
-                This is a test response, it does not come from the server.
-              </Text>
+              {Platform.OS !== "web" ? (
+                <View>
+                  <Results risk={TestResponse} />
+                  <Text>
+                    This is a test response, it does not come from the server.
+                  </Text>
+                </View>
+              ) : (
+                <Text>Loading...</Text>
+              )}
             </View>
           )}
         </View>
