@@ -86,7 +86,6 @@ export default function Form() {
                     }
                     numeric
                     keyboardType="numeric"
-                    defaultValue=""
                     value={factorInteger}
                     maxLength={Factors.factors[nr].maxdigits}
                   ></TextInput>
