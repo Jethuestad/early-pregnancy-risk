@@ -1,9 +1,11 @@
-import json
-from ..exceptions.api_exceptions import BadJsonException
+from typing import Union
+from django.http import JsonResponse
 
-def body_to_dict(request) -> dict:
-    '''Turns a JSON field in a POST request in to a dictornary'''
-    try:
-        return json.loads(request.body)
-    except:
-        raise BadJsonException()
+def standard_json_response(success: bool, payload: Union[dict, list], status_code=200):
+    response = {"success": success}
+    if not success:
+        response["error"] = payload
+    else:
+        response["payload"] = payload
+    print(response)
+    return JsonResponse(response, safe=False, status=status_code)

@@ -16,12 +16,10 @@ const styles = StyleSheet.create({
   container: {
     ...Platform.select({
       web: {
-        alignSelf: "left",
-        marginHorizontal: 30,
+        alignItems: "center",
         marginTop: 20,
         marginBottom: 10,
         paddingBottom: 20,
-
         borderBottomColor: "black",
         borderBottomWidth: 2,
       },
