@@ -47,7 +47,7 @@ export const postFactors = async (factors) => {
   try {
     let response = await fetch(ENDPOINTS.calculate, data);
     let json = await response.text();
-    return json;
+    return JSON.parse(json);
   } catch (e) {
     if (e instanceof ReferenceError) {
       //TODO: Handle error
