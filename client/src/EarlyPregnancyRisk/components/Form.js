@@ -19,8 +19,24 @@ export default function Form() {
   const [factorBoolean, setFactorBoolean] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
-  const Factors = require("../constants/Factors");
   const [risk, setRisk] = useState(null);
+
+  const Factors = require("../constants/Factors");
+  const TestResponse = {
+    success: true,
+    payload: [
+      {
+        complication: "diabetes",
+        severity: 4,
+        risk_score: 53,
+      },
+      {
+        complication: "diabetes",
+        severity: 4,
+        risk_score: 53,
+      },
+    ],
+  };
 
   useEffect(() => {
     if (!isSubmitting) return;
@@ -54,7 +70,7 @@ export default function Form() {
         <Results risk={risk} />
       ) : (
         <View>
-          {nr < Factors.factors.length && !isSubmitting ? (
+          {nr < Factors.factors.length ? (
             <View>
               <Text style={[styles.question, colors.primary]}>
                 {Factors.factors[nr].question}
@@ -135,7 +151,14 @@ export default function Form() {
                 <Text style={styles.skipBtn}>Skip</Text>
               </TouchableHighlight>
             </View>
-          ) : null}
+          ) : (
+            <View>
+              <Results risk={TestResponse} />
+              <Text>
+                This is a test response, it does not come from the server.
+              </Text>
+            </View>
+          )}
         </View>
       )}
     </View>

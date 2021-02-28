@@ -11,7 +11,7 @@ export default function Form(props) {
           <View>
             {props.risk.payload.map((item, index) => {
               return (
-                <View>
+                <View key={index}>
                   <View style={[styles.containerText]}>
                     <Text style={[colors.primary, styles.complication]}>
                       {item.complication}
