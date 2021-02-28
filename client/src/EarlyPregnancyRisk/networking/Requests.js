@@ -4,7 +4,6 @@ if (__DEV__) {
 }
 
 export const getTestJson = async () => {
-  console.log([ENDPOINTS.translate, "en", "123"].join("/"));
   try {
     let response = await fetch(ENDPOINTS.test_request);
     let json = await response.json();
@@ -37,15 +36,18 @@ export const getLanguageComponent = async (country_code, component_id) => {
 };
 
 export const postFactors = async (factors) => {
-  console.log(factors);
   let data = {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(factors),
   };
+
   try {
     let response = await fetch(ENDPOINTS.calculate, data);
-    let json = await response.json();
-    return json;
+    let json = await response.text();
+    return JSON.parse(json);
   } catch (e) {
     if (e instanceof ReferenceError) {
       //TODO: Handle error

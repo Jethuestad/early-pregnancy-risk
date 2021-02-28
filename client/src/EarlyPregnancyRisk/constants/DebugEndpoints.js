@@ -1,5 +1,5 @@
 module.exports = {
-  test_request: "https://jsonplaceholder.typicode.com/todos/2",
-  translate: "localhost:8000/translate",
-  calculate: "localhost:8000/calculate",
+  test_request: "http://localhost:8000/test/",
+  translate: "http://localhost:8000/translate",
+  calculate: "http://localhost:8000/calculate/",
 };
