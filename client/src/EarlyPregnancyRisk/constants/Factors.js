@@ -2,7 +2,7 @@ module.exports = {
   factors: [
     {
       factor: "age",
-      question: "Please enter your current age",
+      question: "What is your age?",
       answertype: "int",
       skippable: false,
       maxdigits: 2,
@@ -10,7 +10,7 @@ module.exports = {
     {
       factor: "parity",
       question:
-        "Please enter the number of times you previously have been pregnant, including births and stillbirths",
+        "How many times have you previously been pregnant, including births, miscarriages, and stillbirths",
       answertype: "int",
       skippable: false,
       maxdigits: 1,
@@ -43,13 +43,13 @@ module.exports = {
         },
         {
           factor: "preterm",
-          question: "Have you previously had preterm birth?",
+          question: "Have you previously had a preterm birth?",
           answertype: "boolean",
           skippable: false,
         },
         {
           factor: "macrosomia",
-          question: "Macrosomia?",
+          question: "Have you had any children with Macrosomia?",
           answertype: "boolean",
           skippable: true,
         },
@@ -57,21 +57,21 @@ module.exports = {
     },
     {
       factor: "height",
-      question: "Please enter your height",
+      question: "What is your height",
       answertype: "int",
       skippable: false,
       maxdigits: 3,
     },
     {
       factor: "weight",
-      question: "Please enter your weight",
+      question: "What is your weight",
       answertype: "int",
       skippable: false,
       maxdigits: 3,
     },
     {
       factor: "family_diabetes",
-      question: "Do your family have a history of diabetes?",
+      question: "Does your family have a history of diabetes?",
       answertype: "boolean",
       skippable: true,
     },
@@ -89,49 +89,52 @@ module.exports = {
     },
     {
       factor: "blood_pressure_not_family",
-      question: "Do you have a high blood pressure?",
+      question: "Do you have high blood pressure?",
       answertype: "boolean",
       skippable: false,
     },
     {
       factor: "diet_not_varied",
-      question: "Do you have a varied diet?",
+      question: "Is your diet non-varied?",
       answertype: "boolean",
       skippable: false,
     },
     {
       factor: "diet_sugar",
-      question: "Do you have a high sugar intake?",
+      question:
+        "Do you drink sugar/artificially sweetened beverages more than 4 times a week?",
       answertype: "boolean",
       skippable: false,
     },
     {
       factor: "diet_sweets",
-      question: "Do you eat a lot of sweets?",
+      question:
+        "Do you eat sweets such as ice cream, cakes, or cookies more than 2 times a week?",
       answertype: "boolean",
       skippable: false,
     },
     {
       factor: "diet_processed_meat",
-      question: "Do you eat a lot of processed meat?",
+      question:
+        "Do you eat processed meat products more than zero times a week?",
       answertype: "boolean",
       skippable: false,
     },
     {
       factor: "diet_whole_grain",
-      question: "Do you eat a lot of whole grain?",
+      question: "Do you eat whole grain products less than 2 times a day?",
       answertype: "boolean",
       skippable: false,
     },
     {
       factor: "diet_diary",
-      question: "Do you consume a lot of diary products?",
+      question: "Do you consume dairy products less than 2 times a day?",
       answertype: "boolean",
       skippable: false,
     },
     {
       factor: "diet_vitamin_d",
-      question: "Do you have normal vitamin D levels?",
+      question: "Do you have vitamin D intake less than 5 times a week?",
       answertype: "boolean",
       skippable: false,
     },
@@ -143,13 +146,13 @@ module.exports = {
     },
     {
       factor: "activity_vigorous",
-      question: "Do you have vigourous exercise?",
+      question: "Do you take part in vigourous exercise?",
       answertype: "boolean",
       skippable: false,
     },
     {
       factor: "activity_stairs",
-      question: "Do you exercise by walking up stairs?",
+      question: "Do you climb at least 10 stairs a day?",
       answertype: "boolean",
       skippable: false,
     },
