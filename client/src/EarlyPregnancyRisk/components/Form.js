@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
   },
   inputBtn: {
     elevation: 7,
-    backgroundColor: "#E15A46",
+    backgroundColor: "#BF1616",
     borderRadius: 7,
     alignSelf: "center",
     ...Platform.select({
@@ -269,6 +269,7 @@ const styles = StyleSheet.create({
   textTitleBtn: {
     fontWeight: "bold",
     textAlign: "center",
+    color: "white",
     marginVertical: 4,
     ...Platform.select({
       ios: {
@@ -285,7 +286,7 @@ const styles = StyleSheet.create({
   skipBtn: {
     fontWeight: "bold",
     textAlign: "center",
-    color: "#FFFFFF",
+    color: "white",
     marginVertical: 4,
     ...Platform.select({
       ios: {
