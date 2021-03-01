@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
   Platform,
+  FlatList,
 } from "react-native";
 
 import Footer from "./Footer";
@@ -12,71 +13,50 @@ import Header from "./Header";
 import Form from "./Form";
 
 export default function FrontPage() {
-  const [isLoading, setLoading] = useState(false);
-  const [displayNone, setDisplay] = useState(true);
-
-  useEffect(() => {
-    (async function () {
-      if (isLoading) {
-        try {
-        } finally {
-          setDisplay(false);
-          setLoading(false);
-        }
-      }
-    })();
-  }, [isLoading]);
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <View style={styles.container}>
       <Header />
       <View style={styles.background}></View>
-      {displayNone ? (
+      {!showForm ? (
         <View style={styles.centre}>
           <View style={styles.infoBox}>
             <Text style={styles.textBox}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              sapien lorem, sagittis et quam ut, pellentesque blandit felis.
-              Nullam interdum sagittis est nec bibendum. Cras feugiat neque est,
-              sit amet consequat lacus porttitor sed. Praesent gravida in ex ut
-              rutrum. Praesent et ex bibendum, pulvinar diam sit amet, bibendum
-              velit. Etiam rutrum sed nisi et semper. Proin id lectus massa.
-              Aenean eu ornare lacus. Nulla facilisi. Pellentesque et vestibulum
-              velit. Nullam vitae neque vel lorem suscipit accumsan in vel nisi.
-              Nam tristique venenatis arcu, quis tristique quam eleifend a.
-              Suspendisse vitae varius tortor. Aliquam aliquam dui tincidunt
-              eros tincidunt, nec posuere erat ullamcorper. Suspendisse
-              tincidunt, lectus non suscipit tincidunt, sem quam sollicitudin
-              sapien, sodales ornare orci tortor id ex. Fusce mattis, neque ut
-              pellentesque rhoncus, velit ante rutrum magna, at ultrices arcu
-              lorem et massa. Donec mattis rhoncus sapien sit amet sagittis.
-              Duis commodo turpis vel turpis laoreet auctor. Etiam placerat
-              consectetur laoreet.
+              Pregnant or planning for a baby? This tool will make you assess
+              your health status for a healthy pregnancy and a complication free
+              birth. By filling in your personal health measurements, this tool
+              will estimate risk for developing common pregnancy complications
+              below.
             </Text>
 
             <Text style={styles.textBox}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              sapien lorem, sagittis et quam ut, pellentesque blandit felis.
-              Nullam interdum sagittis est nec bibendum. Cras feugiat neque est,
-              sit amet consequat lacus porttitor sed. Praesent gravida in ex ut
-              rutrum. Praesent et ex bibendum, pulvinar diam sit amet, bibendum
-              velit. Etiam rutrum sed nisi et semper. Proin id lectus massa.
-              Aenean eu ornare lacus. Nulla facilisi. Pellentesque et vestibulum
-              velit. Nullam vitae neque vel lorem suscipit accumsan in vel nisi.
-              Nam tristique venenatis arcu, quis tristique quam eleifend a.
-              Suspendisse vitae varius tortor. Aliquam aliquam dui tincidunt
-              eros tincidunt, nec posuere erat ullamcorper. Suspendisse
-              tincidunt, lectus non suscipit tincidunt, sem quam sollicitudin
-              sapien, sodales ornare orci tortor id ex. Fusce mattis, neque ut
-              pellentesque rhoncus, velit ante rutrum magna, at ultrices arcu
-              lorem et massa. Donec mattis rhoncus sapien sit amet sagittis.
-              Duis commodo turpis vel turpis laoreet auctor. Etiam placerat
-              consectetur laoreet.
+              It is important to note that the tool will provide you with the
+              risk of an ‘average‘ woman with your health measures and NOT your
+              personal risk score. It is also important to note that the model
+              does not take into many other psychosocial factors affecting
+              maternal outcome.
             </Text>
+          </View>
+          <View style={styles.infoBox}>
+            <FlatList
+              data={[
+                { key: "Miscarriage" },
+                { key: "Gestational Diabetes Mellitus" },
+                { key: "Preeclampsia" },
+                { key: "Pre-term birth" },
+                { key: "Still birth" },
+                { key: "Caesarean section" },
+                { key: "Postpartum depression" },
+              ]}
+              renderItem={({ item }) => (
+                <Text style={styles.textBox}>{item.key}</Text>
+              )}
+            />
           </View>
           <View style={styles.buttonBox}>
             <TouchableOpacity
-              onPress={() => setLoading(true)}
+              onPress={() => setShowForm(true)}
               style={styles.button}
             >
               <Text style={styles.buttonText}>Start</Text>
@@ -99,19 +79,16 @@ const styles = StyleSheet.create({
     margin: "auto",
     ...Platform.select({
       ios: {
-        minHeight: 450,
         maxHeight: 545,
         minWidth: 500,
         maxWidth: 1000,
       },
       android: {
-        minHeight: 450,
         maxHeight: 545,
         minWidth: 500,
         maxWidth: 1000,
       },
       default: {
-        minHeight: "45vh",
         maxHeight: "54.5vh",
         minWidth: "50rem",
         maxWidth: "100vw",
@@ -139,6 +116,7 @@ const styles = StyleSheet.create({
     }),
   },
   textBox: {
+    padding: 10,
     ...Platform.select({
       ios: {
         maxWidth: 300,
@@ -151,6 +129,7 @@ const styles = StyleSheet.create({
       default: {
         maxWidth: "30rem",
         minWidth: "25rem",
+        fontSize: "1.2rem",
       },
     }),
   },
@@ -195,7 +174,6 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   background: {
-    backgroundColor: "#BF3B29",
     position: "absolute",
     ...Platform.select({
       ios: {
