@@ -11,17 +11,20 @@ import {
 import Results from "./Results";
 import colors from "../style/colors";
 import { postFactors } from "../networking/Requests";
+import { checkRequirement } from "../modules/FactorUtilities";
 
 export default function Form() {
+  const Factors = require("../constants/Factors");
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [nr, setNr] = useState(0);
+  const [factors, setFactors] = useState(Factors.factors);
   const [factorInteger, setFactorInteger] = useState("");
   const [factorBoolean, setFactorBoolean] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
   const [risk, setRisk] = useState(null);
 
-  const Factors = require("../constants/Factors");
   const TestResponse = {
     success: true,
     payload: [
@@ -38,16 +41,44 @@ export default function Form() {
     ],
   };
 
+  function addSubFactors() {
+    if (factors[nr].subfactors != null && factors[nr].requirement != null) {
+      let shouldAdd = false;
+      if (factors[nr].answertype === "int") {
+        shouldAdd = checkRequirement(
+          factors[nr].requirement,
+          factorInteger,
+          "int"
+        );
+      } else {
+        shouldAdd = checkRequirement(
+          factors[nr].requirement,
+          factorBoolean,
+          "boolean"
+        );
+      }
+      if (shouldAdd) {
+        let left = factors.slice(0, nr + 1);
+        let right = factors.slice(nr + 1);
+        left.concat(factors[nr].subfactors);
+        left.concat(right);
+        let temp = left.concat(factors[nr].subfactors, right);
+        setFactors(temp);
+      }
+    }
+  }
+
   useEffect(() => {
     if (!isSubmitting) return;
     let tData = data;
     if (!skipped) {
-      if (Factors.factors[nr].answertype === "int") {
-        tData[Factors.factors[nr].factor] = Number(factorInteger);
+      if (factors[nr].answertype === "int") {
+        tData[factors[nr].factor] = Number(factorInteger);
       } else {
-        tData[Factors.factors[nr].factor] = factorBoolean;
+        tData[factors[nr].factor] = factorBoolean;
       }
       setData(tData);
+      addSubFactors();
     }
     setSkipped(false);
     setFactorInteger("");
@@ -56,7 +87,7 @@ export default function Form() {
   }, [isSubmitting]);
 
   useEffect(() => {
-    if (nr >= Factors.factors.length) {
+    if (nr >= factors.length) {
       (async function () {
         const response = await postFactors(data);
         setRisk(response);
@@ -70,14 +101,14 @@ export default function Form() {
         <Results risk={risk} />
       ) : (
         <View>
-          {nr < Factors.factors.length ? (
+          {nr < factors.length ? (
             <View>
               <Text style={[styles.question, colors.primary]}>
-                {Factors.factors[nr].question}
+                {factors[nr].question}
               </Text>
               <View style={styles.spacing} />
               {/* NUMERICAL*/}
-              {Factors.factors[nr].answertype === "int" ? (
+              {factors[nr].answertype === "int" ? (
                 <View>
                   <TextInput
                     style={styles.textinput}
@@ -87,7 +118,7 @@ export default function Form() {
                     numeric
                     keyboardType="numeric"
                     value={factorInteger}
-                    maxLength={Factors.factors[nr].maxdigits}
+                    maxLength={factors[nr].maxdigits}
                   ></TextInput>
                   <View style={styles.spacingBtn} />
                   <TouchableHighlight
@@ -105,7 +136,7 @@ export default function Form() {
                 </View>
               ) : null}
               {/* YES or NO*/}
-              {Factors.factors[nr].answertype === "boolean" ? (
+              {factors[nr].answertype === "boolean" ? (
                 <View style={styles.spacingBtn}>
                   <View>
                     <TouchableHighlight
@@ -136,19 +167,22 @@ export default function Form() {
                   </View>
                 </View>
               ) : null}
-              {/* Need to handle skip as "default values" some way*/}
-              <View style={styles.spacingBtn} />
-              <TouchableHighlight
-                style={styles.inputBtn}
-                activeOpacity={0.6}
-                underlayColor="#DDDDDD"
-                onPress={() => {
-                  setSkipped(true);
-                  setIsSubmitting(true);
-                }}
-              >
-                <Text style={styles.skipBtn}>Skip</Text>
-              </TouchableHighlight>
+              {factors[nr].skippable ? (
+                <View>
+                  <View style={styles.spacingBtn} />
+                  <TouchableHighlight
+                    style={styles.inputBtn}
+                    activeOpacity={0.6}
+                    underlayColor="#DDDDDD"
+                    onPress={() => {
+                      setSkipped(true);
+                      setIsSubmitting(true);
+                    }}
+                  >
+                    <Text style={styles.skipBtn}>Skip</Text>
+                  </TouchableHighlight>
+                </View>
+              ) : null}
             </View>
           ) : (
             <View>

@@ -1,5 +1,5 @@
-export function getSeverity(complication) {
-  switch (complication) {
+export function getSeverity(s) {
+  switch (s) {
     case 1:
       return "Low";
     case 2:
