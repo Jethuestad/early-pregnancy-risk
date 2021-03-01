@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect } from "react";
 import { View, Platform, Text, StyleSheet } from "react-native";
-import { getSeverity } from "../constants/Severity";
+import { getSeverity } from "../modules/Severity";
 import colors from "../style/colors";
 
 export default function Form(props) {
