@@ -10,7 +10,7 @@ export default class Footer extends Component {
       <View style={styles.container}>
         <Text style={[text.p, colors.black]}>
           Early Pregnancy Risk {new Date().getFullYear()}
-        </Text>{" "}
+        </Text>
         <Text
           style={[text.p, colors.black]}
           onPress={() => Linking.openURL("http://google.com")}
