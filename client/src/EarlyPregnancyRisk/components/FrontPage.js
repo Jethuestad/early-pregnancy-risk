@@ -28,7 +28,6 @@ export default function FrontPage() {
         })();
     }, [isLoading]);
 
-
   return (
     <View style={styles.container}>
       <View style={styles.background}></View>

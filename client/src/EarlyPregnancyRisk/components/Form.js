@@ -5,161 +5,250 @@ import {
   View,
   TouchableHighlight,
   TextInput,
-  TouchableWithoutFeedback, Animated,
+  TouchableWithoutFeedback,
+  Platform,
+  Animated,
 } from "react-native";
+import Results from "./Results";
 import colors from "../style/colors";
 import { postFactors } from "../networking/Requests";
+import { checkRequirement } from "../modules/FactorUtilities";
 
-export default function Form( props ) {
+export default function Form() {
+  const Factors = require("../constants/Factors");
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [nr, setNr] = useState(0);
-  const [factorInteger, setFactorInteger] = useState(0);
+  const [factors, setFactors] = useState(Factors.factors);
+  const [factorInteger, setFactorInteger] = useState("");
   const [factorBoolean, setFactorBoolean] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
-  const Factors = require("../constants/Factors");
+  const [risk, setRisk] = useState(null);
+
+
   let animation = useRef(new Animated.Value(0));
   const [progress, setProgress] = useState(1);
 
   function prog(){
-    if(progress < 24) {
+    if(progress < factors.length) {
       setProgress(progress + 1);
     }
   }
 
+  const TestResponse = {
+    success: true,
+    payload: [
+      {
+        complication: "diabetes",
+        severity: 4,
+        risk_score: 53,
+      },
+      {
+        complication: "diabetes",
+        severity: 4,
+        risk_score: 53,
+      },
+    ],
+  };
+
+  function addSubFactors() {
+    if (factors[nr].subfactors != null && factors[nr].requirement != null) {
+      let shouldAdd = false;
+      if (factors[nr].answertype === "int") {
+        shouldAdd = checkRequirement(
+            factors[nr].requirement,
+            factorInteger,
+            "int"
+        );
+      } else {
+        shouldAdd = checkRequirement(
+            factors[nr].requirement,
+            factorBoolean,
+            "boolean"
+        );
+      }
+      if (shouldAdd) {
+        let left = factors.slice(0, nr + 1);
+        let right = factors.slice(nr + 1);
+        left.concat(factors[nr].subfactors);
+        left.concat(right);
+        let temp = left.concat(factors[nr].subfactors, right);
+        setFactors(temp);
+      }
+    }
+  }
 
   useEffect(() => {
     if (!isSubmitting) return;
     let tData = data;
-    if (skipped) {
-      tData[Factors.factors[nr].factor] = "skipped";
-    } else if (Factors.factors[nr].answertype === "int") {
-      tData[Factors.factors[nr].factor] = factorInteger;
-    } else {
-      tData[Factors.factors[nr].factor] = factorBoolean;
+    if (!skipped) {
+      if (factors[nr].answertype === "int") {
+        tData[factors[nr].factor] = Number(factorInteger);
+      } else {
+        tData[factors[nr].factor] = factorBoolean;
+      }
+      setData(tData);
+      addSubFactors();
     }
     prog()
-    setData(tData);
+    setSkipped(false);
+    setFactorInteger("");
     setIsSubmitting(false);
     setNr(nr + 1);
   }, [isSubmitting]);
 
   useEffect(() => {
-
-    if (nr >= Factors.factors.length) {
-      postFactors(data);
+    if (nr >= factors.length) {
+      (async function () {
+        const response = await postFactors(data);
+        setRisk(response);
+      })();
     }
   }, [nr]);
 
   useEffect(() => {
     Animated.timing(animation.current, {
       toValue: progress,
-      duration: 24,
+      duration: factors.length,
       useNativeDriver: false,
     }).start();
   }, [progress]);
 
   const width = animation.current.interpolate({
-    inputRange: [0, 24],
+    inputRange: [0, factors.length],
     outputRange: ["0%","100%"],
     extrapolate: "clamp",
   });
 
   return (
-      <View style={styles.main_container}>
-        {nr < Factors.factors.length && !isSubmitting ?
 
-        <View style={progBarStyles.container}>
-          <View style={progBarStyles.progressBar}>
-            <Animated.View
-                style={[
-                  StyleSheet.absoluteFill,
-                  { backgroundColor: "#E15A46", width },
-                ]}
-            />
-          </View>
-          <Text styles={{fontSize:15}}>{`${progress}/24`}</Text>
-        </View>
+      <View style={styles.main_container}>
+        {nr < factors.length ?
+
+            <View style={progBarStyles.container}>
+              <View style={progBarStyles.progressBar}>
+                <Animated.View
+                    style={[
+                      StyleSheet.absoluteFill,
+                      { backgroundColor: "#E15A46", width },
+                    ]}
+                />
+              </View>
+              <Text styles={{fontSize:15}}>{`${progress}/24`}</Text>
+            </View>
             : null}
 
         <View style={styles.container}>
-          {nr < Factors.factors.length && !isSubmitting ? (
-            <View>
-              <Text style={[styles.question, colors.primary]}>
-                {Factors.factors[nr].factor}
-              </Text>
-              {/* NUMERICAL*/}
-              {Factors.factors[nr].answertype === "int" ? (
-                <View>
-                  <TextInput
-                    style={styles.textinput}
-                    onChangeText={(value) => setFactorInteger(value)}
-                    numeric
-                    keyboardType="numeric"
-                    defaultValue=""
-                    maxLength={2}
-                  ></TextInput>
-                  <TouchableHighlight
-                    style={styles.appInputButtons}
-                    activeOpacity={0.6}
-                    underlayColor="#DDDDDD"
-                    onPress={() => setIsSubmitting(true)}
-                  >
-                    <Text style={styles.textTitleBtn}>Continue</Text>
-                  </TouchableHighlight>
-                </View>
-              ) : null}
-              {/* YES or NO*/}
-              {Factors.factors[nr].answertype === "boolean" ? (
-                <View style={{ flexDirection: "row" }}>
-                  <View style={styles.space} />
-                  <TouchableHighlight
-                    style={styles.appInputButtons}
-                    activeOpacity={0.6}
-                    underlayColor="#DDDDDD"
-                    onPress={() => {
-                      setFactorBoolean(true);
-                      setIsSubmitting(true);
-                    }}
-                  >
-                    <Text style={styles.textTitleBtn}>No</Text>
-                  </TouchableHighlight>
-                  <TouchableHighlight
-                    style={styles.appInputButtons}
-                    activeOpacity={0.6}
-                    underlayColor="#DDDDDD"
-                    onPress={() => {
-                      setFactorBoolean(false);
-                      setIsSubmitting(true);
-                    }}
-                  >
-                    <Text style={styles.textTitleBtn}>Yes</Text>
-                  </TouchableHighlight>
-                </View>
-              ) : null}
-              {/* Need to handle skip as "default values" some way*/}
-              <TouchableHighlight
-                style={styles.appInputButtons}
-                activeOpacity={0.6}
-                underlayColor="#DDDDDD"
-                onPress={() => {
-                  setSkipped(true);
-                  setIsSubmitting(true);
-                }}
-              >
-                <Text style={styles.skipBtn}>Skip</Text>
-              </TouchableHighlight>
-            </View>
-          ) : null}
+          {risk != null ? (
+              <Results risk={risk} />
+          ) : (
+              <View>
+                {nr < factors.length ? (
+                    <View>
+                      <Text style={[styles.question, colors.primary]}>
+                        {factors[nr].question}
+                      </Text>
+                      <View style={styles.spacing} />
+                      {/* NUMERICAL*/}
+                      {factors[nr].answertype === "int" ? (
+                          <View>
+                            <TextInput
+                                style={styles.textinput}
+                                onChangeText={(value) =>
+                                    setFactorInteger(value.replace(/[^0-9]/g, ""))
+                                }
+                                numeric
+                                keyboardType="numeric"
+                                value={factorInteger}
+                                maxLength={factors[nr].maxdigits}
+                            ></TextInput>
+                            <View style={styles.spacingBtn} />
+                            <TouchableHighlight
+                                style={styles.inputBtn}
+                                activeOpacity={0.6}
+                                underlayColor="#DDDDDD"
+                                onPress={() =>
+                                    factorInteger == ""
+                                        ? setIsSubmitting(false)
+                                        : setIsSubmitting(true)
+                                }
+                            >
+                              <Text style={styles.textTitleBtn}>Continue</Text>
+                            </TouchableHighlight>
+                          </View>
+                      ) : null}
+                      {/* YES or NO*/}
+                      {factors[nr].answertype === "boolean" ? (
+                          <View style={styles.spacingBtn}>
+                            <View>
+                              <TouchableHighlight
+                                  style={styles.inputBtn}
+                                  activeOpacity={0.6}
+                                  underlayColor="#DDDDDD"
+                                  onPress={() => {
+                                    setFactorBoolean(false);
+                                    setIsSubmitting(true);
+                                  }}
+                              >
+                                <Text style={styles.textTitleBtn}>No</Text>
+                              </TouchableHighlight>
+                            </View>
+                            <View style={styles.spacingBtn} />
+                            <View>
+                              <TouchableHighlight
+                                  style={styles.inputBtn}
+                                  activeOpacity={0.6}
+                                  underlayColor="#DDDDDD"
+                                  onPress={() => {
+                                    setFactorBoolean(true);
+                                    setIsSubmitting(true);
+                                  }}
+                              >
+                                <Text style={styles.textTitleBtn}>Yes</Text>
+                              </TouchableHighlight>
+                            </View>
+                          </View>
+                      ) : null}
+                      {factors[nr].skippable ? (
+                          <View>
+                            <View style={styles.spacingBtn} />
+                            <TouchableHighlight
+                                style={styles.inputBtn}
+                                activeOpacity={0.6}
+                                underlayColor="#DDDDDD"
+                                onPress={() => {
+                                  setSkipped(true);
+                                  setIsSubmitting(true);
+                                }}
+                            >
+                              <Text style={styles.skipBtn}>Skip</Text>
+                            </TouchableHighlight>
+                          </View>
+                      ) : null}
+                    </View>
+                ) : (
+                    <View>
+                      {Platform.OS !== "web" ? (
+                          <View>
+                            <Results risk={TestResponse} />
+                            <Text>
+                              This is a test response, it does not come from the server.
+                            </Text>
+                          </View>
+                      ) : (
+                          <Text>Loading...</Text>
+                      )}
+                    </View>
+                )}
+              </View>
+          )}
         </View>
       </View>
   );
 }
 
 const styles = StyleSheet.create({
-  main_container: {
-    flex: 1,
-  },
   container: {
     flex: 1,
     justifyContent: "center",
@@ -168,9 +257,20 @@ const styles = StyleSheet.create({
     margin: "auto",
   },
   question: {
-    fontSize: 30,
     fontWeight: "bold",
-    paddingBottom: 20,
+    textAlign: "center",
+    ...Platform.select({
+      ios: {
+        fontSize: 22,
+      },
+      android: {
+        fontSize: 22,
+      },
+      default: {
+        margin: 150,
+        fontSize: "2rem",
+      },
+    }),
   },
   textinput: {
     width: 200,
@@ -182,29 +282,87 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     color: "black",
     paddingRight: 30, // to ensure the text is never behind the icon
-  },
-  appInputButtons: {
-    elevation: 7,
-    backgroundColor: "#E15A46",
-    borderRadius: 15,
-    paddingHorizontal: 10,
-    paddingVertical: 8,
-    maxWidth: 150,
-    minWidth: 150,
     alignSelf: "center",
   },
+  inputBtn: {
+    elevation: 7,
+    backgroundColor: "#BF1616",
+    borderRadius: 7,
+    alignSelf: "center",
+    ...Platform.select({
+      ios: {
+        paddingHorizontal: 10,
+        paddingVertical: 8,
+        maxWidth: 150,
+        minWidth: 150,
+      },
+      android: {
+        paddingHorizontal: 10,
+        paddingVertical: 8,
+        maxWidth: 150,
+        minWidth: 150,
+      },
+      default: {
+        paddingHorizontal: 10,
+        paddingVertical: 8,
+        maxWidth: 150,
+        minWidth: 150,
+      },
+    }),
+  },
   textTitleBtn: {
-    fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
+    color: "white",
     marginVertical: 4,
+    ...Platform.select({
+      ios: {
+        fontSize: 18,
+      },
+      android: {
+        fontSize: 18,
+      },
+      default: {
+        fontSize: "1rem",
+      },
+    }),
   },
   skipBtn: {
-    fontSize: 16,
-    color: "#FFFFFF",
     fontWeight: "bold",
     textAlign: "center",
+    color: "white",
     marginVertical: 4,
+    ...Platform.select({
+      ios: {
+        fontSize: 18,
+      },
+      android: {
+        fontSize: 18,
+      },
+      default: {
+        fontSize: "1rem",
+      },
+    }),
+  },
+  spacingBtn: {
+    flexDirection: "row",
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    alignSelf: "center",
+  },
+  spacing: {
+    flexDirection: "row",
+    ...Platform.select({
+      ios: {
+        paddingVertical: 20,
+      },
+      android: {
+        paddingVertical: 20,
+      },
+      default: {
+        paddingVertical: 2,
+      },
+    }),
   },
 });
 
