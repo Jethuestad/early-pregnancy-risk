@@ -14,11 +14,11 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     ...Platform.select({
       web: {
         alignItems: "center",
         marginTop: 20,
-        marginBottom: 10,
         paddingBottom: 20,
         borderBottomColor: "black",
         borderBottomWidth: 2,
