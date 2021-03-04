@@ -9,8 +9,7 @@ module.exports = {
     },
     {
       factor: "parity",
-      question:
-        "How many times have you previously been pregnant, including births, miscarriages, and stillbirths",
+      question:"How many times have you previously been pregnant, including births, miscarriages, and stillbirths",
       answertype: "int",
       skippable: false,
       maxdigits: 1,
@@ -18,8 +17,7 @@ module.exports = {
       subfactors: [
         {
           factor: "gdm",
-          question:
-            "Do you currently have, or have previously had Gestational diabetes?",
+          question:"Do you currently have, or have previously had Gestational diabetes?",
           answertype: "boolean",
           skippable: false,
         },
@@ -101,22 +99,19 @@ module.exports = {
     },
     {
       factor: "diet_sugar",
-      question:
-        "Do you drink sugar/artificially sweetened beverages more than 4 times a week?",
+      question:"Do you drink sugar/artificially sweetened beverages more than 4 times a week?",
       answertype: "boolean",
       skippable: false,
     },
     {
       factor: "diet_sweets",
-      question:
-        "Do you eat sweets such as ice cream, cakes, or cookies more than 2 times a week?",
+      question:"Do you eat sweets such as ice cream, cakes, or cookies more than 2 times a week?",
       answertype: "boolean",
       skippable: false,
     },
     {
       factor: "diet_processed_meat",
-      question:
-        "Do you eat processed meat products more than zero times a week?",
+      question:"Do you eat processed meat products more than zero times a week?",
       answertype: "boolean",
       skippable: false,
     },

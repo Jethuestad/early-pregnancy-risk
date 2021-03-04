@@ -1,4 +1,5 @@
 export function getSeverity(s) {
+
   switch (s) {
     case 1:
       return "Low";

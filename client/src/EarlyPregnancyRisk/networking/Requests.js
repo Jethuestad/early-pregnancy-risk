@@ -26,7 +26,7 @@ export const getLanguage = async (country_code) => {
 export const getLanguageComponent = async (country_code, component_id) => {
   try {
     let response = await fetch(
-      [ENDPOINTS.translate, country_code, component_id].join("/")
+        [ENDPOINTS.translate, country_code, component_id].join("/")
     );
     let json = await response.json();
     return json;

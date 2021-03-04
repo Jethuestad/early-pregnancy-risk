@@ -1,9 +1,12 @@
-import React, { useCallback, useEffect, useState } from "react";
+
+import React, { useCallback, useEffect, useRef, useState } from "react";
+
 import {
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
+  Animated,
   Platform,
   FlatList,
 } from "react-native";
@@ -13,13 +16,30 @@ import Header from "./Header";
 import Form from "./Form";
 
 export default function FrontPage() {
-  const [showForm, setShowForm] = useState(false);
+
+  const [isLoading, setLoading] = useState(false);
+  const [displayNone, setDisplay] = useState(true);
+
+    useEffect(() => {
+        (async function () {
+            if (isLoading) {
+                try {
+                } finally {
+                    setDisplay(false);
+                    setLoading(false);
+                }
+            }
+        })();
+    }, [isLoading]);
+
 
   return (
     <View style={styles.container}>
-      <Header />
       <View style={styles.background}></View>
-      {!showForm ? (
+
+      <Header />
+
+      {displayNone ? (
         <View style={styles.centre}>
           <View style={styles.infoBox}>
             <Text style={styles.textBox}>
@@ -64,7 +84,7 @@ export default function FrontPage() {
           </View>
         </View>
       ) : (
-        <Form />
+        <Form/>
       )}
 
       <Footer />
@@ -192,5 +212,25 @@ const styles = StyleSheet.create({
         height: "100vh",
       },
     }),
+  },
+});
+
+const progBarStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    borderBottomColor: "black",
+    borderBottomWidth: 2,
+  },
+  progressBar: {
+    flexDirection: "row",
+    height: 20,
+    width: "80%",
+    backgroundColor: "white",
+    borderColor: "#000",
+    borderWidth: 2,
+    borderRadius: 5,
   },
 });
