@@ -17,21 +17,7 @@ import Form from "./Form";
 
 export default function FrontPage() {
 
-  const [isLoading, setLoading] = useState(false);
-  const [displayNone, setDisplay] = useState(true);
-
-    useEffect(() => {
-        (async function () {
-            if (isLoading) {
-                try {
-                } finally {
-                    setDisplay(false);
-                    setLoading(false);
-                }
-            }
-        })();
-    }, [isLoading]);
-
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <View style={styles.container}>
@@ -39,7 +25,7 @@ export default function FrontPage() {
 
       <Header />
 
-      {displayNone ? (
+      {!showForm ? (
         <View style={styles.centre}>
           <View style={styles.infoBox}>
             <Text style={styles.textBox}>
