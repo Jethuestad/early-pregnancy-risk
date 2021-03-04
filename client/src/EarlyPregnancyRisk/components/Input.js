@@ -89,6 +89,7 @@ export function SkipInput({ setSkipped, completed }) {
 const styles = StyleSheet.create({
   textInputContainer: {
     flex: 1,
+    flexDirection: "row",
     alignItems: "center",
   },
   textInput: {
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
     paddingRight: 30, // to ensure the text is never behind the icon
   },
   textInputSpacer: {
-    marginVertical: 20,
+    marginLeft: 20,
   },
   buttonContainer: {
     flex: 1,

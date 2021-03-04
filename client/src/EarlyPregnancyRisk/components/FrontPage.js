@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignSelf: "stretch",
+    alignItems: "center",
   },
   content: {
     flex: 3,
@@ -109,7 +110,7 @@ const styles = StyleSheet.create({
   },
 
   textBox: {
-    padding: 10,
+    padding: 2,
     ...Platform.select({
       ios: {
         maxWidth: 300,
