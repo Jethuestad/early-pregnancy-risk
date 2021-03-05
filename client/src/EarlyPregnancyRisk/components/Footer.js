@@ -24,6 +24,7 @@ export default class Footer extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 0.5,
     borderTopColor: "black",
     borderTopWidth: 2,
     marginTop: "auto",
