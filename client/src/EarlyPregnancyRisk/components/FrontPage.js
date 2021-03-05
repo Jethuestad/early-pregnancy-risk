@@ -8,14 +8,14 @@ import {
   Platform,
   FlatList,
 } from "react-native";
-
+import { isPhone } from "../modules/Device";
 const colors = require("../style/colors");
 
 export default function FrontPage({ changePage }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <View style={styles.row}>
+        <View style={styles.contentBox}>
           <Text style={styles.textBox}>
             Pregnant or planning for a baby? This tool will make you assess your
             health status for a healthy pregnancy and a complication free birth.
@@ -30,7 +30,7 @@ export default function FrontPage({ changePage }) {
             maternal outcome.
           </Text>
         </View>
-        <View style={styles.row}>
+        <View style={styles.contentBox}>
           <FlatList
             data={[
               { key: "Miscarriage" },
@@ -42,7 +42,7 @@ export default function FrontPage({ changePage }) {
               { key: "Postpartum depression" },
             ]}
             renderItem={({ item }) => (
-              <Text style={[styles.textBox, { fontWeight: "bold" }]}>
+              <Text style={[styles.listBox, { fontWeight: "bold" }]}>
                 {item.key}
               </Text>
             )}
@@ -62,72 +62,35 @@ export default function FrontPage({ changePage }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: "column",
     alignSelf: "stretch",
     alignItems: "center",
   },
   content: {
     flex: 3,
+    alignSelf: "stretch",
     flexDirection: "column",
   },
-  row: {
+  contentBox: {
     flex: 1,
-    flexDirection: "row",
+    flexDirection: isPhone() ? "column" : "row",
     alignItems: "center",
     paddingHorizontal: 50,
-    ...Platform.select({
-      ios: {
-        maxWidth: 600,
-        minWidth: 500,
-      },
-      android: {
-        maxWidth: 600,
-        minWidth: 500,
-      },
-      default: {
-        maxWidth: "60rem",
-        minWidth: "50rem",
-      },
-    }),
   },
   buttonContainer: {
     flex: 1,
-    alignItems: "center",
-    ...Platform.select({
-      ios: {
-        maxHeight: 545,
-        minWidth: 500,
-        maxWidth: 1000,
-      },
-      android: {
-        maxHeight: 545,
-        minWidth: 500,
-        maxWidth: 1000,
-      },
-      default: {
-        maxHeight: "54.5vh",
-        minWidth: "50rem",
-        maxWidth: "100vw",
-      },
-    }),
   },
 
   textBox: {
     padding: 2,
-    ...Platform.select({
-      ios: {
-        maxWidth: 300,
-        minWidth: 250,
-      },
-      android: {
-        maxWidth: 300,
-        minWidth: 250,
-      },
-      default: {
-        maxWidth: "30rem",
-        minWidth: "25rem",
-        fontSize: "1.2rem",
-      },
-    }),
+    paddingHorizontal: isPhone() ? "2%" : "5%",
+    paddingVertical: isPhone() ? 20 : 0,
+    fontSize: 20,
+  },
+  listBox: {
+    padding: 2,
+    paddingHorizontal: isPhone() ? "2%" : "5%",
+    fontSize: 20,
   },
   button: {
     width: 200,

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Platform } from "react-native";
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
 import Progressbar from "../components/Progressbar";
+import { isPhone } from "../modules/Device";
 
 const colors = require("../style/colors");
 
@@ -130,21 +131,21 @@ const styles = StyleSheet.create({
     alignSelf: "stretch",
   },
   spacer: {
-    flex: 5,
+    flex: isPhone() ? 0 : 5,
   },
   progressBarContainer: {
-    flex: 2,
+    flex: isPhone() ? 1 : 2,
     alignItems: "center",
     justifyContent: "center",
   },
   questionContainer: {
-    flex: 2,
+    flex: isPhone() ? 3 : 2,
     alignSelf: "stretch",
     alignItems: "center",
     justifyContent: "center",
   },
   buttonContainer: {
-    flex: 3,
+    flex: isPhone() ? 2 : 3,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -163,7 +164,7 @@ const styles = StyleSheet.create({
     marginHorizontal: "15%",
     ...Platform.select({
       web: {
-        fontSize: "2rem",
+        fontSize: isPhone() ? "1.5rem" : "2rem",
       },
       default: {
         fontSize: 25,

@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Platform } from "react-native";
+import { isPhone } from "../modules/Device";
 
 const colors = require("../style/colors");
 
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     ...Platform.select({
       web: {
-        fontSize: 50,
+        fontSize: isPhone() ? 30 : 50,
       },
       default: {
         fontSize: 30,
