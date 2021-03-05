@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import { StyleSheet, View, Animated } from "react-native";
+import { StyleSheet, View, Animated, Text } from "react-native";
+
+const colors = require("../style/colors");
 
 export default function SkipInput({ progress, total }) {
   let animation = useRef(new Animated.Value(0));
@@ -18,21 +20,51 @@ export default function SkipInput({ progress, total }) {
   }, [progress]);
 
   return (
-    <View style={styles.progressBar}>
-      <Animated.View
-        style={[StyleSheet.absoluteFill, { backgroundColor: "#E15A46", width }]}
-      />
+    <View style={styles.container}>
+      <View style={styles.progressBar}>
+        <Animated.View
+          style={[
+            StyleSheet.absoluteFill,
+            { backgroundColor: colors.primary, width },
+          ]}
+        />
+        <Text
+          style={[
+            styles.text,
+            progress / total > 0.5
+              ? { color: colors.white }
+              : { color: colors.black },
+          ]}
+        >
+          {Math.trunc((progress / total) * 100)}%
+        </Text>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    alignSelf: "stretch",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10,
+  },
   progressBar: {
-    height: 20,
+    height: 30,
     width: "80%",
-    backgroundColor: "white",
-    borderColor: "#000",
+    backgroundColor: colors.white,
+    borderColor: colors.black,
     borderWidth: 1,
-    borderRadius: 10,
+  },
+  text: {
+    position: "absolute",
+    width: "100%",
+    textAlign: "center",
+    justifyContent: "center",
+    fontWeight: "bold",
+    fontSize: 20,
   },
 });

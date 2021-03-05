@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { getSeverity } from "../modules/Severity";
 import { postFactors } from "../networking/Requests";
-import colors from "../style/colors";
+
+const colors = require("../style/colors");
 
 export default function Form({ data }) {
   const [risk, setRisk] = useState();
@@ -28,11 +29,9 @@ export default function Form({ data }) {
         {response.payload.map((item, index) => {
           return (
             <View key={index}>
-              <View style={[styles.containerText]}>
-                <Text style={[colors.primary, styles.complication]}>
-                  {item.complication}
-                </Text>
-                <Text style={[styles.severity]}>
+              <View style={styles.containerText}>
+                <Text style={styles.complication}>{item.complication}</Text>
+                <Text style={styles.severity}>
                   {getSeverity(item.severity)}
                 </Text>
               </View>
@@ -61,8 +60,12 @@ export default function Form({ data }) {
         renderResponse(risk)
       ) : (
         <View style={styles.container}>
-          <Text>This is a test response</Text>
           {renderResponse(testResponse)}
+          <Text
+            style={{ fontSize: 20, fontWeight: "bold", color: colors.primary }}
+          >
+            Note: This is test information, waiting for server response...
+          </Text>
         </View>
       )}
     </View>
@@ -80,7 +83,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "left",
   },
   containerText: {
     flexDirection: "row",
@@ -90,6 +93,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     textTransform: "capitalize",
     fontWeight: "bold",
+    color: colors.primary,
   },
   severity: {
     fontSize: 30,

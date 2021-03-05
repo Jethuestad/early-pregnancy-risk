@@ -9,6 +9,8 @@ import {
   FlatList,
 } from "react-native";
 
+const colors = require("../style/colors");
+
 export default function FrontPage({ changePage }) {
   return (
     <View style={styles.container}>
@@ -133,7 +135,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     justifyContent: "center",
     margin: 10,
-    backgroundColor: "#BF1616",
+    backgroundColor: colors.primary,
     ...Platform.select({
       ios: {
         borderRadius: 5,
@@ -147,7 +149,7 @@ const styles = StyleSheet.create({
     }),
   },
   buttonText: {
-    color: "white",
+    color: colors.white,
     textAlign: "center",
     ...Platform.select({
       ios: {

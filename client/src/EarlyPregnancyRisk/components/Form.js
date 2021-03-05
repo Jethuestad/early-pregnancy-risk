@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, Platform } from "react-native";
-import colors from "../style/colors";
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
 import Progressbar from "../components/Progressbar";
+
+const colors = require("../style/colors");
 
 export default function Form({ changePage }) {
   const Factors = require("../constants/Factors");
@@ -99,14 +100,9 @@ export default function Form({ changePage }) {
         <View style={styles.container}>
           <View style={styles.progressBarContainer}>
             <Progressbar progress={nr} total={factors.length} />
-            <Text>
-              {nr}/{factors.length}
-            </Text>
           </View>
           <View style={styles.questionContainer}>
-            <Text style={[styles.question, colors.primary]}>
-              {factors[nr].question}
-            </Text>
+            <Text style={styles.question}>{factors[nr].question}</Text>
           </View>
           <View style={styles.buttonContainer}>
             {renderInput(factors[nr].answertype)}
@@ -156,11 +152,12 @@ const styles = StyleSheet.create({
     height: 20,
     width: "80%",
     backgroundColor: "white",
-    borderColor: "#000",
+    borderColor: colors.black,
     borderWidth: 1,
     borderRadius: 10,
   },
   question: {
+    color: colors.primary,
     fontWeight: "bold",
     textAlign: "center",
     marginHorizontal: "15%",

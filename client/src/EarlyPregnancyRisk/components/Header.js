@@ -1,15 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 import { StyleSheet, Text, View, Platform } from "react-native";
-import colors from "../style/colors";
 
-export default class Header extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={[styles.text, colors.primary]}>Early Pregnancy Risk</Text>
-      </View>
-    );
-  }
+const colors = require("../style/colors");
+
+export default function Header({ changePage }) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text} onPress={() => changePage()}>
+        Early Pregnancy Risk
+      </Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -30,6 +31,7 @@ const styles = StyleSheet.create({
     }),
   },
   text: {
+    color: colors.primary,
     fontWeight: "bold",
     ...Platform.select({
       web: {

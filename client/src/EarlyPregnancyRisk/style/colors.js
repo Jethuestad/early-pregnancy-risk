@@ -1,8 +1,6 @@
-import { StyleSheet } from "react-native";
-
-export default StyleSheet.create({
-  primary: { color: "#BF3B29" },
-  secondary: { color: "#BF602D" },
-  black: { color: "#262626" },
-  white: { color: "#f2f2f2" },
-});
+module.exports = {
+  primary: "#BF3B29",
+  secondary: "#BF602D",
+  black: "#262626",
+  white: "#f2f2f2",
+};

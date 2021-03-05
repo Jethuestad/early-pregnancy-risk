@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, Platform, Linking } from "react-native";
 import text from "../style/text";
-import colors from "../style/colors";
+
+const colors = require("../style/colors");
 
 export default class Footer extends Component {
   render() {
     // Only display the footer on the web.
     return Platform.OS === "web" ? (
       <View style={styles.container}>
-        <Text style={[text.p, colors.black]}>
+        <Text style={text.p}>
           Early Pregnancy Risk {new Date().getFullYear()}
         </Text>
         <Text
-          style={[text.p, colors.black]}
+          style={text.p}
           onPress={() => Linking.openURL("http://google.com")}
         >
           Privacy Information

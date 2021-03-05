@@ -8,6 +8,8 @@ import {
   TouchableHighlight,
 } from "react-native";
 
+const colors = require("../style/colors");
+
 export function IntInput({ value, setValue, completed, maxDigits }) {
   return (
     <View style={styles.textInputContainer}>
@@ -25,7 +27,7 @@ export function IntInput({ value, setValue, completed, maxDigits }) {
         <TouchableHighlight
           style={styles.button}
           activeOpacity={0.6}
-          underlayColor="#DDDDDD"
+          underlayColor={colors.secondary}
           onPress={() => (value == "" ? completed(false) : completed(true))}
         >
           <Text style={styles.buttonText}>Continue</Text>
@@ -42,7 +44,7 @@ export function BooleanInput({ setValue, completed }) {
         <TouchableHighlight
           style={styles.button}
           activeOpacity={0.6}
-          underlayColor="#DDDDDD"
+          underlayColor={colors.secondary}
           onPress={() => {
             setValue(true);
             completed();
@@ -55,7 +57,7 @@ export function BooleanInput({ setValue, completed }) {
         <TouchableHighlight
           style={styles.button}
           activeOpacity={0.6}
-          underlayColor="#DDDDDD"
+          underlayColor={colors.secondary}
           onPress={() => {
             setValue(false);
             completed();
@@ -99,8 +101,9 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     borderWidth: 1,
     borderRadius: 8,
-    borderColor: "black",
-    color: "black",
+    borderColor: colors.black,
+    color: colors.black,
+    backgroundColor: colors.white,
     paddingRight: 30, // to ensure the text is never behind the icon
   },
   textInputSpacer: {
@@ -113,7 +116,7 @@ const styles = StyleSheet.create({
   buttonSpacer: { marginHorizontal: 20 },
   button: {
     elevation: 7,
-    backgroundColor: "#BF1616",
+    backgroundColor: colors.primary,
     borderRadius: 7,
     paddingHorizontal: 10,
     paddingVertical: 12,
@@ -122,7 +125,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontWeight: "bold",
     textAlign: "center",
-    color: "white",
+    color: colors.white,
     ...Platform.select({
       web: {
         fontSize: "1rem",

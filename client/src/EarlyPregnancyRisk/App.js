@@ -13,13 +13,7 @@ export default function App() {
   const renderPage = () => {
     switch (page) {
       case 0:
-        return (
-          <FrontPage
-            changePage={() => {
-              setPage(1);
-            }}
-          />
-        );
+        return <FrontPage changePage={() => setPage(1)} />;
       case 1:
         return (
           <Form
@@ -38,7 +32,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Header />
+      <Header changePage={() => setPage(0)} />
       <View style={{ flex: 15 }}>{renderPage()}</View>
       <Footer />
     </View>
