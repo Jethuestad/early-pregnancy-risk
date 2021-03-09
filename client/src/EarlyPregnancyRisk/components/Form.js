@@ -10,25 +10,19 @@ const colors = require("../style/colors");
 
 export default function Form({ changePage }) {
   const Factors = require("../constants/Factors");
-  const Refrences = require("../constants/Refrences");
+
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [nr, setNr] = useState(0);
   const [factors, setFactors] = useState(Factors.factors);
-  const [refrences, setRefrences] = useState(Refrences.refrences);
   const [factorInteger, setFactorInteger] = useState("");
   const [factorBoolean, setFactorBoolean] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
   const [visible, setVisible] = useState(false);
-  const [ListRefVisible, setListRefVisible] = useState(false);
-
 
   const toggleOverlay = () => {
     setVisible(!visible);
-  };
-  const toggleOverlayListRef = () => {
-    setListRefVisible(!ListRefVisible);
   };
 
   function addSubFactors() {
@@ -54,14 +48,6 @@ export default function Form({ changePage }) {
         left.concat(right);
         let temp = left.concat(factors[nr].subfactors, right);
         setFactors(temp);
-
-        let leftRef = refrences.slice(0, nr + 1);
-        let rightRef = refrences.slice(nr + 1);
-        leftRef.concat(refrences[nr].subfactors);
-        leftRef.concat(rightRef);
-        let tempRef = left.concat(refrences[nr].subfactors, rightRef);
-        setRefrences(tempRef);
-
       }
     }
   }
@@ -129,11 +115,7 @@ export default function Form({ changePage }) {
             <Button title="See documentation" onPress={toggleOverlay} type="clear" titleStyle={{color: colors.primary}} />
 
             <Overlay isVisible={visible} onBackdropPress={toggleOverlay}>
-              <Text>{refrences[nr].ref}</Text>
-              <Button title="See refrence list" onPress={toggleOverlayListRef} type="clear" titleStyle={{color: colors.primary}}/>
-              <Overlay isVisible={ListRefVisible} onBackdropPress={toggleOverlayListRef}>
-                <ReferenceList />
-              </Overlay>
+              <ReferenceList refNumb={factors[nr].ref}/>
             </Overlay>
 
           </View>

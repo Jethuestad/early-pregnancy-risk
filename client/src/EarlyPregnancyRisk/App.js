@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, View } from "react-native";
 import FrontPage from "./components/FrontPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
