@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Results from "./components/Results";
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function App() {
   const [page, setPage] = useState(0);
@@ -31,11 +32,13 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
-      <Header changePage={() => setPage(0)} />
-      <View style={{ flex: 15 }}>{renderPage()}</View>
-      <Footer />
-    </View>
+      <SafeAreaProvider>
+        <View style={styles.container}>
+          <Header changePage={() => setPage(0)} />
+          <View style={{ flex: 15 }}>{renderPage()}</View>
+          <Footer />
+        </View>
+      </SafeAreaProvider>
   );
 }
 
