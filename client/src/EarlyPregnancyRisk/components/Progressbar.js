@@ -36,7 +36,7 @@ export default function SkipInput({ progress, total }) {
               : { color: colors.black },
           ]}
         >
-          {Math.trunc((progress / total) * 100)}%
+          {progress}/{total}
         </Text>
       </View>
     </View>
