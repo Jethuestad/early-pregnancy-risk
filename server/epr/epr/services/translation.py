@@ -10,6 +10,7 @@ from django.views.decorators.csrf import csrf_exempt
 def question_translation(request, lang_code: str):
     return translation_handler(lang_code, "Question")
 
+@csrf_exempt
 @exception_handler_request
 def text_translation(request, lang_code: str):
     return translation_handler(lang_code, "Text")
