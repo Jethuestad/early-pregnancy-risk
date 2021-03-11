@@ -5,8 +5,8 @@ from ..utilities.decorators import exception_handler_request
 from ..exceptions.api_exceptions import InternalServerError
 from django.views.decorators.csrf import csrf_exempt
 
-@exception_handler_request
 @csrf_exempt
+@exception_handler_request
 def question_translation(request, lang_code: str):
     return translation_handler(lang_code, "Question")
 
