@@ -221,6 +221,149 @@
     }
   },
   {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2021-03-11T23:04:08.060Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "integer",
+      "object_repr": "AnswerType object (integer)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2021-03-11T23:07:06.066Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "age",
+      "object_repr": "age (integer)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2021-03-11T23:07:18.126Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "age",
+      "object_repr": "age (integer)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2021-03-11T23:07:21.895Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "age",
+      "object_repr": "age (integer)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2021-03-11T23:08:38.926Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "Question: parity",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2021-03-11T23:08:50.037Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "boolean",
+      "object_repr": "boolean",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2021-03-11T23:09:03.779Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "parity",
+      "object_repr": "parity (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2021-03-11T23:09:35.908Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "Question: diabetes",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2021-03-11T23:10:17.415Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "diabetes",
+      "object_repr": "diabetes (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2021-03-11T23:11:07.807Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "7",
+      "object_repr": "Question: parity (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2021-03-11T23:11:28.766Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "8",
+      "object_repr": "Question: diabetes (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -581,11 +724,83 @@
     }
   },
   {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add answer type",
+      "content_type": 11,
+      "codename": "add_answertype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change answer type",
+      "content_type": 11,
+      "codename": "change_answertype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete answer type",
+      "content_type": 11,
+      "codename": "delete_answertype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view answer type",
+      "content_type": 11,
+      "codename": "view_answertype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add factor",
+      "content_type": 12,
+      "codename": "add_factor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change factor",
+      "content_type": 12,
+      "codename": "change_factor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete factor",
+      "content_type": 12,
+      "codename": "delete_factor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view factor",
+      "content_type": 12,
+      "codename": "view_factor"
+    }
+  },
+  {
     "model": "auth.user",
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$216000$jb0X3lHt7uyq$EACDKu5TMQdYtVPFTENuhJdKdo5O1NEKp//46pst06U=",
-      "last_login": "2021-03-11T13:32:07.300Z",
+      "last_login": "2021-03-11T13:33:31.846Z",
       "is_superuser": true,
       "username": "admin",
       "first_name": "",
@@ -649,11 +864,29 @@
     "fields": { "app_label": "epr", "model": "translation" }
   },
   {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": { "app_label": "epr", "model": "answertype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": { "app_label": "epr", "model": "factor" }
+  },
+  {
     "model": "sessions.session",
     "pk": "9rmf421d7w7kmkry3mtcrvrskdnohops",
     "fields": {
       "session_data": ".eJxVjEEOwiAQRe_C2hBmijK4dO8ZmgEGqRpISrsy3l2bdKHb_977LzXyupRx7TKPU1JnBerwuwWOD6kbSHeut6Zjq8s8Bb0peqddX1uS52V3_w4K9_KtacjoQrRClgWIPJ8cYnY5ZiA3JHJoBMAQB2OBfcAECT1I9B7xmNX7A9mIN3o:1lKLQ7:B4Xq0fQaIEml2fHAxPDue-NAu3btE2AnWQpzetSaNaw",
       "expire_date": "2021-03-25T13:32:07.302Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "fx8tul2rb6v1151yc0kc994hi8dbss9f",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBmijK4dO8ZmgEGqRpISrsy3l2bdKHb_977LzXyupRx7TKPU1JnBerwuwWOD6kbSHeut6Zjq8s8Bb0peqddX1uS52V3_w4K9_KtacjoQrRClgWIPJ8cYnY5ZiA3JHJoBMAQB2OBfcAECT1I9B7xmNX7A9mIN3o:1lKLRT:hx_wm_bQO-o5QW8ckKzxZpc0yz9r__i01y8ZpS2E_GA",
+      "expire_date": "2021-03-25T13:33:31.849Z"
     }
   },
   {
@@ -688,6 +921,16 @@
     "model": "epr.content",
     "pk": 3,
     "fields": { "name": "front page paragraph 1", "content_type": "Text" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 4,
+    "fields": { "name": "parity", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 5,
+    "fields": { "name": "diabetes", "content_type": "Question" }
   },
   {
     "model": "epr.translation",
@@ -741,6 +984,62 @@
       "language_code": 3,
       "belongs_to": 1,
       "text": "Quel âge avez-vous?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 7,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 4,
+      "text": "How many times have you previously been pregnant, including births, miscarriages, and stillbirths?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 8,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 5,
+      "text": "Do you currently have, or have previously had Gestational diabetes?"
+    }
+  },
+  { "model": "epr.answertype", "pk": "boolean", "fields": {} },
+  { "model": "epr.answertype", "pk": "integer", "fields": {} },
+  {
+    "model": "epr.factor",
+    "pk": "age",
+    "fields": {
+      "question": 1,
+      "answertype": "integer",
+      "skippable": true,
+      "max_digits": 2,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "diabetes",
+    "fields": {
+      "question": 5,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": "parity"
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "parity",
+    "fields": {
+      "question": 4,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": ">0",
+      "parent_factor": null
     }
   }
 ]
