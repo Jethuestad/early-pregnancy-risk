@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .services.score_calculator import get_score
+from .services.translation import question_translation, text_translation
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('calculate/', get_score)
+    path('calculate/', get_score),
+    path('translate/questions/<str:lang_code>', question_translation),
+    path('translate/text/<str:lang_code>', text_translation),
 ]
