@@ -44,3 +44,24 @@ class Translation(models.Model):
 
     def __str__(self) -> str:
         return f"{self.belongs_to} ({self.language_code})"
+
+
+class AnswerType(models.Model):
+    type = LowerCaseField(max_length=100, primary_key=True)
+
+    def __str__(self) -> str:
+        return self.type
+
+
+class Factor(models.Model):
+    factor_name = LowerCaseField(max_length=100, primary_key=True)
+    question = models.ForeignKey(Content, on_delete=models.CASCADE)
+    answertype = models.ForeignKey(AnswerType, on_delete=models.CASCADE)
+    skippable = models.BooleanField(default=True)
+    max_digits = models.PositiveIntegerField(null=True, blank=True)
+    requirement = models.CharField(max_length=10, null=True, blank=True)
+    parent_factor = models.ForeignKey(
+        "self", on_delete=models.CASCADE, null=True, blank=True)
+
+    def __str__(self) -> str:
+        return f"{self.factor_name} ({self.answertype})"
