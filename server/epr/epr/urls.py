@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from .services.score_calculator import get_score
 from .services.translation import question_translation, text_translation
+from .services.factors import get_factors
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('calculate/', get_score),
     path('translate/questions/<str:lang_code>', question_translation),
     path('translate/text/<str:lang_code>', text_translation),
+    path('factors/<str:lang_code>', get_factors)
 ]
