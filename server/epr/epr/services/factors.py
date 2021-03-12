@@ -17,8 +17,7 @@ def serialize_factor(factor: Factor, questions: BaseManager, lang_code: str) -> 
     question = questions.filter(belongs_to=factor.question)
 
     if (len(question) != 1):
-        raise InternalServerError(
-            custom_msg=f"Factor ({factor.factor_name}) doesn't have a question in the selected langauge. ({lang_code})")
+        return None
 
     # Find all factors which has this factor as a parent
     queried_sub_factors = Factor.objects.filter(
