@@ -5,8 +5,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Results from "./components/Results";
+import { getFactors } from "./networking/Requests";
+import { Button } from "react-native";
 
 export default function App() {
+  const COUNTRY_CODES = require("./constants/CountryCodes");
+
+  const [language, setLanguage] = useState(COUNTRY_CODES.english);
+  const [factors, setFactors] = useState(null);
   const [page, setPage] = useState(0);
   const [data, setData] = useState();
 
@@ -21,6 +27,7 @@ export default function App() {
               setPage(2);
               setData(r);
             }}
+            factor_data={factors}
           />
         );
       case 2:
@@ -30,9 +37,23 @@ export default function App() {
     }
   };
 
+  useEffect(() => {
+    (async function () {
+      const response = await getFactors(language);
+      setFactors(response);
+    })();
+  }, [language]);
+
   return (
     <View style={styles.container}>
-      <Header changePage={() => setPage(0)} />
+      <Header
+        changePage={() => setPage(0)}
+        setLang={(lang) => {
+          setPage(0);
+          setLanguage(lang);
+        }}
+        language={language}
+      />
       <View style={{ flex: 15 }}>{renderPage()}</View>
       <Footer />
     </View>

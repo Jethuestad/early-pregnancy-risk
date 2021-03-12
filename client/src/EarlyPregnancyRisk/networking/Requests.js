@@ -26,11 +26,21 @@ export const getLanguage = async (country_code) => {
 export const getLanguageComponent = async (country_code, component_id) => {
   try {
     let response = await fetch(
-        [ENDPOINTS.translate, country_code, component_id].join("/")
+      [ENDPOINTS.translate, country_code, component_id].join("/")
     );
     let json = await response.json();
     return json;
   } catch {
+    console.error(error);
+  }
+};
+
+export const getFactors = async (country_code) => {
+  try {
+    let response = await fetch([ENDPOINTS.factors, country_code].join("/"));
+    let json = await response.text();
+    return JSON.parse(json).payload.factors;
+  } catch (error) {
     console.error(error);
   }
 };

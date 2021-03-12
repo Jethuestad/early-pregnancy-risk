@@ -1,21 +1,31 @@
 import React from "react";
-import { StyleSheet, Text, View, Platform } from "react-native";
+import Flag from "react-native-flags";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Platform,
+  TouchableOpacity,
+} from "react-native";
+import LanguageSelect from "./LanguageSelect";
 
 const colors = require("../style/colors");
 
-export default function Header({ changePage }) {
+export default function Header({ changePage, setLang, language }) {
+  const COUNTRY_CODES = require("../constants/CountryCodes");
   return (
     <View style={styles.container}>
       <Text style={styles.text} onPress={() => changePage()}>
         Early Pregnancy Risk
       </Text>
+      <LanguageSelect setLang={setLang} language={language} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
     ...Platform.select({
       web: {
         alignItems: "center",

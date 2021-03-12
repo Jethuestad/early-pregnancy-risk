@@ -6,12 +6,10 @@ import Progressbar from "../components/Progressbar";
 
 const colors = require("../style/colors");
 
-export default function Form({ changePage }) {
-  const Factors = require("../constants/Factors");
-
+export default function Form({ changePage, factor_data }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [nr, setNr] = useState(0);
-  const [factors, setFactors] = useState(Factors.factors);
+  const [factors, setFactors] = useState(factor_data);
   const [factorInteger, setFactorInteger] = useState("");
   const [factorBoolean, setFactorBoolean] = useState(false);
   const [skipped, setSkipped] = useState(false);
@@ -20,11 +18,11 @@ export default function Form({ changePage }) {
   function addSubFactors() {
     if (factors[nr].subfactors != null && factors[nr].requirement != null) {
       let shouldAdd = false;
-      if (factors[nr].answertype === "int") {
+      if (factors[nr].answertype === "integer") {
         shouldAdd = checkRequirement(
           factors[nr].requirement,
           factorInteger,
-          "int"
+          "integer"
         );
       } else {
         shouldAdd = checkRequirement(
@@ -46,7 +44,7 @@ export default function Form({ changePage }) {
 
   function renderInput(type) {
     switch (type) {
-      case "int":
+      case "integer":
         return (
           <IntInput
             value={factorInteger}
@@ -74,7 +72,7 @@ export default function Form({ changePage }) {
     if (!isSubmitting) return;
     let tData = data;
     if (!skipped) {
-      if (factors[nr].answertype === "int") {
+      if (factors[nr].answertype === "integer") {
         tData[factors[nr].factor] = Number(factorInteger);
       } else {
         tData[factors[nr].factor] = factorBoolean;
@@ -89,14 +87,14 @@ export default function Form({ changePage }) {
   }, [isSubmitting]);
 
   useEffect(() => {
-    if (nr >= factors.length) {
+    if (factors != null && nr >= factors.length) {
       changePage(data);
     }
   }, [nr]);
 
   return (
     <View style={styles.container}>
-      {nr < factors.length ? (
+      {factors != null && nr < factors.length ? (
         <View style={styles.container}>
           <View style={styles.progressBarContainer}>
             <Progressbar progress={nr} total={factors.length} />
