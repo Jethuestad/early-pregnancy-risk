@@ -1,7 +1,11 @@
-import { Dimensions } from "react-native";
+export function isTablet(width) {
+  return width < 1200;
+}
 
-const window = Dimensions.get("window");
+export function isPhone(width) {
+  return width < 500;
+}
 
-export function isPhone() {
-  return window.width < 600;
+export function isSmallPhone(width) {
+  return width < 400;
 }

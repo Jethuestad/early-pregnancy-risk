@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, Platform } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Platform,
+  useWindowDimensions,
+} from "react-native";
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
 import Progressbar from "../components/Progressbar";
@@ -8,6 +14,7 @@ import { isPhone } from "../modules/Device";
 const colors = require("../style/colors");
 
 export default function Form({ changePage }) {
+  const { width, height } = useWindowDimensions();
   const Factors = require("../constants/Factors");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -96,16 +103,16 @@ export default function Form({ changePage }) {
   }, [nr]);
 
   return (
-    <View style={styles.container}>
+    <View style={styles(width).container}>
       {nr < factors.length ? (
-        <View style={styles.container}>
-          <View style={styles.progressBarContainer}>
+        <View style={styles(width).container}>
+          <View style={styles(width).progressBarContainer}>
             <Progressbar progress={nr} total={factors.length} />
           </View>
-          <View style={styles.questionContainer}>
-            <Text style={styles.question}>{factors[nr].question}</Text>
+          <View style={styles(width).questionContainer}>
+            <Text style={styles(width).question}>{factors[nr].question}</Text>
           </View>
-          <View style={styles.buttonContainer}>
+          <View style={styles(width).buttonContainer}>
             {renderInput(factors[nr].answertype)}
             {factors[nr].skippable ? (
               <SkipInput
@@ -116,7 +123,7 @@ export default function Form({ changePage }) {
               />
             ) : null}
           </View>
-          <View style={styles.spacer}></View>
+          <View style={styles(width).spacer}></View>
         </View>
       ) : (
         <Text>Loading...</Text>
@@ -125,50 +132,51 @@ export default function Form({ changePage }) {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignSelf: "stretch",
-  },
-  spacer: {
-    flex: isPhone() ? 0 : 5,
-  },
-  progressBarContainer: {
-    flex: isPhone() ? 1 : 2,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  questionContainer: {
-    flex: isPhone() ? 3 : 2,
-    alignSelf: "stretch",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  buttonContainer: {
-    flex: isPhone() ? 2 : 3,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  progressBar: {
-    height: 20,
-    width: "80%",
-    backgroundColor: "white",
-    borderColor: colors.black,
-    borderWidth: 1,
-    borderRadius: 10,
-  },
-  question: {
-    color: colors.primary,
-    fontWeight: "bold",
-    textAlign: "center",
-    marginHorizontal: "15%",
-    ...Platform.select({
-      web: {
-        fontSize: isPhone() ? "1.5rem" : "2rem",
-      },
-      default: {
-        fontSize: 25,
-      },
-    }),
-  },
-});
+const styles = (width) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      alignSelf: "stretch",
+    },
+    spacer: {
+      flex: isPhone(width) ? 0 : 5,
+    },
+    progressBarContainer: {
+      flex: isPhone(width) ? 1 : 2,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    questionContainer: {
+      flex: isPhone(width) ? 3 : 2,
+      alignSelf: "stretch",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    buttonContainer: {
+      flex: isPhone(width) ? 2 : 3,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    progressBar: {
+      height: 20,
+      width: "80%",
+      backgroundColor: "white",
+      borderColor: colors.black,
+      borderWidth: 1,
+      borderRadius: 10,
+    },
+    question: {
+      color: colors.primary,
+      fontWeight: "bold",
+      textAlign: "center",
+      marginHorizontal: "15%",
+      ...Platform.select({
+        web: {
+          fontSize: isPhone(width) ? "1.5rem" : "2rem",
+        },
+        default: {
+          fontSize: 25,
+        },
+      }),
+    },
+  });
