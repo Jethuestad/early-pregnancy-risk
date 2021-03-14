@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { getSeverity } from "../modules/Severity";
 import { postFactors } from "../networking/Requests";
+import Loading from "./Loading";
 
 const colors = require("../style/colors");
 
@@ -60,12 +61,7 @@ export default function Form({ data }) {
         renderResponse(risk)
       ) : (
         <View style={styles.container}>
-          {renderResponse(testResponse)}
-          <Text
-            style={{ fontSize: 20, fontWeight: "bold", color: colors.primary }}
-          >
-            Note: This is test information, waiting for server response...
-          </Text>
+          <Loading />
         </View>
       )}
     </View>

@@ -35,30 +35,27 @@ export default function FrontPage({ changePage }) {
           </Text>
         </View>
         <View style={styles(width).contentBox}>
-          <FlatList
-            data={[
-              { key: "Miscarriage" },
-              { key: "Gestational Diabetes Mellitus" },
-              { key: "Preeclampsia" },
-              { key: "Pre-term birth" },
-              { key: "Still birth" },
-              { key: "Caesarean section" },
-              { key: "Postpartum depression" },
-            ]}
-            style={styles(width).listBox}
-            renderItem={({ item }) => (
-              <Text style={styles(width).listText}>&bull; {item.key}</Text>
-            )}
-          />
+          <View style={styles(width).listBox}>
+            <Text style={styles(width).listText}>&bull; Miscarriage</Text>
+            <Text style={styles(width).listText}>
+              &bull; Gestational Diabetes Mellitus
+            </Text>
+            <Text style={styles(width).listText}>&bull; Preeclampsia</Text>
+            <Text style={styles(width).listText}>&bull; Pre-term birth</Text>
+            <Text style={styles(width).listText}>&bull; Still birth</Text>
+            <Text style={styles(width).listText}>&bull; Caesarean section</Text>
+            <Text style={styles(width).listText}>
+              &bull; Postpartum depression
+            </Text>
+          </View>
         </View>
-        <View style={styles(width).row}></View>
       </View>
       <View style={styles(width).buttonContainer}>
         <TouchableOpacity
           onPress={() => changePage()}
           style={styles(width).button}
         >
-          <Text style={styles(width).buttonText}>Start Assessment</Text>
+          <Text style={styles(width).buttonText}>Start Risk Assessment</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -91,16 +88,16 @@ const styles = (width) =>
     },
     textBox: {
       padding: 2,
-      paddingHorizontal: isTablet(width) ? "2%" : "5%",
+      paddingHorizontal: isTablet(width) ? "2%" : "3%",
       paddingVertical: isTablet(width) ? 20 : 0,
       fontSize: 20,
     },
     listBox: {
-      paddingHorizontal: isPhone(width) ? "2%" : "5%",
+      paddingHorizontal: isTablet(width) ? "2%" : "3%",
       alignSelf: "flex-start",
     },
     listText: {
-      fontSize: isSmallPhone(width) ? 15 : 20,
+      fontSize: 20,
       fontWeight: "bold",
     },
     button: {
@@ -109,7 +106,7 @@ const styles = (width) =>
       borderRadius: 7,
       paddingHorizontal: 10,
       paddingVertical: 12,
-      width: 300,
+      width: 350,
       alignSelf: "center",
     },
     buttonText: {

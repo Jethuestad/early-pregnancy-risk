@@ -1,11 +1,9 @@
 import React from "react";
-import Flag from "react-native-flags";
 import {
   StyleSheet,
   Text,
   View,
   Platform,
-  TouchableOpacity,
   useWindowDimensions,
 } from "react-native";
 import LanguageSelect from "./LanguageSelect";
@@ -14,7 +12,6 @@ import { isPhone, isSmallPhone, isTablet } from "../modules/Device";
 const colors = require("../style/colors");
 
 export default function Header({ changePage, setLang, language }) {
-  const COUNTRY_CODES = require("../constants/CountryCodes");
   const { width, height } = useWindowDimensions();
 
   return (
@@ -22,6 +19,7 @@ export default function Header({ changePage, setLang, language }) {
       <Text style={styles(width).text} onPress={() => changePage()}>
         Early Pregnancy Risk
       </Text>
+
       <LanguageSelect setLang={setLang} language={language} />
     </View>
   );
@@ -30,7 +28,7 @@ export default function Header({ changePage, setLang, language }) {
 const styles = (width) =>
   StyleSheet.create({
     container: {
-      flex: isPhone(width) ? 1 : 2,
+      flex: 2,
       ...Platform.select({
         web: {
           alignItems: "center",
@@ -40,10 +38,12 @@ const styles = (width) =>
         default: {
           alignSelf: "center",
           marginTop: 40,
+          marginBottom: 10,
         },
       }),
     },
     text: {
+      flex: 1,
       color: colors.primary,
       fontWeight: "bold",
       ...Platform.select({

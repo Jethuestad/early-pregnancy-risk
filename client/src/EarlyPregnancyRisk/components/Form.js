@@ -10,6 +10,7 @@ import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
 import Progressbar from "../components/Progressbar";
 import { isPhone } from "../modules/Device";
+import Loading from "./Loading";
 
 const colors = require("../style/colors");
 
@@ -102,32 +103,36 @@ export default function Form({ changePage, factor_data }) {
     }
   }, [nr]);
 
+  if (factors == null) {
+    return (
+      <View style={styles(width).loading}>
+        <Loading />
+      </View>
+    );
+  } else if (nr >= factors.length) return null;
+
   return (
     <View style={styles(width).container}>
-      {factors != null && nr < factors.length ? (
-        <View style={styles(width).container}>
-          <View style={styles(width).progressBarContainer}>
-            <Progressbar progress={nr} total={factors.length} />
-          </View>
-          <View style={styles(width).questionContainer}>
-            <Text style={styles(width).question}>{factors[nr].question}</Text>
-          </View>
-          <View style={styles(width).buttonContainer}>
-            {renderInput(factors[nr].answertype)}
-            {factors[nr].skippable ? (
-              <SkipInput
-                setSkipped={() => {
-                  setSkipped(true);
-                }}
-                completed={() => setIsSubmitting(true)}
-              />
-            ) : null}
-          </View>
-          <View style={styles(width).spacer}></View>
+      <View style={styles(width).container}>
+        <View style={styles(width).progressBarContainer}>
+          <Progressbar progress={nr} total={factors.length} />
         </View>
-      ) : (
-        <Text>Loading...</Text>
-      )}
+        <View style={styles(width).questionContainer}>
+          <Text style={styles(width).question}>{factors[nr].question}</Text>
+        </View>
+        <View style={styles(width).buttonContainer}>
+          {renderInput(factors[nr].answertype)}
+          {factors[nr].skippable ? (
+            <SkipInput
+              setSkipped={() => {
+                setSkipped(true);
+              }}
+              completed={() => setIsSubmitting(true)}
+            />
+          ) : null}
+        </View>
+        <View style={styles(width).spacer}></View>
+      </View>
     </View>
   );
 }
@@ -178,5 +183,12 @@ const styles = (width) =>
           fontSize: 25,
         },
       }),
+    },
+    loading: {
+      flex: 1,
+      alignSelf: "stretch",
+      textAlign: "center",
+      justifyContent: "center",
+      alignContent: "center",
     },
   });

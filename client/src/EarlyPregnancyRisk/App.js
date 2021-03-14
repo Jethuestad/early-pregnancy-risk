@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { device_init } from "./modules/Device";
+import { StyleSheet, View } from "react-native";
 import FrontPage from "./components/FrontPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Results from "./components/Results";
 import { getFactors } from "./networking/Requests";
-import { Button } from "react-native";
+import Loading from "./components/Loading";
 
 export default function App() {
   const COUNTRY_CODES = require("./constants/CountryCodes");
