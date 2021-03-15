@@ -1,19 +1,28 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import FrontPage from "./components/FrontPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Results from "./components/Results";
+import { getFactors } from "./networking/Requests";
+import Loading from "./components/Loading";
 
 export default function App() {
+  const COUNTRY_CODES = require("./constants/CountryCodes");
+
+  const [language, setLanguage] = useState(COUNTRY_CODES.english);
+  const [factors, setFactors] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(0);
   const [data, setData] = useState();
 
   const renderPage = () => {
     switch (page) {
       case 0:
-        return <FrontPage changePage={() => setPage(1)} />;
+        return (
+          <FrontPage changePage={() => setPage(1)} disabled={factors == null} />
+        );
       case 1:
         return (
           <Form
@@ -21,6 +30,7 @@ export default function App() {
               setPage(2);
               setData(r);
             }}
+            factor_data={factors}
           />
         );
       case 2:
@@ -30,10 +40,29 @@ export default function App() {
     }
   };
 
+  useEffect(() => {
+    (async function () {
+      setIsLoading(true);
+      const response = await getFactors(language);
+      setFactors(response);
+      setIsLoading(false);
+    })();
+  }, [language]);
+
   return (
     <View style={styles.container}>
-      <Header changePage={() => setPage(0)} />
-      <View style={{ flex: 15 }}>{renderPage()}</View>
+      <Header
+        changePage={() => setPage(0)}
+        setLang={(lang) => {
+          setPage(0);
+          setLanguage(lang);
+        }}
+        language={language}
+      />
+
+      <View style={{ flex: 15, justifyContent: "center" }}>
+        {isLoading ? <Loading message={"Loading..."} /> : renderPage()}
+      </View>
       <Footer />
     </View>
   );
@@ -42,6 +71,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F8EAE8",
+    backgroundColor: "#F8F5F5",
   },
 });
