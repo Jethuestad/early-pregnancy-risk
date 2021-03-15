@@ -1,29 +1,31 @@
 import React from "react";
 import {
   StyleSheet,
-  Text,
-  View,
   Platform,
-  TextInput,
   TouchableHighlight,
 } from "react-native";
+import {
+  Divider,
+  Text,
+  Input,
+} from "react-native-elements"
 
 const colors = require("../style/colors");
 
 export function IntInput({ value, setValue, completed, maxDigits }) {
   return (
-    <View style={styles.textInputContainer}>
-      <View style={styles.textInputSpacer}>
-        <TextInput
+    <Divider style={styles.textInputContainer}>
+      <Divider style={styles.textInputSpacer}>
+        <Input
           style={styles.textInput}
           onChangeText={(value) => setValue(value.replace(/[^0-9]/g, ""))}
           numeric
           keyboardType="numeric"
           value={value}
           maxLength={maxDigits}
-        ></TextInput>
-      </View>
-      <View style={styles.textInputSpacer}>
+        ></Input>
+      </Divider>
+      <Divider style={styles.textInputSpacer}>
         <TouchableHighlight
           style={styles.button}
           activeOpacity={0.6}
@@ -32,15 +34,15 @@ export function IntInput({ value, setValue, completed, maxDigits }) {
         >
           <Text style={styles.buttonText}>Continue</Text>
         </TouchableHighlight>
-      </View>
-    </View>
+      </Divider>
+    </Divider>
   );
 }
 
 export function BooleanInput({ setValue, completed }) {
   return (
-    <View style={styles.buttonContainer}>
-      <View style={styles.buttonSpacer}>
+    <Divider style={styles.buttonContainer}>
+      <Divider style={styles.buttonSpacer}>
         <TouchableHighlight
           style={styles.button}
           activeOpacity={0.6}
@@ -52,8 +54,8 @@ export function BooleanInput({ setValue, completed }) {
         >
           <Text style={styles.buttonText}>Yes</Text>
         </TouchableHighlight>
-      </View>
-      <View style={styles.buttonSpacer}>
+      </Divider>
+      <Divider style={styles.buttonSpacer}>
         <TouchableHighlight
           style={styles.button}
           activeOpacity={0.6}
@@ -65,14 +67,14 @@ export function BooleanInput({ setValue, completed }) {
         >
           <Text style={styles.buttonText}>No</Text>
         </TouchableHighlight>
-      </View>
-    </View>
+      </Divider>
+    </Divider>
   );
 }
 
 export function SkipInput({ setSkipped, completed }) {
   return (
-    <View style={styles.skipContainer}>
+    <Divider style={styles.skipContainer}>
       <TouchableHighlight
         style={styles.button}
         activeOpacity={0.6}
@@ -84,21 +86,23 @@ export function SkipInput({ setSkipped, completed }) {
       >
         <Text style={styles.buttonText}>Skip</Text>
       </TouchableHighlight>
-    </View>
+    </Divider>
   );
 }
 
 const styles = StyleSheet.create({
   textInputContainer: {
+    backgroundColor:"none",
     flex: 1,
     flexDirection: "row",
-    alignItems: "center",
+    alignContent: "center",
+    justifyContent:"center",
   },
   textInput: {
     width: 200,
     fontSize: 16,
     paddingHorizontal: 10,
-    paddingVertical: 8,
+    paddingVertical: 10,
     borderWidth: 1,
     borderRadius: 8,
     borderColor: colors.black,
@@ -110,6 +114,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   buttonContainer: {
+    backgroundColor:"none",
     flex: 1,
     flexDirection: "row",
   },
@@ -136,6 +141,7 @@ const styles = StyleSheet.create({
     }),
   },
   skipContainer: {
+    backgroundColor:"none",
     flex: 2,
   },
 });

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
+import { Divider } from "react-native-elements";
 import FrontPage from "./components/FrontPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -33,11 +34,11 @@ export default function App() {
 
   return (
       <SafeAreaProvider>
-        <View style={styles.container}>
+        <Divider style={styles.container}>
           <Header changePage={() => setPage(0)} />
-          <View style={{ flex: 15 }}>{renderPage()}</View>
+          <Divider style={{ flex: 15, backgroundColor:"none" }}>{renderPage()}</Divider>
           <Footer />
-        </View>
+        </Divider>
       </SafeAreaProvider>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { StyleSheet, View, Animated, Text } from "react-native";
-
+import { StyleSheet, Animated} from "react-native";
+import { Divider, Text, } from "react-native-elements";
 const colors = require("../style/colors");
 
 export default function SkipInput({ progress, total }) {
@@ -20,8 +20,8 @@ export default function SkipInput({ progress, total }) {
   }, [progress]);
 
   return (
-    <View style={styles.container}>
-      <View style={styles.progressBar}>
+    <Divider style={styles.container}>
+      <Divider style={styles.progressBar}>
         <Animated.View
           style={[
             StyleSheet.absoluteFill,
@@ -38,13 +38,14 @@ export default function SkipInput({ progress, total }) {
         >
           {progress}/{total}
         </Text>
-      </View>
-    </View>
+      </Divider>
+    </Divider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "none",
     flex: 1,
     flexDirection: "column",
     alignSelf: "stretch",

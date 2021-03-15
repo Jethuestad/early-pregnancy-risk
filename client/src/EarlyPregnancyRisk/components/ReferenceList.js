@@ -1,13 +1,12 @@
 import React, {useState} from "react";
-import {Text, View,} from "react-native";
-import { ListItem } from 'react-native-elements'
+import { ListItem, Text, Divider  } from 'react-native-elements'
 
 export default function ReferenceList({refNumb}) {
     const Refrences = require("../constants/Refrences");
     const [references, setReferences]  = useState(Refrences.refrences)
 
     return(
-        <View>
+        <Divider>
             {refNumb.map((num) =>(
                 <ListItem bottomDivider>
                     <ListItem.Content>
@@ -18,6 +17,6 @@ export default function ReferenceList({refNumb}) {
                 </ListItem>
             ))
             }
-        </View>
+        </Divider>
     );
 };

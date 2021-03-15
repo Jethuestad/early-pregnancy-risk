@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, Platform } from "react-native";
-import { Button, Overlay } from 'react-native-elements';
+import {
+  StyleSheet,
+  Platform } from "react-native";
+import {
+  Divider,
+  Button,
+  Overlay,
+  Text,
+} from 'react-native-elements';
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
 import Progressbar from "../components/Progressbar";
@@ -103,13 +110,13 @@ export default function Form({ changePage }) {
   }, [nr]);
 
   return (
-    <View style={styles.container}>
+    <Divider style={styles.container}>
       {nr < factors.length ? (
-        <View style={styles.container}>
-          <View style={styles.progressBarContainer}>
+        <Divider style={styles.container}>
+          <Divider style={styles.progressBarContainer}>
             <Progressbar progress={nr} total={factors.length} />
-          </View>
-          <View style={styles.questionContainer}>
+          </Divider>
+          <Divider style={styles.questionContainer}>
             <Text style={styles.question}>{factors[nr].question}</Text>
 
             <Button title="See documentation" onPress={toggleOverlay} type="clear" titleStyle={{color: colors.primary}} />
@@ -118,8 +125,8 @@ export default function Form({ changePage }) {
               <ReferenceList refNumb={factors[nr].ref}/>
             </Overlay>
 
-          </View>
-          <View style={styles.buttonContainer}>
+          </Divider>
+          <Divider style={styles.buttonContainer}>
             {renderInput(factors[nr].answertype)}
             {factors[nr].skippable ? (
               <SkipInput
@@ -129,36 +136,41 @@ export default function Form({ changePage }) {
                 completed={() => setIsSubmitting(true)}
               />
             ) : null}
-          </View>
-          <View style={styles.spacer}></View>
-        </View>
+          </Divider>
+          <Divider style={styles.spacer}></Divider>
+        </Divider>
       ) : (
         <Text>Loading...</Text>
       )}
-    </View>
+    </Divider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "none",
     flex: 1,
     alignSelf: "stretch",
   },
   spacer: {
+    backgroundColor: "none",
     flex: 5,
   },
   progressBarContainer: {
+    backgroundColor: "none",
     flex: 2,
     alignItems: "center",
     justifyContent: "center",
   },
   questionContainer: {
+    backgroundColor: "none",
     flex: 2,
     alignSelf: "stretch",
     alignItems: "center",
     justifyContent: "center",
   },
   buttonContainer: {
+    backgroundColor: "none",
     flex: 3,
     alignItems: "center",
     justifyContent: "center",

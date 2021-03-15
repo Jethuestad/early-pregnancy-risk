@@ -2,20 +2,22 @@ import React from "react";
 
 import {
   StyleSheet,
-  Text,
-  View,
   TouchableOpacity,
   Platform,
   FlatList,
 } from "react-native";
+import {
+  Divider,
+  Text,
+} from 'react-native-elements';
 
 const colors = require("../style/colors");
 
 export default function FrontPage({ changePage }) {
   return (
-    <View style={styles.container}>
-      <View style={styles.content}>
-        <View style={styles.row}>
+    <Divider style={styles.container}>
+      <Divider style={styles.content}>
+        <Divider style={styles.row}>
           <Text style={styles.textBox}>
             Pregnant or planning for a baby? This tool will make you assess your
             health status for a healthy pregnancy and a complication free birth.
@@ -29,8 +31,8 @@ export default function FrontPage({ changePage }) {
             does not take into many other psychosocial factors affecting
             maternal outcome.
           </Text>
-        </View>
-        <View style={styles.row}>
+        </Divider>
+        <Divider style={styles.row}>
           <FlatList
             data={[
               { key: "Miscarriage" },
@@ -47,29 +49,32 @@ export default function FrontPage({ changePage }) {
               </Text>
             )}
           />
-        </View>
-        <View style={styles.row}></View>
-      </View>
-      <View style={styles.buttonContainer}>
+        </Divider>
+        <Divider style={styles.row}></Divider>
+      </Divider>
+      <Divider style={styles.buttonContainer}>
         <TouchableOpacity onPress={() => changePage()} style={styles.button}>
           <Text style={styles.buttonText}>Start</Text>
         </TouchableOpacity>
-      </View>
-    </View>
+      </Divider>
+    </Divider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "none",
     flex: 1,
     alignSelf: "stretch",
     alignItems: "center",
   },
   content: {
+    backgroundColor: "none",
     flex: 3,
     flexDirection: "column",
   },
   row: {
+    backgroundColor: "none",
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
@@ -90,6 +95,7 @@ const styles = StyleSheet.create({
     }),
   },
   buttonContainer: {
+    backgroundColor:"none",
     flex: 1,
     alignItems: "center",
     ...Platform.select({

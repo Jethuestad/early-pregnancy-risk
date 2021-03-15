@@ -1,20 +1,22 @@
 import React from "react";
-import { StyleSheet, Text, View, Platform } from "react-native";
+import { StyleSheet, Platform } from "react-native";
+import { Divider, Text, } from "react-native-elements";
 
 const colors = require("../style/colors");
 
 export default function Header({ changePage }) {
   return (
-    <View style={styles.container}>
+    <Divider style={styles.container}>
       <Text style={styles.text} onPress={() => changePage()}>
         Early Pregnancy Risk
       </Text>
-    </View>
+    </Divider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor:"none",
     flex: 1,
     ...Platform.select({
       web: {
