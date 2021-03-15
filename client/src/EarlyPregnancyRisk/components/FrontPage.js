@@ -7,8 +7,9 @@ import {
   FlatList,
   useWindowDimensions,
   ScrollView,
+  View,
 } from "react-native";
-import { View, Text } from "react-native-elements";
+import { Text } from "react-native-elements";
 
 import { isSmallPhone, isPhone, isTablet } from "../modules/Device";
 const colors = require("../style/colors");
@@ -17,7 +18,7 @@ export default function FrontPage({ changePage, disabled }) {
   const { width } = useWindowDimensions();
 
   return (
-    <View style={styles(width).container}>
+    <ScrollView style={styles(width).container}>
       <View style={styles(width).content}>
         <View style={styles(width).contentBox}>
           <Text style={styles(width).textBox}>
@@ -59,7 +60,7 @@ export default function FrontPage({ changePage, disabled }) {
           <Text style={styles(width).buttonText}>Start Risk Assessment</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 

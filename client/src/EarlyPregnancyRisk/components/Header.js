@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Platform, useWindowDimensions } from "react-native";
-import { View, Text } from "react-native-elements";
+import { Text } from "react-native-elements";
 import LanguageSelect from "./LanguageSelect";
 import { isPhone, isSmallPhone, isTablet } from "../modules/Device";
 
@@ -23,7 +23,6 @@ export default function Header({ changePage, setLang, language }) {
 const styles = (width) =>
   StyleSheet.create({
     container: {
-      backgroundColor: null,
       flex: 2,
       ...Platform.select({
         web: {

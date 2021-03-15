@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { StyleSheet, Platform, Linking } from "react-native";
-import { Divider, Text, } from "react-native-elements";
+import { View, StyleSheet, Platform, Linking } from "react-native";
+import { Text } from "react-native-elements";
 
 import text from "../style/text";
 
@@ -10,7 +10,7 @@ export default class Footer extends Component {
   render() {
     // Only display the footer on the web.
     return Platform.OS === "web" ? (
-      <Divider style={styles.container}>
+      <View style={styles.container}>
         <Text style={text.p}>
           Early Pregnancy Risk {new Date().getFullYear()}
         </Text>
@@ -20,20 +20,19 @@ export default class Footer extends Component {
         >
           Privacy Information
         </Text>
-      </Divider>
+      </View>
     ) : null;
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-      backgroundColor:"none",
-      flex: 0.5,
-      borderTopColor: "black",
-      borderTopWidth: 2,
-      marginTop: "auto",
-      paddingVertical: 20,
-      bottom: 0,
-      textAlign: "center",
+    flex: 0.5,
+    borderTopColor: "black",
+    borderTopWidth: 2,
+    marginTop: "auto",
+    paddingVertical: 20,
+    bottom: 0,
+    textAlign: "center",
   },
 });

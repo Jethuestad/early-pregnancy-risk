@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, View, Platform, useWindowDimensions } from "react-native";
+import { View, StyleSheet, Platform, useWindowDimensions } from "react-native";
 import { Button, Overlay, Text } from "react-native-elements";
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
@@ -7,7 +7,7 @@ import Progressbar from "../components/Progressbar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
 import ReferenceList from "./ReferenceList";
-
+import Modal from "modal-react-native-web";
 const colors = require("../style/colors");
 
 export default function Form({ changePage, factor_data }) {
@@ -113,6 +113,24 @@ export default function Form({ changePage, factor_data }) {
 
   return (
     <View style={styles(width).container}>
+      {visible ? (
+        Platform.OS === "web" ? (
+          <Overlay
+            ModalComponent={Modal}
+            onBackdropPress={toggleOverlay}
+            overlayStyle={{ width: "80%" }}
+          >
+            <ReferenceList refNumb={factors[nr].ref} />
+          </Overlay>
+        ) : (
+          <Overlay
+            onBackdropPress={toggleOverlay}
+            overlayStyle={{ width: "80%", height: "90%" }}
+          >
+            <ReferenceList refNumb={factors[nr].ref} />
+          </Overlay>
+        )
+      ) : null}
       {nr < factors.length ? (
         <View style={styles(width).container}>
           <View style={styles(width).progressBarContainer}>
@@ -127,11 +145,6 @@ export default function Form({ changePage, factor_data }) {
               type="clear"
               titleStyle={{ color: colors.primary }}
             />
-            {visible ? (
-              <Overlay onBackdropPress={toggleOverlay}>
-                <ReferenceList refNumb={factors[nr].ref} />
-              </Overlay>
-            ) : null}
           </View>
           <View style={styles(width).buttonContainer}>
             {renderInput(factors[nr].answertype)}
@@ -157,19 +170,16 @@ const styles = (width) =>
     container: {
       flex: 1,
       alignSelf: "stretch",
-      backgroundColor: null,
     },
     spacer: {
       flex: isPhone(width) ? 0 : 5,
     },
     progressBarContainer: {
-      backgroundColor: null,
       flex: isPhone(width) ? 1 : 2,
       alignItems: "center",
       justifyContent: "center",
     },
     questionContainer: {
-      backgroundColor: null,
       flex: isPhone(width) ? 3 : 2,
       alignSelf: "stretch",
       alignItems: "center",

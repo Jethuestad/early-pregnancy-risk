@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { View } from "react-native-elements";
 import { StyleSheet, View } from "react-native";
 import FrontPage from "./components/FrontPage";
 import Header from "./components/Header";
