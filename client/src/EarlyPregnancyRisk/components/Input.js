@@ -1,6 +1,12 @@
 import React from "react";
-import { View, StyleSheet, Platform, TouchableHighlight } from "react-native";
-import { Text, Input } from "react-native-elements";
+import {
+  View,
+  TextInput,
+  StyleSheet,
+  Platform,
+  TouchableHighlight,
+} from "react-native";
+import { Text } from "react-native-elements";
 
 const colors = require("../style/colors");
 
@@ -8,16 +14,16 @@ export function IntInput({ value, setValue, completed, maxDigits }) {
   return (
     <View style={styles.textInputContainer}>
       <View style={styles.textInputSpacer}>
-        <Input
+        <TextInput
           style={styles.textInput}
           onChangeText={(value) => setValue(value.replace(/[^0-9]/g, ""))}
           numeric
           keyboardType="numeric"
           value={value}
           maxLength={maxDigits}
-        ></Input>
+        ></TextInput>
       </View>
-      <View style={styles.textInputSpacer}>
+      <View style={styles.textInputButtonSpacer}>
         <TouchableHighlight
           style={styles.button}
           activeOpacity={0.6}
@@ -85,15 +91,15 @@ export function SkipInput({ setSkipped, completed }) {
 const styles = StyleSheet.create({
   textInputContainer: {
     flex: 1,
-    flexDirection: "row",
+    alignSelf: "stretch",
     alignContent: "center",
     justifyContent: "center",
   },
   textInput: {
-    width: 200,
-    fontSize: 16,
+    fontSize: 14,
     paddingHorizontal: 10,
     paddingVertical: 10,
+    marginVertical: 5,
     borderWidth: 1,
     borderRadius: 8,
     borderColor: colors.black,
@@ -102,11 +108,21 @@ const styles = StyleSheet.create({
     paddingRight: 30, // to ensure the text is never behind the icon
   },
   textInputSpacer: {
-    marginLeft: 20,
+    flex: 1,
+    width: 200,
+    alignSelf: "center",
+    justifyContent: "center",
+  },
+  textInputButtonSpacer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
   buttonContainer: {
     flex: 1,
     flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
   buttonSpacer: { marginHorizontal: 20 },
   button: {
@@ -116,6 +132,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 12,
     width: 150,
+    marginVertical: 5,
   },
   buttonText: {
     fontWeight: "bold",

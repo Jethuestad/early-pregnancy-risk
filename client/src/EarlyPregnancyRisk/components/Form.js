@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { View, StyleSheet, Platform, useWindowDimensions } from "react-native";
-import { Button, Overlay, Text } from "react-native-elements";
+import { Button, Text } from "react-native-elements";
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
 import Progressbar from "../components/Progressbar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
-import ReferenceList from "./ReferenceList";
-import Modal from "modal-react-native-web";
+import FormOverlay from "./FormOverlay";
+
 const colors = require("../style/colors");
 
 export default function Form({ changePage, factor_data }) {
@@ -21,10 +21,6 @@ export default function Form({ changePage, factor_data }) {
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
   const [visible, setVisible] = useState(false);
-
-  const toggleOverlay = () => {
-    setVisible(!visible);
-  };
 
   function addSubFactors() {
     if (factors[nr].subfactors != null && factors[nr].requirement != null) {
@@ -113,55 +109,40 @@ export default function Form({ changePage, factor_data }) {
 
   return (
     <View style={styles(width).container}>
-      {visible ? (
-        Platform.OS === "web" ? (
-          <Overlay
-            ModalComponent={Modal}
-            onBackdropPress={toggleOverlay}
-            overlayStyle={{ width: "80%" }}
-          >
-            <ReferenceList refNumb={factors[nr].ref} />
-          </Overlay>
-        ) : (
-          <Overlay
-            onBackdropPress={toggleOverlay}
-            overlayStyle={{ width: "80%", height: "90%" }}
-          >
-            <ReferenceList refNumb={factors[nr].ref} />
-          </Overlay>
-        )
-      ) : null}
-      {nr < factors.length ? (
-        <View style={styles(width).container}>
-          <View style={styles(width).progressBarContainer}>
-            <Progressbar progress={nr} total={factors.length} />
-          </View>
-          <View style={styles(width).questionContainer}>
-            <Text style={styles(width).question}>{factors[nr].question}</Text>
-
-            <Button
-              title="See documentation"
-              onPress={toggleOverlay}
-              type="clear"
-              titleStyle={{ color: colors.primary }}
-            />
-          </View>
-          <View style={styles(width).buttonContainer}>
-            {renderInput(factors[nr].answertype)}
-            {factors[nr].skippable ? (
+      <FormOverlay
+        factor={factors[nr]}
+        visible={visible}
+        setVisible={(v) => setVisible(v)}
+      />
+      <View style={styles(width).container}>
+        <View style={styles(width).progressBarContainer}>
+          <Progressbar progress={nr} total={factors.length} />
+        </View>
+        <View style={styles(width).questionContainer}>
+          <Text style={styles(width).question}>{factors[nr].question}</Text>
+        </View>
+        <View style={styles(width).buttonContainer}>
+          {renderInput(factors[nr].answertype)}
+          {factors[nr].skippable ? (
+            <View style={{ flex: 1 }}>
               <SkipInput
                 setSkipped={() => {
                   setSkipped(true);
                 }}
                 completed={() => setIsSubmitting(true)}
               />
-            ) : null}
-          </View>
-          <View style={styles(width).spacer}></View>
+            </View>
+          ) : null}
         </View>
-      ) : (
-        <Text>Loading...</Text>
-      )}
+        <View style={styles(width).referencesContainer}>
+          <Button
+            title="Click to see why we need this information."
+            onPress={() => setVisible(true)}
+            type="clear"
+            titleStyle={{ color: colors.primary }}
+          />
+        </View>
+      </View>
     </View>
   );
 }
@@ -171,11 +152,8 @@ const styles = (width) =>
       flex: 1,
       alignSelf: "stretch",
     },
-    spacer: {
-      flex: isPhone(width) ? 0 : 5,
-    },
     progressBarContainer: {
-      flex: isPhone(width) ? 1 : 2,
+      flex: isPhone(width) ? 1 : 1,
       alignItems: "center",
       justifyContent: "center",
     },
@@ -186,9 +164,13 @@ const styles = (width) =>
       justifyContent: "center",
     },
     buttonContainer: {
-      flex: isPhone(width) ? 2 : 3,
+      flex: isPhone(width) ? 3 : 3,
+      alignSelf: "stretch",
       alignItems: "center",
       justifyContent: "center",
+    },
+    referencesContainer: {
+      flex: 0.5,
     },
     progressBar: {
       height: 20,
