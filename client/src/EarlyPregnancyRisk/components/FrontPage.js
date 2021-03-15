@@ -13,7 +13,7 @@ import {
 import { isSmallPhone, isPhone, isTablet } from "../modules/Device";
 const colors = require("../style/colors");
 
-export default function FrontPage({ changePage }) {
+export default function FrontPage({ changePage, disabled }) {
   const { width, height } = useWindowDimensions();
 
   return (
@@ -52,8 +52,9 @@ export default function FrontPage({ changePage }) {
       </View>
       <View style={styles(width).buttonContainer}>
         <TouchableOpacity
+          disabled={disabled}
           onPress={() => changePage()}
-          style={styles(width).button}
+          style={styles(width, disabled).button}
         >
           <Text style={styles(width).buttonText}>Start Risk Assessment</Text>
         </TouchableOpacity>
@@ -62,7 +63,7 @@ export default function FrontPage({ changePage }) {
   );
 }
 
-const styles = (width) =>
+const styles = (width, disabled = false) =>
   StyleSheet.create({
     container: {
       flex: 1,
@@ -108,6 +109,7 @@ const styles = (width) =>
       paddingVertical: 12,
       width: 350,
       alignSelf: "center",
+      opacity: disabled ? 0.1 : 1,
     },
     buttonText: {
       color: colors.white,

@@ -1,15 +1,13 @@
 import React from "react";
-import Image from "react-native-remote-svg";
+import { View, Text, ActivityIndicator } from "react-native";
 
-export default function Loading() {
+const colors = require("../style/colors");
+
+export default function Loading({ message }) {
   return (
-    <Image
-      source={require("../assets/loading.svg")}
-      style={{
-        width: 50,
-        height: 50,
-        alignSelf: "center",
-      }}
-    />
+    <View style={{ alignItems: "center" }}>
+      <ActivityIndicator size="large" color={colors.primary} />
+      <Text style={{ color: colors.secondary, marginTop: 5 }}>{message}</Text>
+    </View>
   );
 }

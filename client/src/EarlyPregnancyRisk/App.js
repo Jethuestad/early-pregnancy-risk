@@ -13,13 +13,16 @@ export default function App() {
 
   const [language, setLanguage] = useState(COUNTRY_CODES.english);
   const [factors, setFactors] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(0);
   const [data, setData] = useState();
 
   const renderPage = () => {
     switch (page) {
       case 0:
-        return <FrontPage changePage={() => setPage(1)} />;
+        return (
+          <FrontPage changePage={() => setPage(1)} disabled={factors == null} />
+        );
       case 1:
         return (
           <Form
@@ -39,8 +42,10 @@ export default function App() {
 
   useEffect(() => {
     (async function () {
+      setIsLoading(false);
       const response = await getFactors(language);
       setFactors(response);
+      setIsLoading(false);
     })();
   }, [language]);
 
@@ -54,7 +59,10 @@ export default function App() {
         }}
         language={language}
       />
-      <View style={{ flex: 15 }}>{renderPage()}</View>
+
+      <View style={{ flex: 15, justifyContent: "center" }}>
+        {isLoading ? <Loading message={"Loading..."} /> : renderPage()}
+      </View>
       <Footer />
     </View>
   );

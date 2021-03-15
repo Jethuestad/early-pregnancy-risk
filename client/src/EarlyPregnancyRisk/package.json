@@ -13,11 +13,8 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
-    "react-native-flags": "^1.0.0",
     "react-native-progress": "^4.1.2",
-    "react-native-remote-svg": "^2.0.6",
-    "react-native-web": "~0.13.12",
-    "react-native-webview": "^11.2.4"
+    "react-native-web": "~0.13.12"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"
