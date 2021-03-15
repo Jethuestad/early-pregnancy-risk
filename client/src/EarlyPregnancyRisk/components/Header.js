@@ -12,7 +12,7 @@ import { isPhone, isSmallPhone, isTablet } from "../modules/Device";
 const colors = require("../style/colors");
 
 export default function Header({ changePage, setLang, language }) {
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <View style={styles(width).container}>

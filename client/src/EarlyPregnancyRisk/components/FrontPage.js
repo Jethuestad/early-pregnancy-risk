@@ -14,7 +14,7 @@ import { isSmallPhone, isPhone, isTablet } from "../modules/Device";
 const colors = require("../style/colors");
 
 export default function FrontPage({ changePage, disabled }) {
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <ScrollView style={styles(width).container}>

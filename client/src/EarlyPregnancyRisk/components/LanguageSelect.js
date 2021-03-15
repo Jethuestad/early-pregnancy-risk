@@ -11,7 +11,7 @@ const colors = require("../style/colors");
 
 export default function LanguageSelect({ setLang, language }) {
   const COUNTRY_CODES = require("../constants/CountryCodes");
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <View style={styles.container}>

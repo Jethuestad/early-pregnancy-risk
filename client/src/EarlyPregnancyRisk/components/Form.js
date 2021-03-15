@@ -15,7 +15,7 @@ import Loading from "./Loading";
 const colors = require("../style/colors");
 
 export default function Form({ changePage, factor_data }) {
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [nr, setNr] = useState(0);
