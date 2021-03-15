@@ -16,7 +16,7 @@ export default function Header({ changePage }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor:"none",
+    backgroundColor: "#F8EAE8",
     flex: 1,
     ...Platform.select({
       web: {

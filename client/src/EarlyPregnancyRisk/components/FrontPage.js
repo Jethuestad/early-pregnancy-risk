@@ -63,18 +63,18 @@ export default function FrontPage({ changePage }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "none",
+    backgroundColor: "#F8EAE8",
     flex: 1,
     alignSelf: "stretch",
     alignItems: "center",
   },
   content: {
-    backgroundColor: "none",
+    backgroundColor: "#F8EAE8",
     flex: 3,
     flexDirection: "column",
   },
   row: {
-    backgroundColor: "none",
+    backgroundColor: "#F8EAE8",
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     }),
   },
   buttonContainer: {
-    backgroundColor:"none",
+    backgroundColor: "#F8EAE8",
     flex: 1,
     alignItems: "center",
     ...Platform.select({

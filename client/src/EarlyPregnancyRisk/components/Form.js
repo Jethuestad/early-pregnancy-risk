@@ -148,29 +148,29 @@ export default function Form({ changePage }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "none",
+    backgroundColor: "#F8EAE8",
     flex: 1,
     alignSelf: "stretch",
   },
   spacer: {
-    backgroundColor: "none",
+    backgroundColor: "#F8EAE8",
     flex: 5,
   },
   progressBarContainer: {
-    backgroundColor: "none",
+    backgroundColor: "#F8EAE8",
     flex: 2,
     alignItems: "center",
     justifyContent: "center",
   },
   questionContainer: {
-    backgroundColor: "none",
+    backgroundColor: "#F8EAE8",
     flex: 2,
     alignSelf: "stretch",
     alignItems: "center",
     justifyContent: "center",
   },
   buttonContainer: {
-    backgroundColor: "none",
+    backgroundColor: "#F8EAE8",
     flex: 3,
     alignItems: "center",
     justifyContent: "center",

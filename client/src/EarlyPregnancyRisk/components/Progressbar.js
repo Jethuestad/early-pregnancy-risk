@@ -45,7 +45,7 @@ export default function SkipInput({ progress, total }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "none",
+    backgroundColor: "#F8EAE8",
     flex: 1,
     flexDirection: "column",
     alignSelf: "stretch",

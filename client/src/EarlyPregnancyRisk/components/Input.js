@@ -92,7 +92,7 @@ export function SkipInput({ setSkipped, completed }) {
 
 const styles = StyleSheet.create({
   textInputContainer: {
-    backgroundColor:"none",
+    backgroundColor: "#F8EAE8",
     flex: 1,
     flexDirection: "row",
     alignContent: "center",
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   buttonContainer: {
-    backgroundColor:"none",
+    backgroundColor: "#F8EAE8",
     flex: 1,
     flexDirection: "row",
   },
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     }),
   },
   skipContainer: {
-    backgroundColor:"none",
+    backgroundColor: "#F8EAE8",
     flex: 2,
   },
 });

@@ -36,7 +36,7 @@ export default function App() {
       <SafeAreaProvider>
         <Divider style={styles.container}>
           <Header changePage={() => setPage(0)} />
-          <Divider style={{ flex: 15, backgroundColor:"none" }}>{renderPage()}</Divider>
+          <Divider style={{ flex: 15, backgroundColor:"#F8EAE8" }}>{renderPage()}</Divider>
           <Footer />
         </Divider>
       </SafeAreaProvider>
