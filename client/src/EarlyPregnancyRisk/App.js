@@ -42,7 +42,7 @@ export default function App() {
 
   useEffect(() => {
     (async function () {
-      setIsLoading(false);
+      setIsLoading(true);
       const response = await getFactors(language);
       setFactors(response);
       setIsLoading(false);

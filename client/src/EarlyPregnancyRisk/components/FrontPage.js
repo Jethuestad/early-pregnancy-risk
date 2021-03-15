@@ -109,20 +109,18 @@ const styles = (width, disabled = false) =>
       paddingVertical: 12,
       width: 350,
       alignSelf: "center",
-      opacity: disabled ? 0.1 : 1,
+      opacity: disabled ? 0.5 : 1,
     },
     buttonText: {
       color: colors.white,
       textAlign: "center",
       ...Platform.select({
-        ios: {
-          fontSize: 18,
-        },
-        android: {
-          fontSize: 18,
+        web: {
+          fontSize: "2rem",
         },
         default: {
-          fontSize: "2rem",
+          fontSize: 18,
+          fontWeight: "bold",
         },
       }),
     },
