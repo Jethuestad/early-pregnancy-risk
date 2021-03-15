@@ -104,6 +104,7 @@ const styles = (width, disabled = false) =>
     },
     button: {
       elevation: 7,
+      backgroundColor: colors.primary,
       borderRadius: 7,
       paddingHorizontal: 10,
       paddingVertical: 12,
