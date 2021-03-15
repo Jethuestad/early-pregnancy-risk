@@ -3,7 +3,7 @@ module.exports = {
     {
       factor: "age",
       question: "What is your age?",
-      answertype: "int",
+      answertype: "integer",
       skippable: true,
       maxdigits: 2,
       ref:[1,4,9,30]
@@ -12,7 +12,7 @@ module.exports = {
       factor: "parity",
       question:
         "How many times have you previously been pregnant, including births, miscarriages, and stillbirths",
-      answertype: "int",
+      answertype: "integer",
       skippable: true,
       maxdigits: 1,
       requirement: ">;0",
@@ -66,7 +66,7 @@ module.exports = {
     {
       factor: "height",
       question: "What is your height",
-      answertype: "int",
+      answertype: "integer",
       skippable: true,
       maxdigits: 3,
       ref:[9],
@@ -74,7 +74,7 @@ module.exports = {
     {
       factor: "weight",
       question: "What is your weight",
-      answertype: "int",
+      answertype: "integer",
       skippable: true,
       maxdigits: 3,
       ref:[10],

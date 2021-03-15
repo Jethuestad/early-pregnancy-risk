@@ -3,22 +3,23 @@ import { View, StyleSheet } from "react-native";
 import { Text } from "react-native-elements";
 import { getSeverity } from "../modules/Severity";
 import { postFactors } from "../networking/Requests";
+import Loading from "./Loading";
 
 const colors = require("../style/colors");
 
 export default function Form({ data }) {
-  const [risk, setRisk] = useState();
+  const [risk, setRisk] = useState(null);
 
   const testResponse = {
     success: true,
     payload: [
       {
-        complication: "diabetes",
+        complication: "(Test) diabetes",
         severity: 4,
         risk_score: 53,
       },
       {
-        complication: "Preeclampsia",
+        complication: "(Test) Preeclampsia",
         severity: 2,
         risk_score: 21,
       },
@@ -50,27 +51,23 @@ export default function Form({ data }) {
     if (data != null && risk == null) {
       (async function () {
         const response = await postFactors(data);
-        setRisk(response);
+        if (response == null) {
+          setRisk(testResponse);
+        } else {
+          setRisk(response);
+        }
       })();
     }
-  });
+  }, []);
 
-  return (
-    <View style={styles.container}>
-      {risk != null ? (
-        renderResponse(risk)
-      ) : (
-        <View style={styles.container}>
-          {renderResponse(testResponse)}
-          <Text
-            style={{ fontSize: 20, fontWeight: "bold", color: colors.primary }}
-          >
-            Note: This is test information, waiting for server response...
-          </Text>
-        </View>
-      )}
-    </View>
-  );
+  if (risk == null) {
+    return (
+      <View style={styles.container}>
+        <Loading message={"Calculating risk..."} />
+      </View>
+    );
+  }
+  return <View style={styles.container}>{renderResponse(risk)}</View>;
 }
 
 const styles = StyleSheet.create({
@@ -84,7 +81,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "left",
   },
   containerText: {
     flexDirection: "row",
