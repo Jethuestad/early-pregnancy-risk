@@ -12,7 +12,12 @@ def get_factors(request, lang_code: str):
     return factor_handler(lang_code)
 
 
-def serialize_factor(factor: Factor, questions: BaseManager, lang_code: str) -> dict:
+def serialize_factor(factor: Factor, questions: BaseManager, lang_code: str, isSubfactor: bool = False) -> dict:
+
+    # Factors which have a parent factor should not be added.
+    if factor.parent_factor != None and not isSubfactor:
+        return None
+
     # Find all questions which belong to this factor
     question = questions.filter(belongs_to=factor.question)
 
@@ -23,7 +28,7 @@ def serialize_factor(factor: Factor, questions: BaseManager, lang_code: str) -> 
     queried_sub_factors = Factor.objects.filter(
         parent_factor=factor)
 
-    sub_factors = [serialize_factor(f, questions, lang_code)
+    sub_factors = [serialize_factor(f, questions, lang_code, True)
                    for f in queried_sub_factors]
 
     return {
