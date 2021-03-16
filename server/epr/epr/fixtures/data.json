@@ -1,1 +1,2689 @@
-[{"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2021-03-11T11:26:34.304Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "en", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2021-03-11T11:26:44.479Z", "user": 1, "content_type": 8, "object_id": "Question", "object_repr": "Question", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2021-03-11T11:26:46.174Z", "user": 1, "content_type": 9, "object_id": "1", "object_repr": "Question: Age", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2021-03-11T11:26:51.181Z", "user": 1, "content_type": 10, "object_id": "1", "object_repr": "Question: age (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2021-03-11T13:16:14.525Z", "user": 1, "content_type": 9, "object_id": "2", "object_repr": "Question: Height", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2021-03-11T13:16:29.896Z", "user": 1, "content_type": 10, "object_id": "2", "object_repr": "Question: height (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2021-03-11T13:16:43.021Z", "user": 1, "content_type": 7, "object_id": "2", "object_repr": "no", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2021-03-11T13:17:29.919Z", "user": 1, "content_type": 10, "object_id": "3", "object_repr": "Question: height (no)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2021-03-11T13:25:28.410Z", "user": 1, "content_type": 10, "object_id": "1", "object_repr": "Question: age (en)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2021-03-11T13:26:00.337Z", "user": 1, "content_type": 10, "object_id": "4", "object_repr": "Question: age (no)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2021-03-11T13:26:21.200Z", "user": 1, "content_type": 7, "object_id": "3", "object_repr": "fr", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2021-03-11T13:26:47.380Z", "user": 1, "content_type": 8, "object_id": "Text", "object_repr": "Text", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2021-03-11T13:26:48.796Z", "user": 1, "content_type": 9, "object_id": "3", "object_repr": "Text: Front page paragraph 1", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2021-03-11T13:27:06.210Z", "user": 1, "content_type": 10, "object_id": "5", "object_repr": "Text: front page paragraph 1 (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2021-03-11T13:27:32.934Z", "user": 1, "content_type": 8, "object_id": "List", "object_repr": "List", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 16, "fields": {"action_time": "2021-03-11T13:28:28.686Z", "user": 1, "content_type": 10, "object_id": "6", "object_repr": "Question: age (fr)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 17, "fields": {"action_time": "2021-03-11T13:31:52.708Z", "user": 1, "content_type": 4, "object_id": "1", "object_repr": "admin", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"}}, {"model": "admin.logentry", "pk": 18, "fields": {"action_time": "2021-03-11T23:04:08.060Z", "user": 1, "content_type": 11, "object_id": "integer", "object_repr": "AnswerType object (integer)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 19, "fields": {"action_time": "2021-03-11T23:07:06.066Z", "user": 1, "content_type": 12, "object_id": "age", "object_repr": "age (integer)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 20, "fields": {"action_time": "2021-03-11T23:07:18.126Z", "user": 1, "content_type": 12, "object_id": "age", "object_repr": "age (integer)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"}}, {"model": "admin.logentry", "pk": 21, "fields": {"action_time": "2021-03-11T23:07:21.895Z", "user": 1, "content_type": 12, "object_id": "age", "object_repr": "age (integer)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"}}, {"model": "admin.logentry", "pk": 22, "fields": {"action_time": "2021-03-11T23:08:38.926Z", "user": 1, "content_type": 9, "object_id": "4", "object_repr": "Question: parity", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 23, "fields": {"action_time": "2021-03-11T23:08:50.037Z", "user": 1, "content_type": 11, "object_id": "boolean", "object_repr": "boolean", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 24, "fields": {"action_time": "2021-03-11T23:09:03.779Z", "user": 1, "content_type": 12, "object_id": "parity", "object_repr": "parity (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 25, "fields": {"action_time": "2021-03-11T23:09:35.908Z", "user": 1, "content_type": 9, "object_id": "5", "object_repr": "Question: diabetes", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 26, "fields": {"action_time": "2021-03-11T23:10:17.415Z", "user": 1, "content_type": 12, "object_id": "diabetes", "object_repr": "diabetes (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 27, "fields": {"action_time": "2021-03-11T23:11:07.807Z", "user": 1, "content_type": 10, "object_id": "7", "object_repr": "Question: parity (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 28, "fields": {"action_time": "2021-03-11T23:11:28.766Z", "user": 1, "content_type": 10, "object_id": "8", "object_repr": "Question: diabetes (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 29, "fields": {"action_time": "2021-03-12T08:49:55.382Z", "user": 1, "content_type": 10, "object_id": "7", "object_repr": "Question: parity (en)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 30, "fields": {"action_time": "2021-03-12T11:32:05.166Z", "user": 1, "content_type": 12, "object_id": "parity", "object_repr": "parity (integer)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Answertype\"]}}]"}}, {"model": "admin.logentry", "pk": 31, "fields": {"action_time": "2021-03-12T11:33:24.122Z", "user": 1, "content_type": 12, "object_id": "gdm", "object_repr": "gdm (boolean)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Factor name\"]}}]"}}, {"model": "admin.logentry", "pk": 32, "fields": {"action_time": "2021-03-12T11:34:20.166Z", "user": 1, "content_type": 12, "object_id": "diabetes", "object_repr": "diabetes (boolean)", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 33, "fields": {"action_time": "2021-03-12T11:34:33.022Z", "user": 1, "content_type": 12, "object_id": "gdm", "object_repr": "gdm (boolean)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 34, "fields": {"action_time": "2021-03-12T11:36:01.674Z", "user": 1, "content_type": 9, "object_id": "6", "object_repr": "Question: gdm", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 35, "fields": {"action_time": "2021-03-12T11:36:27.674Z", "user": 1, "content_type": 9, "object_id": "6", "object_repr": "Question: congenital", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"}}, {"model": "admin.logentry", "pk": 36, "fields": {"action_time": "2021-03-12T11:36:50.821Z", "user": 1, "content_type": 12, "object_id": "congenital", "object_repr": "congenital (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 37, "fields": {"action_time": "2021-03-12T11:37:54.539Z", "user": 1, "content_type": 10, "object_id": "9", "object_repr": "Question: congenital (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 38, "fields": {"action_time": "2021-03-12T11:38:12.698Z", "user": 1, "content_type": 9, "object_id": "7", "object_repr": "Question: stillbirth", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 39, "fields": {"action_time": "2021-03-12T11:38:15.518Z", "user": 1, "content_type": 10, "object_id": "10", "object_repr": "Question: stillbirth (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 40, "fields": {"action_time": "2021-03-12T11:39:00.224Z", "user": 1, "content_type": 9, "object_id": "8", "object_repr": "Question: miscarriage", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 41, "fields": {"action_time": "2021-03-12T11:39:03.182Z", "user": 1, "content_type": 10, "object_id": "11", "object_repr": "Question: miscarriage (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 42, "fields": {"action_time": "2021-03-12T11:39:44.665Z", "user": 1, "content_type": 12, "object_id": "stillbirth", "object_repr": "stillbirth (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 43, "fields": {"action_time": "2021-03-12T11:39:56.496Z", "user": 1, "content_type": 12, "object_id": "miscarriage", "object_repr": "miscarriage (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 44, "fields": {"action_time": "2021-03-12T12:52:16.037Z", "user": 1, "content_type": 12, "object_id": "miscarriage", "object_repr": "miscarriage (boolean)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"}}, {"model": "admin.logentry", "pk": 45, "fields": {"action_time": "2021-03-12T12:52:22.412Z", "user": 1, "content_type": 12, "object_id": "gdm", "object_repr": "gdm (boolean)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 46, "fields": {"action_time": "2021-03-12T12:52:28.329Z", "user": 1, "content_type": 12, "object_id": "congenital", "object_repr": "congenital (boolean)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"}}, {"model": "admin.logentry", "pk": 47, "fields": {"action_time": "2021-03-16T14:54:35.298Z", "user": 1, "content_type": 9, "object_id": "9", "object_repr": "Question: preterm", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 48, "fields": {"action_time": "2021-03-16T14:54:59.980Z", "user": 1, "content_type": 9, "object_id": "10", "object_repr": "Question: macrosomia", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 49, "fields": {"action_time": "2021-03-16T14:55:14.479Z", "user": 1, "content_type": 9, "object_id": "11", "object_repr": "Question: weight", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 50, "fields": {"action_time": "2021-03-16T14:55:25.282Z", "user": 1, "content_type": 9, "object_id": "12", "object_repr": "Question: white", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 51, "fields": {"action_time": "2021-03-16T14:55:41.027Z", "user": 1, "content_type": 9, "object_id": "13", "object_repr": "Question: family_diabetes", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 52, "fields": {"action_time": "2021-03-16T14:55:53.398Z", "user": 1, "content_type": 9, "object_id": "14", "object_repr": "Question: polycystic", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 53, "fields": {"action_time": "2021-03-16T14:56:01.980Z", "user": 1, "content_type": 9, "object_id": "15", "object_repr": "Question: blood_pressure_family", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 54, "fields": {"action_time": "2021-03-16T14:56:12.273Z", "user": 1, "content_type": 9, "object_id": "16", "object_repr": "Question: blood_pressure_not_family", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 55, "fields": {"action_time": "2021-03-16T14:56:20.905Z", "user": 1, "content_type": 9, "object_id": "17", "object_repr": "Question: diet_not_varied", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 56, "fields": {"action_time": "2021-03-16T14:56:30.873Z", "user": 1, "content_type": 9, "object_id": "18", "object_repr": "Question: diet_sugar", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 57, "fields": {"action_time": "2021-03-16T14:56:40.018Z", "user": 1, "content_type": 9, "object_id": "19", "object_repr": "Question: diet_processed_meat", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 58, "fields": {"action_time": "2021-03-16T14:56:48.596Z", "user": 1, "content_type": 9, "object_id": "20", "object_repr": "Question: diet_whole_grain", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 59, "fields": {"action_time": "2021-03-16T14:56:57.879Z", "user": 1, "content_type": 9, "object_id": "21", "object_repr": "Question: diet_diary", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 60, "fields": {"action_time": "2021-03-16T14:57:10.553Z", "user": 1, "content_type": 9, "object_id": "22", "object_repr": "Question: diet_vitamin_d", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 61, "fields": {"action_time": "2021-03-16T14:57:20.194Z", "user": 1, "content_type": 9, "object_id": "23", "object_repr": "Question: activity_walking_minute", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 62, "fields": {"action_time": "2021-03-16T14:57:37.999Z", "user": 1, "content_type": 9, "object_id": "24", "object_repr": "Question: activity_vigorous", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 63, "fields": {"action_time": "2021-03-16T14:58:22.776Z", "user": 1, "content_type": 9, "object_id": "25", "object_repr": "Question: activity_stairs", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 64, "fields": {"action_time": "2021-03-16T15:01:23.552Z", "user": 1, "content_type": 12, "object_id": "preterm", "object_repr": "preterm (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 65, "fields": {"action_time": "2021-03-16T15:02:56.025Z", "user": 1, "content_type": 12, "object_id": "preterm", "object_repr": "preterm (boolean)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"}}, {"model": "admin.logentry", "pk": 66, "fields": {"action_time": "2021-03-16T15:03:38.007Z", "user": 1, "content_type": 12, "object_id": "macrosomia", "object_repr": "macrosomia (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 67, "fields": {"action_time": "2021-03-16T15:04:33.968Z", "user": 1, "content_type": 12, "object_id": "height", "object_repr": "height (integer)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 68, "fields": {"action_time": "2021-03-16T15:05:05.902Z", "user": 1, "content_type": 12, "object_id": "weight", "object_repr": "weight (integer)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 69, "fields": {"action_time": "2021-03-16T15:06:20.789Z", "user": 1, "content_type": 12, "object_id": "white", "object_repr": "white (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 70, "fields": {"action_time": "2021-03-16T15:06:41.916Z", "user": 1, "content_type": 9, "object_id": "12", "object_repr": "Question: ethnicity", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"}}, {"model": "admin.logentry", "pk": 71, "fields": {"action_time": "2021-03-16T15:06:50.709Z", "user": 1, "content_type": 12, "object_id": "white", "object_repr": "white (boolean)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 72, "fields": {"action_time": "2021-03-16T15:08:00.563Z", "user": 1, "content_type": 12, "object_id": "family_diabetes", "object_repr": "family_diabetes (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 73, "fields": {"action_time": "2021-03-16T15:08:23.237Z", "user": 1, "content_type": 12, "object_id": "polycystic", "object_repr": "polycystic (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 74, "fields": {"action_time": "2021-03-16T15:08:48.104Z", "user": 1, "content_type": 12, "object_id": "blood_pressure_family", "object_repr": "blood_pressure_family (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 75, "fields": {"action_time": "2021-03-16T15:09:05.318Z", "user": 1, "content_type": 12, "object_id": "blood_pressure_not_family", "object_repr": "blood_pressure_not_family (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 76, "fields": {"action_time": "2021-03-16T15:09:19.788Z", "user": 1, "content_type": 12, "object_id": "diet_not_varied", "object_repr": "diet_not_varied (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 77, "fields": {"action_time": "2021-03-16T15:09:48.438Z", "user": 1, "content_type": 12, "object_id": "diet_sugar", "object_repr": "diet_sugar (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 78, "fields": {"action_time": "2021-03-16T15:10:33.143Z", "user": 1, "content_type": 12, "object_id": "diet_processed_meat", "object_repr": "diet_processed_meat (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 79, "fields": {"action_time": "2021-03-16T15:10:46.655Z", "user": 1, "content_type": 12, "object_id": "diet_whole_grain", "object_repr": "diet_whole_grain (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 80, "fields": {"action_time": "2021-03-16T15:11:07.730Z", "user": 1, "content_type": 12, "object_id": "diet_diary", "object_repr": "diet_diary (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 81, "fields": {"action_time": "2021-03-16T15:11:28.818Z", "user": 1, "content_type": 12, "object_id": "diet_vitamin_d", "object_repr": "diet_vitamin_d (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 82, "fields": {"action_time": "2021-03-16T15:11:46.258Z", "user": 1, "content_type": 12, "object_id": "activity_walking_minute", "object_repr": "activity_walking_minute (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 83, "fields": {"action_time": "2021-03-16T15:11:59.959Z", "user": 1, "content_type": 12, "object_id": "activity_vigorous", "object_repr": "activity_vigorous (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 84, "fields": {"action_time": "2021-03-16T15:12:13.499Z", "user": 1, "content_type": 12, "object_id": "activity_stairs", "object_repr": "activity_stairs (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 85, "fields": {"action_time": "2021-03-16T15:12:26.791Z", "user": 1, "content_type": 12, "object_id": "parity", "object_repr": "parity (integer)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 86, "fields": {"action_time": "2021-03-16T15:12:35.441Z", "user": 1, "content_type": 12, "object_id": "gdm", "object_repr": "gdm (boolean)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 87, "fields": {"action_time": "2021-03-16T15:12:48.585Z", "user": 1, "content_type": 12, "object_id": "age", "object_repr": "age (integer)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 88, "fields": {"action_time": "2021-03-16T15:12:55.968Z", "user": 1, "content_type": 12, "object_id": "congenital", "object_repr": "congenital (boolean)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 89, "fields": {"action_time": "2021-03-16T15:13:37.545Z", "user": 1, "content_type": 10, "object_id": "2", "object_repr": "Question: height (en)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 90, "fields": {"action_time": "2021-03-16T15:13:46.975Z", "user": 1, "content_type": 10, "object_id": "3", "object_repr": "Question: height (no)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 91, "fields": {"action_time": "2021-03-16T15:13:50.429Z", "user": 1, "content_type": 10, "object_id": "4", "object_repr": "Question: age (no)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 92, "fields": {"action_time": "2021-03-16T15:26:14.649Z", "user": 1, "content_type": 10, "object_id": "12", "object_repr": "Question: preterm (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 93, "fields": {"action_time": "2021-03-16T15:26:39.871Z", "user": 1, "content_type": 10, "object_id": "13", "object_repr": "Question: macrosomia (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 94, "fields": {"action_time": "2021-03-16T15:27:35.664Z", "user": 1, "content_type": 10, "object_id": "14", "object_repr": "Question: weight (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 95, "fields": {"action_time": "2021-03-16T15:29:23.144Z", "user": 1, "content_type": 10, "object_id": "15", "object_repr": "Question: ethnicity (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 96, "fields": {"action_time": "2021-03-16T15:30:41.205Z", "user": 1, "content_type": 10, "object_id": "16", "object_repr": "Question: family_diabetes (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 97, "fields": {"action_time": "2021-03-16T15:30:56.228Z", "user": 1, "content_type": 10, "object_id": "17", "object_repr": "Question: polycystic (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 98, "fields": {"action_time": "2021-03-16T15:31:12.111Z", "user": 1, "content_type": 10, "object_id": "18", "object_repr": "Question: blood_pressure_family (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 99, "fields": {"action_time": "2021-03-16T15:31:29.446Z", "user": 1, "content_type": 10, "object_id": "19", "object_repr": "Question: blood_pressure_not_family (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 100, "fields": {"action_time": "2021-03-16T15:32:18.978Z", "user": 1, "content_type": 10, "object_id": "20", "object_repr": "Question: diet_not_varied (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 101, "fields": {"action_time": "2021-03-16T15:32:32.764Z", "user": 1, "content_type": 10, "object_id": "21", "object_repr": "Question: diet_sugar (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 102, "fields": {"action_time": "2021-03-16T15:33:23.612Z", "user": 1, "content_type": 9, "object_id": "26", "object_repr": "Question: diet_sweets", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 103, "fields": {"action_time": "2021-03-16T15:33:35.888Z", "user": 1, "content_type": 12, "object_id": "diet_sweets", "object_repr": "diet_sweets (boolean)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 104, "fields": {"action_time": "2021-03-16T15:33:55.931Z", "user": 1, "content_type": 10, "object_id": "22", "object_repr": "Question: diet_sweets (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 105, "fields": {"action_time": "2021-03-16T15:34:32.079Z", "user": 1, "content_type": 10, "object_id": "23", "object_repr": "Question: diet_processed_meat (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 106, "fields": {"action_time": "2021-03-16T15:34:51.621Z", "user": 1, "content_type": 10, "object_id": "24", "object_repr": "Question: diet_whole_grain (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 107, "fields": {"action_time": "2021-03-16T15:35:15.470Z", "user": 1, "content_type": 10, "object_id": "25", "object_repr": "Question: diet_diary (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 108, "fields": {"action_time": "2021-03-16T15:35:30.066Z", "user": 1, "content_type": 10, "object_id": "26", "object_repr": "Question: diet_vitamin_d (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 109, "fields": {"action_time": "2021-03-16T15:35:59.886Z", "user": 1, "content_type": 10, "object_id": "27", "object_repr": "Question: activity_walking_minute (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 110, "fields": {"action_time": "2021-03-16T15:36:22.104Z", "user": 1, "content_type": 10, "object_id": "28", "object_repr": "Question: activity_vigorous (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 111, "fields": {"action_time": "2021-03-16T15:36:37.937Z", "user": 1, "content_type": 10, "object_id": "29", "object_repr": "Question: activity_stairs (en)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add log entry", "content_type": 1, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change log entry", "content_type": 1, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete log entry", "content_type": 1, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view log entry", "content_type": 1, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add permission", "content_type": 2, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change permission", "content_type": 2, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete permission", "content_type": 2, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view permission", "content_type": 2, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add group", "content_type": 3, "codename": "add_group"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change group", "content_type": 3, "codename": "change_group"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete group", "content_type": 3, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view group", "content_type": 3, "codename": "view_group"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add user", "content_type": 4, "codename": "add_user"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change user", "content_type": 4, "codename": "change_user"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete user", "content_type": 4, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view user", "content_type": 4, "codename": "view_user"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add content type", "content_type": 5, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change content type", "content_type": 5, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete content type", "content_type": 5, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view content type", "content_type": 5, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add session", "content_type": 6, "codename": "add_session"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change session", "content_type": 6, "codename": "change_session"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete session", "content_type": 6, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view session", "content_type": 6, "codename": "view_session"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add language", "content_type": 7, "codename": "add_language"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change language", "content_type": 7, "codename": "change_language"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete language", "content_type": 7, "codename": "delete_language"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view language", "content_type": 7, "codename": "view_language"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add content type", "content_type": 8, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change content type", "content_type": 8, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete content type", "content_type": 8, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view content type", "content_type": 8, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add content", "content_type": 9, "codename": "add_content"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change content", "content_type": 9, "codename": "change_content"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete content", "content_type": 9, "codename": "delete_content"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view content", "content_type": 9, "codename": "view_content"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add translation", "content_type": 10, "codename": "add_translation"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change translation", "content_type": 10, "codename": "change_translation"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete translation", "content_type": 10, "codename": "delete_translation"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view translation", "content_type": 10, "codename": "view_translation"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can add answer type", "content_type": 11, "codename": "add_answertype"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change answer type", "content_type": 11, "codename": "change_answertype"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete answer type", "content_type": 11, "codename": "delete_answertype"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can view answer type", "content_type": 11, "codename": "view_answertype"}}, {"model": "auth.permission", "pk": 45, "fields": {"name": "Can add factor", "content_type": 12, "codename": "add_factor"}}, {"model": "auth.permission", "pk": 46, "fields": {"name": "Can change factor", "content_type": 12, "codename": "change_factor"}}, {"model": "auth.permission", "pk": 47, "fields": {"name": "Can delete factor", "content_type": 12, "codename": "delete_factor"}}, {"model": "auth.permission", "pk": 48, "fields": {"name": "Can view factor", "content_type": 12, "codename": "view_factor"}}, {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$216000$jb0X3lHt7uyq$EACDKu5TMQdYtVPFTENuhJdKdo5O1NEKp//46pst06U=", "last_login": "2021-03-16T13:55:05.997Z", "is_superuser": true, "username": "admin", "first_name": "", "last_name": "", "email": "", "is_staff": true, "is_active": true, "date_joined": "2021-03-11T11:26:03Z", "groups": [], "user_permissions": []}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "auth", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "epr", "model": "language"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "epr", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "epr", "model": "content"}}, {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "epr", "model": "translation"}}, {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "epr", "model": "answertype"}}, {"model": "contenttypes.contenttype", "pk": 12, "fields": {"app_label": "epr", "model": "factor"}}, {"model": "sessions.session", "pk": "9rmf421d7w7kmkry3mtcrvrskdnohops", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2hBmijK4dO8ZmgEGqRpISrsy3l2bdKHb_977LzXyupRx7TKPU1JnBerwuwWOD6kbSHeut6Zjq8s8Bb0peqddX1uS52V3_w4K9_KtacjoQrRClgWIPJ8cYnY5ZiA3JHJoBMAQB2OBfcAECT1I9B7xmNX7A9mIN3o:1lKLQ7:B4Xq0fQaIEml2fHAxPDue-NAu3btE2AnWQpzetSaNaw", "expire_date": "2021-03-25T13:32:07.302Z"}}, {"model": "sessions.session", "pk": "fx8tul2rb6v1151yc0kc994hi8dbss9f", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2hBmijK4dO8ZmgEGqRpISrsy3l2bdKHb_977LzXyupRx7TKPU1JnBerwuwWOD6kbSHeut6Zjq8s8Bb0peqddX1uS52V3_w4K9_KtacjoQrRClgWIPJ8cYnY5ZiA3JHJoBMAQB2OBfcAECT1I9B7xmNX7A9mIN3o:1lKLRT:hx_wm_bQO-o5QW8ckKzxZpc0yz9r__i01y8ZpS2E_GA", "expire_date": "2021-03-25T13:33:31.849Z"}}, {"model": "sessions.session", "pk": "q3ncix4gjqb3mt3zoj4iasba31tylrnl", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2hBmijK4dO8ZmgEGqRpISrsy3l2bdKHb_977LzXyupRx7TKPU1JnBerwuwWOD6kbSHeut6Zjq8s8Bb0peqddX1uS52V3_w4K9_KtacjoQrRClgWIPJ8cYnY5ZiA3JHJoBMAQB2OBfcAECT1I9B7xmNX7A9mIN3o:1lMAA6:B5Ar001L6zPK0nsFZJW38klOhuy_Q1L-mdKhcIjuOTY", "expire_date": "2021-03-30T13:55:06.003Z"}}, {"model": "epr.language", "pk": 1, "fields": {"code": "en", "language": "English"}}, {"model": "epr.language", "pk": 2, "fields": {"code": "no", "language": "Norwegian"}}, {"model": "epr.language", "pk": 3, "fields": {"code": "fr", "language": "French"}}, {"model": "epr.contenttype", "pk": "List", "fields": {}}, {"model": "epr.contenttype", "pk": "Question", "fields": {}}, {"model": "epr.contenttype", "pk": "Text", "fields": {}}, {"model": "epr.content", "pk": 1, "fields": {"name": "age", "content_type": "Question"}}, {"model": "epr.content", "pk": 2, "fields": {"name": "height", "content_type": "Question"}}, {"model": "epr.content", "pk": 3, "fields": {"name": "front page paragraph 1", "content_type": "Text"}}, {"model": "epr.content", "pk": 4, "fields": {"name": "parity", "content_type": "Question"}}, {"model": "epr.content", "pk": 5, "fields": {"name": "diabetes", "content_type": "Question"}}, {"model": "epr.content", "pk": 6, "fields": {"name": "congenital", "content_type": "Question"}}, {"model": "epr.content", "pk": 7, "fields": {"name": "stillbirth", "content_type": "Question"}}, {"model": "epr.content", "pk": 8, "fields": {"name": "miscarriage", "content_type": "Question"}}, {"model": "epr.content", "pk": 9, "fields": {"name": "preterm", "content_type": "Question"}}, {"model": "epr.content", "pk": 10, "fields": {"name": "macrosomia", "content_type": "Question"}}, {"model": "epr.content", "pk": 11, "fields": {"name": "weight", "content_type": "Question"}}, {"model": "epr.content", "pk": 12, "fields": {"name": "ethnicity", "content_type": "Question"}}, {"model": "epr.content", "pk": 13, "fields": {"name": "family_diabetes", "content_type": "Question"}}, {"model": "epr.content", "pk": 14, "fields": {"name": "polycystic", "content_type": "Question"}}, {"model": "epr.content", "pk": 15, "fields": {"name": "blood_pressure_family", "content_type": "Question"}}, {"model": "epr.content", "pk": 16, "fields": {"name": "blood_pressure_not_family", "content_type": "Question"}}, {"model": "epr.content", "pk": 17, "fields": {"name": "diet_not_varied", "content_type": "Question"}}, {"model": "epr.content", "pk": 18, "fields": {"name": "diet_sugar", "content_type": "Question"}}, {"model": "epr.content", "pk": 19, "fields": {"name": "diet_processed_meat", "content_type": "Question"}}, {"model": "epr.content", "pk": 20, "fields": {"name": "diet_whole_grain", "content_type": "Question"}}, {"model": "epr.content", "pk": 21, "fields": {"name": "diet_diary", "content_type": "Question"}}, {"model": "epr.content", "pk": 22, "fields": {"name": "diet_vitamin_d", "content_type": "Question"}}, {"model": "epr.content", "pk": 23, "fields": {"name": "activity_walking_minute", "content_type": "Question"}}, {"model": "epr.content", "pk": 24, "fields": {"name": "activity_vigorous", "content_type": "Question"}}, {"model": "epr.content", "pk": 25, "fields": {"name": "activity_stairs", "content_type": "Question"}}, {"model": "epr.content", "pk": 26, "fields": {"name": "diet_sweets", "content_type": "Question"}}, {"model": "epr.translation", "pk": 1, "fields": {"language_code": 1, "belongs_to": 1, "text": "What is your age?"}}, {"model": "epr.translation", "pk": 2, "fields": {"language_code": 1, "belongs_to": 2, "text": "What is your height?"}}, {"model": "epr.translation", "pk": 3, "fields": {"language_code": 2, "belongs_to": 2, "text": "Hva er din h°yde?"}}, {"model": "epr.translation", "pk": 4, "fields": {"language_code": 2, "belongs_to": 1, "text": "Hva er din alder?"}}, {"model": "epr.translation", "pk": 5, "fields": {"language_code": 1, "belongs_to": 3, "text": "Pregnant or planning for a baby? This tool will make you assess your health status for a healthy pregnancy and a complication free birth. By filling in your personal health measurements, this tool will estimate risk for developing common pregnancy complications below."}}, {"model": "epr.translation", "pk": 6, "fields": {"language_code": 3, "belongs_to": 1, "text": "Quel Ôge avez-vous?"}}, {"model": "epr.translation", "pk": 7, "fields": {"language_code": 1, "belongs_to": 4, "text": "How many times have you previously been pregnant, including births, miscarriages, and stillbirths?"}}, {"model": "epr.translation", "pk": 8, "fields": {"language_code": 1, "belongs_to": 5, "text": "Do you currently have, or have previously had Gestational diabetes?"}}, {"model": "epr.translation", "pk": 9, "fields": {"language_code": 1, "belongs_to": 6, "text": "Do you have any children with congenital disorder?"}}, {"model": "epr.translation", "pk": 10, "fields": {"language_code": 1, "belongs_to": 7, "text": "Have you previously had any stillbirths?"}}, {"model": "epr.translation", "pk": 11, "fields": {"language_code": 1, "belongs_to": 8, "text": "Have you had any miscarriages?"}}, {"model": "epr.translation", "pk": 12, "fields": {"language_code": 1, "belongs_to": 9, "text": "Have you previously had a preterm birth?"}}, {"model": "epr.translation", "pk": 13, "fields": {"language_code": 1, "belongs_to": 10, "text": "Have you had any children with Macrosomia?"}}, {"model": "epr.translation", "pk": 14, "fields": {"language_code": 1, "belongs_to": 11, "text": "What is your weight?"}}, {"model": "epr.translation", "pk": 15, "fields": {"language_code": 1, "belongs_to": 12, "text": "Are you white?"}}, {"model": "epr.translation", "pk": 16, "fields": {"language_code": 1, "belongs_to": 13, "text": "Does your family have a history of diabetes?"}}, {"model": "epr.translation", "pk": 17, "fields": {"language_code": 1, "belongs_to": 14, "text": "Do you have polycystic ovarian syndrome?"}}, {"model": "epr.translation", "pk": 18, "fields": {"language_code": 1, "belongs_to": 15, "text": "Does your family have a history of high blood pressure?"}}, {"model": "epr.translation", "pk": 19, "fields": {"language_code": 1, "belongs_to": 16, "text": "Do you have high blood pressure?"}}, {"model": "epr.translation", "pk": 20, "fields": {"language_code": 1, "belongs_to": 17, "text": "Is your diet non-varied?"}}, {"model": "epr.translation", "pk": 21, "fields": {"language_code": 1, "belongs_to": 18, "text": "Do you drink sugar/artificially sweetened beverages more than 4 times a week?"}}, {"model": "epr.translation", "pk": 22, "fields": {"language_code": 1, "belongs_to": 26, "text": "Do you eat sweets such as ice cream, cakes, or cookies more than 2 times a week?"}}, {"model": "epr.translation", "pk": 23, "fields": {"language_code": 1, "belongs_to": 19, "text": "Do you eat processed meat products more than zero times a week?"}}, {"model": "epr.translation", "pk": 24, "fields": {"language_code": 1, "belongs_to": 20, "text": "Do you eat whole grain products less than 2 times a day?"}}, {"model": "epr.translation", "pk": 25, "fields": {"language_code": 1, "belongs_to": 21, "text": "Do you consume dairy products less than 2 times a day?"}}, {"model": "epr.translation", "pk": 26, "fields": {"language_code": 1, "belongs_to": 22, "text": "Do you have vitamin D intake less than 5 times a week?"}}, {"model": "epr.translation", "pk": 27, "fields": {"language_code": 1, "belongs_to": 23, "text": "Do you excercise for at least 30min a day?"}}, {"model": "epr.translation", "pk": 28, "fields": {"language_code": 1, "belongs_to": 24, "text": "Do you take part in vigorous exercise?"}}, {"model": "epr.translation", "pk": 29, "fields": {"language_code": 1, "belongs_to": 25, "text": "Do you climb at least 10 stairs a day?"}}, {"model": "epr.answertype", "pk": "boolean", "fields": {}}, {"model": "epr.answertype", "pk": "integer", "fields": {}}, {"model": "epr.factor", "pk": "activity_stairs", "fields": {"question": 25, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "activity_vigorous", "fields": {"question": 24, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "activity_walking_minute", "fields": {"question": 23, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "age", "fields": {"question": 1, "answertype": "integer", "skippable": true, "max_digits": 2, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "blood_pressure_family", "fields": {"question": 15, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "blood_pressure_not_family", "fields": {"question": 16, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "congenital", "fields": {"question": 6, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": "parity"}}, {"model": "epr.factor", "pk": "diet_diary", "fields": {"question": 21, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "diet_not_varied", "fields": {"question": 17, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "diet_processed_meat", "fields": {"question": 19, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "diet_sugar", "fields": {"question": 18, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "diet_sweets", "fields": {"question": 26, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "diet_vitamin_d", "fields": {"question": 22, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "diet_whole_grain", "fields": {"question": 20, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "family_diabetes", "fields": {"question": 13, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "gdm", "fields": {"question": 5, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": "parity"}}, {"model": "epr.factor", "pk": "height", "fields": {"question": 2, "answertype": "integer", "skippable": true, "max_digits": 3, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "macrosomia", "fields": {"question": 10, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": "parity"}}, {"model": "epr.factor", "pk": "miscarriage", "fields": {"question": 8, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": "parity"}}, {"model": "epr.factor", "pk": "parity", "fields": {"question": 4, "answertype": "integer", "skippable": true, "max_digits": null, "requirement": ">0", "parent_factor": null}}, {"model": "epr.factor", "pk": "polycystic", "fields": {"question": 14, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "preterm", "fields": {"question": 9, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": "parity"}}, {"model": "epr.factor", "pk": "stillbirth", "fields": {"question": 7, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "weight", "fields": {"question": 11, "answertype": "integer", "skippable": true, "max_digits": 3, "requirement": null, "parent_factor": null}}, {"model": "epr.factor", "pk": "white", "fields": {"question": 12, "answertype": "boolean", "skippable": true, "max_digits": null, "requirement": null, "parent_factor": null}}]
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2021-03-11T11:26:34.304Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "en",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2021-03-11T11:26:44.479Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "Question",
+      "object_repr": "Question",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2021-03-11T11:26:46.174Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Question: Age",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2021-03-11T11:26:51.181Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Question: age (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2021-03-11T13:16:14.525Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "Question: Height",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2021-03-11T13:16:29.896Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Question: height (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2021-03-11T13:16:43.021Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "no",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2021-03-11T13:17:29.919Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "Question: height (no)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2021-03-11T13:25:28.410Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Question: age (en)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2021-03-11T13:26:00.337Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Question: age (no)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2021-03-11T13:26:21.200Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "fr",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2021-03-11T13:26:47.380Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "Text",
+      "object_repr": "Text",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2021-03-11T13:26:48.796Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "3",
+      "object_repr": "Text: Front page paragraph 1",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2021-03-11T13:27:06.210Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "5",
+      "object_repr": "Text: front page paragraph 1 (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2021-03-11T13:27:32.934Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "List",
+      "object_repr": "List",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2021-03-11T13:28:28.686Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "Question: age (fr)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2021-03-11T13:31:52.708Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "admin",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2021-03-11T23:04:08.060Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "integer",
+      "object_repr": "AnswerType object (integer)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2021-03-11T23:07:06.066Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "age",
+      "object_repr": "age (integer)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2021-03-11T23:07:18.126Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "age",
+      "object_repr": "age (integer)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2021-03-11T23:07:21.895Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "age",
+      "object_repr": "age (integer)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2021-03-11T23:08:38.926Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "Question: parity",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2021-03-11T23:08:50.037Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "boolean",
+      "object_repr": "boolean",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2021-03-11T23:09:03.779Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "parity",
+      "object_repr": "parity (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2021-03-11T23:09:35.908Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "Question: diabetes",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2021-03-11T23:10:17.415Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "diabetes",
+      "object_repr": "diabetes (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2021-03-11T23:11:07.807Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "7",
+      "object_repr": "Question: parity (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2021-03-11T23:11:28.766Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "8",
+      "object_repr": "Question: diabetes (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2021-03-12T08:49:55.382Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "7",
+      "object_repr": "Question: parity (en)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2021-03-12T11:32:05.166Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "parity",
+      "object_repr": "parity (integer)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Answertype\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2021-03-12T11:33:24.122Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "gdm",
+      "object_repr": "gdm (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Factor name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2021-03-12T11:34:20.166Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "diabetes",
+      "object_repr": "diabetes (boolean)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2021-03-12T11:34:33.022Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "gdm",
+      "object_repr": "gdm (boolean)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2021-03-12T11:36:01.674Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "Question: gdm",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2021-03-12T11:36:27.674Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "Question: congenital",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2021-03-12T11:36:50.821Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "congenital",
+      "object_repr": "congenital (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2021-03-12T11:37:54.539Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "9",
+      "object_repr": "Question: congenital (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2021-03-12T11:38:12.698Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "7",
+      "object_repr": "Question: stillbirth",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2021-03-12T11:38:15.518Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "10",
+      "object_repr": "Question: stillbirth (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2021-03-12T11:39:00.224Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "8",
+      "object_repr": "Question: miscarriage",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2021-03-12T11:39:03.182Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "11",
+      "object_repr": "Question: miscarriage (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2021-03-12T11:39:44.665Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "stillbirth",
+      "object_repr": "stillbirth (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2021-03-12T11:39:56.496Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "miscarriage",
+      "object_repr": "miscarriage (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2021-03-12T12:52:16.037Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "miscarriage",
+      "object_repr": "miscarriage (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2021-03-12T12:52:22.412Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "gdm",
+      "object_repr": "gdm (boolean)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2021-03-12T12:52:28.329Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "congenital",
+      "object_repr": "congenital (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2021-03-16T14:54:35.298Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "Question: preterm",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2021-03-16T14:54:59.980Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "10",
+      "object_repr": "Question: macrosomia",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2021-03-16T14:55:14.479Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "11",
+      "object_repr": "Question: weight",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2021-03-16T14:55:25.282Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "12",
+      "object_repr": "Question: white",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2021-03-16T14:55:41.027Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "13",
+      "object_repr": "Question: family_diabetes",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2021-03-16T14:55:53.398Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "14",
+      "object_repr": "Question: polycystic",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2021-03-16T14:56:01.980Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "15",
+      "object_repr": "Question: blood_pressure_family",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2021-03-16T14:56:12.273Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "16",
+      "object_repr": "Question: blood_pressure_not_family",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+      "action_time": "2021-03-16T14:56:20.905Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "17",
+      "object_repr": "Question: diet_not_varied",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+      "action_time": "2021-03-16T14:56:30.873Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "18",
+      "object_repr": "Question: diet_sugar",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+      "action_time": "2021-03-16T14:56:40.018Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "19",
+      "object_repr": "Question: diet_processed_meat",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+      "action_time": "2021-03-16T14:56:48.596Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "20",
+      "object_repr": "Question: diet_whole_grain",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+      "action_time": "2021-03-16T14:56:57.879Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "21",
+      "object_repr": "Question: diet_diary",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+      "action_time": "2021-03-16T14:57:10.553Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "22",
+      "object_repr": "Question: diet_vitamin_d",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+      "action_time": "2021-03-16T14:57:20.194Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "23",
+      "object_repr": "Question: activity_walking_minute",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+      "action_time": "2021-03-16T14:57:37.999Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "24",
+      "object_repr": "Question: activity_vigorous",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+      "action_time": "2021-03-16T14:58:22.776Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "25",
+      "object_repr": "Question: activity_stairs",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+      "action_time": "2021-03-16T15:01:23.552Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "preterm",
+      "object_repr": "preterm (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+      "action_time": "2021-03-16T15:02:56.025Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "preterm",
+      "object_repr": "preterm (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Parent factor\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+      "action_time": "2021-03-16T15:03:38.007Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "macrosomia",
+      "object_repr": "macrosomia (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+      "action_time": "2021-03-16T15:04:33.968Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "height",
+      "object_repr": "height (integer)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+      "action_time": "2021-03-16T15:05:05.902Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "weight",
+      "object_repr": "weight (integer)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+      "action_time": "2021-03-16T15:06:20.789Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "white",
+      "object_repr": "white (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+      "action_time": "2021-03-16T15:06:41.916Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "12",
+      "object_repr": "Question: ethnicity",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+      "action_time": "2021-03-16T15:06:50.709Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "white",
+      "object_repr": "white (boolean)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+      "action_time": "2021-03-16T15:08:00.563Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "family_diabetes",
+      "object_repr": "family_diabetes (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+      "action_time": "2021-03-16T15:08:23.237Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "polycystic",
+      "object_repr": "polycystic (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+      "action_time": "2021-03-16T15:08:48.104Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "blood_pressure_family",
+      "object_repr": "blood_pressure_family (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+      "action_time": "2021-03-16T15:09:05.318Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "blood_pressure_not_family",
+      "object_repr": "blood_pressure_not_family (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+      "action_time": "2021-03-16T15:09:19.788Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "diet_not_varied",
+      "object_repr": "diet_not_varied (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+      "action_time": "2021-03-16T15:09:48.438Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "diet_sugar",
+      "object_repr": "diet_sugar (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+      "action_time": "2021-03-16T15:10:33.143Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "diet_processed_meat",
+      "object_repr": "diet_processed_meat (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+      "action_time": "2021-03-16T15:10:46.655Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "diet_whole_grain",
+      "object_repr": "diet_whole_grain (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+      "action_time": "2021-03-16T15:11:07.730Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "diet_diary",
+      "object_repr": "diet_diary (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+      "action_time": "2021-03-16T15:11:28.818Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "diet_vitamin_d",
+      "object_repr": "diet_vitamin_d (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+      "action_time": "2021-03-16T15:11:46.258Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "activity_walking_minute",
+      "object_repr": "activity_walking_minute (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+      "action_time": "2021-03-16T15:11:59.959Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "activity_vigorous",
+      "object_repr": "activity_vigorous (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+      "action_time": "2021-03-16T15:12:13.499Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "activity_stairs",
+      "object_repr": "activity_stairs (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+      "action_time": "2021-03-16T15:12:26.791Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "parity",
+      "object_repr": "parity (integer)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+      "action_time": "2021-03-16T15:12:35.441Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "gdm",
+      "object_repr": "gdm (boolean)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+      "action_time": "2021-03-16T15:12:48.585Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "age",
+      "object_repr": "age (integer)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+      "action_time": "2021-03-16T15:12:55.968Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "congenital",
+      "object_repr": "congenital (boolean)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+      "action_time": "2021-03-16T15:13:37.545Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Question: height (en)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+      "action_time": "2021-03-16T15:13:46.975Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "Question: height (no)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+      "action_time": "2021-03-16T15:13:50.429Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Question: age (no)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+      "action_time": "2021-03-16T15:26:14.649Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "12",
+      "object_repr": "Question: preterm (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+      "action_time": "2021-03-16T15:26:39.871Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "13",
+      "object_repr": "Question: macrosomia (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+      "action_time": "2021-03-16T15:27:35.664Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "14",
+      "object_repr": "Question: weight (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+      "action_time": "2021-03-16T15:29:23.144Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "15",
+      "object_repr": "Question: ethnicity (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+      "action_time": "2021-03-16T15:30:41.205Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "16",
+      "object_repr": "Question: family_diabetes (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+      "action_time": "2021-03-16T15:30:56.228Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "17",
+      "object_repr": "Question: polycystic (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+      "action_time": "2021-03-16T15:31:12.111Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "18",
+      "object_repr": "Question: blood_pressure_family (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+      "action_time": "2021-03-16T15:31:29.446Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "19",
+      "object_repr": "Question: blood_pressure_not_family (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+      "action_time": "2021-03-16T15:32:18.978Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "20",
+      "object_repr": "Question: diet_not_varied (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+      "action_time": "2021-03-16T15:32:32.764Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "21",
+      "object_repr": "Question: diet_sugar (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+      "action_time": "2021-03-16T15:33:23.612Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "26",
+      "object_repr": "Question: diet_sweets",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+      "action_time": "2021-03-16T15:33:35.888Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "diet_sweets",
+      "object_repr": "diet_sweets (boolean)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+      "action_time": "2021-03-16T15:33:55.931Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "22",
+      "object_repr": "Question: diet_sweets (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+      "action_time": "2021-03-16T15:34:32.079Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "23",
+      "object_repr": "Question: diet_processed_meat (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+      "action_time": "2021-03-16T15:34:51.621Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "24",
+      "object_repr": "Question: diet_whole_grain (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+      "action_time": "2021-03-16T15:35:15.470Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "25",
+      "object_repr": "Question: diet_diary (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+      "action_time": "2021-03-16T15:35:30.066Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "26",
+      "object_repr": "Question: diet_vitamin_d (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+      "action_time": "2021-03-16T15:35:59.886Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "27",
+      "object_repr": "Question: activity_walking_minute (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+      "action_time": "2021-03-16T15:36:22.104Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "28",
+      "object_repr": "Question: activity_vigorous (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+      "action_time": "2021-03-16T15:36:37.937Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "29",
+      "object_repr": "Question: activity_stairs (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add language",
+      "content_type": 7,
+      "codename": "add_language"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change language",
+      "content_type": 7,
+      "codename": "change_language"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete language",
+      "content_type": 7,
+      "codename": "delete_language"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view language",
+      "content_type": 7,
+      "codename": "view_language"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 8,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 8,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 8,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 8,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add content",
+      "content_type": 9,
+      "codename": "add_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change content",
+      "content_type": 9,
+      "codename": "change_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete content",
+      "content_type": 9,
+      "codename": "delete_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view content",
+      "content_type": 9,
+      "codename": "view_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add translation",
+      "content_type": 10,
+      "codename": "add_translation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change translation",
+      "content_type": 10,
+      "codename": "change_translation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete translation",
+      "content_type": 10,
+      "codename": "delete_translation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view translation",
+      "content_type": 10,
+      "codename": "view_translation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add answer type",
+      "content_type": 11,
+      "codename": "add_answertype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change answer type",
+      "content_type": 11,
+      "codename": "change_answertype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete answer type",
+      "content_type": 11,
+      "codename": "delete_answertype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view answer type",
+      "content_type": 11,
+      "codename": "view_answertype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add factor",
+      "content_type": 12,
+      "codename": "add_factor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change factor",
+      "content_type": 12,
+      "codename": "change_factor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete factor",
+      "content_type": 12,
+      "codename": "delete_factor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view factor",
+      "content_type": 12,
+      "codename": "view_factor"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$jb0X3lHt7uyq$EACDKu5TMQdYtVPFTENuhJdKdo5O1NEKp//46pst06U=",
+      "last_login": "2021-03-16T13:55:05.997Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-03-11T11:26:03Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "auth", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "epr", "model": "language" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": { "app_label": "epr", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": { "app_label": "epr", "model": "content" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": { "app_label": "epr", "model": "translation" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": { "app_label": "epr", "model": "answertype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": { "app_label": "epr", "model": "factor" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "9rmf421d7w7kmkry3mtcrvrskdnohops",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBmijK4dO8ZmgEGqRpISrsy3l2bdKHb_977LzXyupRx7TKPU1JnBerwuwWOD6kbSHeut6Zjq8s8Bb0peqddX1uS52V3_w4K9_KtacjoQrRClgWIPJ8cYnY5ZiA3JHJoBMAQB2OBfcAECT1I9B7xmNX7A9mIN3o:1lKLQ7:B4Xq0fQaIEml2fHAxPDue-NAu3btE2AnWQpzetSaNaw",
+      "expire_date": "2021-03-25T13:32:07.302Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "fx8tul2rb6v1151yc0kc994hi8dbss9f",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBmijK4dO8ZmgEGqRpISrsy3l2bdKHb_977LzXyupRx7TKPU1JnBerwuwWOD6kbSHeut6Zjq8s8Bb0peqddX1uS52V3_w4K9_KtacjoQrRClgWIPJ8cYnY5ZiA3JHJoBMAQB2OBfcAECT1I9B7xmNX7A9mIN3o:1lKLRT:hx_wm_bQO-o5QW8ckKzxZpc0yz9r__i01y8ZpS2E_GA",
+      "expire_date": "2021-03-25T13:33:31.849Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "q3ncix4gjqb3mt3zoj4iasba31tylrnl",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBmijK4dO8ZmgEGqRpISrsy3l2bdKHb_977LzXyupRx7TKPU1JnBerwuwWOD6kbSHeut6Zjq8s8Bb0peqddX1uS52V3_w4K9_KtacjoQrRClgWIPJ8cYnY5ZiA3JHJoBMAQB2OBfcAECT1I9B7xmNX7A9mIN3o:1lMAA6:B5Ar001L6zPK0nsFZJW38klOhuy_Q1L-mdKhcIjuOTY",
+      "expire_date": "2021-03-30T13:55:06.003Z"
+    }
+  },
+  {
+    "model": "epr.language",
+    "pk": 1,
+    "fields": { "code": "en", "language": "English" }
+  },
+  {
+    "model": "epr.language",
+    "pk": 2,
+    "fields": { "code": "no", "language": "Norwegian" }
+  },
+  {
+    "model": "epr.language",
+    "pk": 3,
+    "fields": { "code": "fr", "language": "French" }
+  },
+  { "model": "epr.contenttype", "pk": "List", "fields": {} },
+  { "model": "epr.contenttype", "pk": "Question", "fields": {} },
+  { "model": "epr.contenttype", "pk": "Text", "fields": {} },
+  {
+    "model": "epr.content",
+    "pk": 1,
+    "fields": { "name": "age", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 2,
+    "fields": { "name": "height", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 3,
+    "fields": { "name": "front page paragraph 1", "content_type": "Text" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 4,
+    "fields": { "name": "parity", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 5,
+    "fields": { "name": "diabetes", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 6,
+    "fields": { "name": "congenital", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 7,
+    "fields": { "name": "stillbirth", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 8,
+    "fields": { "name": "miscarriage", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 9,
+    "fields": { "name": "preterm", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 10,
+    "fields": { "name": "macrosomia", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 11,
+    "fields": { "name": "weight", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 12,
+    "fields": { "name": "ethnicity", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 13,
+    "fields": { "name": "family_diabetes", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 14,
+    "fields": { "name": "polycystic", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 15,
+    "fields": { "name": "blood_pressure_family", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 16,
+    "fields": {
+      "name": "blood_pressure_not_family",
+      "content_type": "Question"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 17,
+    "fields": { "name": "diet_not_varied", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 18,
+    "fields": { "name": "diet_sugar", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 19,
+    "fields": { "name": "diet_processed_meat", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 20,
+    "fields": { "name": "diet_whole_grain", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 21,
+    "fields": { "name": "diet_diary", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 22,
+    "fields": { "name": "diet_vitamin_d", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 23,
+    "fields": { "name": "activity_walking_minute", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 24,
+    "fields": { "name": "activity_vigorous", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 25,
+    "fields": { "name": "activity_stairs", "content_type": "Question" }
+  },
+  {
+    "model": "epr.content",
+    "pk": 26,
+    "fields": { "name": "diet_sweets", "content_type": "Question" }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 1,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 1,
+      "text": "What is your age?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 2,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 2,
+      "text": "What is your height?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 3,
+    "fields": {
+      "language_code": 2,
+      "belongs_to": 2,
+      "text": "Hva er din hï¿½yde?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 4,
+    "fields": {
+      "language_code": 2,
+      "belongs_to": 1,
+      "text": "Hva er din alder?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 5,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 3,
+      "text": "Pregnant or planning for a baby? This tool will make you assess your health status for a healthy pregnancy and a complication free birth. By filling in your personal health measurements, this tool will estimate risk for developing common pregnancy complications below."
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 6,
+    "fields": {
+      "language_code": 3,
+      "belongs_to": 1,
+      "text": "Quel ï¿½ge avez-vous?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 7,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 4,
+      "text": "How many times have you previously been pregnant, including births, miscarriages, and stillbirths?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 8,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 5,
+      "text": "Do you currently have, or have previously had Gestational diabetes?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 9,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 6,
+      "text": "Do you have any children with congenital disorder?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 10,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 7,
+      "text": "Have you previously had any stillbirths?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 11,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 8,
+      "text": "Have you had any miscarriages?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 12,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 9,
+      "text": "Have you previously had a preterm birth?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 13,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 10,
+      "text": "Have you had any children with Macrosomia?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 14,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 11,
+      "text": "What is your weight?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 15,
+    "fields": { "language_code": 1, "belongs_to": 12, "text": "Are you white?" }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 16,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 13,
+      "text": "Does your family have a history of diabetes?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 17,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 14,
+      "text": "Do you have polycystic ovarian syndrome?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 18,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 15,
+      "text": "Does your family have a history of high blood pressure?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 19,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 16,
+      "text": "Do you have high blood pressure?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 20,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 17,
+      "text": "Is your diet non-varied?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 21,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 18,
+      "text": "Do you drink sugar/artificially sweetened beverages more than 4 times a week?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 22,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 26,
+      "text": "Do you eat sweets such as ice cream, cakes, or cookies more than 2 times a week?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 23,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 19,
+      "text": "Do you eat processed meat products more than zero times a week?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 24,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 20,
+      "text": "Do you eat whole grain products less than 2 times a day?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 25,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 21,
+      "text": "Do you consume dairy products less than 2 times a day?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 26,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 22,
+      "text": "Do you have vitamin D intake less than 5 times a week?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 27,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 23,
+      "text": "Do you excercise for at least 30min a day?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 28,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 24,
+      "text": "Do you take part in vigorous exercise?"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 29,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 25,
+      "text": "Do you climb at least 10 stairs a day?"
+    }
+  },
+  { "model": "epr.answertype", "pk": "boolean", "fields": {} },
+  { "model": "epr.answertype", "pk": "integer", "fields": {} },
+  {
+    "model": "epr.factor",
+    "pk": "activity_stairs",
+    "fields": {
+      "question": 25,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "activity_vigorous",
+    "fields": {
+      "question": 24,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "activity_walking_minute",
+    "fields": {
+      "question": 23,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "age",
+    "fields": {
+      "question": 1,
+      "answertype": "integer",
+      "skippable": true,
+      "max_digits": 2,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "blood_pressure_family",
+    "fields": {
+      "question": 15,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "blood_pressure_not_family",
+    "fields": {
+      "question": 16,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "congenital",
+    "fields": {
+      "question": 6,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": "parity"
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "diet_diary",
+    "fields": {
+      "question": 21,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "diet_not_varied",
+    "fields": {
+      "question": 17,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "diet_processed_meat",
+    "fields": {
+      "question": 19,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "diet_sugar",
+    "fields": {
+      "question": 18,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "diet_sweets",
+    "fields": {
+      "question": 26,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "diet_vitamin_d",
+    "fields": {
+      "question": 22,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "diet_whole_grain",
+    "fields": {
+      "question": 20,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "family_diabetes",
+    "fields": {
+      "question": 13,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "gdm",
+    "fields": {
+      "question": 5,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": "parity"
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "height",
+    "fields": {
+      "question": 2,
+      "answertype": "integer",
+      "skippable": true,
+      "max_digits": 3,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "macrosomia",
+    "fields": {
+      "question": 10,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": "parity"
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "miscarriage",
+    "fields": {
+      "question": 8,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": "parity"
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "parity",
+    "fields": {
+      "question": 4,
+      "answertype": "integer",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": ">0",
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "polycystic",
+    "fields": {
+      "question": 14,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "preterm",
+    "fields": {
+      "question": 9,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": "parity"
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "stillbirth",
+    "fields": {
+      "question": 7,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "weight",
+    "fields": {
+      "question": 11,
+      "answertype": "integer",
+      "skippable": true,
+      "max_digits": 3,
+      "requirement": null,
+      "parent_factor": null
+    }
+  },
+  {
+    "model": "epr.factor",
+    "pk": "white",
+    "fields": {
+      "question": 12,
+      "answertype": "boolean",
+      "skippable": true,
+      "max_digits": null,
+      "requirement": null,
+      "parent_factor": null
+    }
+  }
+]
