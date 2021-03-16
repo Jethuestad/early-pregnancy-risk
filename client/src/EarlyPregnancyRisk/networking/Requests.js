@@ -41,7 +41,7 @@ export const getFactors = async (country_code) => {
   try {
     let response = await fetch([ENDPOINTS.factors, country_code].join("/"));
     let json = await response.text();
-    if (!json.success) return Factors.factors;
+    if (!JSON.parse(json).success) return Factors.factors;
     return JSON.parse(json).payload.factors;
   } catch (error) {
     console.error(error);

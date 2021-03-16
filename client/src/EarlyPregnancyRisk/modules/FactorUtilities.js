@@ -1,7 +1,6 @@
 export function checkRequirement(requirement, value, type) {
-
   let [c, v] = requirement.split(";");
-  if (type === "int") {
+  if (type === "integer") {
     switch (c) {
       case "=":
         return ((x) => x == Number(v))(value);
