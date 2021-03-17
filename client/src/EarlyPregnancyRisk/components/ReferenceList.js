@@ -23,27 +23,27 @@ export default function ReferenceList({ factor_name, close }) {
 
   if (references == null || isLoading) {
     return (
-        <View
-            style={{
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%",
-            }}
-        >
-          <Loading message="Loading references..." />
-        </View>
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100%",
+        }}
+      >
+        <Loading message="Loading references..." />
+      </View>
     );
   }
 
   return (
-      <View>
-        {references.map((val) => (
-              <ListItem bottomView key={val.id}>
-                <ListItem.Content>
-                  <Text>{val.ref}</Text>
-                </ListItem.Content>
-              </ListItem>
-          ))}
-      </View>
+    <View>
+      {references.map((val) => (
+        <ListItem bottomView key={val.id}>
+          <ListItem.Content>
+            <Text>{val.ref}</Text>
+          </ListItem.Content>
+        </ListItem>
+      ))}
+    </View>
   );
 }

@@ -1,5 +1,4 @@
 import Factors from "../constants/Factors";
-import Refrences from "../constants/Refrences";
 
 let ENDPOINTS = require("../constants/Endpoints");
 if (__DEV__) {
@@ -35,18 +34,6 @@ export const getLanguageComponent = async (country_code, component_id) => {
     return json;
   } catch {
     console.error(error);
-  }
-};
-
-export const getReferences = async (factor_name) => {
-  try {
-    let response = await fetch([ENDPOINTS.reference, factor_name].join("/"));
-    let json = await response.text();
-    if (!json.success) return Refrences.references;
-    return JSON.parse(json).payload.references;
-  } catch (error) {
-    console.error(error);
-    return Refrences.references;
   }
 };
 
