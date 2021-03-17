@@ -36,14 +36,41 @@ export default function ReferenceList({ factor_name, close }) {
   }
 
   return (
-    <View>
-      {references.map((val) => (
-        <ListItem bottomView key={val.id}>
-          <ListItem.Content>
-            <Text>{val.ref}</Text>
-          </ListItem.Content>
-        </ListItem>
-      ))}
-    </View>
+      <View style={styles.centeredView}>
+        <View style={styles.modalView}>
+        {references.map((val) => (
+          <ListItem bottomView key={val.id}>
+            <ListItem.Content>
+              <Text>{val.ref}</Text>
+            </ListItem.Content>
+          </ListItem>
+        ))}
+      </View>
+      </View>
   );
 }
+
+const styles = StyleSheet.create({
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 22
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 35,
+    justifyContent: "center",
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5
+  },
+});

@@ -10,26 +10,27 @@ export default function FormOverlay({ factor, visible, setVisible }) {
     <View>
       {visible ? (
         Platform.OS === "web" ? (
-          <Overlay
-            ModalComponent={Modal}
-            onBackdropPress={() => setVisible(false)}
-            overlayStyle={{ width: "60%", minHeight: "50%" }}
+          <Modal
+            animationType="slide"
+            transparent={true}
+            visible={visible}
           >
             <ReferenceList
               factor_name={factor.factor}
               close={() => setVisible(false)}
             />
-          </Overlay>
+          </Modal>
         ) : (
-          <Overlay
-            onBackdropPress={() => setVisible(false)}
-            overlayStyle={{ width: "80%", height: "90%" }}
+          <Modal
+              animationType="slide"
+              transparent={true}
+              visible={visible}
           >
             <ReferenceList
               factor_name={factor.factor}
               close={() => setVisible(false)}
             />
-          </Overlay>
+          </Modal>
         )
       ) : null}
     </View>
