@@ -13,6 +13,7 @@ import Progressbar from "../components/Progressbar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
 import FormOverLay from "./FormOverLay";
+import {TouchableHighlight} from "react-native-web";
 
 const colors = require("../style/colors");
 
@@ -134,12 +135,11 @@ export default function Form({ changePage, factor_data }) {
           ) : null}
         </View>
         <View style={styles(width).referencesContainer}>
-          <Button
-              title="Click to see why we need this information."
-              onPress={() => setVisible(true)}
-              type="clear"
-              titleStyle={{ color: colors.primary }}
-          />
+          <TouchableHighlight onPress={() => setVisible(true)}>
+            <Text style={{color:colors.primary, fontSize:20}}>
+              Click to see why we need this information.
+            </Text>
+          </TouchableHighlight>
         </View>
       </View>
       <FormOverLay visible={visible} setVisible={setVisible} factor={factors[nr]}/>
@@ -203,5 +203,8 @@ const styles = (width) =>
     },
     referencesContainer: {
       flex: 0.5,
+      textAlign: "center",
+      justifyContent: "center",
+      alignContent: "center",
     },
   });
