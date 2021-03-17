@@ -7,32 +7,31 @@ import Modal from "modal-react-native-web";
 export default function FormOverlay({ factor, visible, setVisible }) {
   Modal.setAppElement("body");
   return (
-    <View>
-
-      {visible ? (
-        Platform.OS === "web" ? (
-          <Overlay
-            ModalComponent={Modal}
-            onBackdropPress={() => setVisible(false)}
-            overlayStyle={{ width: "60%", minHeight: "50%" }}
-          >
-            <ReferenceList
-              factor_name={factor.factor}
-              close={() => setVisible(false)}
-            />
-          </Overlay>
-        ) : (
-          <Overlay
-            onBackdropPress={() => setVisible(false)}
-            overlayStyle={{ width: "80%", height: "90%" }}
-          >
-            <ReferenceList
-              factor_name={factor.factor}
-              close={() => setVisible(false)}
-            />
-          </Overlay>
-        )
-      ) : null}
-    </View>
+      <View>
+        {visible ? (
+            Platform.OS === "web" ? (
+                <Overlay
+                    ModalComponent={Modal}
+                    onBackdropPress={() => setVisible(false)}
+                    overlayStyle={{ width: "60%", minHeight: "50%" }}
+                >
+                  <ReferenceList
+                      factor_name={factor.factor}
+                      close={() => setVisible(false)}
+                  />
+                </Overlay>
+            ) : (
+                <Overlay
+                    onBackdropPress={() => setVisible(false)}
+                    overlayStyle={{ width: "80%", height: "90%" }}
+                >
+                  <ReferenceList
+                      factor_name={factor.factor}
+                      close={() => setVisible(false)}
+                  />
+                </Overlay>
+            )
+        ) : null}
+      </View>
   );
 }

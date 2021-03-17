@@ -1,26 +1,32 @@
 import React from "react";
-import { View, StyleSheet, Platform, TouchableHighlight } from "react-native";
-import { Text, Input } from "react-native-elements";
+import {
+    View,
+    TextInput,
+    StyleSheet,
+    Platform,
+    TouchableHighlight,
+} from "react-native";
+import { Text } from "react-native-elements";
 
 const colors = require("../style/colors");
 
 export function IntInput({ value, setValue, completed, maxDigits }) {
   return (
-    <View style={styles.textInputContainer}>
-      <View style={styles.textInputSpacer}>
-        <Input
-          style={styles.textInput}
-          onChangeText={(value) => setValue(value.replace(/[^0-9]/g, ""))}
-          numeric
-          keyboardType="numeric"
-          value={value}
-          maxLength={maxDigits}
-        ></Input>
-      </View>
-      <View style={styles.textInputSpacer}>
-        <TouchableHighlight
-          style={styles.button}
-          activeOpacity={0.6}
+      <View style={styles.textInputContainer}>
+        <View style={styles.textInputSpacer}>
+          <TextInput
+              style={styles.textInput}
+              onChangeText={(value) => setValue(value.replace(/[^0-9]/g, ""))}
+              numeric
+              keyboardType="numeric"
+              value={value}
+              maxLength={maxDigits}
+          ></TextInput>
+        </View>
+        <View style={styles.textInputButtonSpacer}>
+          <TouchableHighlight
+              style={styles.button}
+              activeOpacity={0.6}
           underlayColor={colors.secondary}
           onPress={() => (value == "" ? completed(false) : completed(true))}
         >
