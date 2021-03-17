@@ -5,13 +5,15 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Results from "./components/Results";
-import { getFactors } from "./networking/Requests";
+import { getFactors, getTranslation } from "./networking/Requests";
 import Loading from "./components/Loading";
+import { TranslationContext } from "./contexts/TranslationContext";
 
 export default function App() {
   const COUNTRY_CODES = require("./constants/CountryCodes");
 
   const [language, setLanguage] = useState(COUNTRY_CODES.english);
+  const [text, setText] = useState({});
   const [factors, setFactors] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(0);
@@ -43,28 +45,32 @@ export default function App() {
   useEffect(() => {
     (async function () {
       setIsLoading(true);
-      const response = await getFactors(language);
-      setFactors(response);
+      const textResponse = await getTranslation(language);
+      setText(textResponse);
+      const factorResponse = await getFactors(language);
+      setFactors(factorResponse);
       setIsLoading(false);
     })();
   }, [language]);
 
   return (
-    <View style={styles.container}>
-      <Header
-        changePage={() => setPage(0)}
-        setLang={(lang) => {
-          setPage(0);
-          setLanguage(lang);
-        }}
-        language={language}
-      />
+    <TranslationContext.Provider value={text}>
+      <View style={styles.container}>
+        <Header
+          changePage={() => setPage(0)}
+          setLang={(lang) => {
+            setPage(0);
+            setLanguage(lang);
+          }}
+          language={language}
+        />
 
-      <View style={{ flex: 15, justifyContent: "center" }}>
-        {isLoading ? <Loading message={"Loading..."} /> : renderPage()}
+        <View style={{ flex: 15, justifyContent: "center" }}>
+          {isLoading != 0 ? <Loading message={isLoading} /> : renderPage()}
+        </View>
+        <Footer />
       </View>
-      <Footer />
-    </View>
+    </TranslationContext.Provider>
   );
 }
 

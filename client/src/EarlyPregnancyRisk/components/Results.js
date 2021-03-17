@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { TranslationContext } from "../contexts/TranslationContext";
 import { getSeverity } from "../modules/Severity";
 import { postFactors } from "../networking/Requests";
 import Loading from "./Loading";
@@ -8,6 +9,7 @@ const colors = require("../style/colors");
 
 export default function Form({ data }) {
   const [risk, setRisk] = useState(null);
+  const context = useContext(TranslationContext);
 
   const testResponse = {
     success: true,
@@ -62,7 +64,11 @@ export default function Form({ data }) {
   if (risk == null) {
     return (
       <View style={styles.container}>
-        <Loading message={"Calculating risk..."} />
+        <Loading
+          message={
+            context.loading_risk != undefined ? context.loading_risk : null
+          }
+        />
       </View>
     );
   }

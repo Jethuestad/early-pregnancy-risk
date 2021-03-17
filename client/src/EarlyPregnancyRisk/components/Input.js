@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   StyleSheet,
   Text,
@@ -7,10 +7,13 @@ import {
   TextInput,
   TouchableHighlight,
 } from "react-native";
+import { TranslationContext } from "../contexts/TranslationContext";
 
 const colors = require("../style/colors");
 
 export function IntInput({ value, setValue, completed, maxDigits }) {
+  const context = useContext(TranslationContext);
+
   return (
     <View style={styles.textInputContainer}>
       <View style={styles.textInputSpacer}>
@@ -30,7 +33,11 @@ export function IntInput({ value, setValue, completed, maxDigits }) {
           underlayColor={colors.secondary}
           onPress={() => (value == "" ? completed(false) : completed(true))}
         >
-          <Text style={styles.buttonText}>Continue</Text>
+          <Text style={styles.buttonText}>
+            {context.button_continue != undefined
+              ? context.button_continue
+              : null}
+          </Text>
         </TouchableHighlight>
       </View>
     </View>
@@ -38,6 +45,7 @@ export function IntInput({ value, setValue, completed, maxDigits }) {
 }
 
 export function BooleanInput({ setValue, completed }) {
+  const context = useContext(TranslationContext);
   return (
     <View style={styles.buttonContainer}>
       <View style={styles.buttonSpacer}>
@@ -50,7 +58,9 @@ export function BooleanInput({ setValue, completed }) {
             completed();
           }}
         >
-          <Text style={styles.buttonText}>Yes</Text>
+          <Text style={styles.buttonText}>
+            {context.button_yes != undefined ? context.button_yes : null}
+          </Text>
         </TouchableHighlight>
       </View>
       <View style={styles.buttonSpacer}>
@@ -63,7 +73,9 @@ export function BooleanInput({ setValue, completed }) {
             completed();
           }}
         >
-          <Text style={styles.buttonText}>No</Text>
+          <Text style={styles.buttonText}>
+            {context.button_no != undefined ? context.button_no : null}
+          </Text>
         </TouchableHighlight>
       </View>
     </View>
@@ -71,6 +83,7 @@ export function BooleanInput({ setValue, completed }) {
 }
 
 export function SkipInput({ setSkipped, completed }) {
+  const context = useContext(TranslationContext);
   return (
     <View style={styles.skipContainer}>
       <TouchableHighlight
@@ -82,7 +95,9 @@ export function SkipInput({ setSkipped, completed }) {
           completed(true);
         }}
       >
-        <Text style={styles.buttonText}>Skip</Text>
+        <Text style={styles.buttonText}>
+          {context.button_skip != undefined ? context.button_skip : null}
+        </Text>
       </TouchableHighlight>
     </View>
   );
