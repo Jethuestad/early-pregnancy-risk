@@ -8,6 +8,7 @@ export default function FormOverlay({ factor, visible, setVisible }) {
   Modal.setAppElement("body");
   return (
     <View>
+
       {visible ? (
         Platform.OS === "web" ? (
           <Overlay
