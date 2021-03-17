@@ -1,11 +1,11 @@
 from ..exceptions.api_exceptions import InternalServerError, exception_response_constructor
 from rest_framework.exceptions import APIException
 
-def exception_handler_request(function):
+def exception_handler_request(function, *args, **kwargs):
     '''This decorator handles otherwise unhandled errors and returns a generic error message'''
     def _function(request, *args, **kwargs):
         try:
-            return function(request)
+            return function(request, *args, **kwargs)
 
         except APIException as handled_exception:
             print("Caught exception!\n{}".format(handled_exception))
