@@ -1,4 +1,5 @@
 import Factors from "../constants/Factors";
+import Translations from "../constants/Translations";
 
 let ENDPOINTS = require("../constants/Endpoints");
 if (__DEV__) {
@@ -15,25 +16,15 @@ export const getTestJson = async () => {
   }
 };
 
-export const getLanguage = async (country_code) => {
+export const getTranslation = async (country_code) => {
   try {
     let response = await fetch([ENDPOINTS.translate, country_code].join("/"));
-    let json = await response.json();
-    return json;
-  } catch {
+    let json = await response.text();
+    if (!JSON.parse(json).success) return Translations.translation;
+    return JSON.parse(json).payload.translation;
+  } catch (error) {
     console.error(error);
-  }
-};
-
-export const getLanguageComponent = async (country_code, component_id) => {
-  try {
-    let response = await fetch(
-      [ENDPOINTS.translate, country_code, component_id].join("/")
-    );
-    let json = await response.json();
-    return json;
-  } catch {
-    console.error(error);
+    return Translations.translation;
   }
 };
 

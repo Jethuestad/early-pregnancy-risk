@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import {
   StyleSheet,
@@ -11,42 +11,37 @@ import {
   ScrollView,
 } from "react-native";
 import { isSmallPhone, isPhone, isTablet } from "../modules/Device";
+import { TranslationContext } from "../contexts/TranslationContext";
 const colors = require("../style/colors");
 
 export default function FrontPage({ changePage, disabled }) {
   const { width } = useWindowDimensions();
+  const context = useContext(TranslationContext);
 
   return (
     <ScrollView style={styles(width).container}>
       <View style={styles(width).content}>
         <View style={styles(width).contentBox}>
           <Text style={styles(width).textBox}>
-            Pregnant or planning for a baby? This tool will make you assess your
-            health status for a healthy pregnancy and a complication free birth.
-            By filling in your personal health measurements, this tool will
-            estimate risk for developing common pregnancy complications below.
+            {context.front_page_paragraph_1 != undefined
+              ? context.front_page_paragraph_1
+              : null}
           </Text>
           <Text style={styles(width).textBox}>
-            It is important to note that the tool will provide you with the risk
-            of an ‘average‘ woman with your health measures and NOT your
-            personal risk score. It is also important to note that the model
-            does not take into many other psychosocial factors affecting
-            maternal outcome.
+            {context.front_page_paragraph_2 != undefined
+              ? context.front_page_paragraph_2
+              : null}
           </Text>
         </View>
         <View style={styles(width).contentBox}>
           <View style={styles(width).listBox}>
-            <Text style={styles(width).listText}>&bull; Miscarriage</Text>
-            <Text style={styles(width).listText}>
-              &bull; Gestational Diabetes Mellitus
-            </Text>
-            <Text style={styles(width).listText}>&bull; Preeclampsia</Text>
-            <Text style={styles(width).listText}>&bull; Pre-term birth</Text>
-            <Text style={styles(width).listText}>&bull; Still birth</Text>
-            <Text style={styles(width).listText}>&bull; Caesarean section</Text>
-            <Text style={styles(width).listText}>
-              &bull; Postpartum depression
-            </Text>
+            {context.front_page_list != undefined
+              ? context.front_page_list.split(";").map((item, index) => (
+                  <Text style={styles(width).listText} key={index}>
+                    &bull; {item}
+                  </Text>
+                ))
+              : null}
           </View>
         </View>
       </View>
@@ -56,7 +51,9 @@ export default function FrontPage({ changePage, disabled }) {
           onPress={() => changePage()}
           style={styles(width, disabled).button}
         >
-          <Text style={styles(width).buttonText}>Start Risk Assessment</Text>
+          <Text style={styles(width).buttonText}>
+            {context.button_start != undefined ? context.button_start : null}
+          </Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
