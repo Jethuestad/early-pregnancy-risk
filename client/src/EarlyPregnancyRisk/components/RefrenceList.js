@@ -35,23 +35,29 @@ export default function ReferenceList({ factor_name, close }) {
     }
 
     const renderItem =({item}) => (
-        <Text style={{
-            padding:2,
-            borderBottomWidth:1,
-            borderBottomColor:"black"
-        }}>
+        <Text style={styles.textBox}>
             {item.ref}
         </Text>
     )
 
     return (
-        <View style={{
-            backgroundColor:"white",
-            color:"black",
-            padding:8,
-            borderRadius:5,
-        }}>
+        <View style={styles.contentBox}>
             <FlatList data={references} renderItem={renderItem}/>
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    textBox:{
+        padding:2,
+        borderBottomWidth:1,
+        borderBottomColor:"black",
+    },
+    contentBox:{
+        backgroundColor:"white",
+        color:"black",
+        padding:8,
+        borderRadius:5,
+    },
+
+})

@@ -5,12 +5,14 @@ import {
   View,
   Platform,
   useWindowDimensions,
+  Button,
 } from "react-native";
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
 import Progressbar from "../components/Progressbar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
+import FormOverLay from "./FormOverLay";
 
 const colors = require("../style/colors");
 
@@ -24,6 +26,7 @@ export default function Form({ changePage, factor_data }) {
   const [factorBoolean, setFactorBoolean] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
+  const [visible, setVisible] = useState(false);
 
   function addSubFactors() {
     if (factors[nr].subfactors != null && factors[nr].requirement != null) {
@@ -130,8 +133,16 @@ export default function Form({ changePage, factor_data }) {
             />
           ) : null}
         </View>
-        <View style={styles(width).spacer}></View>
+        <View style={styles(width).referencesContainer}>
+          <Button
+              title="Click to see why we need this information."
+              onPress={() => setVisible(true)}
+              type="clear"
+              titleStyle={{ color: colors.primary }}
+          />
+        </View>
       </View>
+      <FormOverLay visible={visible} setVisible={setVisible} factor={factors[nr]}/>
     </View>
   );
 }
@@ -189,5 +200,8 @@ const styles = (width) =>
       textAlign: "center",
       justifyContent: "center",
       alignContent: "center",
+    },
+    referencesContainer: {
+      flex: 0.5,
     },
   });
