@@ -5,7 +5,7 @@ import {
   View,
   Platform,
   useWindowDimensions,
-  Button,
+  TouchableHighlight,
 } from "react-native";
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
@@ -13,7 +13,6 @@ import Progressbar from "../components/Progressbar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
 import FormOverLay from "./FormOverLay";
-import {TouchableHighlight} from "react-native-web";
 
 const colors = require("../style/colors");
 

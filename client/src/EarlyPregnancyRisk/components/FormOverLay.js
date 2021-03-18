@@ -9,7 +9,6 @@ import ReferenceList from "./RefrenceList";
 
 export default function FormOverLay({visible, setVisible, factor}){
 
-
     return(
     <View>
         {visible ?(
@@ -37,17 +36,3 @@ export default function FormOverLay({visible, setVisible, factor}){
     </View>
     )
 }
-
-const styles = StyleSheet.create({
-    OverlayContainer:{
-        zIndex:"10",
-        position:"fixed",
-        backgroundColor:"black",
-        color:"white",
-        justifyContent: 'center',
-        alignItems:"center",
-        width:"100%",
-        height:"100%",
-        top:"0",
-    }
-})
