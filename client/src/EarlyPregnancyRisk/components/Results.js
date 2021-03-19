@@ -64,11 +64,7 @@ export default function Form({ data }) {
   if (risk == null) {
     return (
       <View style={styles.container}>
-        <Loading
-          message={
-            context.loading_risk != undefined ? context.loading_risk : null
-          }
-        />
+        <Loading message={context.loading_risk || ""} />
       </View>
     );
   }
