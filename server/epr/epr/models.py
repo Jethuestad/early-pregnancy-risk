@@ -57,6 +57,7 @@ class Factor(models.Model):
     factor_name = LowerCaseField(max_length=100, primary_key=True)
     question = models.ForeignKey(Content, on_delete=models.CASCADE)
     answertype = models.ForeignKey(AnswerType, on_delete=models.CASCADE)
+    unit = models.CharField(max_length=10, null=True, blank=True, default=None)
     skippable = models.BooleanField(default=True)
     max_digits = models.PositiveIntegerField(null=True, blank=True)
     requirement = models.CharField(max_length=10, null=True, blank=True)
