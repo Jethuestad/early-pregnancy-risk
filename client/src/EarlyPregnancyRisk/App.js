@@ -9,13 +9,15 @@ import { getFactors, getTranslation } from "./networking/Requests";
 import Loading from "./components/Loading";
 import { TranslationContext } from "./contexts/TranslationContext";
 
+var async = require("async");
+
 export default function App() {
   const COUNTRY_CODES = require("./constants/CountryCodes");
 
   const [language, setLanguage] = useState(COUNTRY_CODES.english);
   const [text, setText] = useState({});
   const [factors, setFactors] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingLanguage, setIsLoadingLanguage] = useState(false);
   const [page, setPage] = useState(0);
   const [data, setData] = useState();
 
@@ -42,15 +44,24 @@ export default function App() {
     }
   };
 
+  // Get translations from the server.
   useEffect(() => {
-    (async function () {
-      setIsLoading(true);
-      const textResponse = await getTranslation(language);
-      setText(textResponse);
-      const factorResponse = await getFactors(language);
-      setFactors(factorResponse);
-      setIsLoading(false);
-    })();
+    setIsLoadingLanguage(true);
+    async.parallel(
+      [
+        async (callback) => {
+          setText(await getTranslation(language));
+          callback();
+        },
+        async (callback) => {
+          setFactors(await getFactors(language));
+          callback();
+        },
+      ],
+      function () {
+        setIsLoadingLanguage(false);
+      }
+    );
   }, [language]);
 
   return (
@@ -58,6 +69,7 @@ export default function App() {
       <View style={styles.container}>
         <Header
           changePage={() => setPage(0)}
+          isLoadingLanguage={isLoadingLanguage}
           setLang={(lang) => {
             setPage(0);
             setLanguage(lang);
@@ -66,7 +78,7 @@ export default function App() {
         />
 
         <View style={{ flex: 15, justifyContent: "center" }}>
-          {isLoading != 0 ? <Loading message={isLoading} /> : renderPage()}
+          {isLoadingLanguage == true ? <Loading /> : renderPage()}
         </View>
         <Footer />
       </View>
