@@ -11,7 +11,12 @@ import { isPhone, isSmallPhone, isTablet } from "../modules/Device";
 
 const colors = require("../style/colors");
 
-export default function Header({ changePage, setLang, language }) {
+export default function Header({
+  changePage,
+  setLang,
+  language,
+  isLoadingLanguage,
+}) {
   const { width } = useWindowDimensions();
 
   return (
@@ -20,7 +25,11 @@ export default function Header({ changePage, setLang, language }) {
         Early Pregnancy Risk
       </Text>
 
-      <LanguageSelect setLang={setLang} language={language} />
+      <LanguageSelect
+        setLang={setLang}
+        language={language}
+        isLoadingLanguage={isLoadingLanguage}
+      />
     </View>
   );
 }

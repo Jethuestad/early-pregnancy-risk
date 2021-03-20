@@ -9,7 +9,11 @@ import {
 import { isPhone } from "../modules/Device";
 const colors = require("../style/colors");
 
-export default function LanguageSelect({ setLang, language }) {
+export default function LanguageSelect({
+  setLang,
+  language,
+  isLoadingLanguage,
+}) {
   const COUNTRY_CODES = require("../constants/CountryCodes");
   const { width } = useWindowDimensions();
 
@@ -17,6 +21,7 @@ export default function LanguageSelect({ setLang, language }) {
     <View style={styles.container}>
       <View style={styles.languages}>
         <TouchableOpacity
+          disabled={isLoadingLanguage}
           style={[
             language == COUNTRY_CODES.english ? styles.highlight : styles.none,
             styles.flag,
@@ -29,6 +34,7 @@ export default function LanguageSelect({ setLang, language }) {
           />
         </TouchableOpacity>
         <TouchableOpacity
+          disabled={isLoadingLanguage}
           style={[
             language == COUNTRY_CODES.norwegian
               ? styles.highlight
@@ -43,6 +49,7 @@ export default function LanguageSelect({ setLang, language }) {
           />
         </TouchableOpacity>
         <TouchableOpacity
+          disabled={isLoadingLanguage}
           style={[
             language == COUNTRY_CODES.french ? styles.highlight : styles.none,
             styles.flag,

@@ -11,12 +11,14 @@ const Form = loadable(() => import("./components/Form"));
 const Results = loadable(() => import("./components/Results"));
 const FrontPage = loadable(() => import("./components/FrontPage"));
 
+var async = require("async");
+
 export default function App() {
   const COUNTRY_CODES = require("./constants/CountryCodes");
   const [language, setLanguage] = useState(COUNTRY_CODES.english);
   const [text, setText] = useState({});
   const [factors, setFactors] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingLanguage, setIsLoadingLanguage] = useState(false);
   const [page, setPage] = useState(0);
   const [data, setData] = useState();
 
@@ -54,20 +56,28 @@ export default function App() {
       Results.preload();
     })();
   }, []);
-
+  
+  // Get translations from the server.
   useEffect(() => {
-    (async function () {
-      fadeOut();
-      await new Promise((r) => setTimeout(r, 400));
-      setPage(0);
-      setIsLoading(true);
-      const textResponse = await getTranslation(language);
-      setText(textResponse);
-      const factorResponse = await getFactors(language);
-      setFactors(factorResponse);
-      setIsLoading(false);
-      fadeIn();
-    })();
+    fadeOut();
+    await new Promise((r) => setTimeout(r, 400));
+    setPage(0);
+    setIsLoadingLanguage(true);
+    async.parallel(
+      [
+        async (callback) => {
+          setText(await getTranslation(language));
+          callback();
+        },
+        async (callback) => {
+          setFactors(await getFactors(language));
+          callback();
+        },
+      ],
+      function () {
+        setIsLoadingLanguage(false);
+      }
+    );
   }, [language]);
 
   const changePage = async (p) => {
@@ -101,13 +111,14 @@ export default function App() {
       <View style={styles.container}>
         <Header
           changePage={() => changePage(0)}
+          isLoadingLanguage={isLoadingLanguage}
           setLang={(lang) => {
             setLanguage(lang);
           }}
           language={language}
         />
         <View style={{ flex: 15 }}>
-          {isLoading ? (
+          {isLoadingLanguage ? (
             <Loading />
           ) : (
             <Animated.View
