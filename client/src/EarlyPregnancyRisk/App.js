@@ -18,7 +18,7 @@ export default function App() {
   const [language, setLanguage] = useState(COUNTRY_CODES.english);
   const [text, setText] = useState({});
   const [factors, setFactors] = useState(null);
-  const [isLoadingLanguage, setIsLoadingLanguage] = useState(false);
+  const [isLoadingLanguage, setIsLoadingLanguage] = useState(true);
   const [page, setPage] = useState(0);
   const [data, setData] = useState();
 
@@ -50,65 +50,64 @@ export default function App() {
 
   // Preload components
   useEffect(() => {
+    fadeTo(1, 1000, fadeGlobal);
+
     (async () => {
       FrontPage.preload();
       Form.preload();
       Results.preload();
     })();
   }, []);
-  
+
   // Get translations from the server.
   useEffect(() => {
-    fadeOut();
-    await new Promise((r) => setTimeout(r, 400));
-    setPage(0);
-    setIsLoadingLanguage(true);
-    async.parallel(
-      [
-        async (callback) => {
-          setText(await getTranslation(language));
-          callback();
-        },
-        async (callback) => {
-          setFactors(await getFactors(language));
-          callback();
-        },
-      ],
-      function () {
-        setIsLoadingLanguage(false);
-      }
-    );
+    (async () => {
+      fadeTo(0);
+      await new Promise((r) => setTimeout(r, 400));
+      setPage(0);
+      setIsLoadingLanguage(true);
+      async.parallel(
+        [
+          async (callback) => {
+            const response = await getTranslation(language);
+            setText(response);
+            callback();
+          },
+          async (callback) => {
+            const response = await getFactors(language);
+            setFactors(response);
+            callback();
+          },
+        ],
+        function () {
+          setIsLoadingLanguage(false);
+          fadeTo(1);
+        }
+      );
+    })();
   }, [language]);
 
   const changePage = async (p) => {
-    fadeOut();
+    fadeTo(0);
     await new Promise((r) => setTimeout(r, 200));
     setPage(p);
     await new Promise((r) => setTimeout(r, 200));
-    fadeIn();
+    fadeTo(1);
   };
 
-  const fadeAnim = useRef(new Animated.Value(1)).current;
+  const fadeBody = useRef(new Animated.Value(0)).current;
+  const fadeGlobal = useRef(new Animated.Value(0)).current;
 
-  const fadeOut = async () => {
-    // Will change fadeAnim value to 0 in 5 seconds
-    Animated.timing(fadeAnim, {
-      toValue: 0,
-      duration: 200,
-    }).start();
-  };
-
-  const fadeIn = () => {
-    // Will change fadeAnim value to 0 in 5 seconds
-    Animated.timing(fadeAnim, {
-      toValue: 1,
-      duration: 500,
+  const fadeTo = async (v, d = 200, ref = fadeBody) => {
+    Animated.timing(ref, {
+      toValue: v,
+      duration: d,
     }).start();
   };
 
   return (
     <TranslationContext.Provider value={text}>
-      <View style={styles.container}>
+      <Animated.View style={[styles.container, { opacity: fadeGlobal }]}>
         <Header
           changePage={() => changePage(0)}
           isLoadingLanguage={isLoadingLanguage}
@@ -122,7 +121,7 @@ export default function App() {
             <Loading />
           ) : (
             <Animated.View
-              style={{ flex: 1, justifyContent: "center", opacity: fadeAnim }}
+              style={{ flex: 1, justifyContent: "center", opacity: fadeBody }}
             >
               {renderPage()}
             </Animated.View>
@@ -130,7 +129,7 @@ export default function App() {
         </View>
 
         <Footer />
-      </View>
+      </Animated.View>
     </TranslationContext.Provider>
   );
 }
