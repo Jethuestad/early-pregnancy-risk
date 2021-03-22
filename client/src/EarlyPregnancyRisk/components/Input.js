@@ -11,7 +11,7 @@ import { TranslationContext } from "../contexts/TranslationContext";
 
 const colors = require("../style/colors");
 
-export function IntInput({ value, setValue, completed, maxDigits }) {
+export function IntInput({ value, setValue, completed, maxDigits, unit }) {
   const context = useContext(TranslationContext);
 
   return (
@@ -25,6 +25,7 @@ export function IntInput({ value, setValue, completed, maxDigits }) {
           value={value}
           maxLength={maxDigits}
         ></TextInput>
+        <Text style={styles.unit}>{unit}</Text>
       </View>
       <View style={styles.textInputSpacer}>
         <TouchableHighlight
@@ -113,6 +114,7 @@ const styles = StyleSheet.create({
   },
   textInputSpacer: {
     marginLeft: 20,
+    flexDirection: "row",
   },
   buttonContainer: {
     flex: 1,
@@ -142,5 +144,11 @@ const styles = StyleSheet.create({
   },
   skipContainer: {
     flex: 2,
+  },
+  unit: {
+    fontSize: 16,
+    fontWeight: "bold",
+    alignSelf: "center",
+    marginLeft: 5,
   },
 });

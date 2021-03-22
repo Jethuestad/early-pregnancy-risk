@@ -35,6 +35,7 @@ def serialize_factor(factor: Factor, questions: BaseManager, lang_code: str, isS
         "factor": factor.factor_name,
         "question": question.first().text,
         "answertype": factor.answertype.type,
+        "unit": factor.unit,
         "skippable": factor.skippable,
         "maxdigits": factor.max_digits,
         "requirement": factor.requirement,
