@@ -115,6 +115,7 @@ export default function Form({ changePage, factor_data }) {
 
   return (
     <View style={styles(width).container}>
+      <FormOverLay visible={visible} setVisible={setVisible} factor={factors[nr]}/>
       <View style={styles(width).container}>
         <View style={styles(width).progressBarContainer}>
           <Progressbar progress={nr} total={factors.length} />
