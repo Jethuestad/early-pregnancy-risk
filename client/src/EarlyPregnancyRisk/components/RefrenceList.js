@@ -49,13 +49,11 @@ export default function ReferenceList({ factor_name, close }) {
 
 const styles = StyleSheet.create({
     textBox:{
-        zIndex: 99,
         padding:2,
         borderBottomWidth:1,
         borderBottomColor:"black",
     },
     contentBox:{
-        zIndex:99,
         backgroundColor:"white",
         color:"black",
         padding:8,
