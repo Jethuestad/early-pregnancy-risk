@@ -25,10 +25,10 @@ def translation_handler(lang_code: str, content_type: str):
         raise InternalServerError(
             custom_msg=f"No translations available for selected language. ({lang_code})")
 
-    translation = {"country_code": lang_code, "translations": {}}
+    translation = {"country_code": lang_code, "translation": {}}
     # Properly format the queried objects and add them to dictionary
     for queried_object in queried_objects:
         name = queried_object.belongs_to.name.replace(" ", "_")
-        translation["translations"][name] = queried_object.text
+        translation["translation"][name] = queried_object.text
 
     return standard_json_response(True, translation)
