@@ -1,7 +1,7 @@
 module.exports = {
-  test_request: "https://jsonplaceholder.typicode.com/todos/1",
-  translate: "https://nrec.hagenes.eu/translate/text",
-  calculate: "https://nrec.hagenes.eu/calculate/",
-  factors: "https://nrec.hagenes.eu/factors",
+  test_request: "http://localhost:8000/test/",
+  translate: "http://localhost:8000/translate",
+  calculate: "http://localhost:8000/calculate/",
+  factors: "http://localhost:8000/factors",
   reference: "http://localhost:8000/reference",
 };
