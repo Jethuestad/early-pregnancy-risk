@@ -66,6 +66,7 @@ export default function Form({ changePage, factor_data }) {
             }}
             completed={(b) => setIsSubmitting(b)}
             maxDigits={factors[nr].maxdigits}
+            unit={factors[nr].unit}
           />
         );
       case "boolean":

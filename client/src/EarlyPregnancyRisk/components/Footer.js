@@ -14,7 +14,7 @@ export default function Footer() {
         Early Pregnancy Risk {new Date().getFullYear()}
       </Text>
       <Text style={text.p} onPress={() => Linking.openURL("http://google.com")}>
-        {context.footer_privacy != undefined ? context.footer_privacy : null}
+        {context.footer_divacy || ""}
       </Text>
     </View>
   ) : null;

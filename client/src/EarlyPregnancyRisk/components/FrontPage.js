@@ -23,14 +23,10 @@ export default function FrontPage({ changePage, disabled }) {
       <View style={styles(width).content}>
         <View style={styles(width).contentBox}>
           <Text style={styles(width).textBox}>
-            {context.front_page_paragraph_1 != undefined
-              ? context.front_page_paragraph_1
-              : null}
+            {context.front_page_paragraph_1 || ""}
           </Text>
           <Text style={styles(width).textBox}>
-            {context.front_page_paragraph_2 != undefined
-              ? context.front_page_paragraph_2
-              : null}
+            {context.front_page_paragraph_2 || ""}
           </Text>
         </View>
         <View style={styles(width).contentBox}>
@@ -52,7 +48,7 @@ export default function FrontPage({ changePage, disabled }) {
           style={styles(width, disabled).button}
         >
           <Text style={styles(width).buttonText}>
-            {context.button_start != undefined ? context.button_start : null}
+            {context.button_start || ""}
           </Text>
         </TouchableOpacity>
       </View>
