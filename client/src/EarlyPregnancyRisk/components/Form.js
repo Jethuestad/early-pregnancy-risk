@@ -5,7 +5,7 @@ import {
   View,
   Platform,
   useWindowDimensions,
-  TouchableHighlight,
+  Pressable,
 } from "react-native";
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
@@ -116,7 +116,7 @@ export default function Form({ changePage, factor_data }) {
 
   return (
     <View style={styles(width).container}>
-      <FormOverLay visible={visible} setVisible={setVisible} factor={factors[nr]}/>
+       
       <View style={styles(width).container}>
         <View style={styles(width).progressBarContainer}>
           <Progressbar progress={nr} total={factors.length} />
@@ -135,15 +135,16 @@ export default function Form({ changePage, factor_data }) {
             />
           ) : null}
         </View>
-        <View style={styles(width).referencesContainer}>
-          <TouchableHighlight onPress={() => setVisible(true)}>
-            <Text style={{color:colors.primary, fontSize:20}}>
-              Click to see why we need this information.
-            </Text>
-          </TouchableHighlight>
         </View>
+        <View style={styles.referencesContainer}>
+        <FormOverLay visible={visible} setVisible={setVisible} factor={factors[nr]}/>
+          <Pressable
+          style={[styles.button, styles.buttonOpen]}
+          onPress={() => setVisible(true)}
+          >
+            <Text style={{alignSelf: "center"}}>Click to see why we need this information</Text>
+          </Pressable>
       </View>
-      <FormOverLay visible={visible} setVisible={setVisible} factor={factors[nr]}/>
     </View>
   );
 }
