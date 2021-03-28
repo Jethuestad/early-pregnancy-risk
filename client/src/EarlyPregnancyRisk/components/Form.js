@@ -12,7 +12,7 @@ import { IntInput, BooleanInput, SkipInput } from "./Input";
 import Progressbar from "../components/Progressbar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
-import FormOverLay from "./FormOverLay";
+import FormOverlay from "./FormOverlay";
 
 const colors = require("../style/colors");
 
@@ -137,7 +137,7 @@ export default function Form({ changePage, factor_data }) {
         </View>
         </View>
         <View style={styles.referencesContainer}>
-        <FormOverLay visible={visible} setVisible={setVisible} factor={factors[nr]}/>
+        <FormOverlay visible={visible} setVisible={setVisible} factor={factors[nr]}/>
           <Pressable
           style={[styles.button, styles.buttonOpen]}
           onPress={() => setVisible(true)}

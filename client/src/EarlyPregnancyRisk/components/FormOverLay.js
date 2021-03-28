@@ -3,12 +3,12 @@ import { Alert, Modal, StyleSheet, Text, Pressable, View } from "react-native";
 import ReferenceList from "./RefrenceList";
 const colors = require("../style/colors");
 
-export default function FormOverLay({visible, setVisible, factor}){
+export default function FormOverlay({visible, setVisible, factor}){
 
   return (
     <View style={styles.centeredView}>
       <Modal
-        animationType="slide"
+        animationType="fade"
         transparent={true}
         visible={visible}
         onRequestClose={() => {
