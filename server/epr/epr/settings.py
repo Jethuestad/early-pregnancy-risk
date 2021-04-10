@@ -129,16 +129,16 @@ LOGGING = {
         },
     },
     'handlers': {
-        'file': {
+        'request-file': {
             'level': 'WARNING',
             'class': 'logging.FileHandler',
-            'filename': 'epr/logs/warning.log',
+            'filename': 'epr/logs/request.log',
             'formatter': 'simple'
         },
     },
     'loggers': {
-        'django': {
-            'handlers': ['file'],
+        'django.request': {
+            'handlers': ['request-file'],
             'level': 'WARNING',
             'propagate': True,
         },
