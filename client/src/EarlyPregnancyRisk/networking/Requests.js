@@ -6,6 +6,21 @@ if (__DEV__) {
   ENDPOINTS = require("../constants/DebugEndpoints");
 }
 
+async function fetchWithTimeout(resource, options) {
+  const { timeout = 8000 } = options;
+
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeout);
+
+  const response = await fetch(resource, {
+    ...options,
+    signal: controller.signal,
+  });
+  clearTimeout(id);
+
+  return response;
+}
+
 export const getTestJson = async () => {
   try {
     let response = await fetch(ENDPOINTS.test_request);
@@ -18,7 +33,12 @@ export const getTestJson = async () => {
 
 export const getTranslation = async (country_code) => {
   try {
-    let response = await fetch([ENDPOINTS.translate, country_code].join("/"));
+    let response = await fetchWithTimeout(
+      [ENDPOINTS.translate, country_code].join("/"),
+      {
+        timeout: 8000,
+      }
+    );
     let json = await response.text();
     if (!JSON.parse(json).success) return Translations.translation;
     return JSON.parse(json).payload.translation;
@@ -30,7 +50,12 @@ export const getTranslation = async (country_code) => {
 
 export const getFactors = async (country_code) => {
   try {
-    let response = await fetch([ENDPOINTS.factors, country_code].join("/"));
+    let response = await fetchWithTimeout(
+      [ENDPOINTS.factors, country_code].join("/"),
+      {
+        timeout: 8000,
+      }
+    );
     let json = await response.text();
     if (!JSON.parse(json).success) return Factors.factors;
     return JSON.parse(json).payload.factors;
@@ -47,10 +72,11 @@ export const postFactors = async (factors) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(factors),
+    timeout: 12000,
   };
 
   try {
-    let response = await fetch(ENDPOINTS.calculate, data);
+    let response = await fetchWithTimeout(ENDPOINTS.calculate, data);
     let json = await response.text();
     return JSON.parse(json);
   } catch (error) {
