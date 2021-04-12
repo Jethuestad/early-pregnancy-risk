@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from os import path, mkdir
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -106,6 +107,43 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Logging config
+# Create log directory and file if it does not already exist
+if not path.exists("epr/logs"):
+    mkdir("epr/logs")
+
+if not path.exists("epr/logs/warning.log"):
+    open("epr/logs/warning.log", "w+").close()
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {asctime} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'request-file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': 'epr/logs/request.log',
+            'formatter': 'simple'
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['request-file'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+    },
+}
 
 
 # Internationalization
