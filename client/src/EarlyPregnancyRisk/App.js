@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { StyleSheet, View } from "react-native";
-import FrontPage from "./components/FrontPage";
+import React, { useState, useEffect, useRef } from "react";
+import { Animated, StyleSheet, View } from "react-native";
+import { getFactors, getTranslation } from "./networking/Requests";
+import { TranslationContext } from "./contexts/TranslationContext";
+import Loading from "./components/Loading";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Form from "./components/Form";
-import Results from "./components/Results";
-import { getFactors, getTranslation } from "./networking/Requests";
-import Loading from "./components/Loading";
-import { TranslationContext } from "./contexts/TranslationContext";
+
+import loadable from "@loadable/component";
+const Form = loadable(() => import("./components/Form"));
+const Results = loadable(() => import("./components/Results"));
+const FrontPage = loadable(() => import("./components/FrontPage"));
 
 var async = require("async");
 
 export default function App() {
   const COUNTRY_CODES = require("./constants/CountryCodes");
-
   const [language, setLanguage] = useState(COUNTRY_CODES.english);
   const [text, setText] = useState({});
   const [factors, setFactors] = useState(null);
-  const [isLoadingLanguage, setIsLoadingLanguage] = useState(false);
+  const [isLoadingLanguage, setIsLoadingLanguage] = useState(true);
   const [page, setPage] = useState(0);
   const [data, setData] = useState();
 
@@ -25,13 +26,16 @@ export default function App() {
     switch (page) {
       case 0:
         return (
-          <FrontPage changePage={() => setPage(1)} disabled={factors == null} />
+          <FrontPage
+            changePage={async () => changePage(1)}
+            disabled={factors == null}
+          />
         );
       case 1:
         return (
           <Form
             changePage={(r) => {
-              setPage(2);
+              changePage(2);
               setData(r);
             }}
             factor_data={factors}
@@ -44,44 +48,88 @@ export default function App() {
     }
   };
 
+  // Preload components
+  useEffect(() => {
+    fadeTo(1, 1000, fadeGlobal);
+
+    (async () => {
+      FrontPage.preload();
+      Form.preload();
+      Results.preload();
+    })();
+  }, []);
+
   // Get translations from the server.
   useEffect(() => {
-    setIsLoadingLanguage(true);
-    async.parallel(
-      [
-        async (callback) => {
-          setText(await getTranslation(language));
-          callback();
-        },
-        async (callback) => {
-          setFactors(await getFactors(language));
-          callback();
-        },
-      ],
-      function () {
-        setIsLoadingLanguage(false);
-      }
-    );
+    (async () => {
+      fadeTo(0);
+      await new Promise((r) => setTimeout(r, 400));
+      setPage(0);
+      setIsLoadingLanguage(true);
+      async.parallel(
+        [
+          async (callback) => {
+            const response = await getTranslation(language);
+            setText(response);
+            callback();
+          },
+          async (callback) => {
+            const response = await getFactors(language);
+            setFactors(response);
+            callback();
+          },
+        ],
+        function () {
+          setIsLoadingLanguage(false);
+          fadeTo(1);
+        }
+      );
+    })();
   }, [language]);
+
+  const changePage = async (p) => {
+    fadeTo(0);
+    await new Promise((r) => setTimeout(r, 200));
+    setPage(p);
+    await new Promise((r) => setTimeout(r, 200));
+    fadeTo(1);
+  };
+
+  const fadeBody = useRef(new Animated.Value(0)).current;
+  const fadeGlobal = useRef(new Animated.Value(0)).current;
+
+  const fadeTo = async (v, d = 200, ref = fadeBody) => {
+    Animated.timing(ref, {
+      toValue: v,
+      duration: d,
+    }).start();
+  };
 
   return (
     <TranslationContext.Provider value={text}>
-      <View style={styles.container}>
+      <Animated.View style={[styles.container, { opacity: fadeGlobal }]}>
         <Header
-          changePage={() => setPage(0)}
+          changePage={() => changePage(0)}
           isLoadingLanguage={isLoadingLanguage}
           setLang={(lang) => {
-            setPage(0);
             setLanguage(lang);
           }}
           language={language}
         />
-
-        <View style={{ flex: 15, justifyContent: "center" }}>
-          {isLoadingLanguage == true ? <Loading /> : renderPage()}
+        <View style={{ flex: 15 }}>
+          {isLoadingLanguage ? (
+            <Loading />
+          ) : (
+            <Animated.View
+              style={{ flex: 1, justifyContent: "center", opacity: fadeBody }}
+            >
+              {renderPage()}
+            </Animated.View>
+          )}
         </View>
+
         <Footer />
-      </View>
+      </Animated.View>
     </TranslationContext.Provider>
   );
 }
@@ -90,5 +138,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#F8F5F5",
+    height: "100%",
   },
 });
