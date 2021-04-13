@@ -1,51 +1,63 @@
 import React, { useState } from "react";
-import { Alert, Modal, StyleSheet, Text, Pressable, View } from "react-native";
+import { Alert, Modal, StyleSheet, Text, Pressable, View, Platform } from "react-native";
 import ReferenceList from "./RefrenceList";
+import { isPhone, isTablet, } from "../modules/Device";
 const colors = require("../style/colors");
 
 export default function FormOverlay({visible, setVisible, factor}){
 
   return (
-    <View style={styles.centeredView}>
-      <Modal
-        animationType="fade"
-        transparent={true}
-        visible={visible}
-        onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
-          setVisible(!visible);
-        }}
-      >
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
+    
+    <Modal
+      animationType="fade"
+      transparent={true}
+      visible={visible}
+      onRequestClose={() => {
+        Alert.alert("Modal has been closed.");
+        setVisible(!visible);
+      }}
+    >
+      <View style={styles.centeredView}>
+        <View style={styles.modalView}>
           <ReferenceList factor_name={factor.factor} close={() => visible(false)}/>
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => setVisible(!visible)}
             >
-              <Text style={styles.textStyle}>Close reference list</Text>
-            </Pressable>
-          </View>
+            <Text style={styles.textStyle}>Close reference list</Text>
+          </Pressable>
         </View>
-      </Modal>
-      
-    </View>
+      </View>
+    </Modal>
+
   );
 };
 
 const styles = StyleSheet.create({
   centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22
+    flex:1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: (Platform.OS == 'ios') ? 20 : 0
+  
   },
   modalView: {
-    margin: 20,
+    justifyContent: 'center',
+    margin: 35,
     backgroundColor: "white",
     borderRadius: 20,
-    paddingHorizontal: 25,
-    paddingVertical: 55,
+    paddingHorizontal: isTablet ? "2%" : "3%",
+    paddingVertical: isTablet ? 20 : 0,
+    ...Platform.select({
+      web: {
+        maxWidth: (Platform.OS == 'web') ? "60%" : "20%",
+        maxHeight: (Platform.OS == 'web') ? "60%" : "20%",
+        minHeight: (Platform.OS == 'web') ? "50%" : "20%",
+      },
+      default: {
+        paddingVertical: 100,
+      }
+    }),
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -58,8 +70,10 @@ const styles = StyleSheet.create({
   },
   button: {
     borderRadius: 6,
-    padding: 13,
-    elevation: 2
+    padding: 15,
+    elevation: 2,
+    marginBottom: 30,
+    marginTop: (Platform.OS == 'web') ? 30 : 2,
   },
   buttonOpen: {
     backgroundColor: colors.white,
@@ -72,8 +86,4 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center"
   },
-  modalText: {
-    marginBottom: 15,
-    textAlign: "center"
-  }
 });
