@@ -12,6 +12,7 @@ export default function FormOverlay({visible, setVisible, factor}){
       animationType="fade"
       transparent={true}
       visible={visible}
+      useNativeDriver={false}
       onRequestClose={() => {
         Alert.alert("Modal has been closed.");
         setVisible(!visible);

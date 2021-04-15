@@ -102,6 +102,7 @@ export default function App() {
     Animated.timing(ref, {
       toValue: v,
       duration: d,
+      useNativeDriver: false,
     }).start();
   };
 
