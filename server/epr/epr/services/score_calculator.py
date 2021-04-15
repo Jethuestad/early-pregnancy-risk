@@ -1,3 +1,4 @@
+from server.epr.epr.services.complications.preeclampsia import preeclampsia_risk
 from ..utilities.json_utils import json_request_to_dict
 from ..services.calculation import Calculation
 from django.views.decorators.csrf import csrf_exempt
@@ -14,11 +15,14 @@ def get_score(request):
 
     json_dict = json_request_to_dict(request, valid_json_format_calc)
     calc = Calculation(json_dict)   # Creates a risk calculation based on userinput
-    diabetes1 = calc.diabetes
-    diabetes2 = calc.diabetes
+    diabetes = calc.diabetes
+    diabetes1 = calc.diabetes1
+    preeclampsia = calc.preeclampsia
 
     response = []
-    response.append(diabetes2)
+    response.append(diabetes)
     response.append(diabetes1)
+    #response.append(preeclampsia) | The calculation contains questions that is not yet implemented
+    
     # TODO: Add proper json response
     return standard_json_response(True, response)
