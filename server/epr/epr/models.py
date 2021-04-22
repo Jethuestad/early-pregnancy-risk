@@ -51,6 +51,20 @@ class AnswerType(models.Model):
 
     def __str__(self) -> str:
         return self.type
+    
+class Disease(models.Model):
+    disease = LowerCaseField(max_length=100)
+    def __str__(self) -> str:
+        return "{}".format(self.disease)
+
+class References(models.Model):
+    reference_id = models.CharField(max_length=100, null=True, blank=True)
+    reference_string = models.CharField(max_length=1000)
+    related_disease = models.ForeignKey(Disease, on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return "{} - {}".format(self.reference_id, self.reference_string)
+
 
 
 class Factor(models.Model):
@@ -61,6 +75,7 @@ class Factor(models.Model):
     skippable = models.BooleanField(default=True)
     max_digits = models.PositiveIntegerField(null=True, blank=True)
     requirement = models.CharField(max_length=10, null=True, blank=True)
+    diseases = models.ManyToManyField(Disease, blank=True)
     parent_factor = models.ForeignKey(
         "self", on_delete=models.CASCADE, null=True, blank=True)
 
