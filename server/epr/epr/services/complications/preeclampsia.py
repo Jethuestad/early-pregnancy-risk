@@ -52,7 +52,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 13
     elif ethnicity == 1:    # South Asian
         risk_score += 5
-    elif ethnicity == 2:    # Other
+    else:                   # Other
         risk_score += 0
 
     # Chronic hypertension

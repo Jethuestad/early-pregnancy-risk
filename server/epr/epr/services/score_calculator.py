@@ -22,7 +22,7 @@ def get_score(request):
     response = []
     response.append(diabetes)
     response.append(diabetes1)
-    #response.append(preeclampsia) | The calculation contains questions that is not yet implemented
+    response.append(preeclampsia)
     
     # TODO: Add proper json response
     return standard_json_response(True, response)
