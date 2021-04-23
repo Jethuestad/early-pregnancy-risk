@@ -71,7 +71,7 @@ class References(models.Model):
     related_disease = models.ForeignKey(Disease, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return "{} - {}".format(self.reference_id, self.reference_string)
+        return "{}, {} - {}".format(self.related_disease, self.reference_id, self.reference_string)
 
 
 
