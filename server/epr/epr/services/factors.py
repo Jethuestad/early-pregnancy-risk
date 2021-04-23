@@ -15,15 +15,21 @@ def get_factors(request, lang_code: str):
 @exception_handler_request
 def get_references(request, lang_code: str, factor_name_query: str):
     diseases = Factor.objects.get(factor_name = factor_name_query).diseases.all()
-    response = {}
+    response = []
     for disease in diseases:
+        reference_dict = {"references":[]}
         trans_disease = DiseaseTranslation.objects.get(disease=disease, language__code=lang_code)
+
         if trans_disease is None:
             continue
-        response[trans_disease.translation] = []
+
+        reference_dict["name"] = trans_disease.translation
         references = References.objects.filter(related_disease=disease)
+
         for reference in references:
-            response[trans_disease.translation].append(reference.reference_string)
+            reference_dict["references"].append(reference.reference_string)
+            
+        response.append(reference_dict)
 
     return standard_json_response(True, response)
 
