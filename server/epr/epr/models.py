@@ -56,6 +56,14 @@ class Disease(models.Model):
     disease = LowerCaseField(max_length=100)
     def __str__(self) -> str:
         return "{}".format(self.disease)
+    
+class DiseaseTranslation(models.Model):
+    disease = models.ForeignKey(Disease, on_delete=models.CASCADE)
+    language = models.ForeignKey(Language, on_delete=models.CASCADE)
+    translation = models.CharField(max_length=100)
+
+    def __str__(self) -> str:
+        return "{} - ({}, {})".format(self.translation, self.language, self.disease)
 
 class References(models.Model):
     reference_id = models.CharField(max_length=100, null=True, blank=True)
