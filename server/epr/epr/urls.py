@@ -24,5 +24,5 @@ urlpatterns = [
     path('calculate/', get_score),
     path('translate/text/<str:lang_code>', translation),
     path('factors/<str:lang_code>', get_factors),
-    path('factor/<str:lang_code>/references/<str:factor_name_query>', get_references)
+    path('factor/<str:factor_name_query>/<str:lang_code>/references', get_references)
 ]
