@@ -21,6 +21,23 @@ async function fetchWithTimeout(resource, options) {
   return response;
 }
 
+export const getReferences = async (factor_name, lang_code) => {
+  try {
+    let response = await fetchWithTimeout(
+        [ENDPOINTS.references, factor_name,lang_code].join("/"),
+        {
+          timeout: 8000,
+        }
+    );
+    let json = await response.text();
+    if (!JSON.parse(json).success) return null;
+    return JSON.parse(json).payload;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
 export const getTestJson = async () => {
   try {
     let response = await fetch(ENDPOINTS.test_request);
@@ -64,6 +81,7 @@ export const getFactors = async (country_code) => {
     return Factors.factors;
   }
 };
+
 
 export const postFactors = async (factors) => {
   let data = {
