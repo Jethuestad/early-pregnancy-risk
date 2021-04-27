@@ -8,7 +8,7 @@ if (__DEV__) {
 }
 export const getReferences = async (factor_name) => {
   try {
-    let response = await fetch([ENDPOINTS.reference, factor_name].join("/"));
+    let response = await fetch(ENDPOINTS.references.format(factor_name, "en"));
     let json = await response.text();
     if (!json.success) return Refrences.references;
     return JSON.parse(json).payload.references;
