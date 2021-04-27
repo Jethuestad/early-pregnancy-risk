@@ -3,5 +3,5 @@ module.exports = {
   translate: "https://nrec.hagenes.eu/translate/text",
   calculate: "https://nrec.hagenes.eu/calculate/",
   factors: "https://nrec.hagenes.eu/factors",
-  references: "localhost:8000/factor",
+  references: "https://nrec.hagenes.eu/factors/{0}/{1}/references",
 };
