@@ -5,12 +5,14 @@ import {
   View,
   Platform,
   useWindowDimensions,
+  Pressable,
 } from "react-native";
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
 import Progressbar from "../components/Progressbar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
+import FormOverlay from "./FormOverlay";
 
 const colors = require("../style/colors");
 
@@ -24,6 +26,7 @@ export default function Form({ changePage, factor_data }) {
   const [factorBoolean, setFactorBoolean] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
+  const [visible, setVisible] = useState(false);
 
   function addSubFactors() {
     if (factors[nr].subfactors != null && factors[nr].requirement != null) {
@@ -113,6 +116,7 @@ export default function Form({ changePage, factor_data }) {
 
   return (
     <View style={styles(width).container}>
+       
       <View style={styles(width).container}>
         <View style={styles(width).progressBarContainer}>
           <Progressbar progress={nr} total={factors.length} />
@@ -131,7 +135,15 @@ export default function Form({ changePage, factor_data }) {
             />
           ) : null}
         </View>
-        <View style={styles(width).spacer}></View>
+        </View>
+        <View style={styles.referencesContainer}>
+        <FormOverlay visible={visible} setVisible={setVisible} factor={factors[nr]}/>
+          <Pressable
+          style={[styles.button, styles.buttonOpen]}
+          onPress={() => setVisible(true)}
+          >
+            <Text style={{alignSelf: "center"}}>Click to see why we need this information</Text>
+          </Pressable>
       </View>
     </View>
   );
@@ -187,6 +199,12 @@ const styles = (width) =>
     loading: {
       flex: 1,
       alignSelf: "stretch",
+      textAlign: "center",
+      justifyContent: "center",
+      alignContent: "center",
+    },
+    referencesContainer: {
+      flex: 0.5,
       textAlign: "center",
       justifyContent: "center",
       alignContent: "center",
