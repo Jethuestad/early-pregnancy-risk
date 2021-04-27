@@ -4,7 +4,7 @@ import ReferenceList from "./RefrenceList";
 import { isPhone, isTablet, } from "../modules/Device";
 const colors = require("../style/colors");
 
-export default function FormOverlay({visible, setVisible, factor}){
+export default function FormOverlay({visible, setVisible, factor, lang_code}){
 
   return (
     
@@ -20,7 +20,7 @@ export default function FormOverlay({visible, setVisible, factor}){
     >
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
-          <ReferenceList factor_name={factor.factor} close={() => visible(false)}/>
+          <ReferenceList factor_name={factor.factor} close={() => visible(false)} lang_code={lang_code}/>
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => setVisible(!visible)}

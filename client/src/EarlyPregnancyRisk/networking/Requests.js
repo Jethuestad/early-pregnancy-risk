@@ -6,10 +6,11 @@ let ENDPOINTS = require("../constants/Endpoints");
 if (__DEV__) {
   ENDPOINTS = require("../constants/DebugEndpoints");
 }
-export const getReferences = async (factor_name) => {
+export const getReferences = async (factor_name, lang_code) => {
   try {
-    let response = await fetch(ENDPOINTS.references.format(factor_name, "en"));
+    let response = await fetch([ENDPOINTS.references, factor_name, lang_code, "references"].join("/"));
     let json = await response.text();
+    console.log(json.success)
     if (!json.success) return Refrences.references;
     return JSON.parse(json).payload.references;
   } catch (error) {
@@ -18,22 +19,6 @@ export const getReferences = async (factor_name) => {
   }
 };
 
-export const getReferences = async (factor_name, lang_code) => {
-  try {
-    let response = await fetchWithTimeout(
-        [ENDPOINTS.references, factor_name,lang_code].join("/"),
-        {
-          timeout: 8000,
-        }
-    );
-    let json = await response.text();
-    if (!JSON.parse(json).success) return null;
-    return JSON.parse(json).payload;
-  } catch (error) {
-    console.error(error);
-    return null;
-  }
-}
 
 export const getTestJson = async () => {
   try {

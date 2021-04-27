@@ -3,14 +3,14 @@ import { View, FlatList, Text, StyleSheet, } from "react-native";
 import Loading from "./Loading";
 import { getReferences } from "../networking/Requests";
 
-export default function ReferenceList({ factor_name, close }) {
+export default function ReferenceList({ factor_name, close, lang_code }) {
     const [isLoading, setIsLoading] = useState(true);
     const [references, setReferences] = useState();
 
     useEffect(() => {
         setIsLoading(true);
         (async function () {
-            const response = await getReferences(factor_name);
+            const response = await getReferences(factor_name, lang_code);
             if (response == null) {
                 close();
             } else {

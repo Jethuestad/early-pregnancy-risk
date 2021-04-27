@@ -16,7 +16,7 @@ import FormOverlay from "./FormOverlay";
 
 const colors = require("../style/colors");
 
-export default function Form({ changePage, factor_data }) {
+export default function Form({ changePage, factor_data, lang_code }) {
   const { width } = useWindowDimensions();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -137,7 +137,7 @@ export default function Form({ changePage, factor_data }) {
         </View>
         </View>
         <View style={styles.referencesContainer}>
-        <FormOverlay visible={visible} setVisible={setVisible} factor={factors[nr]}/>
+        <FormOverlay visible={visible} setVisible={setVisible} factor={factors[nr]} lang_code={lang_code}/>
           <Pressable
           style={[styles.button, styles.buttonOpen]}
           onPress={() => setVisible(true)}
