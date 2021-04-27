@@ -8,11 +8,11 @@ if (__DEV__) {
 }
 export const getReferences = async (factor_name, lang_code) => {
   try {
-    let response = await fetch([ENDPOINTS.references, factor_name, lang_code, "references"].join("/"));
+    let response = await fetch([ENDPOINTS.references, factor_name, lang_code, "references"].join("/okok"));
     let json = await response.text();
     console.log(json.success)
     if (!json.success) return Refrences.references;
-    return JSON.parse(json).payload.references;
+    return JSON.parse(json).payload;
   } catch (error) {
     console.error(error);
     return Refrences.references;

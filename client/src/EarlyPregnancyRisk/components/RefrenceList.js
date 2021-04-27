@@ -14,7 +14,10 @@ export default function ReferenceList({ factor_name, close, lang_code }) {
             if (response == null) {
                 close();
             } else {
-                setReferences(response);
+               let dataSet = response.map((data)=>
+                   data)
+
+                setReferences(dataSet);
             }
         })();
         setIsLoading(false);
