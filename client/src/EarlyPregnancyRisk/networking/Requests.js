@@ -18,7 +18,7 @@ export const getReferences = async (factor_name, lang_code) => {
     return JSON.parse(json).payload;
   } catch (error) {
     console.error(error);
-    return Refrences.references;
+    return null;
   }
 };
 

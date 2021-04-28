@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
       web: {
         maxWidth: Platform.OS == "web" ? "60%" : "20%",
         maxHeight: Platform.OS == "web" ? "60%" : "20%",
-        minHeight: Platform.OS == "web" ? "50%" : "20%",
       },
       default: {
         paddingVertical: 100,

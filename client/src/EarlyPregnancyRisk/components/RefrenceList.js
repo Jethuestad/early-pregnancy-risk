@@ -15,25 +15,24 @@ export default function ReferenceList({ factor_name, close, lang_code }) {
         close();
       } else {
         setReferences(response);
+        setIsLoading(false);
       }
     })();
-    setIsLoading(false);
   }, []);
 
-  if (references == undefined || isLoading) {
+  if (references == undefined || references == null || isLoading) {
     return (
       <View
         style={{
           alignItems: "center",
           justifyContent: "center",
-          height: "100%",
         }}
       >
         <Loading message="Loading references..." />
       </View>
     );
   }
-
+  console.log(references);
   return (
     <ScrollView style={styles.contentBox}>
       <Text style={styles.description}>
@@ -41,20 +40,22 @@ export default function ReferenceList({ factor_name, close, lang_code }) {
         complications below. Below all complications is a list of references,
         which can give further information about the topic.
       </Text>
-      {references.map((e, i) => (
-        <View key={i}>
-          <Text style={styles.title}>{e.name}</Text>
-          {e.references.length == 0 ? (
-            <Text> No references </Text>
-          ) : (
-            e.references.map((reference, j) => (
-              <Text style={styles.reference} key={j}>
-                {j + 1}: {reference}
-              </Text>
-            ))
-          )}
-        </View>
-      ))}
+      {references.length == 0
+        ? null
+        : references.map((e, i) => (
+            <View key={i}>
+              <Text style={styles.title}>{e.name}</Text>
+              {e.references.length == 0 ? (
+                <Text> No references </Text>
+              ) : (
+                e.references.map((reference, j) => (
+                  <Text style={styles.reference} key={j}>
+                    {j + 1}: {reference}
+                  </Text>
+                ))
+              )}
+            </View>
+          ))}
     </ScrollView>
   );
 }
