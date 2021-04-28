@@ -14,6 +14,6 @@ def exception_handler_request(function, *args, **kwargs):
             return exception_response_constructor(handled_exception)
 
         except Exception as unhandled_exception:
-            logger.error("\nip:{}\nbody:{}\nendpoint:{}\nstack trace:{}".format(request.META.get('REMOTE_ADDR'), request.body,request.headers ,uhandled_exception), exc_info=1)
+            logger.error("\nip:{}\nbody:{}\nendpoint:{}\nstack trace:{}".format(request.META.get('REMOTE_ADDR'), request.body,request.headers ,unhandled_exception), exc_info=1)
             return exception_response_constructor(InternalServerError())
     return _function
