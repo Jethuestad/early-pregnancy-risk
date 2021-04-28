@@ -8,16 +8,19 @@ if (__DEV__) {
 }
 export const getReferences = async (factor_name, lang_code) => {
   try {
-    let response = await fetch([ENDPOINTS.references, factor_name, lang_code, "references"].join("/"));
+    let response = await fetch(
+      [ENDPOINTS.references, factor_name, lang_code, "references"].join("/")
+    );
     let json = await response.text();
-    if (!json.success) return Refrences.references;
+    if (!JSON.parse(json).success) {
+      return null;
+    }
     return JSON.parse(json).payload;
   } catch (error) {
     console.error(error);
     return Refrences.references;
   }
 };
-
 
 export const getTestJson = async () => {
   try {
@@ -52,7 +55,6 @@ export const getFactors = async (country_code) => {
     return Factors.factors;
   }
 };
-
 
 export const postFactors = async (factors) => {
   let data = {

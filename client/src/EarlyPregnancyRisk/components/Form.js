@@ -116,7 +116,6 @@ export default function Form({ changePage, factor_data, lang_code }) {
 
   return (
     <View style={styles(width).container}>
-       
       <View style={styles(width).container}>
         <View style={styles(width).progressBarContainer}>
           <Progressbar progress={nr} total={factors.length} />
@@ -135,15 +134,19 @@ export default function Form({ changePage, factor_data, lang_code }) {
             />
           ) : null}
         </View>
-        </View>
-        <View style={styles.referencesContainer}>
-        <FormOverlay visible={visible} setVisible={setVisible} factor={factors[nr]} lang_code={lang_code}/>
-          <Pressable
-          style={[styles.button, styles.buttonOpen]}
-          onPress={() => setVisible(true)}
-          >
-            <Text style={{alignSelf: "center"}}>Click to see why we need this information</Text>
-          </Pressable>
+      </View>
+      <View style={styles.referencesContainer}>
+        <FormOverlay
+          visible={visible}
+          setVisible={setVisible}
+          factor={factors[nr]}
+          lang_code={lang_code}
+        />
+        <Pressable onPress={() => setVisible(true)}>
+          <Text style={styles(width).referenceButton}>
+            Click to see why we need this information
+          </Text>
+        </Pressable>
       </View>
     </View>
   );
@@ -208,5 +211,10 @@ const styles = (width) =>
       textAlign: "center",
       justifyContent: "center",
       alignContent: "center",
+    },
+    referenceButton: {
+      fontSize: 20,
+      marginVertical: 20,
+      alignSelf: "center",
     },
   });
