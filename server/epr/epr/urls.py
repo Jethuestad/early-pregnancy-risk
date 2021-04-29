@@ -21,7 +21,7 @@ from .services.factors import get_factors, get_references
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('calculate/', get_score),
+    path('calculate/<str:lang_code>', get_score),
     path('translate/text/<str:lang_code>', translation),
     path('factors/<str:lang_code>', get_factors),
     path('factor/<str:factor_name_query>/<str:lang_code>/references', get_references)
