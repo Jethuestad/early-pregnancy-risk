@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Language, Translation, ContentType, Content, AnswerType, Factor, Disease, References, DiseaseTranslation
-
+from .models import Language, Translation, ContentType, Content, AnswerType, Factor, References
 
 class TranslationAdmin(admin.ModelAdmin):
     search_fields = ["language_code__code", "belongs_to__name"]
@@ -16,6 +15,4 @@ admin.site.register(ContentType)
 admin.site.register(Content, ContentAdmin)
 admin.site.register(AnswerType)
 admin.site.register(Factor)
-admin.site.register(Disease)
 admin.site.register(References)
-admin.site.register(DiseaseTranslation)

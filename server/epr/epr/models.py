@@ -51,28 +51,14 @@ class AnswerType(models.Model):
 
     def __str__(self) -> str:
         return self.type
-    
-class Disease(models.Model):
-    disease = LowerCaseField(max_length=100)
-    def __str__(self) -> str:
-        return "{}".format(self.disease)
-    
-class DiseaseTranslation(models.Model):
-    disease = models.ForeignKey(Disease, on_delete=models.CASCADE)
-    language = models.ForeignKey(Language, on_delete=models.CASCADE)
-    translation = models.CharField(max_length=100)
-
-    def __str__(self) -> str:
-        return "{} - ({}, {})".format(self.translation, self.language, self.disease)
 
 class References(models.Model):
     reference_id = models.CharField(max_length=100, null=True, blank=True)
     reference_string = models.CharField(max_length=1000)
-    related_disease = models.ForeignKey(Disease, on_delete=models.CASCADE)
+    related_complication = models.ForeignKey(Content, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return "{}, {} - {}".format(self.related_disease, self.reference_id, self.reference_string)
-
+        return "{}, {} - {}".format(self.related_complication, self.reference_id, self.reference_string)
 
 
 class Factor(models.Model):
@@ -83,7 +69,7 @@ class Factor(models.Model):
     skippable = models.BooleanField(default=True)
     max_digits = models.PositiveIntegerField(null=True, blank=True)
     requirement = models.CharField(max_length=10, null=True, blank=True)
-    diseases = models.ManyToManyField(Disease, blank=True)
+    complications = models.ManyToManyField(Content, blank=True, related_name="comp")
     parent_factor = models.ForeignKey(
         "self", on_delete=models.CASCADE, null=True, blank=True)
 
