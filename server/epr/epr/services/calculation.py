@@ -1,17 +1,28 @@
 from ..exceptions.api_exceptions import InternalServerError
+from ..models import Translation, Complication_Risk
 
 class Calculation:
-    def __init__(self, json_dict: dict):
+    def __init__(self, json_dict: dict, language_code: str):
+        self.language_code = language_code
         self.risk_score = calculate(json_dict)
 
         # Add multiple risks here
-        self.diabetes = diabetes_risk(self.risk_score)
+        self.diabetes = diabetes_risk(self.risk_score,language_code)
 
-def risk_dict_constructor(risk_score: int,  complication: str, severity: int) -> dict:
-    return  {"complication" : complication, "severity": severity, "risk_score": risk_score}
+def risk_dict_constructor(risk_score: int,  complication: str, severity: int, language_code: str) -> dict:
+    translated_comp = Translation.objects.get(belongs_to__name=complication, language_code__code=language_code).text
+    if translated_comp is None:
+        translated_comp = Translation.objects.get(belongs_to=complication, language__code="en").text
+    
+    percentage_translated = Translation.objects.get(belongs_to__name="percentage_of_pregnancies", language_code__code=language_code).text
+
+    percentage_risk = Complication_Risk.objects.get(related_complication__name=complication, severity = "{}".format(severity)).percentage
+
+
+    return  {"complication" : translated_comp, "severity": severity, "risk_str":"{} {}".format(percentage_risk, percentage_translated), "risk_score": risk_score}
 
 # Spitting out the risk factor based on points
-def diabetes_risk(risk_score: int) -> dict:
+def diabetes_risk(risk_score: int, language_code: str) -> dict:
     severity = 0
     if 0 <= risk_score <= 5:
         severity = 0
@@ -26,7 +37,7 @@ def diabetes_risk(risk_score: int) -> dict:
     else:
         raise InternalServerError("Invalid score when calculating diabetes")
     
-    return risk_dict_constructor(risk_score, "diabetes", severity)
+    return risk_dict_constructor(risk_score, "gestational_diabetes_mellitus", severity, language_code)
 
 def calculate(json_dict: dict) -> int:
     risk_score = 0
