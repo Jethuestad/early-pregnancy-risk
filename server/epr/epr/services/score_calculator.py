@@ -1,4 +1,3 @@
-from server.epr.epr.services.complications.preeclampsia import preeclampsia_risk
 from ..utilities.json_utils import json_request_to_dict
 from ..services.calculation import Calculation
 from django.views.decorators.csrf import csrf_exempt

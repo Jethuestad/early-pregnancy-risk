@@ -1,4 +1,4 @@
-from server.epr.epr.services.complications import diabetes, preeclampsia
+from ..services.complications import diabetes, preeclampsia
 from ..exceptions.api_exceptions import InternalServerError
 
 class Calculation:

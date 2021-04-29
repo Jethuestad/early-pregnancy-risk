@@ -1,4 +1,4 @@
-from server.epr.epr.exceptions.api_exceptions import InternalServerError
+from ...exceptions.api_exceptions import InternalServerError
 
 
 # Returning the risk_score and the severity risk_score

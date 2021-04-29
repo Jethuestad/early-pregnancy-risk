@@ -1,5 +1,5 @@
 from sys import winver
-from server.epr.epr.exceptions.api_exceptions import InternalServerError
+from ...exceptions.api_exceptions import InternalServerError
 import math
 
 
