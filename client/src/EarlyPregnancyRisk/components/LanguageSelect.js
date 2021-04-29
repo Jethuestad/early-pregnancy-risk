@@ -2,6 +2,7 @@ import React from "react";
 import {
   StyleSheet,
   View,
+  Text,
   TouchableOpacity,
   useWindowDimensions,
   Image,
@@ -62,6 +63,24 @@ export default function LanguageSelect({
           />
         </TouchableOpacity>
       </View>
+      {language != COUNTRY_CODES.english ? (
+        <View style={{ flexDirection: "column" }}>
+          <Text
+            style={{
+              color: "red",
+              width: "50%",
+              fontSize: 15,
+              alignSelf: "center",
+              textAlign: "center",
+            }}
+          >
+            DISCLAIMER: This language may have problematic translations, and
+            should only be used for testing. The translations were made using
+            google translate, without any supervision from a competent
+            translator or native speaker.
+          </Text>
+        </View>
+      ) : null}
     </View>
   );
 }
