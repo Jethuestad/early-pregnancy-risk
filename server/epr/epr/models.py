@@ -52,13 +52,15 @@ class AnswerType(models.Model):
     def __str__(self) -> str:
         return self.type
 
-class References(models.Model):
+
+class Reference(models.Model):
     reference_id = models.CharField(max_length=100, null=True, blank=True)
     reference_string = models.CharField(max_length=1000)
     related_complication = models.ForeignKey(Content, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
         return "{}, {} - {}".format(self.related_complication, self.reference_id, self.reference_string)
+
 
 class Complication_Risk(models.Model):
     severity = models.CharField(max_length=10)
@@ -68,6 +70,7 @@ class Complication_Risk(models.Model):
     def __str__(self) -> str:
         return "{} - {}".format(self.related_complication, self.severity)
 
+
 class Factor(models.Model):
     factor_name = LowerCaseField(max_length=100, primary_key=True)
     question = models.ForeignKey(Content, on_delete=models.CASCADE)
@@ -76,7 +79,8 @@ class Factor(models.Model):
     skippable = models.BooleanField(default=True)
     max_digits = models.PositiveIntegerField(null=True, blank=True)
     requirement = models.CharField(max_length=10, null=True, blank=True)
-    complications = models.ManyToManyField(Content, blank=True, related_name="comp")
+    complications = models.ManyToManyField(
+        Content, blank=True, related_name="comp")
     parent_factor = models.ForeignKey(
         "self", on_delete=models.CASCADE, null=True, blank=True)
 

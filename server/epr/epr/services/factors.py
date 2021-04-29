@@ -1,5 +1,5 @@
 from django.db.models.manager import BaseManager
-from ..models import Factor, Translation, References
+from ..models import Factor, Translation, Reference
 from ..utilities.request_utils import standard_json_response
 from ..utilities.decorators import exception_handler_request
 from ..exceptions.api_exceptions import InternalServerError
@@ -11,27 +11,31 @@ from django.views.decorators.csrf import csrf_exempt
 def get_factors(request, lang_code: str):
     return factor_handler(lang_code)
 
+
 @csrf_exempt
 @exception_handler_request
 def get_references(request, lang_code: str, factor_name_query: str):
-    complications = Factor.objects.get(factor_name = factor_name_query).complications.all()
+    complications = Factor.objects.get(
+        factor_name=factor_name_query).complications.all()
     response = []
     for complication in complications:
-        reference_dict = {"references":[]}
-        trans_complication = Translation.objects.get(belongs_to=complication, language__code=lang_code)
+        reference_dict = {"references": []}
+        trans_complication = Translation.objects.get(
+            belongs_to=complication, language__code=lang_code)
 
         if trans_complication is None:
             continue
 
         reference_dict["name"] = trans_complication.text
-        references = References.objects.filter(related_disease=complication)
+        references = Reference.objects.filter(related_disease=complication)
 
         for reference in references:
             reference_dict["references"].append(reference.reference_string)
-            
+
         response.append(reference_dict)
 
     return standard_json_response(True, response)
+
 
 def serialize_factor(factor: Factor, questions: BaseManager, lang_code: str, isSubfactor: bool = False) -> dict:
 
