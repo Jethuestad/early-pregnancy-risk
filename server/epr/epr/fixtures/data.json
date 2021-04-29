@@ -1550,7 +1550,7 @@
     "model": "admin.logentry",
     "pk": 120,
     "fields": {
-      "action_time": "2021-03-16T17:56:48.000Z",
+      "action_time": "2021-03-16T17:56:48Z",
       "user": 1,
       "content_type": 12,
       "object_id": "macrosomia",
@@ -2743,6 +2743,643 @@
     }
   },
   {
+    "model": "admin.logentry",
+    "pk": 212,
+    "fields": {
+      "action_time": "2021-04-22T10:12:00.697Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "Disease object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 213,
+    "fields": {
+      "action_time": "2021-04-22T10:12:04.386Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "2",
+      "object_repr": "Disease object (2)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 214,
+    "fields": {
+      "action_time": "2021-04-22T10:12:09.387Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "3",
+      "object_repr": "Disease object (3)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 215,
+    "fields": {
+      "action_time": "2021-04-22T10:12:15.914Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "4",
+      "object_repr": "Disease object (4)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 216,
+    "fields": {
+      "action_time": "2021-04-22T10:12:20.435Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "5",
+      "object_repr": "Disease object (5)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 217,
+    "fields": {
+      "action_time": "2021-04-22T10:13:42.353Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "6",
+      "object_repr": "Hyperemesis gravidarum",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 218,
+    "fields": {
+      "action_time": "2021-04-22T10:13:48.264Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "7",
+      "object_repr": "Miscarriage",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 219,
+    "fields": {
+      "action_time": "2021-04-22T10:13:53.002Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "8",
+      "object_repr": "Placental complications",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 220,
+    "fields": {
+      "action_time": "2021-04-22T10:13:59.214Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "9",
+      "object_repr": "Pre-term birth",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 221,
+    "fields": {
+      "action_time": "2021-04-22T10:14:04.903Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "10",
+      "object_repr": "Preeclampsia",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 222,
+    "fields": {
+      "action_time": "2021-04-22T10:14:11.768Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "11",
+      "object_repr": "Thrombosis",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 223,
+    "fields": {
+      "action_time": "2021-04-22T10:15:30.648Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "weight",
+      "object_repr": "weight (integer)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 224,
+    "fields": {
+      "action_time": "2021-04-22T10:39:50.911Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "stillbirth",
+      "object_repr": "stillbirth (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 225,
+    "fields": {
+      "action_time": "2021-04-22T10:40:39.188Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "preterm",
+      "object_repr": "preterm (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 226,
+    "fields": {
+      "action_time": "2021-04-22T10:41:02.214Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "polycystic",
+      "object_repr": "polycystic (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 227,
+    "fields": {
+      "action_time": "2021-04-22T10:42:18.005Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "parity",
+      "object_repr": "parity (integer)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 228,
+    "fields": {
+      "action_time": "2021-04-22T10:42:55.600Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "miscarriage",
+      "object_repr": "miscarriage (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 229,
+    "fields": {
+      "action_time": "2021-04-22T10:43:18.176Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "macrosomia",
+      "object_repr": "macrosomia (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 230,
+    "fields": {
+      "action_time": "2021-04-22T10:43:59.226Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "height",
+      "object_repr": "height (integer)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 231,
+    "fields": {
+      "action_time": "2021-04-22T10:44:42.732Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "gdm",
+      "object_repr": "gdm (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 232,
+    "fields": {
+      "action_time": "2021-04-22T10:45:12.636Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "family_diabetes",
+      "object_repr": "family_diabetes (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 233,
+    "fields": {
+      "action_time": "2021-04-22T10:45:41.712Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "diet_whole_grain",
+      "object_repr": "diet_whole_grain (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 234,
+    "fields": {
+      "action_time": "2021-04-22T10:46:14.182Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "diet_vitamin_d",
+      "object_repr": "diet_vitamin_d (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 235,
+    "fields": {
+      "action_time": "2021-04-22T10:47:06.453Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "diet_sweets",
+      "object_repr": "diet_sweets (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 236,
+    "fields": {
+      "action_time": "2021-04-22T10:47:31.493Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "diet_sugar",
+      "object_repr": "diet_sugar (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 237,
+    "fields": {
+      "action_time": "2021-04-22T10:47:57.534Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "diet_processed_meat",
+      "object_repr": "diet_processed_meat (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 238,
+    "fields": {
+      "action_time": "2021-04-22T10:48:18.539Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "diet_not_varied",
+      "object_repr": "diet_not_varied (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 239,
+    "fields": {
+      "action_time": "2021-04-22T10:49:15.020Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "congenital",
+      "object_repr": "congenital (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 240,
+    "fields": {
+      "action_time": "2021-04-22T10:49:50.892Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "blood_pressure_not_family",
+      "object_repr": "blood_pressure_not_family (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 241,
+    "fields": {
+      "action_time": "2021-04-22T10:50:24.993Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "blood_pressure_family",
+      "object_repr": "blood_pressure_family (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 242,
+    "fields": {
+      "action_time": "2021-04-22T10:53:00.280Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "age",
+      "object_repr": "age (integer)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 243,
+    "fields": {
+      "action_time": "2021-04-22T10:53:25.654Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "activity_walking_minute",
+      "object_repr": "activity_walking_minute (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 244,
+    "fields": {
+      "action_time": "2021-04-22T10:53:56.236Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "activity_vigorous",
+      "object_repr": "activity_vigorous (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 245,
+    "fields": {
+      "action_time": "2021-04-22T10:54:16.363Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "activity_stairs",
+      "object_repr": "activity_stairs (boolean)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Diseases\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 246,
+    "fields": {
+      "action_time": "2021-04-22T11:36:14.361Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "44",
+      "object_repr": "Question: parity (no)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 247,
+    "fields": {
+      "action_time": "2021-04-23T07:30:19.126Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "DiseaseTranslation object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 248,
+    "fields": {
+      "action_time": "2021-04-23T07:30:26.859Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "DiseaseTranslation object (2)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 249,
+    "fields": {
+      "action_time": "2021-04-23T07:30:47.071Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "3",
+      "object_repr": "DiseaseTranslation object (3)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 250,
+    "fields": {
+      "action_time": "2021-04-23T07:30:58.819Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "4",
+      "object_repr": "DiseaseTranslation object (4)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 251,
+    "fields": {
+      "action_time": "2021-04-23T07:31:12.819Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "5",
+      "object_repr": "DiseaseTranslation object (5)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 252,
+    "fields": {
+      "action_time": "2021-04-23T07:31:25.969Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "6",
+      "object_repr": "DiseaseTranslation object (6)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 253,
+    "fields": {
+      "action_time": "2021-04-23T07:31:35.465Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "7",
+      "object_repr": "DiseaseTranslation object (7)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 254,
+    "fields": {
+      "action_time": "2021-04-23T07:31:45.972Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "8",
+      "object_repr": "DiseaseTranslation object (8)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 255,
+    "fields": {
+      "action_time": "2021-04-23T07:31:56.837Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "9",
+      "object_repr": "DiseaseTranslation object (9)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 256,
+    "fields": {
+      "action_time": "2021-04-23T07:32:07.596Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "10",
+      "object_repr": "DiseaseTranslation object (10)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 257,
+    "fields": {
+      "action_time": "2021-04-23T07:32:20.715Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "11",
+      "object_repr": "DiseaseTranslation object (11)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 258,
+    "fields": {
+      "action_time": "2021-04-23T07:59:14.478Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "7 - Lee KW, Ching SM, Ramachandran V, Yee A, Hoo FK, Chia YC, et al. Prevalence and risk factors of gestational diabetes mellitus in Asia: a systematic review and meta-analysis. BMC Pregnancy Childbir",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 259,
+    "fields": {
+      "action_time": "2021-04-23T07:59:25.384Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "8 - Hrolfsdottir L, Gunnarsdottir I, Birgisdottir BE, Hreidarsdottir IT, Smarason AKr, Hardardottir H, et al. Can a Simple Dietary Screening in Early Pregnancy Identify Dietary Habits Associated with ",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 260,
+    "fields": {
+      "action_time": "2021-04-23T07:59:38.320Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "9 - Tobias DK, Zhang C, van Dam RM, Bowers K, Hu FB. Physical Activity Before and During Pregnancy and Risk of Gestational Diabetes Mellitus: A meta-analysis. Diabetes Care. 2011;34:223–9.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -3175,11 +3812,227 @@
     }
   },
   {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add references",
+      "content_type": 13,
+      "codename": "add_references"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change references",
+      "content_type": 13,
+      "codename": "change_references"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete references",
+      "content_type": 13,
+      "codename": "delete_references"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view references",
+      "content_type": 13,
+      "codename": "view_references"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add factor",
+      "content_type": 14,
+      "codename": "add_factor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change factor",
+      "content_type": 14,
+      "codename": "change_factor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete factor",
+      "content_type": 14,
+      "codename": "delete_factor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view factor",
+      "content_type": 14,
+      "codename": "view_factor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add disease translation",
+      "content_type": 15,
+      "codename": "add_diseasetranslation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change disease translation",
+      "content_type": 15,
+      "codename": "change_diseasetranslation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete disease translation",
+      "content_type": 15,
+      "codename": "delete_diseasetranslation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view disease translation",
+      "content_type": 15,
+      "codename": "view_diseasetranslation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add disease",
+      "content_type": 12,
+      "codename": "add_disease"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change disease",
+      "content_type": 12,
+      "codename": "change_disease"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete disease",
+      "content_type": 12,
+      "codename": "delete_disease"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view disease",
+      "content_type": 12,
+      "codename": "view_disease"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 7,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 7,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 7,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 7,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add language",
+      "content_type": 8,
+      "codename": "add_language"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change language",
+      "content_type": 8,
+      "codename": "change_language"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete language",
+      "content_type": 8,
+      "codename": "delete_language"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view language",
+      "content_type": 8,
+      "codename": "view_language"
+    }
+  },
+  {
     "model": "auth.user",
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$216000$dW5KSggOSG0O$ooT6QnCYtRUw6L0maDOxyP8DiHTSmenrFrI7R4Cex8s=",
-      "last_login": "2021-03-17T18:14:42.906Z",
+      "last_login": "2021-04-22T12:47:51.472Z",
       "is_superuser": true,
       "username": "admin",
       "first_name": "",
@@ -3194,63 +4047,123 @@
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 1,
-    "fields": { "app_label": "admin", "model": "logentry" }
+    "id": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 2,
-    "fields": { "app_label": "auth", "model": "permission" }
+    "id": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 3,
-    "fields": { "app_label": "auth", "model": "group" }
+    "id": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 4,
-    "fields": { "app_label": "auth", "model": "user" }
+    "id": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 5,
-    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+    "id": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 6,
-    "fields": { "app_label": "sessions", "model": "session" }
+    "id": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 7,
-    "fields": { "app_label": "epr", "model": "language" }
+    "id": 7,
+    "fields": {
+      "app_label": "epr",
+      "model": "contenttype"
+    }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 8,
-    "fields": { "app_label": "epr", "model": "contenttype" }
+    "id": 8,
+    "fields": {
+      "app_label": "epr",
+      "model": "language"
+    }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 9,
-    "fields": { "app_label": "epr", "model": "content" }
+    "id": 9,
+    "fields": {
+      "app_label": "epr",
+      "model": "content"
+    }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 10,
-    "fields": { "app_label": "epr", "model": "translation" }
+    "id": 10,
+    "fields": {
+      "app_label": "epr",
+      "model": "translation"
+    }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 11,
-    "fields": { "app_label": "epr", "model": "answertype" }
+    "id": 11,
+    "fields": {
+      "app_label": "epr",
+      "model": "answertype"
+    }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 12,
-    "fields": { "app_label": "epr", "model": "factor" }
+    "id": 12,
+    "fields": {
+      "app_label": "epr",
+      "model": "disease"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "id": 13,
+    "fields": {
+      "app_label": "epr",
+      "model": "references"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "id": 14,
+    "fields": {
+      "app_label": "epr",
+      "model": "factor"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "id": 15,
+    "fields": {
+      "app_label": "epr",
+      "model": "diseasetranslation"
+    }
   },
   {
     "model": "sessions.session",
@@ -3262,10 +4175,34 @@
   },
   {
     "model": "sessions.session",
+    "pk": "2sp7m5jpdpirtit14mahw27cikfygbym",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSEwIA-X7vsNZHiMVA0kpV0Z_12bdKHbe865LxZwW2vYRlnCnNmFSXb63SKmR2k7yHdst85Tb-syR74r_KCDTz2X5_Vw_w4qjvqtS8xGCTI6KjAepCJPKDwogcrFRM6lrEEWtOfkIgoLpIyWRUJOBGTZ-wPhFjf3:1lZYkJ:BVFUMH0OuSTRL4jaOg_BzKtdT8XkBx__biu8eX966y4",
+      "expire_date": "2021-05-06T12:47:51.499Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "3wvedti6ud5sz27otksecx3ceauy9ln1",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSEwIA-X7vsNZHiMVA0kpV0Z_12bdKHbe865LxZwW2vYRlnCnNmFSXb63SKmR2k7yHdst85Tb-syR74r_KCDTz2X5_Vw_w4qjvqtS8xGCTI6KjAepCJPKDwogcrFRM6lrEEWtOfkIgoLpIyWRUJOBGTZ-wPhFjf3:1lZWJK:NEQVHqm-fuac5lEl8imk0Gs2Pb7FVC_jph6Ts1V_dbU",
+      "expire_date": "2021-05-06T10:11:50.424Z"
+    }
+  },
+  {
+    "model": "sessions.session",
     "pk": "9rmf421d7w7kmkry3mtcrvrskdnohops",
     "fields": {
       "session_data": ".eJxVjEEOwiAQRe_C2hBmijK4dO8ZmgEGqRpISrsy3l2bdKHb_977LzXyupRx7TKPU1JnBerwuwWOD6kbSHeut6Zjq8s8Bb0peqddX1uS52V3_w4K9_KtacjoQrRClgWIPJ8cYnY5ZiA3JHJoBMAQB2OBfcAECT1I9B7xmNX7A9mIN3o:1lKLQ7:B4Xq0fQaIEml2fHAxPDue-NAu3btE2AnWQpzetSaNaw",
       "expire_date": "2021-03-25T13:32:07.302Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "av1usacs1x3uiuu7hjcxskxs03x5fkz1",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSEwIA-X7vsNZHiMVA0kpV0Z_12bdKHbe865LxZwW2vYRlnCnNmFSXb63SKmR2k7yHdst85Tb-syR74r_KCDTz2X5_Vw_w4qjvqtS8xGCTI6KjAepCJPKDwogcrFRM6lrEEWtOfkIgoLpIyWRUJOBGTZ-wPhFjf3:1lZX6E:g92r1tP3ocrWQasZ6Raw7AHqSepN4xoGaNo7jVwnBX0",
+      "expire_date": "2021-05-06T11:02:22.888Z"
     }
   },
   {
@@ -3294,10 +4231,34 @@
   },
   {
     "model": "sessions.session",
+    "pk": "nwmzn5qpcsy35arxs37m51yfp7ysu3yy",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBmijK4dO8ZmgEGqRpISrsy3l2bdKHb_977LzXyupRx7TKPU1JnBerwuwWOD6kbSHeut6Zjq8s8Bb0peqddX1uS52V3_w4K9_KtacjoQrRClgWIPJ8cYnY5ZiA3JHJoBMAQB2OBfcAECT1I9B7xmNX7A9mIN3o:1lMDI1:CcLAr1k9B1hRkPLZVprrafyRhtslGNlpssygN3AcjRc",
+      "expire_date": "2021-03-30T17:15:29.483Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "oyqktu9kbpp2alnh123h55cpxz9p6fyn",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSEwIA-X7vsNZHiMVA0kpV0Z_12bdKHbe865LxZwW2vYRlnCnNmFSXb63SKmR2k7yHdst85Tb-syR74r_KCDTz2X5_Vw_w4qjvqtS8xGCTI6KjAepCJPKDwogcrFRM6lrEEWtOfkIgoLpIyWRUJOBGTZ-wPhFjf3:1lZYdA:2vvsV9pa8NBvDiGN88iPw4nYR8TqAR0kaOH0s-np6Es",
+      "expire_date": "2021-05-06T12:40:28.679Z"
+    }
+  },
+  {
+    "model": "sessions.session",
     "pk": "q3ncix4gjqb3mt3zoj4iasba31tylrnl",
     "fields": {
       "session_data": ".eJxVjEEOwiAQRe_C2hBmijK4dO8ZmgEGqRpISrsy3l2bdKHb_977LzXyupRx7TKPU1JnBerwuwWOD6kbSHeut6Zjq8s8Bb0peqddX1uS52V3_w4K9_KtacjoQrRClgWIPJ8cYnY5ZiA3JHJoBMAQB2OBfcAECT1I9B7xmNX7A9mIN3o:1lMAA6:B5Ar001L6zPK0nsFZJW38klOhuy_Q1L-mdKhcIjuOTY",
       "expire_date": "2021-03-30T13:55:06.003Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "s3090htvj4qa7t86uvhj0zh4a35c6fi3",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSEwIA-X7vsNZHiMVA0kpV0Z_12bdKHbe865LxZwW2vYRlnCnNmFSXb63SKmR2k7yHdst85Tb-syR74r_KCDTz2X5_Vw_w4qjvqtS8xGCTI6KjAepCJPKDwogcrFRM6lrEEWtOfkIgoLpIyWRUJOBGTZ-wPhFjf3:1lZVnY:JA_b4DDfLE8SAxnnvyQGrBq0Td69TELgBGWpjuXgnfM",
+      "expire_date": "2021-05-06T09:39:00.737Z"
     }
   },
   {
@@ -3319,95 +4280,161 @@
   {
     "model": "epr.language",
     "pk": 1,
-    "fields": { "code": "en", "language": "English" }
+    "fields": {
+      "code": "en",
+      "language": "English"
+    }
   },
   {
     "model": "epr.language",
     "pk": 2,
-    "fields": { "code": "no", "language": "Norwegian" }
+    "fields": {
+      "code": "no",
+      "language": "Norwegian"
+    }
   },
   {
     "model": "epr.language",
     "pk": 3,
-    "fields": { "code": "fr", "language": "French" }
+    "fields": {
+      "code": "fr",
+      "language": "French"
+    }
   },
-  { "model": "epr.contenttype", "pk": "List", "fields": {} },
-  { "model": "epr.contenttype", "pk": "Question", "fields": {} },
-  { "model": "epr.contenttype", "pk": "Text", "fields": {} },
+  {
+    "model": "epr.contenttype",
+    "pk": "List",
+    "fields": {}
+  },
+  {
+    "model": "epr.contenttype",
+    "pk": "Question",
+    "fields": {}
+  },
+  {
+    "model": "epr.contenttype",
+    "pk": "Text",
+    "fields": {}
+  },
   {
     "model": "epr.content",
     "pk": 1,
-    "fields": { "name": "age", "content_type": "Question" }
+    "fields": {
+      "name": "age",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 2,
-    "fields": { "name": "height", "content_type": "Question" }
+    "fields": {
+      "name": "height",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 3,
-    "fields": { "name": "front_page_paragraph_1", "content_type": "Text" }
+    "fields": {
+      "name": "front_page_paragraph_1",
+      "content_type": "Text"
+    }
   },
   {
     "model": "epr.content",
     "pk": 4,
-    "fields": { "name": "parity", "content_type": "Question" }
+    "fields": {
+      "name": "parity",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 5,
-    "fields": { "name": "diabetes", "content_type": "Question" }
+    "fields": {
+      "name": "diabetes",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 6,
-    "fields": { "name": "congenital", "content_type": "Question" }
+    "fields": {
+      "name": "congenital",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 7,
-    "fields": { "name": "stillbirth", "content_type": "Question" }
+    "fields": {
+      "name": "stillbirth",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 8,
-    "fields": { "name": "miscarriage", "content_type": "Question" }
+    "fields": {
+      "name": "miscarriage",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 9,
-    "fields": { "name": "preterm", "content_type": "Question" }
+    "fields": {
+      "name": "preterm",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 10,
-    "fields": { "name": "macrosomia", "content_type": "Question" }
+    "fields": {
+      "name": "macrosomia",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 11,
-    "fields": { "name": "weight", "content_type": "Question" }
+    "fields": {
+      "name": "weight",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 12,
-    "fields": { "name": "ethnicity", "content_type": "Question" }
+    "fields": {
+      "name": "ethnicity",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 13,
-    "fields": { "name": "family_diabetes", "content_type": "Question" }
+    "fields": {
+      "name": "family_diabetes",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 14,
-    "fields": { "name": "polycystic", "content_type": "Question" }
+    "fields": {
+      "name": "polycystic",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 15,
-    "fields": { "name": "blood_pressure_family", "content_type": "Question" }
+    "fields": {
+      "name": "blood_pressure_family",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
@@ -3420,92 +4447,146 @@
   {
     "model": "epr.content",
     "pk": 17,
-    "fields": { "name": "diet_not_varied", "content_type": "Question" }
+    "fields": {
+      "name": "diet_not_varied",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 18,
-    "fields": { "name": "diet_sugar", "content_type": "Question" }
+    "fields": {
+      "name": "diet_sugar",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 19,
-    "fields": { "name": "diet_processed_meat", "content_type": "Question" }
+    "fields": {
+      "name": "diet_processed_meat",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 20,
-    "fields": { "name": "diet_whole_grain", "content_type": "Question" }
+    "fields": {
+      "name": "diet_whole_grain",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 21,
-    "fields": { "name": "diet_diary", "content_type": "Question" }
+    "fields": {
+      "name": "diet_diary",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 22,
-    "fields": { "name": "diet_vitamin_d", "content_type": "Question" }
+    "fields": {
+      "name": "diet_vitamin_d",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 23,
-    "fields": { "name": "activity_walking_minute", "content_type": "Question" }
+    "fields": {
+      "name": "activity_walking_minute",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 24,
-    "fields": { "name": "activity_vigorous", "content_type": "Question" }
+    "fields": {
+      "name": "activity_vigorous",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 25,
-    "fields": { "name": "activity_stairs", "content_type": "Question" }
+    "fields": {
+      "name": "activity_stairs",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 26,
-    "fields": { "name": "diet_sweets", "content_type": "Question" }
+    "fields": {
+      "name": "diet_sweets",
+      "content_type": "Question"
+    }
   },
   {
     "model": "epr.content",
     "pk": 27,
-    "fields": { "name": "button_yes", "content_type": "Text" }
+    "fields": {
+      "name": "button_yes",
+      "content_type": "Text"
+    }
   },
   {
     "model": "epr.content",
     "pk": 28,
-    "fields": { "name": "button_no", "content_type": "Text" }
+    "fields": {
+      "name": "button_no",
+      "content_type": "Text"
+    }
   },
   {
     "model": "epr.content",
     "pk": 29,
-    "fields": { "name": "button_skip", "content_type": "Text" }
+    "fields": {
+      "name": "button_skip",
+      "content_type": "Text"
+    }
   },
   {
     "model": "epr.content",
     "pk": 30,
-    "fields": { "name": "button_continue", "content_type": "Text" }
+    "fields": {
+      "name": "button_continue",
+      "content_type": "Text"
+    }
   },
   {
     "model": "epr.content",
     "pk": 31,
-    "fields": { "name": "front_page_paragraph_2", "content_type": "Text" }
+    "fields": {
+      "name": "front_page_paragraph_2",
+      "content_type": "Text"
+    }
   },
   {
     "model": "epr.content",
     "pk": 32,
-    "fields": { "name": "front_page_list", "content_type": "List" }
+    "fields": {
+      "name": "front_page_list",
+      "content_type": "List"
+    }
   },
   {
     "model": "epr.content",
     "pk": 33,
-    "fields": { "name": "button_start", "content_type": "Text" }
+    "fields": {
+      "name": "button_start",
+      "content_type": "Text"
+    }
   },
   {
     "model": "epr.content",
     "pk": 34,
-    "fields": { "name": "footer_privacy", "content_type": "Text" }
+    "fields": {
+      "name": "footer_privacy",
+      "content_type": "Text"
+    }
   },
   {
     "model": "epr.translation",
@@ -3531,7 +4612,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 2,
-      "text": "Hva er din høyde?"
+      "text": "Hva er din h°yde?"
     }
   },
   {
@@ -3558,7 +4639,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 1,
-      "text": "Quel âge avez-vous?"
+      "text": "Quel Ôge avez-vous?"
     }
   },
   {
@@ -3810,7 +4891,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 15,
-      "text": "Har familien din en historie med høyt blodtrykk?"
+      "text": "Har familien din en historie med h°yt blodtrykk?"
     }
   },
   {
@@ -3819,7 +4900,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 16,
-      "text": "Har du høyt blodtrykk?"
+      "text": "Har du h°yt blodtrykk?"
     }
   },
   {
@@ -3846,7 +4927,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 19,
-      "text": "Spiser du prosesserte kjøttprodukter mer enn null ganger i uken?"
+      "text": "Spiser du prosesserte kj°ttprodukter mer enn null ganger i uken?"
     }
   },
   {
@@ -3855,7 +4936,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 18,
-      "text": "Drikker du sukker / kunstig søte drikker mer enn 4 ganger i uken?"
+      "text": "Drikker du sukker / kunstig s°te drikker mer enn 4 ganger i uken?"
     }
   },
   {
@@ -3864,7 +4945,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 26,
-      "text": "Spiser du søtsaker som iskrem, kaker eller kjeks mer enn 2 ganger i uken?"
+      "text": "Spiser du s°tsaker som iskrem, kaker eller kjeks mer enn 2 ganger i uken?"
     }
   },
   {
@@ -3900,7 +4981,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 4,
-      "text": "Hvor mange ganger har du tidligere vært gravid, inkludert fødsler, spontanaborter og dødfødsler?"
+      "text": "Hvor mange ganger har du tidligere vµrt gravid, inkludert f°dsler, spontanaborter og d°df°dsler?"
     }
   },
   {
@@ -3909,7 +4990,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 6,
-      "text": "Har du noen barn med medfødt lidelse?"
+      "text": "Har du noen barn med medf°dt lidelse?"
     }
   },
   {
@@ -3945,7 +5026,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 9,
-      "text": "Har du tidligere født for tidlig?"
+      "text": "Har du tidligere f°dt for tidlig?"
     }
   },
   {
@@ -3954,7 +5035,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 7,
-      "text": "Har du tidligere hatt dødfødsler?"
+      "text": "Har du tidligere hatt d°df°dsler?"
     }
   },
   {
@@ -4008,7 +5089,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 15,
-      "text": "Votre famille a-t-elle des antécédents d'hypertension artérielle?"
+      "text": "Votre famille a-t-elle des antÚcÚdents d'hypertension artÚrielle?"
     }
   },
   {
@@ -4035,7 +5116,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 17,
-      "text": "Votre alimentation est-elle non variée?"
+      "text": "Votre alimentation est-elle non variÚe?"
     }
   },
   {
@@ -4044,7 +5125,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 19,
-      "text": "Mangez-vous des produits carnés transformés plus de zéro fois par semaine?"
+      "text": "Mangez-vous des produits carnÚs transformÚs plus de zÚro fois par semaine?"
     }
   },
   {
@@ -4053,7 +5134,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 18,
-      "text": "Buvez-vous du sucre / des boissons sucrées artificiellement plus de 4 fois par semaine?"
+      "text": "Buvez-vous du sucre / des boissons sucrÚes artificiellement plus de 4 fois par semaine?"
     }
   },
   {
@@ -4062,7 +5143,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 26,
-      "text": "Mangez-vous des bonbons tels que de la crème glacée, des gâteaux ou des biscuits plus de 2 fois par semaine?"
+      "text": "Mangez-vous des bonbons tels que de la crÞme glacÚe, des gÔteaux ou des biscuits plus de 2 fois par semaine?"
     }
   },
   {
@@ -4080,7 +5161,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 20,
-      "text": "Mangez-vous des produits à grains entiers moins de 2 fois par jour?"
+      "text": "Mangez-vous des produits Ó grains entiers moins de 2 fois par jour?"
     }
   },
   {
@@ -4089,7 +5170,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 13,
-      "text": "Votre famille a-t-elle des antécédents de diabète?"
+      "text": "Votre famille a-t-elle des antÚcÚdents de diabÞte?"
     }
   },
   {
@@ -4107,7 +5188,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 4,
-      "text": "Combien de fois avez-vous déjà été enceinte, y compris des naissances, des fausses couches et des mortinaissances?"
+      "text": "Combien de fois avez-vous dÚjÓ ÚtÚ enceinte, y compris des naissances, des fausses couches et des mortinaissances?"
     }
   },
   {
@@ -4116,7 +5197,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 6,
-      "text": "Avez-vous des enfants atteints de troubles congénitaux?"
+      "text": "Avez-vous des enfants atteints de troubles congÚnitaux?"
     }
   },
   {
@@ -4125,7 +5206,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 5,
-      "text": "Souffrez-vous actuellement ou avez déjà souffert de diabète gestationnel?"
+      "text": "Souffrez-vous actuellement ou avez dÚjÓ souffert de diabÞte gestationnel?"
     }
   },
   {
@@ -4152,7 +5233,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 9,
-      "text": "Avez-vous déjà eu une naissance prématurée?"
+      "text": "Avez-vous dÚjÓ eu une naissance prÚmaturÚe?"
     }
   },
   {
@@ -4161,7 +5242,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 7,
-      "text": "Avez-vous déjà eu des mortinaissances?"
+      "text": "Avez-vous dÚjÓ eu des mortinaissances?"
     }
   },
   {
@@ -4188,28 +5269,44 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 12,
-      "text": "Êtes-vous ethniquement blanc?"
+      "text": "╩tes-vous ethniquement blanc?"
     }
   },
   {
     "model": "epr.translation",
     "pk": 77,
-    "fields": { "language_code": 1, "belongs_to": 27, "text": "Yes" }
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 27,
+      "text": "Yes"
+    }
   },
   {
     "model": "epr.translation",
     "pk": 78,
-    "fields": { "language_code": 1, "belongs_to": 28, "text": "No" }
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 28,
+      "text": "No"
+    }
   },
   {
     "model": "epr.translation",
     "pk": 79,
-    "fields": { "language_code": 1, "belongs_to": 29, "text": "Skip" }
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 29,
+      "text": "Skip"
+    }
   },
   {
     "model": "epr.translation",
     "pk": 80,
-    "fields": { "language_code": 1, "belongs_to": 30, "text": "Continue" }
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 30,
+      "text": "Continue"
+    }
   },
   {
     "model": "epr.translation",
@@ -4217,7 +5314,7 @@
     "fields": {
       "language_code": 1,
       "belongs_to": 31,
-      "text": "It is important to note that the tool will provide you with the risk of an ‘average‘ woman with your health measures and NOT your personal risk score. It is also important to note that the model does not take into many other psychosocial factors affecting maternal outcome."
+      "text": "It is important to note that the tool will provide you with the risk of an æaverageæ woman with your health measures and NOT your personal risk score. It is also important to note that the model does not take into many other psychosocial factors affecting maternal outcome."
     }
   },
   {
@@ -4250,22 +5347,38 @@
   {
     "model": "epr.translation",
     "pk": 85,
-    "fields": { "language_code": 2, "belongs_to": 28, "text": "Nei" }
+    "fields": {
+      "language_code": 2,
+      "belongs_to": 28,
+      "text": "Nei"
+    }
   },
   {
     "model": "epr.translation",
     "pk": 86,
-    "fields": { "language_code": 2, "belongs_to": 27, "text": "Ja" }
+    "fields": {
+      "language_code": 2,
+      "belongs_to": 27,
+      "text": "Ja"
+    }
   },
   {
     "model": "epr.translation",
     "pk": 87,
-    "fields": { "language_code": 2, "belongs_to": 29, "text": "Hopp over" }
+    "fields": {
+      "language_code": 2,
+      "belongs_to": 29,
+      "text": "Hopp over"
+    }
   },
   {
     "model": "epr.translation",
     "pk": 88,
-    "fields": { "language_code": 2, "belongs_to": 30, "text": "Fortsett" }
+    "fields": {
+      "language_code": 2,
+      "belongs_to": 30,
+      "text": "Fortsett"
+    }
   },
   {
     "model": "epr.translation",
@@ -4273,7 +5386,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 31,
-      "text": "Det er viktig å merke seg at verktøyet vil gi deg risikoen for en ”gjennomsnittlig” kvinne med dine helsemessige tiltak og IKKE din personlige risikoscore. Det er også viktig å merke seg at modellen ikke tar inn mange andre psykososiale faktorer som påvirker mors utfall."
+      "text": "Det er viktig Õ merke seg at verkt°yet vil gi deg risikoen for en ögjennomsnittligö kvinne med dine helsemessige tiltak og IKKE din personlige risikoscore. Det er ogsÕ viktig Õ merke seg at modellen ikke tar inn mange andre psykososiale faktorer som pÕvirker mors utfall."
     }
   },
   {
@@ -4282,7 +5395,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 3,
-      "text": "Gravid eller planlegger du en baby? Dette verktøyet vil få deg til å vurdere din helsestatus for en sunn graviditet og en komplikasjonsfri fødsel. Ved å fylle ut dine personlige helsemålinger, vil dette verktøyet estimere risikoen for å utvikle vanlige graviditetskomplikasjoner nedenfor."
+      "text": "Gravid eller planlegger du en baby? Dette verkt°yet vil fÕ deg til Õ vurdere din helsestatus for en sunn graviditet og en komplikasjonsfri f°dsel. Ved Õ fylle ut dine personlige helsemÕlinger, vil dette verkt°yet estimere risikoen for Õ utvikle vanlige graviditetskomplikasjoner nedenfor."
     }
   },
   {
@@ -4291,7 +5404,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 32,
-      "text": "Abort;Svangerskapsdiabetes Mellitus;Svangerskapsforgiftning;For tidlig fødsel;Dødfødsel;Keisersnitt;Postpartum depresjon"
+      "text": "Abort;Svangerskapsdiabetes Mellitus;Svangerskapsforgiftning;For tidlig f°dsel;D°df°dsel;Keisersnitt;Postpartum depresjon"
     }
   },
   {
@@ -4309,7 +5422,7 @@
     "fields": {
       "language_code": 2,
       "belongs_to": 34,
-      "text": "Klikk for å lese om personvernreglene våre"
+      "text": "Klikk for Õ lese om personvernreglene vÕre"
     }
   },
   {
@@ -4318,7 +5431,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 34,
-      "text": "Cliquez pour lire notre politique de confidentialité"
+      "text": "Cliquez pour lire notre politique de confidentialitÚ"
     }
   },
   {
@@ -4327,7 +5440,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 3,
-      "text": "Vous êtes enceinte ou prévoyez un bébé? Cet outil vous fera évaluer votre état de santé pour une grossesse en bonne santé et une naissance sans complications. En remplissant vos mesures de santé personnelles, cet outil évaluera ci-dessous le risque de développer des complications de grossesse courantes."
+      "text": "Vous Ûtes enceinte ou prÚvoyez un bÚbÚ? Cet outil vous fera Úvaluer votre Útat de santÚ pour une grossesse en bonne santÚ et une naissance sans complications. En remplissant vos mesures de santÚ personnelles, cet outil Úvaluera ci-dessous le risque de dÚvelopper des complications de grossesse courantes."
     }
   },
   {
@@ -4336,28 +5449,44 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 31,
-      "text": "Il est important de noter que l'outil vous fournira le risque d'une femme «moyenne» avec vos mesures de santé et NON votre score de risque personnel. Il est également important de noter que le modèle ne prend pas en compte de nombreux autres facteurs psychosociaux affectant le devenir maternel."
+      "text": "Il est important de noter que l'outil vous fournira le risque d'une femme ½moyenne╗ avec vos mesures de santÚ et NON votre score de risque personnel. Il est Úgalement important de noter que le modÞle ne prend pas en compte de nombreux autres facteurs psychosociaux affectant le devenir maternel."
     }
   },
   {
     "model": "epr.translation",
     "pk": 97,
-    "fields": { "language_code": 3, "belongs_to": 27, "text": "Oui" }
+    "fields": {
+      "language_code": 3,
+      "belongs_to": 27,
+      "text": "Oui"
+    }
   },
   {
     "model": "epr.translation",
     "pk": 98,
-    "fields": { "language_code": 3, "belongs_to": 28, "text": "Non" }
+    "fields": {
+      "language_code": 3,
+      "belongs_to": 28,
+      "text": "Non"
+    }
   },
   {
     "model": "epr.translation",
     "pk": 99,
-    "fields": { "language_code": 3, "belongs_to": 29, "text": "Sauter" }
+    "fields": {
+      "language_code": 3,
+      "belongs_to": 29,
+      "text": "Sauter"
+    }
   },
   {
     "model": "epr.translation",
     "pk": 100,
-    "fields": { "language_code": 3, "belongs_to": 30, "text": "Continuez" }
+    "fields": {
+      "language_code": 3,
+      "belongs_to": 30,
+      "text": "Continuez"
+    }
   },
   {
     "model": "epr.translation",
@@ -4365,7 +5494,7 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 32,
-      "text": "Fausse-couche;Diabète sucré gestationnel;Prééclampsie;Naissance prématurée;Nature morte;Césarienne;Dépression postpartum"
+      "text": "Fausse-couche;DiabÞte sucrÚ gestationnel;PrÚÚclampsie;Naissance prÚmaturÚe;Nature morte;CÚsarienne;DÚpression postpartum"
     }
   },
   {
@@ -4374,21 +5503,234 @@
     "fields": {
       "language_code": 3,
       "belongs_to": 33,
-      "text": "Commencer l'évaluation"
+      "text": "Commencer l'Úvaluation"
     }
   },
-  { "model": "epr.answertype", "pk": "boolean", "fields": {} },
-  { "model": "epr.answertype", "pk": "integer", "fields": {} },
+  {
+    "model": "epr.answertype",
+    "pk": "boolean",
+    "fields": {}
+  },
+  {
+    "model": "epr.answertype",
+    "pk": "integer",
+    "fields": {}
+  },
+  {
+    "model": "epr.disease",
+    "pk": 1,
+    "fields": {
+      "disease": "postpartum depression"
+    }
+  },
+  {
+    "model": "epr.disease",
+    "pk": 2,
+    "fields": {
+      "disease": "still birth"
+    }
+  },
+  {
+    "model": "epr.disease",
+    "pk": 3,
+    "fields": {
+      "disease": "antepartum haemorrhage"
+    }
+  },
+  {
+    "model": "epr.disease",
+    "pk": 4,
+    "fields": {
+      "disease": "caesarean section"
+    }
+  },
+  {
+    "model": "epr.disease",
+    "pk": 5,
+    "fields": {
+      "disease": "gestational diabetes mellitus"
+    }
+  },
+  {
+    "model": "epr.disease",
+    "pk": 6,
+    "fields": {
+      "disease": "hyperemesis gravidarum"
+    }
+  },
+  {
+    "model": "epr.disease",
+    "pk": 7,
+    "fields": {
+      "disease": "miscarriage"
+    }
+  },
+  {
+    "model": "epr.disease",
+    "pk": 8,
+    "fields": {
+      "disease": "placental complications"
+    }
+  },
+  {
+    "model": "epr.disease",
+    "pk": 9,
+    "fields": {
+      "disease": "pre-term birth"
+    }
+  },
+  {
+    "model": "epr.disease",
+    "pk": 10,
+    "fields": {
+      "disease": "preeclampsia"
+    }
+  },
+  {
+    "model": "epr.disease",
+    "pk": 11,
+    "fields": {
+      "disease": "thrombosis"
+    }
+  },
+  {
+    "model": "epr.diseasetranslation",
+    "pk": 1,
+    "fields": {
+      "disease": 1,
+      "language": 1,
+      "translation": "Postpartum Depression"
+    }
+  },
+  {
+    "model": "epr.diseasetranslation",
+    "pk": 2,
+    "fields": {
+      "disease": 2,
+      "language": 1,
+      "translation": "Still Birth"
+    }
+  },
+  {
+    "model": "epr.diseasetranslation",
+    "pk": 3,
+    "fields": {
+      "disease": 3,
+      "language": 1,
+      "translation": "Antepartum Haemorrhage"
+    }
+  },
+  {
+    "model": "epr.diseasetranslation",
+    "pk": 4,
+    "fields": {
+      "disease": 4,
+      "language": 1,
+      "translation": "Caesarean Section"
+    }
+  },
+  {
+    "model": "epr.diseasetranslation",
+    "pk": 5,
+    "fields": {
+      "disease": 5,
+      "language": 1,
+      "translation": "Gestational Diabetes Mellitus"
+    }
+  },
+  {
+    "model": "epr.diseasetranslation",
+    "pk": 6,
+    "fields": {
+      "disease": 6,
+      "language": 1,
+      "translation": "Hypermesis Gravidarum"
+    }
+  },
+  {
+    "model": "epr.diseasetranslation",
+    "pk": 7,
+    "fields": {
+      "disease": 7,
+      "language": 1,
+      "translation": "Miscarriage"
+    }
+  },
+  {
+    "model": "epr.diseasetranslation",
+    "pk": 8,
+    "fields": {
+      "disease": 8,
+      "language": 1,
+      "translation": "Placental Complications"
+    }
+  },
+  {
+    "model": "epr.diseasetranslation",
+    "pk": 9,
+    "fields": {
+      "disease": 9,
+      "language": 1,
+      "translation": "Pre-term Birth"
+    }
+  },
+  {
+    "model": "epr.diseasetranslation",
+    "pk": 10,
+    "fields": {
+      "disease": 10,
+      "language": 1,
+      "translation": "Preeclampsia"
+    }
+  },
+  {
+    "model": "epr.diseasetranslation",
+    "pk": 11,
+    "fields": {
+      "disease": 11,
+      "language": 1,
+      "translation": "Thrombosis"
+    }
+  },
+  {
+    "model": "epr.references",
+    "pk": 1,
+    "fields": {
+      "reference_id": "7",
+      "reference_string": "Lee KW, Ching SM, Ramachandran V, Yee A, Hoo FK, Chia YC, et al. Prevalence and risk factors of gestational diabetes mellitus in Asia: a systematic review and meta-analysis. BMC Pregnancy Childbirth. 2018;18:494",
+      "related_disease": 5
+    }
+  },
+  {
+    "model": "epr.references",
+    "pk": 2,
+    "fields": {
+      "reference_id": "8",
+      "reference_string": "Hrolfsdottir L, Gunnarsdottir I, Birgisdottir BE, Hreidarsdottir IT, Smarason AKr, Hardardottir H, et al. Can a Simple Dietary Screening in Early Pregnancy Identify Dietary Habits Associated with Gestational Diabetes? Nutrients. 2019;11:1868.",
+      "related_disease": 5
+    }
+  },
+  {
+    "model": "epr.references",
+    "pk": 3,
+    "fields": {
+      "reference_id": "9",
+      "reference_string": "Tobias DK, Zhang C, van Dam RM, Bowers K, Hu FB. Physical Activity Before and During Pregnancy and Risk of Gestational Diabetes Mellitus: A meta-analysis. Diabetes Care. 2011;34:223–9.",
+      "related_disease": 5
+    }
+  },
   {
     "model": "epr.factor",
     "pk": "activity_stairs",
     "fields": {
       "question": 25,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [5]
     }
   },
   {
@@ -4397,10 +5739,12 @@
     "fields": {
       "question": 24,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [5]
     }
   },
   {
@@ -4409,10 +5753,12 @@
     "fields": {
       "question": 23,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [5]
     }
   },
   {
@@ -4421,10 +5767,12 @@
     "fields": {
       "question": 1,
       "answertype": "integer",
+      "unit": null,
       "skippable": true,
       "max_digits": 2,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [1, 2, 3, 4, 5, 7, 8, 9, 10, 11]
     }
   },
   {
@@ -4433,10 +5781,12 @@
     "fields": {
       "question": 15,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [5]
     }
   },
   {
@@ -4445,10 +5795,12 @@
     "fields": {
       "question": 16,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [5]
     }
   },
   {
@@ -4457,10 +5809,12 @@
     "fields": {
       "question": 6,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": "parity"
+      "parent_factor": "parity",
+      "diseases": [5]
     }
   },
   {
@@ -4469,10 +5823,12 @@
     "fields": {
       "question": 21,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": []
     }
   },
   {
@@ -4481,10 +5837,12 @@
     "fields": {
       "question": 17,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [1, 5]
     }
   },
   {
@@ -4493,10 +5851,12 @@
     "fields": {
       "question": 19,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [1, 5]
     }
   },
   {
@@ -4505,10 +5865,12 @@
     "fields": {
       "question": 18,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [1, 5]
     }
   },
   {
@@ -4517,10 +5879,12 @@
     "fields": {
       "question": 26,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [1, 5]
     }
   },
   {
@@ -4529,10 +5893,12 @@
     "fields": {
       "question": 22,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [1, 5]
     }
   },
   {
@@ -4541,10 +5907,12 @@
     "fields": {
       "question": 20,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [1, 5]
     }
   },
   {
@@ -4553,10 +5921,12 @@
     "fields": {
       "question": 13,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [5]
     }
   },
   {
@@ -4565,10 +5935,12 @@
     "fields": {
       "question": 5,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": "parity"
+      "parent_factor": "parity",
+      "diseases": [2, 5, 9]
     }
   },
   {
@@ -4577,10 +5949,12 @@
     "fields": {
       "question": 2,
       "answertype": "integer",
+      "unit": null,
       "skippable": true,
       "max_digits": 3,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [4, 5, 10]
     }
   },
   {
@@ -4589,10 +5963,12 @@
     "fields": {
       "question": 10,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": "parity"
+      "parent_factor": "parity",
+      "diseases": [5]
     }
   },
   {
@@ -4601,10 +5977,12 @@
     "fields": {
       "question": 8,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": "parity"
+      "parent_factor": "parity",
+      "diseases": [5, 7]
     }
   },
   {
@@ -4613,10 +5991,12 @@
     "fields": {
       "question": 4,
       "answertype": "integer",
+      "unit": null,
       "skippable": true,
       "max_digits": 1,
       "requirement": ">;0",
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [1, 2, 5, 6, 8, 11]
     }
   },
   {
@@ -4625,10 +6005,12 @@
     "fields": {
       "question": 14,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [5]
     }
   },
   {
@@ -4637,10 +6019,12 @@
     "fields": {
       "question": 9,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": "parity"
+      "parent_factor": "parity",
+      "diseases": [5, 9]
     }
   },
   {
@@ -4649,10 +6033,12 @@
     "fields": {
       "question": 7,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": "parity"
+      "parent_factor": "parity",
+      "diseases": [5]
     }
   },
   {
@@ -4661,10 +6047,12 @@
     "fields": {
       "question": 11,
       "answertype": "integer",
+      "unit": null,
       "skippable": true,
       "max_digits": 3,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": [5, 6, 10]
     }
   },
   {
@@ -4673,10 +6061,12 @@
     "fields": {
       "question": 12,
       "answertype": "boolean",
+      "unit": null,
       "skippable": true,
       "max_digits": null,
       "requirement": null,
-      "parent_factor": null
+      "parent_factor": null,
+      "diseases": []
     }
   }
 ]

@@ -3,4 +3,5 @@ module.exports = {
   translate: "https://nrec.hagenes.eu/translate/text",
   calculate: "https://nrec.hagenes.eu/calculate/",
   factors: "https://nrec.hagenes.eu/factors",
+  references: "https://nrec.hagenes.eu/factors",
 };

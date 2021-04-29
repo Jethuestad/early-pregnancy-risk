@@ -39,6 +39,7 @@ export default function App() {
               setData(r);
             }}
             factor_data={factors}
+            lang_code={language}
           />
         );
       case 2:
@@ -102,6 +103,7 @@ export default function App() {
     Animated.timing(ref, {
       toValue: v,
       duration: d,
+      useNativeDriver: false,
     }).start();
   };
 
