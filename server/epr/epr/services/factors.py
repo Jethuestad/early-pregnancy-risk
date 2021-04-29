@@ -1,5 +1,5 @@
 from django.db.models.manager import BaseManager
-from ..models import Factor, Translation, DiseaseTranslation, Disease, References
+from ..models import Factor, Translation, References
 from ..utilities.request_utils import standard_json_response
 from ..utilities.decorators import exception_handler_request
 from ..exceptions.api_exceptions import InternalServerError
@@ -14,17 +14,17 @@ def get_factors(request, lang_code: str):
 @csrf_exempt
 @exception_handler_request
 def get_references(request, lang_code: str, factor_name_query: str):
-    diseases = Factor.objects.get(factor_name = factor_name_query).diseases.all()
+    complications = Factor.objects.get(factor_name = factor_name_query).complications.all()
     response = []
-    for disease in diseases:
+    for complication in complications:
         reference_dict = {"references":[]}
-        trans_disease = DiseaseTranslation.objects.get(disease=disease, language__code=lang_code)
+        trans_complication = Translation.objects.get(belongs_to=complication, language__code=lang_code)
 
-        if trans_disease is None:
+        if trans_complication is None:
             continue
 
-        reference_dict["name"] = trans_disease.translation
-        references = References.objects.filter(related_disease=disease)
+        reference_dict["name"] = trans_complication.text
+        references = References.objects.filter(related_disease=complication)
 
         for reference in references:
             reference_dict["references"].append(reference.reference_string)
