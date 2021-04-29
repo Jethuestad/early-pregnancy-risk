@@ -60,6 +60,13 @@ class References(models.Model):
     def __str__(self) -> str:
         return "{}, {} - {}".format(self.related_complication, self.reference_id, self.reference_string)
 
+class Complication_Risk(models.Model):
+    severity = models.CharField(max_length=10)
+    related_complication = models.ForeignKey(Content, on_delete=models.CASCADE)
+    percentage = models.CharField(max_length=10)
+
+    def __str__(self) -> str:
+        return "{} - {}".format(self.related_complication, self.severity)
 
 class Factor(models.Model):
     factor_name = LowerCaseField(max_length=100, primary_key=True)
