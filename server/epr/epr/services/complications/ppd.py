@@ -43,8 +43,8 @@ def calculate(json_dict: dict) -> dict:
     if json_dict.get("education_years") <= 12:
         risk_score += 1.5
    
-    # Smoker
-    if json_dict.get("smoker"):
+    # Smoking
+    if json_dict.get("smoking"):
         risk_score += 2
 
     # Going through an extremely stressful event, like a job loss, financial problems, or health problems over the past year

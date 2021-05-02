@@ -37,7 +37,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 1.4
 
     # No higher education
-    if not json_dict.get("education"):
+    if not json_dict.get("higher_education"):
         risk_score += 1.4
     
     # Nausea and vomiting in first trimester

@@ -63,8 +63,8 @@ def calculate(json_dict: dict) -> dict:
         elif bmi > 40:
             risk_score += 2.5
 
-    # Smoker
-    if json_dict.get("smoker"):
+    # Smoking
+    if json_dict.get("smoking"):
         risk_score += 1.5
 
     # chronic hypertnesion

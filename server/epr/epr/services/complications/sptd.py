@@ -92,7 +92,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 5
 
     # Gonorhea or Syphilis
-    if (json_dict.get("gonorhea_syphilis")):
+    if (json_dict.get("gonorhea") or json_dict.get("syphilis")):
         risk_score += 1.5
 
     return spdt_risk(risk_score)

@@ -200,7 +200,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 8
 
     # Diabetes mellitus type 1 or 2
-    if json_dict.get("diabetes_mellitus"):
+    if json_dict.get("diabetes"):
         risk_score += 16
 
 
