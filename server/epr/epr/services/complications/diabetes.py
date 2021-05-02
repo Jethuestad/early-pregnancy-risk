@@ -1,7 +1,7 @@
 from ...exceptions.api_exceptions import InternalServerError
 
 
-# Returning the risk_score and the severity risk_score
+# Returning the risk_score and the severity of the risk_score
 def diabetes_risk(risk_score: int) -> dict:
     severity = 0
     if 0 <= risk_score < 3:

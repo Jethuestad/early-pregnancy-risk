@@ -1,9 +1,8 @@
-from sys import winver
 from ...exceptions.api_exceptions import InternalServerError
 import math
 
 
-# Returning the risk_score and the severity risk_score
+# Returning the risk_score and the severity of the risk_score
 def preeclampsia_risk(risk_score: int) -> dict:
     severity = 0
     if 0 <= risk_score < 3:
@@ -48,9 +47,9 @@ def calculate(json_dict: dict) -> dict:
     # Ethnicity
     if (ethnicity:=json_dict.get("ethnicity")) == None:
         pass
-    elif ethnicity == 0:    # Afro-Caribbean
+    elif ethnicity == 2:    # Afro-Caribbean
         risk_score += 13
-    elif ethnicity == 1:    # South Asian
+    elif ethnicity == 3:    # South Asian
         risk_score += 5
     else:                   # Other
         risk_score += 0
