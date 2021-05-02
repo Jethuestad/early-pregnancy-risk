@@ -64,7 +64,7 @@ def calculate(json_dict: dict) -> dict:
             risk_score += 2.5
 
     # Smoker
-    if json_dict.get("smoker") == None:
+    if json_dict.get("smoker"):
         risk_score += 1.5
 
     # chronic hypertnesion
