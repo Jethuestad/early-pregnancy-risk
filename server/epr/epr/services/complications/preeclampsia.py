@@ -55,7 +55,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 0
 
     # Chronic hypertension
-    if json_dict.get("chronic_hypertention"):
+    if json_dict.get("chronic_hypertension"):
         risk_score += 35
 
     # Systemic lupus erythematosus or antiphospholipid syndrome
