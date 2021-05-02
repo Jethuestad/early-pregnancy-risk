@@ -103,7 +103,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 2
 
     # Previous preeclampsia
-    if json_dict.get("ppe"):
+    if json_dict.get("preeclampsia"):
         risk_score += 2
 
     # interpregnancy interval in months
