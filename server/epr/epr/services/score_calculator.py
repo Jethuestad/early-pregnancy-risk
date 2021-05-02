@@ -8,19 +8,18 @@ from ..utilities.request_utils import standard_json_response
 
 @csrf_exempt
 @exception_handler_request
-def get_score(request):
+def get_score(request, lang_code):
     if request.method != "POST":
         raise BadMethodException(request.method, "POST")
 
     json_dict = json_request_to_dict(request, valid_json_format_calc)
-    calc = Calculation(json_dict)   # Creates a risk calculation based on userinput
+
+    calc = Calculation(json_dict, lang_code)   # Creates a risk calculation based on userinput
     diabetes = calc.diabetes
-    diabetes1 = calc.diabetes1
     preeclampsia = calc.preeclampsia
 
     response = []
     response.append(diabetes)
-    response.append(diabetes1)
     response.append(preeclampsia)
     
     # TODO: Add proper json response

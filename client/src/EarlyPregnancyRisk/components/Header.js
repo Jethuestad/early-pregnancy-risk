@@ -37,7 +37,7 @@ export default function Header({
 const styles = (width) =>
   StyleSheet.create({
     container: {
-      flex: 2,
+      flex: 3,
       ...Platform.select({
         web: {
           alignItems: "center",

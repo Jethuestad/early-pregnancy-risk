@@ -3380,6 +3380,1150 @@
     }
   },
   {
+    "model": "admin.logentry",
+    "pk": 261,
+    "fields": {
+      "action_time": "2021-04-26T08:07:34.596Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "11",
+      "object_repr": "Thrombosis - (en, thrombosis)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 262,
+    "fields": {
+      "action_time": "2021-04-26T08:07:34.630Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "10",
+      "object_repr": "Preeclampsia - (en, preeclampsia)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 263,
+    "fields": {
+      "action_time": "2021-04-26T08:07:34.676Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "9",
+      "object_repr": "Pre-term Birth - (en, pre-term birth)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 264,
+    "fields": {
+      "action_time": "2021-04-26T08:07:34.707Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "8",
+      "object_repr": "Placental Complications - (en, placental complications)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 265,
+    "fields": {
+      "action_time": "2021-04-26T08:07:34.741Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "7",
+      "object_repr": "Miscarriage - (en, miscarriage)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 266,
+    "fields": {
+      "action_time": "2021-04-26T08:07:34.775Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "6",
+      "object_repr": "Hypermesis Gravidarum - (en, hyperemesis gravidarum)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 267,
+    "fields": {
+      "action_time": "2021-04-26T08:07:34.812Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "5",
+      "object_repr": "Gestational Diabetes Mellitus - (en, gestational diabetes mellitus)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 268,
+    "fields": {
+      "action_time": "2021-04-26T08:07:34.845Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "4",
+      "object_repr": "Caesarean Section - (en, caesarean section)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 269,
+    "fields": {
+      "action_time": "2021-04-26T08:07:34.877Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "3",
+      "object_repr": "Antepartum Haemorrhage - (en, antepartum haemorrhage)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 270,
+    "fields": {
+      "action_time": "2021-04-26T08:07:34.910Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "Still Birth - (en, still birth)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 271,
+    "fields": {
+      "action_time": "2021-04-26T08:07:34.965Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "Postpartum Depression - (en, postpartum depression)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 272,
+    "fields": {
+      "action_time": "2021-04-26T08:08:08.389Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "Disease",
+      "object_repr": "Disease",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 273,
+    "fields": {
+      "action_time": "2021-04-29T09:31:06.455Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "11",
+      "object_repr": "Thrombosis - (en, thrombosis)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 274,
+    "fields": {
+      "action_time": "2021-04-29T09:31:06.486Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "10",
+      "object_repr": "Preeclampsia - (en, preeclampsia)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 275,
+    "fields": {
+      "action_time": "2021-04-29T09:31:06.514Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "9",
+      "object_repr": "Pre-term Birth - (en, pre-term birth)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 276,
+    "fields": {
+      "action_time": "2021-04-29T09:31:06.536Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "8",
+      "object_repr": "Placental Complications - (en, placental complications)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 277,
+    "fields": {
+      "action_time": "2021-04-29T09:31:06.554Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "7",
+      "object_repr": "Miscarriage - (en, miscarriage)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 278,
+    "fields": {
+      "action_time": "2021-04-29T09:31:06.577Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "6",
+      "object_repr": "Hypermesis Gravidarum - (en, hyperemesis gravidarum)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 279,
+    "fields": {
+      "action_time": "2021-04-29T09:31:06.599Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "5",
+      "object_repr": "Gestational Diabetes Mellitus - (en, gestational diabetes mellitus)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 280,
+    "fields": {
+      "action_time": "2021-04-29T09:31:06.617Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "4",
+      "object_repr": "Caesarean Section - (en, caesarean section)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 281,
+    "fields": {
+      "action_time": "2021-04-29T09:31:06.636Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "3",
+      "object_repr": "Antepartum Haemorrhage - (en, antepartum haemorrhage)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 282,
+    "fields": {
+      "action_time": "2021-04-29T09:31:06.665Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "Still Birth - (en, still birth)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 283,
+    "fields": {
+      "action_time": "2021-04-29T09:31:06.684Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "Postpartum Depression - (en, postpartum depression)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 284,
+    "fields": {
+      "action_time": "2021-04-29T09:31:50.785Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "11",
+      "object_repr": "thrombosis",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 285,
+    "fields": {
+      "action_time": "2021-04-29T09:31:50.810Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "10",
+      "object_repr": "preeclampsia",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 286,
+    "fields": {
+      "action_time": "2021-04-29T09:31:50.833Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "9",
+      "object_repr": "pre-term birth",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 287,
+    "fields": {
+      "action_time": "2021-04-29T09:31:50.864Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "8",
+      "object_repr": "placental complications",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 288,
+    "fields": {
+      "action_time": "2021-04-29T09:31:50.884Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "7",
+      "object_repr": "miscarriage",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 289,
+    "fields": {
+      "action_time": "2021-04-29T09:31:50.906Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "6",
+      "object_repr": "hyperemesis gravidarum",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 290,
+    "fields": {
+      "action_time": "2021-04-29T09:31:50.928Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "5",
+      "object_repr": "gestational diabetes mellitus",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 291,
+    "fields": {
+      "action_time": "2021-04-29T09:31:50.948Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "4",
+      "object_repr": "caesarean section",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 292,
+    "fields": {
+      "action_time": "2021-04-29T09:31:50.967Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "3",
+      "object_repr": "antepartum haemorrhage",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 293,
+    "fields": {
+      "action_time": "2021-04-29T09:31:50.990Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "2",
+      "object_repr": "still birth",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 294,
+    "fields": {
+      "action_time": "2021-04-29T09:31:51.012Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "postpartum depression",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 295,
+    "fields": {
+      "action_time": "2021-04-29T09:32:37.244Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "35",
+      "object_repr": "Disease: gestational_diabetes_mellitus",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 296,
+    "fields": {
+      "action_time": "2021-04-29T09:32:48.118Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "36",
+      "object_repr": "Disease: preeclampsia",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 297,
+    "fields": {
+      "action_time": "2021-04-29T09:33:03.875Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "37",
+      "object_repr": "Disease: pre-term birth",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 298,
+    "fields": {
+      "action_time": "2021-04-29T09:33:14.590Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "38",
+      "object_repr": "Disease: miscarriage",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 299,
+    "fields": {
+      "action_time": "2021-04-29T09:33:27.840Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "39",
+      "object_repr": "Disease: still birth",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 300,
+    "fields": {
+      "action_time": "2021-04-29T09:33:41.446Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "40",
+      "object_repr": "Disease: cesarean_section",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 301,
+    "fields": {
+      "action_time": "2021-04-29T09:33:57.354Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "41",
+      "object_repr": "Disease: postpartum_depression",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 302,
+    "fields": {
+      "action_time": "2021-04-29T09:34:12.156Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "42",
+      "object_repr": "Disease: placental_complications",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 303,
+    "fields": {
+      "action_time": "2021-04-29T09:34:30.138Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "43",
+      "object_repr": "Disease: hyperemesis_gravidarum",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 304,
+    "fields": {
+      "action_time": "2021-04-29T09:34:50.668Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "44",
+      "object_repr": "Disease: antepartum_haemorrhage",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 305,
+    "fields": {
+      "action_time": "2021-04-29T09:35:05.643Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "45",
+      "object_repr": "Disease: thrombosis",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 306,
+    "fields": {
+      "action_time": "2021-04-29T09:35:22.522Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "39",
+      "object_repr": "Disease: still_birth",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 307,
+    "fields": {
+      "action_time": "2021-04-29T09:35:32.501Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "37",
+      "object_repr": "Disease: pre-term_birth",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 308,
+    "fields": {
+      "action_time": "2021-04-29T09:35:58.873Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "103",
+      "object_repr": "Disease: gestational_diabetes_mellitus (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 309,
+    "fields": {
+      "action_time": "2021-04-29T09:36:11.953Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "104",
+      "object_repr": "Disease: preeclampsia (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 310,
+    "fields": {
+      "action_time": "2021-04-29T09:36:22.496Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "105",
+      "object_repr": "Disease: pre-term_birth (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 311,
+    "fields": {
+      "action_time": "2021-04-29T09:36:35.588Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "106",
+      "object_repr": "Disease: miscarriage (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 312,
+    "fields": {
+      "action_time": "2021-04-29T09:36:56.306Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "107",
+      "object_repr": "Disease: still_birth (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 313,
+    "fields": {
+      "action_time": "2021-04-29T09:37:14.765Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "Complication",
+      "object_repr": "Complication",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Content type\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 314,
+    "fields": {
+      "action_time": "2021-04-29T09:37:25.061Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "Complication",
+      "object_repr": "Complication",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Content type\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 315,
+    "fields": {
+      "action_time": "2021-04-29T09:37:36.082Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "Disease",
+      "object_repr": "Disease",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 316,
+    "fields": {
+      "action_time": "2021-04-29T09:37:49.622Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "46",
+      "object_repr": "Complication: antepartum_haemorrhage",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 317,
+    "fields": {
+      "action_time": "2021-04-29T09:37:59.818Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "47",
+      "object_repr": "Complication: cesarean_section",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 318,
+    "fields": {
+      "action_time": "2021-04-29T09:38:07.299Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "48",
+      "object_repr": "Complication: gestational_diabetes_mellitus",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 319,
+    "fields": {
+      "action_time": "2021-04-29T09:38:15.697Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "49",
+      "object_repr": "Complication: hyperemesis_gravidarum",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 320,
+    "fields": {
+      "action_time": "2021-04-29T09:38:25.236Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "50",
+      "object_repr": "Complication: miscarriage",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 321,
+    "fields": {
+      "action_time": "2021-04-29T09:38:33.316Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "51",
+      "object_repr": "Complication: placental_complications",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 322,
+    "fields": {
+      "action_time": "2021-04-29T09:38:43.212Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "52",
+      "object_repr": "Complication: postpartum_depression",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 323,
+    "fields": {
+      "action_time": "2021-04-29T09:38:55.713Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "53",
+      "object_repr": "Complication: pre-term_birth",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 324,
+    "fields": {
+      "action_time": "2021-04-29T09:39:05.291Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "54",
+      "object_repr": "Complication: preeclampsia",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 325,
+    "fields": {
+      "action_time": "2021-04-29T09:39:14.246Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "55",
+      "object_repr": "Complication: still_birth",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 326,
+    "fields": {
+      "action_time": "2021-04-29T09:39:21.578Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "56",
+      "object_repr": "Complication: thrombosis",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 327,
+    "fields": {
+      "action_time": "2021-04-29T09:39:40.669Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "108",
+      "object_repr": "Complication: antepartum_haemorrhage (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 328,
+    "fields": {
+      "action_time": "2021-04-29T09:39:56.597Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "109",
+      "object_repr": "Complication: cesarean_section (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 329,
+    "fields": {
+      "action_time": "2021-04-29T09:40:15.738Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "110",
+      "object_repr": "Complication: gestational_diabetes_mellitus (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 330,
+    "fields": {
+      "action_time": "2021-04-29T09:40:28.996Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "111",
+      "object_repr": "Complication: hyperemesis_gravidarum (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 331,
+    "fields": {
+      "action_time": "2021-04-29T09:40:40.710Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "112",
+      "object_repr": "Complication: miscarriage (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 332,
+    "fields": {
+      "action_time": "2021-04-29T09:40:53.566Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "113",
+      "object_repr": "Complication: placental_complications (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 333,
+    "fields": {
+      "action_time": "2021-04-29T09:41:04.735Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "114",
+      "object_repr": "Complication: postpartum_depression (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 334,
+    "fields": {
+      "action_time": "2021-04-29T09:41:16.392Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "115",
+      "object_repr": "Complication: pre-term_birth (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 335,
+    "fields": {
+      "action_time": "2021-04-29T09:41:28.123Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "116",
+      "object_repr": "Complication: preeclampsia (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 336,
+    "fields": {
+      "action_time": "2021-04-29T09:41:38.340Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "117",
+      "object_repr": "Complication: still_birth (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 337,
+    "fields": {
+      "action_time": "2021-04-29T09:41:48.934Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "118",
+      "object_repr": "Complication: thrombosis (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 338,
+    "fields": {
+      "action_time": "2021-04-29T11:13:28.331Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "Complication Risk",
+      "object_repr": "Complication Risk",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 339,
+    "fields": {
+      "action_time": "2021-04-29T11:13:59.415Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "Complication Risk",
+      "object_repr": "Complication Risk",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 340,
+    "fields": {
+      "action_time": "2021-04-29T11:23:34.258Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "57",
+      "object_repr": "Text: percentage_of_pregnancies",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 341,
+    "fields": {
+      "action_time": "2021-04-29T11:24:06.569Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "119",
+      "object_repr": "Text: percentage_of_pregnancies (en)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 342,
+    "fields": {
+      "action_time": "2021-04-29T11:28:56.660Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "1",
+      "object_repr": "Complication: gestational_diabetes_mellitus - 1",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 343,
+    "fields": {
+      "action_time": "2021-04-29T11:29:36.745Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "1",
+      "object_repr": "Complication: gestational_diabetes_mellitus - 0",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Severity\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 344,
+    "fields": {
+      "action_time": "2021-04-29T11:29:49.658Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "2",
+      "object_repr": "Complication: gestational_diabetes_mellitus - 1",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 345,
+    "fields": {
+      "action_time": "2021-04-29T11:30:05.170Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "3",
+      "object_repr": "Complication: gestational_diabetes_mellitus - 2",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 346,
+    "fields": {
+      "action_time": "2021-04-29T11:30:15.292Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "4",
+      "object_repr": "Complication: gestational_diabetes_mellitus - 3",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 347,
+    "fields": {
+      "action_time": "2021-04-29T11:30:37.091Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "5",
+      "object_repr": "Complication: gestational_diabetes_mellitus - 4",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 348,
+    "fields": {
+      "action_time": "2021-04-29T11:40:40.029Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "119",
+      "object_repr": "Text: percentage_of_pregnancies (en)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+    }
+  },
+  {
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -4028,6 +5172,42 @@
     }
   },
   {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add complication_ risk",
+      "content_type": 16,
+      "codename": "add_complication_risk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change complication_ risk",
+      "content_type": 16,
+      "codename": "change_complication_risk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete complication_ risk",
+      "content_type": 16,
+      "codename": "delete_complication_risk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view complication_ risk",
+      "content_type": 16,
+      "codename": "view_complication_risk"
+    }
+  },
+  {
     "model": "auth.user",
     "pk": 1,
     "fields": {
@@ -4166,6 +5346,14 @@
     }
   },
   {
+    "model": "contenttypes.contenttype",
+    "id": 16,
+    "fields": {
+      "app_label": "epr",
+      "model": "complication_risk"
+    }
+  },
+  {
     "model": "sessions.session",
     "pk": "0bmckvw09djga6jgsd3e8c9f1662300z",
     "fields": {
@@ -4300,6 +5488,11 @@
       "code": "fr",
       "language": "French"
     }
+  },
+  {
+    "model": "epr.contenttype",
+    "pk": "Complication",
+    "fields": {}
   },
   {
     "model": "epr.contenttype",
@@ -4585,6 +5778,102 @@
     "pk": 34,
     "fields": {
       "name": "footer_privacy",
+      "content_type": "Text"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 46,
+    "fields": {
+      "name": "antepartum_haemorrhage",
+      "content_type": "Complication"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 47,
+    "fields": {
+      "name": "cesarean_section",
+      "content_type": "Complication"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 48,
+    "fields": {
+      "name": "gestational_diabetes_mellitus",
+      "content_type": "Complication"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 49,
+    "fields": {
+      "name": "hyperemesis_gravidarum",
+      "content_type": "Complication"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 50,
+    "fields": {
+      "name": "miscarriage",
+      "content_type": "Complication"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 51,
+    "fields": {
+      "name": "placental_complications",
+      "content_type": "Complication"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 52,
+    "fields": {
+      "name": "postpartum_depression",
+      "content_type": "Complication"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 53,
+    "fields": {
+      "name": "pre-term_birth",
+      "content_type": "Complication"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 54,
+    "fields": {
+      "name": "preeclampsia",
+      "content_type": "Complication"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 55,
+    "fields": {
+      "name": "still_birth",
+      "content_type": "Complication"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 56,
+    "fields": {
+      "name": "thrombosis",
+      "content_type": "Complication"
+    }
+  },
+  {
+    "model": "epr.content",
+    "pk": 57,
+    "fields": {
+      "name": "percentage_of_pregnancies",
       "content_type": "Text"
     }
   },
@@ -5507,6 +6796,114 @@
     }
   },
   {
+    "model": "epr.translation",
+    "pk": 108,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 46,
+      "text": "Antepartum Haemorrhage"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 109,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 47,
+      "text": "Cesarean Section"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 110,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 48,
+      "text": "Gestational Diabetes Mellitus"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 111,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 49,
+      "text": "Hyperemesis Gravidarum"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 112,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 50,
+      "text": "Miscarriage"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 113,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 51,
+      "text": "Placental Complications"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 114,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 52,
+      "text": "Postpartum Depression"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 115,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 53,
+      "text": "Pre-term Birth"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 116,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 54,
+      "text": "Preeclampsia"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 117,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 55,
+      "text": "Still Birth"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 118,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 56,
+      "text": "Thrombosis"
+    }
+  },
+  {
+    "model": "epr.translation",
+    "pk": 119,
+    "fields": {
+      "language_code": 1,
+      "belongs_to": 57,
+      "text": "% of pregancies"
+    }
+  },
+  {
     "model": "epr.answertype",
     "pk": "boolean",
     "fields": {}
@@ -5517,206 +6914,48 @@
     "fields": {}
   },
   {
-    "model": "epr.disease",
+    "model": "epr.complication_risk",
     "pk": 1,
     "fields": {
-      "disease": "postpartum depression"
+      "severity": "0",
+      "related_complication": 48,
+      "percentage": "5"
     }
   },
   {
-    "model": "epr.disease",
+    "model": "epr.complication_risk",
     "pk": 2,
     "fields": {
-      "disease": "still birth"
+      "severity": "1",
+      "related_complication": 48,
+      "percentage": "15"
     }
   },
   {
-    "model": "epr.disease",
+    "model": "epr.complication_risk",
     "pk": 3,
     "fields": {
-      "disease": "antepartum haemorrhage"
+      "severity": "2",
+      "related_complication": 48,
+      "percentage": "20"
     }
   },
   {
-    "model": "epr.disease",
+    "model": "epr.complication_risk",
     "pk": 4,
     "fields": {
-      "disease": "caesarean section"
+      "severity": "3",
+      "related_complication": 48,
+      "percentage": "40"
     }
   },
   {
-    "model": "epr.disease",
+    "model": "epr.complication_risk",
     "pk": 5,
     "fields": {
-      "disease": "gestational diabetes mellitus"
-    }
-  },
-  {
-    "model": "epr.disease",
-    "pk": 6,
-    "fields": {
-      "disease": "hyperemesis gravidarum"
-    }
-  },
-  {
-    "model": "epr.disease",
-    "pk": 7,
-    "fields": {
-      "disease": "miscarriage"
-    }
-  },
-  {
-    "model": "epr.disease",
-    "pk": 8,
-    "fields": {
-      "disease": "placental complications"
-    }
-  },
-  {
-    "model": "epr.disease",
-    "pk": 9,
-    "fields": {
-      "disease": "pre-term birth"
-    }
-  },
-  {
-    "model": "epr.disease",
-    "pk": 10,
-    "fields": {
-      "disease": "preeclampsia"
-    }
-  },
-  {
-    "model": "epr.disease",
-    "pk": 11,
-    "fields": {
-      "disease": "thrombosis"
-    }
-  },
-  {
-    "model": "epr.diseasetranslation",
-    "pk": 1,
-    "fields": {
-      "disease": 1,
-      "language": 1,
-      "translation": "Postpartum Depression"
-    }
-  },
-  {
-    "model": "epr.diseasetranslation",
-    "pk": 2,
-    "fields": {
-      "disease": 2,
-      "language": 1,
-      "translation": "Still Birth"
-    }
-  },
-  {
-    "model": "epr.diseasetranslation",
-    "pk": 3,
-    "fields": {
-      "disease": 3,
-      "language": 1,
-      "translation": "Antepartum Haemorrhage"
-    }
-  },
-  {
-    "model": "epr.diseasetranslation",
-    "pk": 4,
-    "fields": {
-      "disease": 4,
-      "language": 1,
-      "translation": "Caesarean Section"
-    }
-  },
-  {
-    "model": "epr.diseasetranslation",
-    "pk": 5,
-    "fields": {
-      "disease": 5,
-      "language": 1,
-      "translation": "Gestational Diabetes Mellitus"
-    }
-  },
-  {
-    "model": "epr.diseasetranslation",
-    "pk": 6,
-    "fields": {
-      "disease": 6,
-      "language": 1,
-      "translation": "Hypermesis Gravidarum"
-    }
-  },
-  {
-    "model": "epr.diseasetranslation",
-    "pk": 7,
-    "fields": {
-      "disease": 7,
-      "language": 1,
-      "translation": "Miscarriage"
-    }
-  },
-  {
-    "model": "epr.diseasetranslation",
-    "pk": 8,
-    "fields": {
-      "disease": 8,
-      "language": 1,
-      "translation": "Placental Complications"
-    }
-  },
-  {
-    "model": "epr.diseasetranslation",
-    "pk": 9,
-    "fields": {
-      "disease": 9,
-      "language": 1,
-      "translation": "Pre-term Birth"
-    }
-  },
-  {
-    "model": "epr.diseasetranslation",
-    "pk": 10,
-    "fields": {
-      "disease": 10,
-      "language": 1,
-      "translation": "Preeclampsia"
-    }
-  },
-  {
-    "model": "epr.diseasetranslation",
-    "pk": 11,
-    "fields": {
-      "disease": 11,
-      "language": 1,
-      "translation": "Thrombosis"
-    }
-  },
-  {
-    "model": "epr.references",
-    "pk": 1,
-    "fields": {
-      "reference_id": "7",
-      "reference_string": "Lee KW, Ching SM, Ramachandran V, Yee A, Hoo FK, Chia YC, et al. Prevalence and risk factors of gestational diabetes mellitus in Asia: a systematic review and meta-analysis. BMC Pregnancy Childbirth. 2018;18:494",
-      "related_disease": 5
-    }
-  },
-  {
-    "model": "epr.references",
-    "pk": 2,
-    "fields": {
-      "reference_id": "8",
-      "reference_string": "Hrolfsdottir L, Gunnarsdottir I, Birgisdottir BE, Hreidarsdottir IT, Smarason AKr, Hardardottir H, et al. Can a Simple Dietary Screening in Early Pregnancy Identify Dietary Habits Associated with Gestational Diabetes? Nutrients. 2019;11:1868.",
-      "related_disease": 5
-    }
-  },
-  {
-    "model": "epr.references",
-    "pk": 3,
-    "fields": {
-      "reference_id": "9",
-      "reference_string": "Tobias DK, Zhang C, van Dam RM, Bowers K, Hu FB. Physical Activity Before and During Pregnancy and Risk of Gestational Diabetes Mellitus: A meta-analysis. Diabetes Care. 2011;34:223–9.",
-      "related_disease": 5
+      "severity": "4",
+      "related_complication": 48,
+      "percentage": ">50"
     }
   },
   {
@@ -5730,7 +6969,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [5]
+      "complications": []
     }
   },
   {
@@ -5744,7 +6983,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [5]
+      "complications": []
     }
   },
   {
@@ -5758,7 +6997,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [5]
+      "complications": []
     }
   },
   {
@@ -5772,7 +7011,7 @@
       "max_digits": 2,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [1, 2, 3, 4, 5, 7, 8, 9, 10, 11]
+      "complications": []
     }
   },
   {
@@ -5786,7 +7025,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [5]
+      "complications": []
     }
   },
   {
@@ -5800,7 +7039,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [5]
+      "complications": []
     }
   },
   {
@@ -5814,7 +7053,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": "parity",
-      "diseases": [5]
+      "complications": []
     }
   },
   {
@@ -5828,7 +7067,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": []
+      "complications": []
     }
   },
   {
@@ -5842,7 +7081,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [1, 5]
+      "complications": []
     }
   },
   {
@@ -5856,7 +7095,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [1, 5]
+      "complications": []
     }
   },
   {
@@ -5870,7 +7109,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [1, 5]
+      "complications": []
     }
   },
   {
@@ -5884,7 +7123,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [1, 5]
+      "complications": []
     }
   },
   {
@@ -5898,7 +7137,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [1, 5]
+      "complications": []
     }
   },
   {
@@ -5912,7 +7151,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [1, 5]
+      "complications": []
     }
   },
   {
@@ -5926,7 +7165,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [5]
+      "complications": []
     }
   },
   {
@@ -5940,7 +7179,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": "parity",
-      "diseases": [2, 5, 9]
+      "complications": []
     }
   },
   {
@@ -5954,7 +7193,7 @@
       "max_digits": 3,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [4, 5, 10]
+      "complications": []
     }
   },
   {
@@ -5968,7 +7207,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": "parity",
-      "diseases": [5]
+      "complications": []
     }
   },
   {
@@ -5982,7 +7221,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": "parity",
-      "diseases": [5, 7]
+      "complications": []
     }
   },
   {
@@ -5996,7 +7235,7 @@
       "max_digits": 1,
       "requirement": ">;0",
       "parent_factor": null,
-      "diseases": [1, 2, 5, 6, 8, 11]
+      "complications": []
     }
   },
   {
@@ -6010,7 +7249,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [5]
+      "complications": []
     }
   },
   {
@@ -6024,7 +7263,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": "parity",
-      "diseases": [5, 9]
+      "complications": []
     }
   },
   {
@@ -6038,7 +7277,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": "parity",
-      "diseases": [5]
+      "complications": []
     }
   },
   {
@@ -6052,7 +7291,7 @@
       "max_digits": 3,
       "requirement": null,
       "parent_factor": null,
-      "diseases": [5, 6, 10]
+      "complications": []
     }
   },
   {
@@ -6066,7 +7305,7 @@
       "max_digits": null,
       "requirement": null,
       "parent_factor": null,
-      "diseases": []
+      "complications": []
     }
   }
 ]
