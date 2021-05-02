@@ -115,7 +115,7 @@ def calculate(json_dict: dict) -> dict:
     
         # If PPE=0
         # Inter-pregnancy interval (years)
-        if (ip_interval:=json_dict.get("inter-pregnancy_interval")) == None:
+        if (ip_interval:=json_dict.get("interpregnancy_interval")) == None:
             pass
         elif ip_interval == 1:
             risk_score -= 25

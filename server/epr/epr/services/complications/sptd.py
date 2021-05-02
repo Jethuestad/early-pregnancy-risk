@@ -56,7 +56,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 2
 
     # PPT (previous pre-term)
-    if json_dict.get("ppt"):
+    if json_dict.get("previous_preterm"):
         risk_score += 5
 
     # Cervical surgery, such as conization or trachelectomy 
