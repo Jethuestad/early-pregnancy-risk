@@ -24,9 +24,9 @@ def calculate(json_dict: dict) -> dict:
     risk_score = 0
 
     # Gestational time in weeks
-    if (gestatioal_time:=json_dict.get("gestational_time")) == None:
+    if (gestatioal_age:=json_dict.get("gestational_age")) == None:
         pass
-    elif gestatioal_time > 41:
+    elif gestatioal_age > 41:
         risk_score += 4
 
     # Sex

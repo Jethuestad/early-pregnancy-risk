@@ -72,7 +72,7 @@ def calculate(json_dict: dict) -> dict:
 
         # If PPE=1:
         # Gestational age
-        if (g_age:=json_dict.get("g_age")) == None:
+        if (g_age:=json_dict.get("gestational_age")) == None:
             pass
         elif g_age < 26:
             risk_score += 0
@@ -144,7 +144,7 @@ def calculate(json_dict: dict) -> dict:
 
         # If PPE=0  
         # Gestational age
-        if (g_age:=json_dict.get("g_age")) == None:
+        if (g_age:=json_dict.get("gestational_age")) == None:
             pass
         elif g_age < 27:
             risk_score += 0
