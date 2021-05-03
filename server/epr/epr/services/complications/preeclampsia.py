@@ -67,7 +67,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 8
 
     # Parous with previous PE (PPE)
-    if json_dict.get("parous_ppe"):
+    if json_dict.get("preeclampsia"):
         risk_score += 39
 
         # If PPE=1:
@@ -110,7 +110,7 @@ def calculate(json_dict: dict) -> dict:
             risk_score -= 39
 
     # Parous with no previous PE
-    if json_dict.get("parous_no_ppe"):
+    if json_dict.get("preeclampsia") == False:
         risk_score += 21
     
         # If PPE=0
