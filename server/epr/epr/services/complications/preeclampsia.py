@@ -63,7 +63,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 15
     
     # Conception by IVF or Spontaneous conception
-    if json_dict.get("conception_by_IVF"):
+    if json_dict.get("conception_by_ivf"):
         risk_score += 8
 
     # Parous with previous PE (PPE)
