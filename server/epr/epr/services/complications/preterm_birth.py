@@ -2,20 +2,20 @@ from ...exceptions.api_exceptions import InternalServerError
 
 
 # Returning the risk_score and the severity of the risk_score
-def spdt_risk(risk_score: int) -> dict:
+def preterm_birth_risk(risk_score: int) -> dict:
     severity = 0
     if 0 <= risk_score < 3:
         severity = 0
     elif 3 <= risk_score < 6:
         severity = 1
-    elif 6 <= risk_score < 9:
+    elif 6 <= risk_score <= 9:
         severity = 2
-    elif 9 <= risk_score <= 15:
+    elif 10 <= risk_score <= 15:
         severity = 3
     elif 15 < risk_score:
         severity = 4
     else:
-        raise InternalServerError("Invalid score when calculating diabetes")
+        raise InternalServerError("Invalid score when calculating spontaneous pre-term delivery")
     
     return {"risk": risk_score, "severity": severity}
 
@@ -95,4 +95,4 @@ def calculate(json_dict: dict) -> dict:
     if (json_dict.get("gonorhea") or json_dict.get("syphilis")):
         risk_score += 1.5
 
-    return spdt_risk(risk_score)
+    return preterm_birth_risk(risk_score)

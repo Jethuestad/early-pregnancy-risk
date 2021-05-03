@@ -8,9 +8,9 @@ def diabetes_risk(risk_score: int) -> dict:
         severity = 0
     elif 3 <= risk_score < 6:
         severity = 1
-    elif 6 <= risk_score < 9:
+    elif 6 <= risk_score <= 9:
         severity = 2
-    elif 9 <= risk_score <= 15:
+    elif 10 <= risk_score <= 15:
         severity = 3
     elif 15 < risk_score:
         severity = 4

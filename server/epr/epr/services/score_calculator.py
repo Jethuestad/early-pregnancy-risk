@@ -18,21 +18,21 @@ def get_score(request, lang_code):
 
     diabetes = calc.diabetes
     preeclampsia = calc.preeclampsia
-    spdt = calc.spdt
+    preterm_birth = calc.preterm_birth
     miscarriage = calc.miscarriage
     stillbirth = calc.stillbirth
-    ppd = calc.ppd
-    caesearean_delivery = calc.caesearean_delivery
+    postpartum_depression = calc.postpartum_depression
+    caesarean_section = calc.caesarean_section
 
 
     response = []
     response.append(diabetes)
     response.append(preeclampsia)
-    response.append(spdt)
+    response.append(preterm_birth)
     response.append(miscarriage)
     response.append(stillbirth)
-    response.append(ppd)
-    response.append(caesearean_delivery)
+    response.append(postpartum_depression)
+    response.append(caesarean_section)
     
     # TODO: Add proper json response
     return standard_json_response(True, response)

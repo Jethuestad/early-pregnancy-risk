@@ -1,4 +1,4 @@
-from ..services.complications import diabetes, preeclampsia, sptd, miscarriage, stillbirth, ppd, caesearean_delivery
+from ..services.complications import diabetes, preeclampsia, preterm_birth, miscarriage, stillbirth, postpartum_depression, caesarean_section
 from ..exceptions.api_exceptions import InternalServerError
 from ..models import Translation, Complication_Risk
 
@@ -9,11 +9,11 @@ class Calculation:
         # Add multiple risks here
         self.diabetes = risk_dict_constructor("diabetes", diabetes.calculate(json_dict), language_code)
         self.preeclampsia = risk_dict_constructor("preeclampsia", preeclampsia.calculate(json_dict), language_code)
-        self.spdt = risk_dict_constructor("spdt", sptd.calculate(json_dict), language_code)
+        self.preterm_birth = risk_dict_constructor("pre-term_birth", preterm_birth.calculate(json_dict), language_code)
         self.miscarriage = risk_dict_constructor("misscarriage", miscarriage.calculate(json_dict), language_code)
-        self.stillbirth = risk_dict_constructor("stillbirth", stillbirth.calculate(json_dict), language_code)
-        self.ppd = risk_dict_constructor("ppd", ppd.calculate(json_dict), language_code)
-        self.caesearean_delivery = risk_dict_constructor("caesearean_delivery", caesearean_delivery.calculate(json_dict), language_code)
+        self.stillbirth = risk_dict_constructor("still_birth", stillbirth.calculate(json_dict), language_code)
+        self.postpartum_depression = risk_dict_constructor("postpartum_depression", postpartum_depression.calculate(json_dict), language_code)
+        self.caesarean_section = risk_dict_constructor("caesarean_section", caesarean_section.calculate(json_dict), language_code)
 
 
 def risk_dict_constructor(complication: str, risk_results: dict, language_code: str) -> dict:
