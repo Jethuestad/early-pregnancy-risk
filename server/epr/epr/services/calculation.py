@@ -7,10 +7,10 @@ class Calculation:
         self.language_code = language_code
 
         # Add multiple risks here
-        self.diabetes = risk_dict_constructor("diabetes", diabetes.calculate(json_dict), language_code)
+        self.diabetes = risk_dict_constructor("gestational_diabetes_mellitus", diabetes.calculate(json_dict), language_code)
         self.preeclampsia = risk_dict_constructor("preeclampsia", preeclampsia.calculate(json_dict), language_code)
         self.preterm_birth = risk_dict_constructor("pre-term_birth", preterm_birth.calculate(json_dict), language_code)
-        self.miscarriage = risk_dict_constructor("misscarriage", miscarriage.calculate(json_dict), language_code)
+        self.miscarriage = risk_dict_constructor("miscarriage", miscarriage.calculate(json_dict), language_code)
         self.stillbirth = risk_dict_constructor("still_birth", stillbirth.calculate(json_dict), language_code)
         self.postpartum_depression = risk_dict_constructor("postpartum_depression", postpartum_depression.calculate(json_dict), language_code)
         self.caesarean_section = risk_dict_constructor("caesarean_section", caesarean_section.calculate(json_dict), language_code)

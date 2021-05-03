@@ -51,13 +51,13 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 5
 
     # Previous miscarriage 
-    if (previous_miscarriage:=json_dict.get("previous_miscarriage")) == None:
+    if (previous_miscarriages:=json_dict.get("previous_miscarriages")) == None:
         pass
-    elif previous_miscarriage == 1:
+    elif previous_miscarriages == 1:
         risk_score += 1.5
-    elif previous_miscarriage == 2:
+    elif previous_miscarriages == 2:
         risk_score += 2.2
-    elif previous_miscarriage == 3:
+    elif previous_miscarriages >= 3:
         risk_score += 4
 
     # Family history of miscarriage

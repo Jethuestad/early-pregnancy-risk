@@ -40,7 +40,9 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 2
 
     # Education
-    if json_dict.get("education_years") <= 12:
+    if (education_years:=json_dict.get("education_years")) == None:
+        pass
+    elif education_years <= 12:
         risk_score += 1.5
    
     # Smoking
@@ -65,7 +67,9 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 1.5
 
     # Infant birth weight (kg)
-    if json_dict.get("infant_weight") < 1.5:
+    if (infant_weight:=json_dict.get("infant_weight")) == None:
+        pass
+    elif infant_weight < 1.5:
         risk_score += 8
 
     # Lack of support from friends, family, and other members of your community

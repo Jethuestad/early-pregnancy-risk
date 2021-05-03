@@ -6123,6 +6123,448 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 472,
+  "fields": {
+    "action_time": "2021-05-03T16:07:51.764Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Complication: preeclampsia - 0",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 473,
+  "fields": {
+    "action_time": "2021-05-03T16:08:04.535Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Complication: preeclampsia - 0",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Percentage\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 474,
+  "fields": {
+    "action_time": "2021-05-03T16:08:16.752Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Complication: preeclampsia - 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 475,
+  "fields": {
+    "action_time": "2021-05-03T16:08:24.189Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "Complication: preeclampsia - 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 476,
+  "fields": {
+    "action_time": "2021-05-03T16:08:35.422Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Complication: preeclampsia - 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 477,
+  "fields": {
+    "action_time": "2021-05-03T16:08:43.249Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "10",
+    "object_repr": "Complication: preeclampsia - 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 478,
+  "fields": {
+    "action_time": "2021-05-03T16:09:52.887Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "11",
+    "object_repr": "Complication: pre-term_birth - 0",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 479,
+  "fields": {
+    "action_time": "2021-05-03T16:09:59.894Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "12",
+    "object_repr": "Complication: pre-term_birth - 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 480,
+  "fields": {
+    "action_time": "2021-05-03T16:10:05.610Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "13",
+    "object_repr": "Complication: pre-term_birth - 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 481,
+  "fields": {
+    "action_time": "2021-05-03T16:10:12.873Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "14",
+    "object_repr": "Complication: pre-term_birth - 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 482,
+  "fields": {
+    "action_time": "2021-05-03T16:10:26.870Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "15",
+    "object_repr": "Complication: pre-term_birth - 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 483,
+  "fields": {
+    "action_time": "2021-05-03T16:11:20.791Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "16",
+    "object_repr": "Complication: miscarriage - 0",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 484,
+  "fields": {
+    "action_time": "2021-05-03T16:11:26.570Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "17",
+    "object_repr": "Complication: miscarriage - 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 485,
+  "fields": {
+    "action_time": "2021-05-03T16:11:33.051Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "18",
+    "object_repr": "Complication: miscarriage - 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 486,
+  "fields": {
+    "action_time": "2021-05-03T16:11:46.155Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "19",
+    "object_repr": "Complication: miscarriage - 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 487,
+  "fields": {
+    "action_time": "2021-05-03T16:18:08.585Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Question: previous_miscarriage2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 488,
+  "fields": {
+    "action_time": "2021-05-03T16:27:28.951Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "81",
+    "object_repr": "Question: previous_miscarriages",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 489,
+  "fields": {
+    "action_time": "2021-05-03T16:28:23.073Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "previous_miscarriages",
+    "object_repr": "previous_miscarriages (integer)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Factor name\", \"Answertype\", \"Max digits\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 490,
+  "fields": {
+    "action_time": "2021-05-03T16:28:38.952Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "previous_miscarriage",
+    "object_repr": "previous_miscarriage (boolean)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Factor name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 491,
+  "fields": {
+    "action_time": "2021-05-03T16:28:47.204Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Question: previous_miscarriage",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 492,
+  "fields": {
+    "action_time": "2021-05-03T16:30:54.146Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "20",
+    "object_repr": "Complication: still_birth - 0",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 493,
+  "fields": {
+    "action_time": "2021-05-03T16:31:01.904Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "21",
+    "object_repr": "Complication: still_birth - 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 494,
+  "fields": {
+    "action_time": "2021-05-03T16:31:08.344Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "22",
+    "object_repr": "Complication: still_birth - 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 495,
+  "fields": {
+    "action_time": "2021-05-03T16:31:15.267Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "23",
+    "object_repr": "Complication: still_birth - 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 496,
+  "fields": {
+    "action_time": "2021-05-03T16:32:02.674Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "24",
+    "object_repr": "Complication: postpartum_depression - 0",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 497,
+  "fields": {
+    "action_time": "2021-05-03T16:32:11.845Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "25",
+    "object_repr": "Complication: postpartum_depression - 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 498,
+  "fields": {
+    "action_time": "2021-05-03T16:32:23.213Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "26",
+    "object_repr": "Complication: postpartum_depression - 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 499,
+  "fields": {
+    "action_time": "2021-05-03T16:32:31.158Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "27",
+    "object_repr": "Complication: postpartum_depression - 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 500,
+  "fields": {
+    "action_time": "2021-05-03T16:32:59.204Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "28",
+    "object_repr": "Complication: cesarean_section - 0",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 501,
+  "fields": {
+    "action_time": "2021-05-03T16:33:05.845Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "24",
+    "object_repr": "Complication: postpartum_depression - 0",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 502,
+  "fields": {
+    "action_time": "2021-05-03T16:33:20.369Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "29",
+    "object_repr": "Complication: cesarean_section - 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 503,
+  "fields": {
+    "action_time": "2021-05-03T16:33:27.971Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "30",
+    "object_repr": "Complication: cesarean_section - 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 504,
+  "fields": {
+    "action_time": "2021-05-03T16:33:37.147Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "31",
+    "object_repr": "Complication: cesarean_section - 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 505,
+  "fields": {
+    "action_time": "2021-05-03T16:37:39.720Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "47",
+    "object_repr": "Complication: caesarean_section",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -7184,7 +7626,7 @@
   "model": "epr.content",
   "pk": 8,
   "fields": {
-    "name": "miscarriage",
+    "name": "previous_miscarriage",
     "content_type": "Question"
   }
 },
@@ -7408,7 +7850,7 @@
   "model": "epr.content",
   "pk": 47,
   "fields": {
-    "name": "cesarean_section",
+    "name": "caesarean_section",
     "content_type": "Complication"
   }
 },
@@ -7664,7 +8106,7 @@
   "model": "epr.content",
   "pk": 81,
   "fields": {
-    "name": "previous_miscarriage",
+    "name": "previous_miscarriages",
     "content_type": "Question"
   }
 },
@@ -9030,6 +9472,240 @@
   }
 },
 {
+  "model": "epr.complication_risk",
+  "pk": 6,
+  "fields": {
+    "severity": "0",
+    "related_complication": 54,
+    "percentage": "5"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 7,
+  "fields": {
+    "severity": "1",
+    "related_complication": 54,
+    "percentage": "15"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 8,
+  "fields": {
+    "severity": "2",
+    "related_complication": 54,
+    "percentage": "20"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 9,
+  "fields": {
+    "severity": "3",
+    "related_complication": 54,
+    "percentage": "40"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 10,
+  "fields": {
+    "severity": "4",
+    "related_complication": 54,
+    "percentage": ">50"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 11,
+  "fields": {
+    "severity": "0",
+    "related_complication": 53,
+    "percentage": "5"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 12,
+  "fields": {
+    "severity": "1",
+    "related_complication": 53,
+    "percentage": "15"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 13,
+  "fields": {
+    "severity": "2",
+    "related_complication": 53,
+    "percentage": "20"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 14,
+  "fields": {
+    "severity": "3",
+    "related_complication": 53,
+    "percentage": "40"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 15,
+  "fields": {
+    "severity": "4",
+    "related_complication": 53,
+    "percentage": ">50"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 16,
+  "fields": {
+    "severity": "0",
+    "related_complication": 50,
+    "percentage": "10"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 17,
+  "fields": {
+    "severity": "1",
+    "related_complication": 50,
+    "percentage": "25"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 18,
+  "fields": {
+    "severity": "2",
+    "related_complication": 50,
+    "percentage": "40"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 19,
+  "fields": {
+    "severity": "3",
+    "related_complication": 50,
+    "percentage": ">50"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 20,
+  "fields": {
+    "severity": "0",
+    "related_complication": 55,
+    "percentage": "10"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 21,
+  "fields": {
+    "severity": "1",
+    "related_complication": 55,
+    "percentage": "25"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 22,
+  "fields": {
+    "severity": "2",
+    "related_complication": 55,
+    "percentage": "40"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 23,
+  "fields": {
+    "severity": "3",
+    "related_complication": 55,
+    "percentage": ">50"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 24,
+  "fields": {
+    "severity": "0",
+    "related_complication": 52,
+    "percentage": "10"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 25,
+  "fields": {
+    "severity": "1",
+    "related_complication": 52,
+    "percentage": "25"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 26,
+  "fields": {
+    "severity": "2",
+    "related_complication": 52,
+    "percentage": "40"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 27,
+  "fields": {
+    "severity": "3",
+    "related_complication": 52,
+    "percentage": ">50"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 28,
+  "fields": {
+    "severity": "0",
+    "related_complication": 47,
+    "percentage": "15"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 29,
+  "fields": {
+    "severity": "1",
+    "related_complication": 47,
+    "percentage": "30"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 30,
+  "fields": {
+    "severity": "2",
+    "related_complication": 47,
+    "percentage": "45"
+  }
+},
+{
+  "model": "epr.complication_risk",
+  "pk": 31,
+  "fields": {
+    "severity": "3",
+    "related_complication": 47,
+    "percentage": ">60"
+  }
+},
+{
   "model": "epr.factor",
   "pk": "activity_stairs",
   "fields": {
@@ -9985,11 +10661,25 @@
   "model": "epr.factor",
   "pk": "previous_miscarriage",
   "fields": {
-    "question": 81,
+    "question": 8,
     "answertype": "boolean",
     "unit": null,
     "skippable": true,
     "max_digits": null,
+    "requirement": null,
+    "parent_factor": "parity",
+    "complications": []
+  }
+},
+{
+  "model": "epr.factor",
+  "pk": "previous_miscarriages",
+  "fields": {
+    "question": 81,
+    "answertype": "integer",
+    "unit": null,
+    "skippable": true,
+    "max_digits": 1,
     "requirement": null,
     "parent_factor": null,
     "complications": []
