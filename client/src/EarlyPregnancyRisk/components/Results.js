@@ -14,7 +14,7 @@ import Loading from "./Loading";
 
 const colors = require("../style/colors");
 
-export default function Form({ data }) {
+export default function Results({ data }) {
   const { width } = useWindowDimensions();
   const [risk, setRisk] = useState(null);
   const context = useContext(TranslationContext);
