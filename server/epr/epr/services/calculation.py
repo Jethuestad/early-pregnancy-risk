@@ -21,9 +21,26 @@ def risk_dict_constructor(complication: str, risk_results: dict, language_code: 
     if translated_comp is None:
         translated_comp = Translation.objects.get(belongs_to=complication, language__code="en").text
     
+    if risk_results["severity"] == 0:
+        severity = "severity_low"
+    elif risk_results["severity"] == 1:
+        severity = "severity_increased"
+    elif risk_results["severity"] == 2:
+        severity = "severity_moderate"
+    elif risk_results["severity"] == 3:
+        severity = "severity_high"
+    elif risk_results["severity"] == 4:
+        severity = "severity_very_high"
+
+
+    severity_string = Translation.objects.get(belongs_to__name=severity, language_code__code=language_code).text
+    if severity_string is None:
+        severity_string = Translation.objects.get(belongs_to__name=severity, language_code__code="en").text
+
     percentage_translated = Translation.objects.get(belongs_to__name="percentage_of_pregnancies", language_code__code=language_code).text
 
     percentage_risk = Complication_Risk.objects.get(related_complication__name=complication, severity = "{}".format(risk_results["severity"])).percentage
 
 
-    return  {"complication" : translated_comp, "severity": risk_results["severity"], "risk_str":"{} {}".format(percentage_risk, percentage_translated), "risk_score": risk_results["risk"]}
+
+    return  {"complication" : translated_comp, "severity_str": severity_string, "severity": risk_results["severity"], "risk_str":"{} {}".format(percentage_risk, percentage_translated), "risk_score": risk_results["risk"]}
