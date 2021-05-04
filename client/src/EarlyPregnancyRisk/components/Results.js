@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { TranslationContext } from "../contexts/TranslationContext";
 import { postFactors } from "../networking/Requests";
-import { isPhone } from "../modules/Device";
+import { isPhone, isTablet } from "../modules/Device";
 import ComplicationProgressbar from "./ComplicationProgressBar";
 import Loading from "./Loading";
 
@@ -26,35 +26,40 @@ export default function Results({ data }) {
         complication: "Gestational Diabetes Mellitus",
         severity: 0,
         severity_str: "Very Low",
-        risk_str: ">50 % of pregancies",
+        risk_str:
+          "Less than 5% of pregnancies with your test results has this complication",
         risk_score: 53,
       },
       {
         complication: "Preeclampsia",
         severity: 1,
         severity_str: "Low",
-        risk_str: ">50 % of pregancies",
+        risk_str:
+          "Less than 15% of pregnancies with your test results has this complication",
         risk_score: 53,
       },
       {
         complication: "Caesearean Delivery",
         severity: 2,
         severity_str: "Increased",
-        risk_str: ">50 % of pregancies",
+        risk_str:
+          "Less than 30% of pregnancies with your test results has this complication",
         risk_score: 53,
       },
       {
         complication: " Post-partum Depression",
         severity: 3,
         severity_str: "High",
-        risk_str: ">50 % of pregancies",
+        risk_str:
+          "Less than 50% of pregnancies with your test results has this complication",
         risk_score: 53,
       },
       {
         complication: "Stillbirth",
         severity: 4,
         severity_str: "Very High",
-        risk_str: ">50 % of pregancies",
+        risk_str:
+          "More than 50% of pregnancies with your test results has this complication",
         risk_score: 53,
       },
     ],
@@ -74,6 +79,9 @@ export default function Results({ data }) {
                   total={4}
                   title={item.severity_str}
                 />
+                <View style={styles(width).subtextContainer}>
+                  <Text style={styles(width).subtext}>{item.risk_str}</Text>
+                </View>
               </View>
             </View>
           );
@@ -124,14 +132,25 @@ const styles = (width) =>
     },
     containerText: {
       flexDirection: "row",
-      marginTop: isPhone(width) ? 15 : 20,
+      marginTop: 20,
     },
     complication: {
-      fontSize: 40,
+      fontSize: isTablet(width) ? 25 : 40,
       textTransform: "capitalize",
       textAlign: "center",
       fontWeight: "bold",
       color: colors.primary,
+    },
+    subtextContainer: {
+      width: "80%",
+      padding: 15,
+      borderStyle: "solid",
+      borderTopColor: "black",
+      borderTopWidth: 1,
+      alignSelf: "center",
+    },
+    subtext: {
+      fontSize: 20,
     },
     complicationContainer: {
       marginHorizontal: 15,
