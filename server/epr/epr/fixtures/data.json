@@ -6565,6 +6565,409 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 506,
+  "fields": {
+    "action_time": "2021-05-04T16:48:52.928Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "117",
+    "object_repr": "Text: risk_low",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 507,
+  "fields": {
+    "action_time": "2021-05-04T16:48:59.240Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "118",
+    "object_repr": "Text: risk_increased",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 508,
+  "fields": {
+    "action_time": "2021-05-04T16:49:14.322Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "119",
+    "object_repr": "Text: risk_high",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 509,
+  "fields": {
+    "action_time": "2021-05-04T16:49:51.850Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "120",
+    "object_repr": "Text: risk_very_high",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 510,
+  "fields": {
+    "action_time": "2021-05-04T16:50:13.319Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "120",
+    "object_repr": "Text: risk_low (en)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 511,
+  "fields": {
+    "action_time": "2021-05-04T16:50:23.085Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "121",
+    "object_repr": "Text: risk_low (no)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 512,
+  "fields": {
+    "action_time": "2021-05-04T16:50:33.874Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "122",
+    "object_repr": "Text: risk_increased (en)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 513,
+  "fields": {
+    "action_time": "2021-05-04T16:50:45.356Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "123",
+    "object_repr": "Text: risk_increased (no)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 514,
+  "fields": {
+    "action_time": "2021-05-04T16:50:53.836Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "124",
+    "object_repr": "Text: risk_high (en)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 515,
+  "fields": {
+    "action_time": "2021-05-04T16:51:01.585Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "125",
+    "object_repr": "Text: risk_high (no)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 516,
+  "fields": {
+    "action_time": "2021-05-04T16:51:15.473Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "126",
+    "object_repr": "Text: risk_very_high (en)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 517,
+  "fields": {
+    "action_time": "2021-05-04T16:51:25.058Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "127",
+    "object_repr": "Text: risk_very_high (no)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 518,
+  "fields": {
+    "action_time": "2021-05-04T16:53:49.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "120",
+    "object_repr": "Text: risk_very_high",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 519,
+  "fields": {
+    "action_time": "2021-05-04T16:53:49.383Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "119",
+    "object_repr": "Text: risk_high",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 520,
+  "fields": {
+    "action_time": "2021-05-04T16:53:49.384Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "118",
+    "object_repr": "Text: risk_increased",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 521,
+  "fields": {
+    "action_time": "2021-05-04T16:53:49.385Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "117",
+    "object_repr": "Text: risk_low",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 522,
+  "fields": {
+    "action_time": "2021-05-04T16:54:06.273Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "121",
+    "object_repr": "Text: severity_low",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 523,
+  "fields": {
+    "action_time": "2021-05-04T16:54:12.821Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "122",
+    "object_repr": "Text: severity_increased",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 524,
+  "fields": {
+    "action_time": "2021-05-04T16:54:19.640Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "123",
+    "object_repr": "Text: severity_high",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 525,
+  "fields": {
+    "action_time": "2021-05-04T16:54:30.686Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "124",
+    "object_repr": "Text: severity_very_high",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 526,
+  "fields": {
+    "action_time": "2021-05-04T16:55:04.288Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "128",
+    "object_repr": "Text: severity_low (en)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 527,
+  "fields": {
+    "action_time": "2021-05-04T16:55:14.053Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "129",
+    "object_repr": "Text: severity_low (no)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 528,
+  "fields": {
+    "action_time": "2021-05-04T16:55:30.453Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "130",
+    "object_repr": "Text: severity_increased (en)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 529,
+  "fields": {
+    "action_time": "2021-05-04T16:55:40.922Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "131",
+    "object_repr": "Text: severity_increased (no)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 530,
+  "fields": {
+    "action_time": "2021-05-04T16:55:49.435Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "132",
+    "object_repr": "Text: severity_high (en)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 531,
+  "fields": {
+    "action_time": "2021-05-04T16:55:57.338Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "133",
+    "object_repr": "Text: severity_high (no)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 532,
+  "fields": {
+    "action_time": "2021-05-04T16:56:08.337Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "134",
+    "object_repr": "Text: severity_very_high (no)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 533,
+  "fields": {
+    "action_time": "2021-05-04T16:56:21.669Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "135",
+    "object_repr": "Text: severity_very_high (en)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 534,
+  "fields": {
+    "action_time": "2021-05-04T17:00:31.239Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "125",
+    "object_repr": "Text: severity_moderate",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 535,
+  "fields": {
+    "action_time": "2021-05-04T17:00:42.789Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "136",
+    "object_repr": "Text: severity_moderate (en)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 536,
+  "fields": {
+    "action_time": "2021-05-04T17:00:52.471Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "137",
+    "object_repr": "Text: severity_moderate (no)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -7253,7 +7656,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$216000$dW5KSggOSG0O$ooT6QnCYtRUw6L0maDOxyP8DiHTSmenrFrI7R4Cex8s=",
-    "last_login": "2021-05-03T12:52:30.816Z",
+    "last_login": "2021-05-04T16:47:51.028Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
@@ -7268,7 +7671,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 1,
+  "pk": 1,
   "fields": {
     "app_label": "admin",
     "model": "logentry"
@@ -7276,7 +7679,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 2,
+  "pk": 2,
   "fields": {
     "app_label": "auth",
     "model": "permission"
@@ -7284,7 +7687,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 3,
+  "pk": 3,
   "fields": {
     "app_label": "auth",
     "model": "group"
@@ -7292,7 +7695,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 4,
+  "pk": 4,
   "fields": {
     "app_label": "auth",
     "model": "user"
@@ -7300,7 +7703,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 5,
+  "pk": 5,
   "fields": {
     "app_label": "contenttypes",
     "model": "contenttype"
@@ -7308,7 +7711,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 6,
+  "pk": 6,
   "fields": {
     "app_label": "sessions",
     "model": "session"
@@ -7316,7 +7719,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 7,
+  "pk": 7,
   "fields": {
     "app_label": "epr",
     "model": "language"
@@ -7324,7 +7727,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 8,
+  "pk": 8,
   "fields": {
     "app_label": "epr",
     "model": "contenttype"
@@ -7332,7 +7735,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 9,
+  "pk": 9,
   "fields": {
     "app_label": "epr",
     "model": "content"
@@ -7340,7 +7743,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 10,
+  "pk": 10,
   "fields": {
     "app_label": "epr",
     "model": "translation"
@@ -7348,7 +7751,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 11,
+  "pk": 11,
   "fields": {
     "app_label": "epr",
     "model": "answertype"
@@ -7356,7 +7759,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 12,
+  "pk": 12,
   "fields": {
     "app_label": "epr",
     "model": "reference"
@@ -7364,7 +7767,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 13,
+  "pk": 13,
   "fields": {
     "app_label": "epr",
     "model": "complication_risk"
@@ -7372,7 +7775,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 14,
+  "pk": 14,
   "fields": {
     "app_label": "epr",
     "model": "factor"
@@ -7380,7 +7783,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 15,
+  "pk": 15,
   "fields": {
     "app_label": "epr",
     "model": "disease"
@@ -7388,7 +7791,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 16,
+  "pk": 16,
   "fields": {
     "app_label": "epr",
     "model": "references"
@@ -7396,7 +7799,7 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "id": 17,
+  "pk": 17,
   "fields": {
     "app_label": "epr",
     "model": "diseasetranslation"
@@ -7464,6 +7867,14 @@
   "fields": {
     "session_data": ".eJxVjMsOwiAQRf-FtSEwIA-X7vsNZHiMVA0kpV0Z_12bdKHbe865LxZwW2vYRlnCnNmFSXb63SKmR2k7yHdst85Tb-syR74r_KCDTz2X5_Vw_w4qjvqtS8xGCTI6KjAepCJPKDwogcrFRM6lrEEWtOfkIgoLpIyWRUJOBGTZ-wPhFjf3:1lMEXR:S2VcerSFs2GKfV34zBaESHIzzJqX4OExsubNPnHAZ78",
     "expire_date": "2021-03-30T18:35:29.623Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lvqecks90zlng17r9cf5g7g7kncl9x7v",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEwIA-X7vsNZHiMVA0kpV0Z_12bdKHbe865LxZwW2vYRlnCnNmFSXb63SKmR2k7yHdst85Tb-syR74r_KCDTz2X5_Vw_w4qjvqtS8xGCTI6KjAepCJPKDwogcrFRM6lrEEWtOfkIgoLpIyWRUJOBGTZ-wPhFjf3:1ldyD9:Jv1e2egDZvIALTM5LdlYPFEIRhBdB0tmtKfebutwm_w",
+    "expire_date": "2021-05-18T16:47:51.030Z"
   }
 },
 {
@@ -8388,6 +8799,46 @@
   "fields": {
     "name": "unplanned",
     "content_type": "Question"
+  }
+},
+{
+  "model": "epr.content",
+  "pk": 121,
+  "fields": {
+    "name": "severity_low",
+    "content_type": "Text"
+  }
+},
+{
+  "model": "epr.content",
+  "pk": 122,
+  "fields": {
+    "name": "severity_increased",
+    "content_type": "Text"
+  }
+},
+{
+  "model": "epr.content",
+  "pk": 123,
+  "fields": {
+    "name": "severity_high",
+    "content_type": "Text"
+  }
+},
+{
+  "model": "epr.content",
+  "pk": 124,
+  "fields": {
+    "name": "severity_very_high",
+    "content_type": "Text"
+  }
+},
+{
+  "model": "epr.content",
+  "pk": 125,
+  "fields": {
+    "name": "severity_moderate",
+    "content_type": "Text"
   }
 },
 {
@@ -9414,6 +9865,96 @@
     "language_code": 1,
     "belongs_to": 57,
     "text": "% of pregancies"
+  }
+},
+{
+  "model": "epr.translation",
+  "pk": 128,
+  "fields": {
+    "language_code": 1,
+    "belongs_to": 121,
+    "text": "Low risk"
+  }
+},
+{
+  "model": "epr.translation",
+  "pk": 129,
+  "fields": {
+    "language_code": 2,
+    "belongs_to": 121,
+    "text": "Lav risiko"
+  }
+},
+{
+  "model": "epr.translation",
+  "pk": 130,
+  "fields": {
+    "language_code": 1,
+    "belongs_to": 122,
+    "text": "Increased risk"
+  }
+},
+{
+  "model": "epr.translation",
+  "pk": 131,
+  "fields": {
+    "language_code": 2,
+    "belongs_to": 122,
+    "text": "Forhøyet risiko"
+  }
+},
+{
+  "model": "epr.translation",
+  "pk": 132,
+  "fields": {
+    "language_code": 1,
+    "belongs_to": 123,
+    "text": "High risk"
+  }
+},
+{
+  "model": "epr.translation",
+  "pk": 133,
+  "fields": {
+    "language_code": 2,
+    "belongs_to": 123,
+    "text": "Høy risiko"
+  }
+},
+{
+  "model": "epr.translation",
+  "pk": 134,
+  "fields": {
+    "language_code": 2,
+    "belongs_to": 124,
+    "text": "Veldig høy risiko"
+  }
+},
+{
+  "model": "epr.translation",
+  "pk": 135,
+  "fields": {
+    "language_code": 1,
+    "belongs_to": 124,
+    "text": "Very high risk"
+  }
+},
+{
+  "model": "epr.translation",
+  "pk": 136,
+  "fields": {
+    "language_code": 1,
+    "belongs_to": 125,
+    "text": "Moderate risk"
+  }
+},
+{
+  "model": "epr.translation",
+  "pk": 137,
+  "fields": {
+    "language_code": 2,
+    "belongs_to": 125,
+    "text": "Moderat risiko"
   }
 },
 {
