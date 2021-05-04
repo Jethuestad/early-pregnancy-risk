@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
-import Progressbar from "../components/Progressbar";
+import Progressbar from "../components/ProgressBar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
 import FormOverlay from "./FormOverlay";

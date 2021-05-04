@@ -1,13 +1,21 @@
 import React, { useState, useEffect, useContext } from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  useWindowDimensions,
+} from "react-native";
 import { TranslationContext } from "../contexts/TranslationContext";
 import { postFactors } from "../networking/Requests";
-import ComplicationProgressbar from "./ComplicationProgressbar";
+import { isPhone } from "../modules/Device";
+import ComplicationProgressbar from "./ComplicationProgressBar";
 import Loading from "./Loading";
 
 const colors = require("../style/colors");
 
 export default function Form({ data }) {
+  const { width } = useWindowDimensions();
   const [risk, setRisk] = useState(null);
   const context = useContext(TranslationContext);
 
@@ -53,12 +61,14 @@ export default function Form({ data }) {
   };
   function renderResponse(response) {
     return (
-      <View style={styles.riskContainer}>
+      <View style={styles(width).riskContainer}>
         {response.payload.map((item, index) => {
           return (
             <View key={index}>
-              <View style={styles.complicationContainer}>
-                <Text style={styles.complication}>{item.complication}</Text>
+              <View style={styles(width).complicationContainer}>
+                <Text style={styles(width).complication}>
+                  {item.complication}
+                </Text>
                 <ComplicationProgressbar
                   progress={item.severity}
                   total={4}
@@ -87,52 +97,47 @@ export default function Form({ data }) {
 
   if (risk == null) {
     return (
-      <View style={styles.container}>
+      <View style={styles(width).container}>
         <Loading message={context.loading_risk || ""} />
       </View>
     );
   }
   return (
     <ScrollView>
-      <View style={styles.container}>{renderResponse(risk)}</View>
+      <View style={styles(width).container}>{renderResponse(risk)}</View>
     </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignSelf: "stretch",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  header: {
-    marginBottom: 20,
-  },
-  headerText: {
-    fontSize: 40,
-  },
-  riskContainer: {
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "center",
-  },
-  containerText: {
-    flexDirection: "row",
-    marginTop: 20,
-  },
-  complication: {
-    fontSize: 40,
-    textTransform: "capitalize",
-    textAlign: "center",
-    fontWeight: "bold",
-    color: colors.primary,
-  },
-  complicationContainer: {
-    marginHorizontal: 15,
-    marginVertical: 10,
-  },
-  severity: {
-    fontSize: 15,
-  },
-});
+const styles = (width) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      alignSelf: "stretch",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    riskContainer: {
+      flex: 1,
+      flexDirection: "column",
+      justifyContent: "center",
+    },
+    containerText: {
+      flexDirection: "row",
+      marginTop: isPhone(width) ? 15 : 20,
+    },
+    complication: {
+      fontSize: 40,
+      textTransform: "capitalize",
+      textAlign: "center",
+      fontWeight: "bold",
+      color: colors.primary,
+    },
+    complicationContainer: {
+      marginHorizontal: 15,
+      marginVertical: 10,
+    },
+    severity: {
+      fontSize: 15,
+    },
+  });

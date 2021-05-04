@@ -3,7 +3,7 @@ import { StyleSheet, View, Animated, Text } from "react-native";
 
 const colors = require("../style/colors");
 
-export default function SkipInput({ progress, total }) {
+export default function ProgressBar({ progress, total }) {
   let animation = useRef(new Animated.Value(0));
   const width = animation.current.interpolate({
     inputRange: [0, total],
