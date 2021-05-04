@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { TranslationContext } from "../contexts/TranslationContext";
-import { getSeverity } from "../modules/Severity";
 import { postFactors } from "../networking/Requests";
+import ComplicationProgressbar from "./ComplicationProgressbar";
 import Loading from "./Loading";
 
 const colors = require("../style/colors");
@@ -15,14 +15,39 @@ export default function Form({ data }) {
     success: true,
     payload: [
       {
-        complication: "(Test) diabetes",
-        severity: 4,
+        complication: "Gestational Diabetes Mellitus",
+        severity: 0,
+        severity_str: "Very Low",
+        risk_str: ">50 % of pregancies",
         risk_score: 53,
       },
       {
-        complication: "(Test) Preeclampsia",
+        complication: "Preeclampsia",
+        severity: 1,
+        severity_str: "Low",
+        risk_str: ">50 % of pregancies",
+        risk_score: 53,
+      },
+      {
+        complication: "Caesearean Delivery",
         severity: 2,
-        risk_score: 21,
+        severity_str: "Increased",
+        risk_str: ">50 % of pregancies",
+        risk_score: 53,
+      },
+      {
+        complication: " Post-partum Depression",
+        severity: 3,
+        severity_str: "High",
+        risk_str: ">50 % of pregancies",
+        risk_score: 53,
+      },
+      {
+        complication: "Stillbirth",
+        severity: 4,
+        severity_str: "Very High",
+        risk_str: ">50 % of pregancies",
+        risk_score: 53,
       },
     ],
   };
@@ -32,15 +57,14 @@ export default function Form({ data }) {
         {response.payload.map((item, index) => {
           return (
             <View key={index}>
-              <View style={styles.containerText}>
+              <View style={styles.complicationContainer}>
                 <Text style={styles.complication}>{item.complication}</Text>
-                <Text style={styles.severity}>
-                  {getSeverity(item.severity)}
-                </Text>
+                <ComplicationProgressbar
+                  progress={item.severity}
+                  total={4}
+                  title={item.severity_str}
+                />
               </View>
-              <Text style={[styles.score]}>
-                Your risk score is {item.risk_score}
-              </Text>
             </View>
           );
         })}
@@ -68,7 +92,11 @@ export default function Form({ data }) {
       </View>
     );
   }
-  return <View style={styles.container}>{renderResponse(risk)}</View>;
+  return (
+    <ScrollView>
+      <View style={styles.container}>{renderResponse(risk)}</View>
+    </ScrollView>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -77,6 +105,12 @@ const styles = StyleSheet.create({
     alignSelf: "stretch",
     justifyContent: "center",
     alignItems: "center",
+  },
+  header: {
+    marginBottom: 20,
+  },
+  headerText: {
+    fontSize: 40,
   },
   riskContainer: {
     flex: 1,
@@ -90,16 +124,15 @@ const styles = StyleSheet.create({
   complication: {
     fontSize: 40,
     textTransform: "capitalize",
+    textAlign: "center",
     fontWeight: "bold",
     color: colors.primary,
   },
-  severity: {
-    fontSize: 30,
-    textTransform: "capitalize",
-    marginLeft: 20,
-    marginTop: 10,
+  complicationContainer: {
+    marginHorizontal: 15,
+    marginVertical: 10,
   },
-  score: {
-    fontSize: 20,
+  severity: {
+    fontSize: 15,
   },
 });
