@@ -23,7 +23,7 @@ export default function Results({ data, skipped }) {
     success: true,
     payload: [
       {
-        complication: "Gestational Diabetes Mellitus",
+        complication: "TEST Gestational Diabetes Mellitus",
         severity: 0,
         severity_str: "Very Low",
         risk_str:
@@ -31,7 +31,7 @@ export default function Results({ data, skipped }) {
         risk_score: 53,
       },
       {
-        complication: "Preeclampsia",
+        complication: "TEST Preeclampsia",
         severity: 1,
         severity_str: "Low",
         risk_str:
@@ -39,7 +39,7 @@ export default function Results({ data, skipped }) {
         risk_score: 53,
       },
       {
-        complication: "Caesearean Delivery",
+        complication: "TEST Caesearean Delivery",
         severity: 2,
         severity_str: "Increased",
         risk_str:
@@ -47,7 +47,7 @@ export default function Results({ data, skipped }) {
         risk_score: 53,
       },
       {
-        complication: " Post-partum Depression",
+        complication: "TEST Post-partum Depression",
         severity: 3,
         severity_str: "High",
         risk_str:
@@ -55,7 +55,7 @@ export default function Results({ data, skipped }) {
         risk_score: 53,
       },
       {
-        complication: "Stillbirth",
+        complication: "TEST Stillbirth",
         severity: 4,
         severity_str: "Very High",
         risk_str:
@@ -142,6 +142,7 @@ const styles = (width) =>
     },
     riskContainer: {
       flex: 1,
+      minWidth: isPhone(width) ? "95%" : isTablet(width) ? "80%" : "50%",
       flexDirection: "column",
       justifyContent: "center",
     },
