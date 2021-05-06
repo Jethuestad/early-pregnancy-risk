@@ -1,5 +1,17 @@
+const COUNTRY_CODES = require("../constants/CountryCodes");
 module.exports = {
+  languages: [
+    {
+      flag_url: "",
+      country_code: COUNTRY_CODES.norwegian,
+    },
+    {
+      flag_url: "",
+      country_code: COUNTRY_CODES.french,
+    },
+  ],
   translation: {
+    title: "Early Pregnancy Risk",
     front_page_paragraph_1:
       "Pregnant or planning for a baby? This tool will make you assess your health status for a healthy pregnancy and a complication free birth. By filling in your personal health measurements, this tool will estimate risk for developing common pregnancy complications below.",
     front_page_paragraph_2:
@@ -14,5 +26,9 @@ module.exports = {
     footer_privacy: "Click here to read about our privacy policy",
     loading: "Loading",
     loading_risk: "Calculating risk",
+    skipped_warning_singular:
+      "You skipped one question, this can affect your test results",
+    skipped_warning_plural:
+      "You skipped %d questions, this can affect your test results",
   },
 };

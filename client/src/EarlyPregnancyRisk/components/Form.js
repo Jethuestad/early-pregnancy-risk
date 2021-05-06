@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { checkRequirement } from "../modules/FactorUtilities";
 import { IntInput, BooleanInput, SkipInput } from "./Input";
-import Progressbar from "../components/Progressbar";
+import Progressbar from "../components/ProgressBar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
 import FormOverlay from "./FormOverlay";
@@ -27,6 +27,7 @@ export default function Form({ changePage, factor_data, lang_code }) {
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
   const [visible, setVisible] = useState(false);
+  const [totalSkipped, setTotalSkipped] = useState(0);
 
   function addSubFactors() {
     if (factors[nr].subfactors != null && factors[nr].requirement != null) {
@@ -102,7 +103,7 @@ export default function Form({ changePage, factor_data, lang_code }) {
 
   useEffect(() => {
     if (factors != null && nr >= factors.length) {
-      changePage(data);
+      changePage(data, totalSkipped);
     }
   }, [nr]);
 
@@ -129,6 +130,7 @@ export default function Form({ changePage, factor_data, lang_code }) {
             <SkipInput
               setSkipped={() => {
                 setSkipped(true);
+                setTotalSkipped((v) => v + 1);
               }}
               completed={() => setIsSubmitting(true)}
             />

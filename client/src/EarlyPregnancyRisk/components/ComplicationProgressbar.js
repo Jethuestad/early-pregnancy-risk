@@ -3,41 +3,28 @@ import { StyleSheet, View, Animated, Text } from "react-native";
 
 const colors = require("../style/colors");
 
-export default function ProgressBar({ progress, total }) {
-  let animation = useRef(new Animated.Value(0));
-  const width = animation.current.interpolate({
-    inputRange: [0, total],
-    outputRange: ["0%", "100%"],
-    extrapolate: "clamp",
-  });
-
-  useEffect(() => {
-    Animated.timing(animation.current, {
-      toValue: progress,
-      duration: total,
-      useNativeDriver: false,
-    }).start();
-  }, [progress]);
+export default function ComplicationProgressbar({ progress, total, title }) {
+  const severityColors = [
+    "#8ab7de",
+    "#80cf61",
+    "#ffed2b",
+    "#ffb12b",
+    "#d12c26",
+  ];
 
   return (
     <View style={styles.container}>
       <View style={styles.progressBar}>
-        <Animated.View
+        <View
           style={[
             StyleSheet.absoluteFill,
-            { backgroundColor: colors.primary, width },
+            {
+              backgroundColor: severityColors[Math.min(progress, total)],
+              width: `${100 - 20 * (total - progress)}%`,
+            },
           ]}
         />
-        <Text
-          style={[
-            styles.text,
-            progress / total > 0.5
-              ? { color: colors.white }
-              : { color: colors.black },
-          ]}
-        >
-          {Math.trunc((progress / total) * 100)}%
-        </Text>
+        <Text style={[styles.text]}>{title}</Text>
       </View>
     </View>
   );
@@ -64,7 +51,7 @@ const styles = StyleSheet.create({
     width: "100%",
     textAlign: "center",
     justifyContent: "center",
-    fontWeight: "bold",
-    fontSize: 20,
+    paddingTop: 3,
+    fontSize: 15,
   },
 });

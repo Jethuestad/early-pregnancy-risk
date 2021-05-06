@@ -13,55 +13,72 @@ const colors = require("../style/colors");
 export default function LanguageSelect({
   setLang,
   language,
+  languages,
   isLoadingLanguage,
 }) {
   const COUNTRY_CODES = require("../constants/CountryCodes");
   const { width } = useWindowDimensions();
-
   return (
     <View style={styles.container}>
       <View style={styles.languages}>
-        <TouchableOpacity
-          disabled={isLoadingLanguage}
-          style={[
-            language == COUNTRY_CODES.english ? styles.highlight : styles.none,
-            styles.flag,
-          ]}
-          onPress={() => setLang(COUNTRY_CODES.english)}
-        >
-          <Image
-            source={require("../assets/uk.png")}
-            style={{ width: 32, height: 32 }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          disabled={isLoadingLanguage}
-          style={[
-            language == COUNTRY_CODES.norwegian
-              ? styles.highlight
-              : styles.none,
-            styles.flag,
-          ]}
-          onPress={() => setLang(COUNTRY_CODES.norwegian)}
-        >
-          <Image
-            source={require("../assets/no.png")}
-            style={{ width: 32, height: 32 }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          disabled={isLoadingLanguage}
-          style={[
-            language == COUNTRY_CODES.french ? styles.highlight : styles.none,
-            styles.flag,
-          ]}
-          onPress={() => setLang(COUNTRY_CODES.french)}
-        >
-          <Image
-            source={require("../assets/fr.png")}
-            style={{ width: 32, height: 32 }}
-          />
-        </TouchableOpacity>
+        <View>
+          <TouchableOpacity
+            disabled={isLoadingLanguage}
+            style={[
+              language == COUNTRY_CODES.english
+                ? styles.highlight
+                : styles.none,
+              styles.flag,
+            ]}
+            onPress={() => setLang(COUNTRY_CODES.english)}
+          >
+            <Image
+              source={require("../assets/uk.png")}
+              style={{ width: 32, height: 32 }}
+            />
+          </TouchableOpacity>
+          <Text
+            style={{
+              textAlign: "center",
+              color:
+                language == COUNTRY_CODES.english
+                  ? colors.primary
+                  : colors.black,
+            }}
+          >
+            {COUNTRY_CODES.english.toUpperCase()}
+          </Text>
+        </View>
+        {languages.map((value) => (
+          <View>
+            <TouchableOpacity
+              disabled={isLoadingLanguage}
+              style={[
+                language == value.country_code ? styles.highlight : styles.none,
+                styles.flag,
+              ]}
+              onPress={() => setLang(value.country_code)}
+            >
+              <Image
+                source={value.flag_url}
+                defaultSource={require("../assets/unknown.png")}
+                style={{ width: 32, height: 32 }}
+              />
+            </TouchableOpacity>
+
+            <Text
+              style={{
+                textAlign: "center",
+                color:
+                  language == value.country_code
+                    ? colors.primary
+                    : colors.black,
+              }}
+            >
+              {value.country_code.toUpperCase()}
+            </Text>
+          </View>
+        ))}
       </View>
       {language != COUNTRY_CODES.english ? (
         <View style={{ flexDirection: "column" }}>

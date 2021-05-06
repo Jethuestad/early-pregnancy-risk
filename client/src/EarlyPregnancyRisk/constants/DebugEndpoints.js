@@ -4,4 +4,5 @@ module.exports = {
   calculate: "http://127.0.0.1:8000/calculate/",
   factors: "http://127.0.0.1:8000/factors",
   references: "http://127.0.0.1:8000/factor",
+  languages: "http://127.0.0.1:8000/languages",
 };
