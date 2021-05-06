@@ -38,6 +38,8 @@ def risk_dict_constructor(complication: str, risk_results: dict, language_code: 
         severity_string = Translation.objects.get(belongs_to__name=severity, language_code__code="en").text
 
     percentage_translated = Translation.objects.get(belongs_to__name="percentage_of_pregnancies", language_code__code=language_code).text
+    if percentage_translated is None:
+        percentage_translated = Translation.objects.get(belongs_to__name="percentage_of_pregnancies", language_code__code="en").text
 
     percentage_risk = Complication_Risk.objects.get(related_complication__name=complication, severity = "{}".format(risk_results["severity"])).percentage
 
