@@ -46,11 +46,13 @@ export default function Form({ changePage, factor_data, lang_code }) {
         );
       }
       if (shouldAdd) {
+        //remove null values first
+        let subfacors = factors[nr].subfactors.filter((el) => el != null);
         let left = factors.slice(0, nr + 1);
         let right = factors.slice(nr + 1);
-        left.concat(factors[nr].subfactors);
+        left.concat(subfacors);
         left.concat(right);
-        let temp = left.concat(factors[nr].subfactors, right);
+        let temp = left.concat(subfacors, right);
         setFactors(temp);
       }
     }

@@ -79,7 +79,7 @@ export const postFactors = async (factors) => {
   };
 
   try {
-    let response = await fetch(ENDPOINTS.calculate, data);
+    let response = await fetch([ENDPOINTS.calculate, "en"].join("/"), data);
     let json = await response.text();
     return JSON.parse(json);
   } catch (error) {
