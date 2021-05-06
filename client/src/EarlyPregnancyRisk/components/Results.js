@@ -121,6 +121,12 @@ export default function Results({ data, skipped }) {
           </Text>
         </View>
       ) : null}
+      <View>
+        <Text style={styles(width).skippedWarningText}>
+          ALL RESULTS ON THIS PAGE IS NOT REAL, AND ARE ONLY FOR TESTING
+          PURPOSES
+        </Text>
+      </View>
       <View style={styles(width).container}>{renderResponse(risk)}</View>
     </ScrollView>
   );

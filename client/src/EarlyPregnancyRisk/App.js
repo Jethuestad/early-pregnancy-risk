@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Animated, StyleSheet, View } from "react-native";
-import { getFactors, getTranslation } from "./networking/Requests";
+import {
+  getFactors,
+  getLanguages,
+  getTranslation,
+} from "./networking/Requests";
 import { TranslationContext } from "./contexts/TranslationContext";
 import Loading from "./components/Loading";
 import Header from "./components/Header";
@@ -74,9 +78,13 @@ export default function App() {
       async.parallel(
         [
           async (callback) => {
+            const response = await getLanguages();
+            setLanguages(response);
+            callback();
+          },
+          async (callback) => {
             const response = await getTranslation(language);
-            setText(response.translation);
-            setLanguages(response.languages);
+            setText(response);
             callback();
           },
           async (callback) => {
