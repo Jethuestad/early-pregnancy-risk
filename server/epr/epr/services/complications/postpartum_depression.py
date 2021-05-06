@@ -15,36 +15,41 @@ def ppd_risk(risk_score: int) -> dict:
     elif risk_score >= 10:
         severity = 3
     else:
-        raise InternalServerError("Invalid score when calculating post-partum depression")
-    
+        raise InternalServerError(
+            "Invalid score when calculating post-partum depression")
+
     return {"risk": risk_score, "severity": severity}
 
 # Calculating risk score unique for post-partum depression
+
+
 def calculate(json_dict: dict) -> dict:
     risk_score = 0
 
     # Age
-    if (age:=json_dict.get("age")) == None:
+    if (age := json_dict.get("age")) == None:
         pass
     elif age > 20:
         risk_score += 2
 
     # Parity
-    if json_dict.get("parity") > 4:
+    if (parity := json_dict.get("parity")) == None:
+        pass
+    elif parity > 4:
         risk_score += 6
 
     # Ethnicity
-    if (ethnicity:=json_dict.get("ethnicity")) == None:
+    if (ethnicity := json_dict.get("ethnicity")) == None:
         pass
     elif ethnicity != 0:    # non-white
         risk_score += 2
 
     # Education
-    if (education_years:=json_dict.get("education_years")) == None:
+    if (education_years := json_dict.get("education_years")) == None:
         pass
     elif education_years <= 12:
         risk_score += 1.5
-   
+
     # Smoking
     if json_dict.get("smoking"):
         risk_score += 2
@@ -53,21 +58,21 @@ def calculate(json_dict: dict) -> dict:
     if json_dict.get("stressfull_event"):
         risk_score += 3
 
-    # Had a mood disorder in the past, e.g. depression, postpartum depression, anxiety disorder, or bipolar disorder 
+    # Had a mood disorder in the past, e.g. depression, postpartum depression, anxiety disorder, or bipolar disorder
     if json_dict.get("mood_disorder"):
         risk_score += 2
 
     # Child with special needs or health problems
     if json_dict.get("child_problems"):
         risk_score += 1.5
-    
-    # Gynecological disease during pregnancy (diabetes, hypertension/hypotension, hepatitis, chicken pox, and gynecological inflammation) 
+
+    # Gynecological disease during pregnancy (diabetes, hypertension/hypotension, hepatitis, chicken pox, and gynecological inflammation)
     if json_dict.get("diabetes") or json_dict.get("hypertension") or json_dict.get("hepatitis") or \
-    json_dict.get("chicken_pox") or json_dict.get("gynecological_inflammation"):
+            json_dict.get("chicken_pox") or json_dict.get("gynecological_inflammation"):
         risk_score += 1.5
 
     # Infant birth weight (kg)
-    if (infant_weight:=json_dict.get("infant_weight")) == None:
+    if (infant_weight := json_dict.get("infant_weight")) == None:
         pass
     elif infant_weight < 1.5:
         risk_score += 8
@@ -76,7 +81,7 @@ def calculate(json_dict: dict) -> dict:
     if json_dict.get("lacking_support"):
         risk_score += 4
 
-    # Infant admission to NICU at birth 
+    # Infant admission to NICU at birth
     if json_dict.get("infant_admission"):
         risk_score += 2
 
@@ -108,7 +113,5 @@ def calculate(json_dict: dict) -> dict:
 
     if diet_count >= 5:
         risk_score += 2
-
-    
 
     return ppd_risk(risk_score)

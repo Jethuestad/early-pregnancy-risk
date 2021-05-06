@@ -16,15 +16,17 @@ def diabetes_risk(risk_score: int) -> dict:
         severity = 4
     else:
         raise InternalServerError("Invalid score when calculating diabetes")
-    
+
     return {"risk": risk_score, "severity": severity}
 
 # Calculating risk score unique for diabetes
+
+
 def calculate(json_dict: dict) -> dict:
     risk_score = 0
-
+    print(json_dict)
     # Age
-    if (age:=json_dict.get("age")) == None:
+    if (age := json_dict.get("age")) == None:
         pass
     elif age <= 25:
         risk_score += 0
@@ -34,7 +36,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 3
 
     # Parity (Number of children)
-    if (parity:=json_dict.get("parity")) == None:
+    if (parity := json_dict.get("parity")) == None:
         pass
     elif parity >= 2:
         risk_score += 1.5
@@ -52,7 +54,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 2.5
 
     # Miscarriage
-    if json_dict.get("miscarriage"):
+    if json_dict.get("previous_miscarriage"):
         risk_score += 2.5
 
     # Preterm delivery
@@ -64,7 +66,7 @@ def calculate(json_dict: dict) -> dict:
         risk_score += 4
 
     # BMI
-    if None not in (bmi_info:=(json_dict.get("weight"), json_dict.get("height"))):
+    if None not in (bmi_info := (json_dict.get("weight"), json_dict.get("height"))):
         bmi = bmi_info[0]/((bmi_info[1]/100)**2)
         if bmi > 30:
             risk_score += 6
