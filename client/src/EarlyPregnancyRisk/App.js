@@ -21,6 +21,7 @@ export default function App() {
   const [isLoadingLanguage, setIsLoadingLanguage] = useState(true);
   const [page, setPage] = useState(0);
   const [data, setData] = useState();
+  const [totalSkipped, setTotalSkipped] = useState(0);
 
   const renderPage = () => {
     switch (page) {
@@ -34,16 +35,17 @@ export default function App() {
       case 1:
         return (
           <Form
-            changePage={(r) => {
+            changePage={(data, skipped) => {
+              setData(data);
+              setTotalSkipped(skipped);
               changePage(2);
-              setData(r);
             }}
             factor_data={factors}
             lang_code={language}
           />
         );
       case 2:
-        return <Results data={data} />;
+        return <Results data={data} skipped={totalSkipped} />;
       default:
         return null;
     }

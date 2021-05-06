@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   StyleSheet,
   Text,
@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import LanguageSelect from "./LanguageSelect";
 import { isPhone, isSmallPhone, isTablet } from "../modules/Device";
+import { TranslationContext } from "../contexts/TranslationContext";
 
 const colors = require("../style/colors");
 
@@ -18,11 +19,12 @@ export default function Header({
   isLoadingLanguage,
 }) {
   const { width } = useWindowDimensions();
+  const context = useContext(TranslationContext);
 
   return (
     <View style={styles(width).container}>
       <Text style={styles(width).text} onPress={() => changePage()}>
-        Early Pregnancy Risk
+        {context.title || "Early Pregnancy Risk"}
       </Text>
 
       <LanguageSelect

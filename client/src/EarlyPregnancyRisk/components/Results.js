@@ -14,7 +14,7 @@ import Loading from "./Loading";
 
 const colors = require("../style/colors");
 
-export default function Results({ data }) {
+export default function Results({ data, skipped }) {
   const { width } = useWindowDimensions();
   const [risk, setRisk] = useState(null);
   const context = useContext(TranslationContext);
@@ -112,6 +112,15 @@ export default function Results({ data }) {
   }
   return (
     <ScrollView>
+      {skipped > 0 ? (
+        <View style={styles(width).skippedWarningContainer}>
+          <Text style={styles(width).skippedWarningText}>
+            {skipped == 1
+              ? context.skipped_warning_singular || ""
+              : (context.skipped_warning_plural || "").replace("%d", skipped)}
+          </Text>
+        </View>
+      ) : null}
       <View style={styles(width).container}>{renderResponse(risk)}</View>
     </ScrollView>
   );
@@ -158,5 +167,14 @@ const styles = (width) =>
     },
     severity: {
       fontSize: 15,
+    },
+    skippedWarningContainer: {
+      flex: 1,
+      marginVertical: 20,
+    },
+    skippedWarningText: {
+      textAlign: "center",
+      fontSize: 20,
+      color: colors.primary,
     },
   });
