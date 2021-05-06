@@ -24,7 +24,6 @@ def diabetes_risk(risk_score: int) -> dict:
 
 def calculate(json_dict: dict) -> dict:
     risk_score = 0
-    print(json_dict)
     # Age
     if (age := json_dict.get("age")) == None:
         pass

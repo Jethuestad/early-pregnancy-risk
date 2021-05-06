@@ -6,7 +6,6 @@ from ..models import Translation, Complication_Risk
 class Calculation:
     def __init__(self, json_dict: dict, language_code: str):
         self.language_code = language_code
-        print(json_dict)
         # Add multiple risks here
         self.diabetes = risk_dict_constructor(
             "gestational_diabetes_mellitus", diabetes.calculate(json_dict), language_code)
