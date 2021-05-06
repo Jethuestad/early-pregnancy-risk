@@ -37,10 +37,10 @@ export const getTranslation = async (country_code) => {
     let response = await fetch([ENDPOINTS.translate, country_code].join("/"));
     let json = await response.text();
     if (!JSON.parse(json).success) return Translations.translation;
-    return JSON.parse(json).payload.translation;
+    return JSON.parse(json).payload;
   } catch (error) {
     console.error(error);
-    return Translations.translation;
+    return Translations;
   }
 };
 

@@ -16,12 +16,14 @@ var async = require("async");
 export default function App() {
   const COUNTRY_CODES = require("./constants/CountryCodes");
   const [language, setLanguage] = useState(COUNTRY_CODES.english);
+  const [languages, setLanguages] = useState([]);
   const [text, setText] = useState({});
   const [factors, setFactors] = useState(null);
   const [isLoadingLanguage, setIsLoadingLanguage] = useState(true);
   const [page, setPage] = useState(0);
   const [data, setData] = useState();
   const [totalSkipped, setTotalSkipped] = useState(0);
+  const [initLoadComplete, setInitLoadComplete] = useState(false);
 
   const renderPage = () => {
     switch (page) {
@@ -73,7 +75,8 @@ export default function App() {
         [
           async (callback) => {
             const response = await getTranslation(language);
-            setText(response);
+            setText(response.translation);
+            setLanguages(response.languages);
             callback();
           },
           async (callback) => {
@@ -84,6 +87,7 @@ export default function App() {
         ],
         function () {
           setIsLoadingLanguage(false);
+          setInitLoadComplete(true);
           fadeTo(1);
         }
       );
@@ -111,29 +115,34 @@ export default function App() {
 
   return (
     <TranslationContext.Provider value={text}>
-      <Animated.View style={[styles.container, { opacity: fadeGlobal }]}>
-        <Header
-          changePage={() => changePage(0)}
-          isLoadingLanguage={isLoadingLanguage}
-          setLang={(lang) => {
-            setLanguage(lang);
-          }}
-          language={language}
-        />
-        <View style={{ flex: 15 }}>
-          {isLoadingLanguage ? (
-            <Loading />
-          ) : (
-            <Animated.View
-              style={{ flex: 1, justifyContent: "center", opacity: fadeBody }}
-            >
-              {renderPage()}
-            </Animated.View>
-          )}
-        </View>
+      {initLoadComplete ? (
+        <Animated.View style={[styles.container, { opacity: fadeGlobal }]}>
+          <Header
+            changePage={() => changePage(0)}
+            isLoadingLanguage={isLoadingLanguage}
+            setLang={(lang) => {
+              setLanguage(lang);
+            }}
+            language={language}
+            languages={languages}
+          />
+          <View style={{ flex: 15 }}>
+            {isLoadingLanguage ? (
+              <Loading />
+            ) : (
+              <Animated.View
+                style={{ flex: 1, justifyContent: "center", opacity: fadeBody }}
+              >
+                {renderPage()}
+              </Animated.View>
+            )}
+          </View>
 
-        <Footer />
-      </Animated.View>
+          <Footer />
+        </Animated.View>
+      ) : (
+        <Loading message={"Getting things ready..."} />
+      )}
     </TranslationContext.Provider>
   );
 }

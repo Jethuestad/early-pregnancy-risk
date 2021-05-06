@@ -16,6 +16,7 @@ export default function Header({
   changePage,
   setLang,
   language,
+  languages,
   isLoadingLanguage,
 }) {
   const { width } = useWindowDimensions();
@@ -30,6 +31,7 @@ export default function Header({
       <LanguageSelect
         setLang={setLang}
         language={language}
+        languages={languages}
         isLoadingLanguage={isLoadingLanguage}
       />
     </View>

@@ -1,4 +1,15 @@
+const COUNTRY_CODES = require("../constants/CountryCodes");
 module.exports = {
+  languages: [
+    {
+      flag_url: "",
+      country_code: COUNTRY_CODES.norwegian,
+    },
+    {
+      flag_url: "",
+      country_code: COUNTRY_CODES.french,
+    },
+  ],
   translation: {
     title: "Early Pregnancy Risk",
     front_page_paragraph_1:
