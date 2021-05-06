@@ -13,12 +13,26 @@ def get_score(request, lang_code):
         raise BadMethodException(request.method, "POST")
 
     json_dict = json_request_to_dict(request, valid_json_format_calc)
+
     calc = Calculation(json_dict, lang_code)   # Creates a risk calculation based on userinput
-    diabetes1 = calc.diabetes
-    diabetes2 = calc.diabetes
+
+    diabetes = calc.diabetes
+    preeclampsia = calc.preeclampsia
+    preterm_birth = calc.preterm_birth
+    miscarriage = calc.miscarriage
+    stillbirth = calc.stillbirth
+    postpartum_depression = calc.postpartum_depression
+    caesarean_section = calc.caesarean_section
+
 
     response = []
-    response.append(diabetes2)
-    response.append(diabetes1)
+    response.append(diabetes)
+    response.append(preeclampsia)
+    response.append(preterm_birth)
+    response.append(miscarriage)
+    response.append(stillbirth)
+    response.append(postpartum_depression)
+    response.append(caesarean_section)
+    
     # TODO: Add proper json response
     return standard_json_response(True, response)
