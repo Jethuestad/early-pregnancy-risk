@@ -94,6 +94,23 @@ export function SkipInput({ setSkipped, completed }) {
   );
 }
 
+export function MultipleInput({}) {
+  const context = useContext(TranslationContext);
+  return (
+    <View style={styles.imgMultipleInput}>
+      <TouchableHighlight
+      style={styles.buttonMultipleInput}
+      onPress={() => {
+        setValue();
+        completed();
+      }}
+      >
+
+      </TouchableHighlight>
+    </View>
+  )
+}
+
 const styles = StyleSheet.create({
   textInputContainer: {
     flex: 1,

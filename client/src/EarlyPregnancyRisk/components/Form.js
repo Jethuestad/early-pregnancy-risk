@@ -23,6 +23,7 @@ export default function Form({ changePage, factor_data, lang_code }) {
   const [nr, setNr] = useState(0);
   const [factors, setFactors] = useState(factor_data);
   const [factorInteger, setFactorInteger] = useState("");
+  const [factorMultiple, setFactorMultiple] = usestate("");
   const [factorBoolean, setFactorBoolean] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
@@ -37,6 +38,12 @@ export default function Form({ changePage, factor_data, lang_code }) {
           factors[nr].requirement,
           factorInteger,
           "integer"
+        );
+      if (factors[nr].answertype === "multiple") {
+        shouldAdd = checkRequirement(
+          factors[nr].requirement,
+          factorMultiple,
+          "multiple"
         );
       } else {
         shouldAdd = checkRequirement(
@@ -72,6 +79,18 @@ export default function Form({ changePage, factor_data, lang_code }) {
             unit={factors[nr].unit}
           />
         );
+      case "multiple":
+        return (
+          <MultipleInput
+            value={factorMultiple}
+            setValue={(v) => {
+              setFactorMultiple(v);
+            }}
+            completed={(b) => setIsSubmitting(b)}
+            maxDigits={factors[nr].maxdigits}
+            unit={factors[nr].unit}
+          />
+        );  
       case "boolean":
         return (
           <BooleanInput
@@ -91,7 +110,11 @@ export default function Form({ changePage, factor_data, lang_code }) {
     if (!skipped) {
       if (factors[nr].answertype === "integer") {
         tData[factors[nr].factor] = Number(factorInteger);
-      } else {
+      }
+      if (factors[nr].answertype === "multiple") {
+        tData(factors[nr].factor = factorMultiple);
+      }
+      else {
         tData[factors[nr].factor] = factorBoolean;
       }
       setData(tData);
