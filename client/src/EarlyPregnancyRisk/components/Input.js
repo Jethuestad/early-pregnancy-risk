@@ -180,8 +180,11 @@ const styles = (width) =>
     buttonContainer: {
       flex: 1,
       flexDirection: "row",
+      flexWrap: "wrap",
+      alignItems: "center",
+      justifyContent: "center",
     },
-    buttonSpacer: { marginHorizontal: 20 },
+    buttonSpacer: { marginHorizontal: 5 },
     button: {
       elevation: 7,
       backgroundColor: colors.primary,

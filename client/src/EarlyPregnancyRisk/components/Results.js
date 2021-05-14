@@ -111,7 +111,7 @@ export default function Results({ data, skipped }) {
     );
   }
   return (
-    <ScrollView>
+    <View>
       {skipped > 0 ? (
         <View style={styles(width).skippedWarningContainer}>
           <Text style={styles(width).skippedWarningText}>
@@ -126,7 +126,7 @@ export default function Results({ data, skipped }) {
         </View>
       ) : null}
       <View style={styles(width).container}>{renderResponse(risk)}</View>
-    </ScrollView>
+    </View>
   );
 }
 
@@ -180,6 +180,7 @@ const styles = (width) =>
     skippedWarningText: {
       textAlign: "center",
       fontSize: 20,
+      margin: 5,
       color: colors.primary,
     },
   });

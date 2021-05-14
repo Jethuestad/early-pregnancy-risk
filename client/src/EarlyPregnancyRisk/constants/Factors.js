@@ -7,7 +7,9 @@ module.exports = {
       values: [
         ["White", 0],
         ["Black", 1],
-        ["Other", 2],
+        ["Afro Caribean", 2],
+        ["South Asian", 3],
+        ["Other", 4],
       ],
       skippable: true,
     },

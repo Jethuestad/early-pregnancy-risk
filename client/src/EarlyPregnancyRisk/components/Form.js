@@ -212,7 +212,7 @@ const styles = (width) =>
       flex: isPhone(width) ? 0 : 5,
     },
     progressBarContainer: {
-      flex: isPhone(width) ? 1 : 2,
+      flex: "auto",
       alignItems: "center",
       justifyContent: "center",
     },
@@ -223,7 +223,7 @@ const styles = (width) =>
       justifyContent: "center",
     },
     buttonContainer: {
-      flex: isPhone(width) ? 2 : 3,
+      flex: "auto",
       alignItems: "center",
       justifyContent: "center",
     },
@@ -248,7 +248,7 @@ const styles = (width) =>
       marginHorizontal: "15%",
       ...Platform.select({
         web: {
-          fontSize: isPhone(width) ? "1.5rem" : "2rem",
+          fontSize: isPhone(width) ? "1.3rem" : "2rem",
         },
         default: {
           fontSize: 25,
@@ -263,14 +263,14 @@ const styles = (width) =>
       alignContent: "center",
     },
     referencesContainer: {
-      flex: 0.5,
+      flex: "auto",
       textAlign: "center",
       justifyContent: "center",
       alignContent: "center",
     },
     referenceButton: {
-      fontSize: 20,
       marginVertical: 20,
       alignSelf: "center",
+      fontSize: isPhone(width) ? 13 : 20,
     },
   });
