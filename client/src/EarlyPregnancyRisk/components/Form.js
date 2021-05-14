@@ -8,7 +8,13 @@ import {
   Pressable,
 } from "react-native";
 import { checkRequirement } from "../modules/FactorUtilities";
-import { IntInput, BooleanInput, SkipInput } from "./Input";
+import {
+  IntInput,
+  BooleanInput,
+  SkipInput,
+  MultipleInput,
+  BackInput,
+} from "./Input";
 import Progressbar from "../components/ProgressBar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
@@ -23,11 +29,13 @@ export default function Form({ changePage, factor_data, lang_code }) {
   const [nr, setNr] = useState(0);
   const [factors, setFactors] = useState(factor_data);
   const [factorInteger, setFactorInteger] = useState("");
+  const [factorMultiple, setFactorMultiple] = useState("");
   const [factorBoolean, setFactorBoolean] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
   const [visible, setVisible] = useState(false);
   const [totalSkipped, setTotalSkipped] = useState(0);
+  const [goBack, setGoBack] = useState(false);
 
   function addSubFactors() {
     if (factors[nr].subfactors != null && factors[nr].requirement != null) {
@@ -37,6 +45,13 @@ export default function Form({ changePage, factor_data, lang_code }) {
           factors[nr].requirement,
           factorInteger,
           "integer"
+        );
+      }
+      if (factors[nr].answertype === "multiple") {
+        shouldAdd = checkRequirement(
+          factors[nr].requirement,
+          factorMultiple,
+          "multiple"
         );
       } else {
         shouldAdd = checkRequirement(
@@ -72,11 +87,20 @@ export default function Form({ changePage, factor_data, lang_code }) {
             unit={factors[nr].unit}
           />
         );
+
       case "boolean":
         return (
           <BooleanInput
             setValue={(v) => setFactorBoolean(v)}
             completed={() => setIsSubmitting(true)}
+          />
+        );
+      case "multiple":
+        return (
+          <MultipleInput
+            values={factors[nr].values || []}
+            completed={() => setIsSubmitting(true)}
+            setValue={(v) => setFactorMultiple(v)}
           />
         );
 
@@ -86,20 +110,32 @@ export default function Form({ changePage, factor_data, lang_code }) {
   }
 
   useEffect(() => {
+    if (goBack) {
+      setNr((n) => (n - 1 > 0 ? n - 1 : 0));
+      setGoBack(false);
+      setIsSubmitting(false);
+      return;
+    }
     if (!isSubmitting) return;
     let tData = data;
     if (!skipped) {
       if (factors[nr].answertype === "integer") {
         tData[factors[nr].factor] = Number(factorInteger);
+      } else if (factors[nr].answertype === "multiple") {
+        tData[factors[nr].factor] = factorMultiple;
       } else {
         tData[factors[nr].factor] = factorBoolean;
       }
+      console.log(tData);
       setData(tData);
       addSubFactors();
+    } else {
+      delete tData[factors[nr].factor];
     }
     setSkipped(false);
     setFactorInteger("");
     setIsSubmitting(false);
+    setFactorMultiple("");
     setNr(nr + 1);
   }, [isSubmitting]);
 
@@ -128,6 +164,16 @@ export default function Form({ changePage, factor_data, lang_code }) {
         </View>
         <View style={styles(width).buttonContainer}>
           {renderInput(factors[nr].answertype)}
+        </View>
+        <View style={styles(width).staticButtonContainer}>
+          {nr > 0 ? (
+            <BackInput
+              setGoBack={() => {
+                setGoBack(true);
+              }}
+              completed={() => setIsSubmitting(true)}
+            />
+          ) : null}
           {factors[nr].skippable ? (
             <SkipInput
               setSkipped={() => {
@@ -180,6 +226,12 @@ const styles = (width) =>
       flex: isPhone(width) ? 2 : 3,
       alignItems: "center",
       justifyContent: "center",
+    },
+    staticButtonContainer: {
+      flex: isPhone(width) ? 2 : 3,
+      justifyContent: "center",
+      flexDirection: "row",
+      flexWrap: "wrap",
     },
     progressBar: {
       height: 20,

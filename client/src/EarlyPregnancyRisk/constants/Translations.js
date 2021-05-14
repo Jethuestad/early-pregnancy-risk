@@ -23,6 +23,7 @@ module.exports = {
     button_no: "No",
     button_skip: "Skip",
     button_continue: "Continue",
+    button_previous: "Previous",
     footer_privacy: "Click here to read about our privacy policy",
     loading: "Loading",
     loading_risk: "Calculating risk",

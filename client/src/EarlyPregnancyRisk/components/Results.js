@@ -106,7 +106,7 @@ export default function Results({ data, skipped }) {
   if (risk == null) {
     return (
       <View style={styles(width).container}>
-        <Loading message={context.loading_risk || ""} />
+        <Loading message={context.loading_risk || "Calculating risk"} />
       </View>
     );
   }
@@ -116,8 +116,12 @@ export default function Results({ data, skipped }) {
         <View style={styles(width).skippedWarningContainer}>
           <Text style={styles(width).skippedWarningText}>
             {skipped == 1
-              ? context.skipped_warning_singular || ""
-              : (context.skipped_warning_plural || "").replace("%d", skipped)}
+              ? context.skipped_warning_singular ||
+                "You skipped one question, this can affect your test results"
+              : (
+                  context.skipped_warning_plural ||
+                  "You skipped %d questions, this can affect your test results"
+                ).replace("%d", skipped)}
           </Text>
         </View>
       ) : null}

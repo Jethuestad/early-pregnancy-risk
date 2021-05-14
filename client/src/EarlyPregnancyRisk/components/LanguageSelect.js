@@ -49,8 +49,8 @@ export default function LanguageSelect({
             {COUNTRY_CODES.english.toUpperCase()}
           </Text>
         </View>
-        {languages.map((value) => (
-          <View>
+        {languages.map((value, index) => (
+          <View key={index}>
             <TouchableOpacity
               disabled={isLoadingLanguage}
               style={[

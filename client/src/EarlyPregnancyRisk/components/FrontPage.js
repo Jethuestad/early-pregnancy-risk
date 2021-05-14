@@ -48,7 +48,7 @@ export default function FrontPage({ changePage, disabled }) {
           style={styles(width, disabled).button}
         >
           <Text style={styles(width).buttonText}>
-            {context.button_start || ""}
+            {context.button_start || "Start"}
           </Text>
         </TouchableOpacity>
       </View>
