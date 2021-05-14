@@ -38,7 +38,7 @@ export function IntInput({ value, setValue, completed, maxDigits, unit }) {
           onPress={() => (value == "" ? completed(false) : completed(true))}
         >
           <Text style={styles(width).buttonText}>
-            {context.button_continue || ""}
+            {context.button_continue || "Continue"}
           </Text>
         </TouchableHighlight>
       </View>
@@ -62,7 +62,7 @@ export function BooleanInput({ setValue, completed }) {
           }}
         >
           <Text style={styles(width).buttonText}>
-            {context.button_yes || ""}
+            {context.button_yes || "Yes"}
           </Text>
         </TouchableHighlight>
       </View>
@@ -77,7 +77,7 @@ export function BooleanInput({ setValue, completed }) {
           }}
         >
           <Text style={styles(width).buttonText}>
-            {context.button_no || ""}
+            {context.button_no || "No"}
           </Text>
         </TouchableHighlight>
       </View>
@@ -100,7 +100,7 @@ export function SkipInput({ setSkipped, completed }) {
         }}
       >
         <Text style={styles(width).buttonText}>
-          {context.button_skip || ""}
+          {context.button_skip || "Skip"}
         </Text>
       </TouchableHighlight>
     </View>
