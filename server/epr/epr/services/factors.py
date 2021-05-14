@@ -1,5 +1,5 @@
 from django.db.models.manager import BaseManager
-from ..models import Factor, Translation, Reference
+from ..models import Factor, FactorValue, Translation, Reference
 from ..utilities.request_utils import standard_json_response
 from ..utilities.decorators import exception_handler_request
 from ..exceptions.api_exceptions import InternalServerError
@@ -37,6 +37,14 @@ def get_references(request, lang_code: str, factor_name_query: str):
     return standard_json_response(True, response)
 
 
+def serialize_factor_value(factor_value: FactorValue, lang_code: str) -> list:
+
+    factor_value_content = Translation.objects.filter(
+        belongs_to=factor_value.content).first()
+    if (factor_value_content != None):
+        return [factor_value_content.text, factor_value.value]
+
+
 def serialize_factor(factor: Factor, questions: BaseManager, lang_code: str, isSubfactor: bool = False) -> dict:
 
     # Factors which have a parent factor should not be added.
@@ -56,10 +64,18 @@ def serialize_factor(factor: Factor, questions: BaseManager, lang_code: str, isS
     sub_factors = [serialize_factor(f, questions, lang_code, True)
                    for f in queried_sub_factors]
 
+    queried_factor_values = FactorValue.objects.filter(belongs_to=factor)
+    multiple_choices = []
+    for fv in queried_factor_values:
+        choice = serialize_factor_value(fv, lang_code)
+        if (choice != None):
+            multiple_choices.append(choice)
+
     return {
         "factor": factor.factor_name,
         "question": question.first().text,
         "answertype": factor.answertype.type,
+        "values": multiple_choices,
         "unit": factor.unit,
         "skippable": factor.skippable,
         "maxdigits": factor.max_digits,

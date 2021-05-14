@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Language, Translation, ContentType, Content, AnswerType, Factor, Reference, Complication_Risk
+from .models import Language, Translation, ContentType, Content, AnswerType, Factor, Reference, Complication_Risk, FactorValue
 
 
 class TranslationAdmin(admin.ModelAdmin):
@@ -18,3 +18,4 @@ admin.site.register(AnswerType)
 admin.site.register(Factor)
 admin.site.register(Reference)
 admin.site.register(Complication_Risk)
+admin.site.register(FactorValue)

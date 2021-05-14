@@ -86,3 +86,16 @@ class Factor(models.Model):
 
     def __str__(self) -> str:
         return f"{self.factor_name} ({self.answertype})"
+
+
+class FactorValue(models.Model):
+    class Meta:
+        unique_together = (("content", "value"))
+
+    content = models.ForeignKey(Content, on_delete=models.CASCADE)
+    value = models.IntegerField()
+    belongs_to = models.ForeignKey(
+        Factor, on_delete=models.CASCADE, default=None)
+
+    def __str__(self) -> str:
+        return f"{self.content} ({self.value}) is a choice in {self.belongs_to}"
