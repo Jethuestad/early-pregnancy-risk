@@ -2,9 +2,14 @@ module.exports = {
   factors: [
     {
       factor: "ethnicity",
-      question:"What is your ethnicity?",
+      question: "What is your ethnicity?",
       answertype: "multiple",
-      skippable: true,  
+      values: [
+        ["White", 0],
+        ["Black", 1],
+        ["Other", 2],
+      ],
+      skippable: true,
     },
     {
       factor: "age",
