@@ -1,11 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  useWindowDimensions,
-} from "react-native";
+import { View, Text, StyleSheet, useWindowDimensions } from "react-native";
 import { TranslationContext } from "../contexts/TranslationContext";
 import { postFactors } from "../networking/Requests";
 import { isPhone, isTablet } from "../modules/Device";

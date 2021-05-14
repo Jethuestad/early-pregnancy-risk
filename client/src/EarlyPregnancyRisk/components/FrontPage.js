@@ -8,7 +8,6 @@ import {
   Platform,
   FlatList,
   useWindowDimensions,
-  ScrollView,
 } from "react-native";
 import { isSmallPhone, isPhone, isTablet } from "../modules/Device";
 import { TranslationContext } from "../contexts/TranslationContext";
@@ -19,7 +18,7 @@ export default function FrontPage({ changePage, disabled }) {
   const context = useContext(TranslationContext);
 
   return (
-    <ScrollView style={styles(width).container}>
+    <View style={styles(width).container}>
       <View style={styles(width).content}>
         <View style={styles(width).contentBox}>
           <Text style={styles(width).textBox}>
@@ -52,14 +51,14 @@ export default function FrontPage({ changePage, disabled }) {
           </Text>
         </TouchableOpacity>
       </View>
-    </ScrollView>
+    </View>
   );
 }
 
 const styles = (width, disabled = false) =>
   StyleSheet.create({
     container: {
-      flex: 1,
+      flex: "auto",
       flexDirection: "column",
       alignSelf: "stretch",
     },
