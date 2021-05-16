@@ -41,35 +41,19 @@ export default function Header({
 const styles = (width) =>
   StyleSheet.create({
     container: {
-      ...Platform.select({
-        web: {
-          alignItems: "center",
-          marginTop: 20,
-          paddingBottom: 20,
-        },
-        default: {
-          alignSelf: "center",
-          marginTop: 40,
-          marginBottom: 10,
-        },
-      }),
+      alignItems: "center",
+      marginTop: 20,
+      paddingBottom: 20,
     },
     text: {
       color: colors.primary,
       fontWeight: "bold",
-      ...Platform.select({
-        web: {
-          fontSize: isSmallPhone(width)
-            ? 30
-            : isPhone(width)
-            ? 40
-            : isTablet(width)
-            ? 50
-            : 60,
-        },
-        default: {
-          fontSize: 30,
-        },
-      }),
+      fontSize: isSmallPhone(width)
+        ? 30
+        : isPhone(width)
+        ? 40
+        : isTablet(width)
+        ? 50
+        : 60,
     },
   });
