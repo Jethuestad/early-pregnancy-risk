@@ -109,6 +109,7 @@ export default function Results({ data, skipped }) {
       {skipped > 0 ? (
         <View style={styles(width).skippedWarningContainer}>
           <Text style={styles(width).skippedWarningText}>
+            {skipped.current}
             {skipped == 1
               ? context.skipped_warning_singular ||
                 "You skipped one question, this can affect your test results"
@@ -127,13 +128,11 @@ export default function Results({ data, skipped }) {
 const styles = (width) =>
   StyleSheet.create({
     container: {
-      flex: 1,
       alignSelf: "stretch",
       justifyContent: "center",
       alignItems: "center",
     },
     riskContainer: {
-      flex: 1,
       minWidth: isPhone(width) ? "95%" : isTablet(width) ? "80%" : "50%",
       flexDirection: "column",
       justifyContent: "center",
@@ -168,7 +167,6 @@ const styles = (width) =>
       fontSize: 15,
     },
     skippedWarningContainer: {
-      flex: 1,
       marginVertical: 20,
     },
     skippedWarningText: {

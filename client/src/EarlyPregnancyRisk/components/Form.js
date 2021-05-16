@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   StyleSheet,
   Text,
@@ -15,7 +15,7 @@ import {
   MultipleInput,
   BackInput,
 } from "./Input";
-import Progressbar from "../components/ProgressBar";
+import Progressbar from "./ProgressBar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
 import FormOverlay from "./FormOverlay";
@@ -28,41 +28,41 @@ export default function Form({ changePage, factor_data, lang_code }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [nr, setNr] = useState(0);
   const [factors, setFactors] = useState(factor_data);
-  const [factorInteger, setFactorInteger] = useState("");
-  const [factorMultiple, setFactorMultiple] = useState("");
-  const [factorBoolean, setFactorBoolean] = useState(false);
-  const [skipped, setSkipped] = useState(false);
   const [data, setData] = useState({});
   const [visible, setVisible] = useState(false);
   const [totalSkipped, setTotalSkipped] = useState(0);
-  const [goBack, setGoBack] = useState(false);
 
+  // [type, value]
+  const [inputController, setInputController] = useState([null, null]);
+
+  // TODO: Only add if they don't already exist
   function addSubFactors() {
     if (factors[nr].subfactors != null && factors[nr].requirement != null) {
       let shouldAdd = false;
       if (factors[nr].answertype === "integer") {
         shouldAdd = checkRequirement(
           factors[nr].requirement,
-          factorInteger,
+          inputController[1],
           "integer"
         );
-      }
-      if (factors[nr].answertype === "multiple") {
+      } else if (factors[nr].answertype === "multiple") {
         shouldAdd = checkRequirement(
           factors[nr].requirement,
-          factorMultiple,
+          inputController[1],
           "multiple"
         );
       } else {
         shouldAdd = checkRequirement(
           factors[nr].requirement,
-          factorBoolean,
+          inputController[1],
           "boolean"
         );
       }
       if (shouldAdd) {
         //remove null values first
-        let subfacors = factors[nr].subfactors.filter((el) => el != null);
+        let subfacors = factors[nr].subfactors.filter(
+          (el) => el != null && !factors.includes(el)
+        );
         let left = factors.slice(0, nr + 1);
         let right = factors.slice(nr + 1);
         left.concat(subfacors);
@@ -78,29 +78,32 @@ export default function Form({ changePage, factor_data, lang_code }) {
       case "integer":
         return (
           <IntInput
-            value={factorInteger}
-            setValue={(v) => {
-              setFactorInteger(v);
-            }}
-            completed={(b) => setIsSubmitting(b)}
             maxDigits={factors[nr].maxdigits}
             unit={factors[nr].unit}
+            setInput={(v) => {
+              setInputController(["integer", v]);
+              setIsSubmitting(true);
+            }}
           />
         );
 
       case "boolean":
         return (
           <BooleanInput
-            setValue={(v) => setFactorBoolean(v)}
-            completed={() => setIsSubmitting(true)}
+            setInput={(v) => {
+              setInputController(["boolean", v]);
+              setIsSubmitting(true);
+            }}
           />
         );
       case "multiple":
         return (
           <MultipleInput
             values={factors[nr].values || []}
-            completed={() => setIsSubmitting(true)}
-            setValue={(v) => setFactorMultiple(v)}
+            setInput={(v) => {
+              setInputController(["multiple", v]);
+              setIsSubmitting(true);
+            }}
           />
         );
 
@@ -110,32 +113,26 @@ export default function Form({ changePage, factor_data, lang_code }) {
   }
 
   useEffect(() => {
-    if (goBack) {
+    if (!isSubmitting) return;
+    if (inputController[0] == "back") {
       setNr((n) => (n - 1 > 0 ? n - 1 : 0));
-      setGoBack(false);
+      setInputController([null, null]);
       setIsSubmitting(false);
       return;
     }
-    if (!isSubmitting) return;
-    let tData = data;
-    if (!skipped) {
-      if (factors[nr].answertype === "integer") {
-        tData[factors[nr].factor] = Number(factorInteger);
-      } else if (factors[nr].answertype === "multiple") {
-        tData[factors[nr].factor] = factorMultiple;
-      } else {
-        tData[factors[nr].factor] = factorBoolean;
-      }
-      console.log(tData);
+
+    if (inputController[0] == "skip") {
+      let tData = data;
+      delete tData[factors[nr].factor];
+      setData(tData);
+    } else {
+      let tData = data;
+      tData[factors[nr].factor] = inputController[1];
       setData(tData);
       addSubFactors();
-    } else {
-      delete tData[factors[nr].factor];
     }
-    setSkipped(false);
-    setFactorInteger("");
+    setInputController([null, null]);
     setIsSubmitting(false);
-    setFactorMultiple("");
     setNr(nr + 1);
   }, [isSubmitting]);
 
@@ -155,35 +152,33 @@ export default function Form({ changePage, factor_data, lang_code }) {
 
   return (
     <View style={styles(width).container}>
-      <View style={styles(width).container}>
-        <View style={styles(width).progressBarContainer}>
-          <Progressbar progress={nr} total={factors.length} />
-        </View>
-        <View style={styles(width).questionContainer}>
-          <Text style={styles(width).question}>{factors[nr].question}</Text>
-        </View>
-        <View style={styles(width).buttonContainer}>
-          {renderInput(factors[nr].answertype)}
-        </View>
-        <View style={styles(width).staticButtonContainer}>
-          {nr > 0 ? (
-            <BackInput
-              setGoBack={() => {
-                setGoBack(true);
-              }}
-              completed={() => setIsSubmitting(true)}
-            />
-          ) : null}
-          {factors[nr].skippable ? (
-            <SkipInput
-              setSkipped={() => {
-                setSkipped(true);
-                setTotalSkipped((v) => v + 1);
-              }}
-              completed={() => setIsSubmitting(true)}
-            />
-          ) : null}
-        </View>
+      <View style={styles(width).progressBarContainer}>
+        <Progressbar progress={nr} total={factors.length} />
+      </View>
+      <View style={styles(width).questionContainer}>
+        <Text style={styles(width).question}>{factors[nr].question}</Text>
+      </View>
+      <View style={styles(width).buttonContainer}>
+        {renderInput(factors[nr].answertype)}
+      </View>
+      <View style={styles(width).staticButtonContainer}>
+        {nr > 0 ? (
+          <BackInput
+            setInput={() => {
+              setInputController(["back", null]);
+              setIsSubmitting(true);
+            }}
+          />
+        ) : null}
+        {factors[nr].skippable ? (
+          <SkipInput
+            setInput={() => {
+              setInputController(["skip", null]);
+              setIsSubmitting(true);
+              setTotalSkipped((s) => s + 1);
+            }}
+          />
+        ) : null}
       </View>
       <View style={styles.referencesContainer}>
         <FormOverlay
@@ -204,31 +199,26 @@ export default function Form({ changePage, factor_data, lang_code }) {
 
 const styles = (width) =>
   StyleSheet.create({
-    container: {
-      flex: 1,
-      alignSelf: "stretch",
-    },
-    spacer: {
-      flex: isPhone(width) ? 0 : 5,
-    },
+    container: {},
+    inputContainer: {},
+    spacer: {},
     progressBarContainer: {
-      flex: "auto",
       alignItems: "center",
       justifyContent: "center",
     },
     questionContainer: {
-      flex: isPhone(width) ? 3 : 2,
+      minHeight: isPhone(width) ? 200 : 300,
       alignSelf: "stretch",
       alignItems: "center",
       justifyContent: "center",
     },
     buttonContainer: {
-      flex: "auto",
       alignItems: "center",
       justifyContent: "center",
     },
     staticButtonContainer: {
-      flex: isPhone(width) ? 2 : 3,
+      minHeight: 100,
+      alignItems: "center",
       justifyContent: "center",
       flexDirection: "row",
       flexWrap: "wrap",
@@ -256,14 +246,12 @@ const styles = (width) =>
       }),
     },
     loading: {
-      flex: 1,
       alignSelf: "stretch",
       textAlign: "center",
       justifyContent: "center",
       alignContent: "center",
     },
     referencesContainer: {
-      flex: "auto",
       textAlign: "center",
       justifyContent: "center",
       alignContent: "center",

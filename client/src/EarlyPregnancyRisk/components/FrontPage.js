@@ -58,17 +58,14 @@ export default function FrontPage({ changePage, disabled }) {
 const styles = (width, disabled = false) =>
   StyleSheet.create({
     container: {
-      flex: "auto",
       flexDirection: "column",
       alignSelf: "stretch",
     },
     content: {
-      flex: 3,
       alignSelf: "stretch",
       flexDirection: "column",
     },
     contentBox: {
-      flex: 1,
       flexDirection: isTablet(width) ? "column" : "row",
       marginHorizontal: isPhone(width) ? 0 : isTablet(width) ? "10%" : "20%",
       alignItems: "center",
@@ -76,7 +73,6 @@ const styles = (width, disabled = false) =>
       alignSelf: "stretch",
     },
     buttonContainer: {
-      flex: 1,
       marginVertical: 50,
     },
     textBox: {

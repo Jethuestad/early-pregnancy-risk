@@ -32,22 +32,18 @@ export default function LanguageSelect({
             ]}
             onPress={() => setLang(COUNTRY_CODES.english)}
           >
-            <Image
-              source={require("../assets/uk.png")}
-              style={{ width: 32, height: 32 }}
-            />
+            <Text
+              style={{
+                textAlign: "center",
+                color:
+                  language == COUNTRY_CODES.english
+                    ? colors.primary
+                    : colors.black,
+              }}
+            >
+              {COUNTRY_CODES.english.toUpperCase()}
+            </Text>
           </TouchableOpacity>
-          <Text
-            style={{
-              textAlign: "center",
-              color:
-                language == COUNTRY_CODES.english
-                  ? colors.primary
-                  : colors.black,
-            }}
-          >
-            {COUNTRY_CODES.english.toUpperCase()}
-          </Text>
         </View>
         {languages.map((value, index) => (
           <View key={index}>
@@ -59,24 +55,18 @@ export default function LanguageSelect({
               ]}
               onPress={() => setLang(value.country_code)}
             >
-              <Image
-                source={value.flag_url}
-                defaultSource={require("../assets/unknown.png")}
-                style={{ width: 32, height: 32 }}
-              />
+              <Text
+                style={{
+                  textAlign: "center",
+                  color:
+                    language == value.country_code
+                      ? colors.primary
+                      : colors.black,
+                }}
+              >
+                {value.country_code.toUpperCase()}
+              </Text>
             </TouchableOpacity>
-
-            <Text
-              style={{
-                textAlign: "center",
-                color:
-                  language == value.country_code
-                    ? colors.primary
-                    : colors.black,
-              }}
-            >
-              {value.country_code.toUpperCase()}
-            </Text>
           </View>
         ))}
       </View>
@@ -104,7 +94,6 @@ export default function LanguageSelect({
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: "center",
   },
   languages: {
@@ -114,6 +103,7 @@ const styles = StyleSheet.create({
   },
   flag: {
     marginHorizontal: 5,
+    padding: 10,
   },
   highlight: {
     borderColor: colors.primary,

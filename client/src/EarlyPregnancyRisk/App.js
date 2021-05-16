@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Animated, StyleSheet, View } from "react-native";
+import { Animated, ScrollView, StyleSheet, View } from "react-native";
 import {
   getFactors,
   getLanguages,
@@ -125,27 +125,31 @@ export default function App() {
     <TranslationContext.Provider value={text}>
       {initLoadComplete ? (
         <Animated.View style={[styles.container, { opacity: fadeGlobal }]}>
-          <Header
-            changePage={() => changePage(0)}
-            isLoadingLanguage={isLoadingLanguage}
-            setLang={(lang) => {
-              setLanguage(lang);
-            }}
-            language={language}
-            languages={languages}
-          />
-          <View style={{ flex: 15 }}>
-            {isLoadingLanguage ? (
-              <Loading />
-            ) : (
-              <Animated.View
-                style={{ flex: 1, justifyContent: "center", opacity: fadeBody }}
-              >
-                {renderPage()}
-              </Animated.View>
-            )}
-          </View>
-
+          <ScrollView>
+            <Header
+              changePage={() => changePage(0)}
+              isLoadingLanguage={isLoadingLanguage}
+              setLang={(lang) => {
+                setLanguage(lang);
+              }}
+              language={language}
+              languages={languages}
+            />
+            <View>
+              {isLoadingLanguage ? (
+                <Loading />
+              ) : (
+                <Animated.View
+                  style={{
+                    justifyContent: "center",
+                    opacity: fadeBody,
+                  }}
+                >
+                  {renderPage()}
+                </Animated.View>
+              )}
+            </View>
+          </ScrollView>
           <Footer />
         </Animated.View>
       ) : (
@@ -158,7 +162,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F8F5F5",
+    backgroundColor: "#FFF",
     height: "100%",
   },
 });

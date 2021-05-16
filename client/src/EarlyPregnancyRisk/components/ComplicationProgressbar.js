@@ -32,7 +32,6 @@ export default function ComplicationProgressbar({ progress, total, title }) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     flexDirection: "column",
     alignSelf: "stretch",
     justifyContent: "center",

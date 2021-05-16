@@ -23,9 +23,6 @@ export default function Footer() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.5,
-    borderTopColor: "black",
-    borderTopWidth: 2,
     marginTop: "auto",
     paddingVertical: 20,
     bottom: 0,

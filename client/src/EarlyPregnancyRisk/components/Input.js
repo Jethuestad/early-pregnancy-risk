@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -13,8 +13,9 @@ import { isPhone } from "../modules/Device";
 
 const colors = require("../style/colors");
 
-export function IntInput({ value, setValue, completed, maxDigits, unit }) {
+export function IntInput({ setInput, maxDigits, unit }) {
   const context = useContext(TranslationContext);
+  const [value, setValue] = useState("");
   const { width } = useWindowDimensions();
 
   return (
@@ -35,7 +36,12 @@ export function IntInput({ value, setValue, completed, maxDigits, unit }) {
           style={styles(width).button}
           activeOpacity={0.6}
           underlayColor={colors.secondary}
-          onPress={() => (value == "" ? completed(false) : completed(true))}
+          onPress={() => {
+            if (value != "") {
+              setInput(Number(value));
+            }
+            setValue("");
+          }}
         >
           <Text style={styles(width).buttonText}>
             {context.button_continue || "Continue"}
@@ -46,7 +52,7 @@ export function IntInput({ value, setValue, completed, maxDigits, unit }) {
   );
 }
 
-export function BooleanInput({ setValue, completed }) {
+export function BooleanInput({ setInput }) {
   const context = useContext(TranslationContext);
   const { width } = useWindowDimensions();
   return (
@@ -57,8 +63,7 @@ export function BooleanInput({ setValue, completed }) {
           activeOpacity={0.6}
           underlayColor={colors.secondary}
           onPress={() => {
-            setValue(true);
-            completed();
+            setInput(true);
           }}
         >
           <Text style={styles(width).buttonText}>
@@ -72,8 +77,7 @@ export function BooleanInput({ setValue, completed }) {
           activeOpacity={0.6}
           underlayColor={colors.secondary}
           onPress={() => {
-            setValue(false);
-            completed();
+            setInput(false);
           }}
         >
           <Text style={styles(width).buttonText}>
@@ -85,7 +89,7 @@ export function BooleanInput({ setValue, completed }) {
   );
 }
 
-export function SkipInput({ setSkipped, completed }) {
+export function SkipInput({ setInput }) {
   const context = useContext(TranslationContext);
   const { width } = useWindowDimensions();
   return (
@@ -95,8 +99,7 @@ export function SkipInput({ setSkipped, completed }) {
         activeOpacity={0.6}
         underlayColor="#DDDDDD"
         onPress={() => {
-          setSkipped(true);
-          completed(true);
+          setInput();
         }}
       >
         <Text style={styles(width).buttonText}>
@@ -107,7 +110,7 @@ export function SkipInput({ setSkipped, completed }) {
   );
 }
 
-export function BackInput({ setGoBack, completed }) {
+export function BackInput({ setInput }) {
   const context = useContext(TranslationContext);
   const { width } = useWindowDimensions();
   return (
@@ -117,8 +120,7 @@ export function BackInput({ setGoBack, completed }) {
         activeOpacity={0.6}
         underlayColor="#DDDDDD"
         onPress={() => {
-          setGoBack(true);
-          completed(true);
+          setInput();
         }}
       >
         <Text style={styles(width).buttonText}>
@@ -129,7 +131,7 @@ export function BackInput({ setGoBack, completed }) {
   );
 }
 
-export function MultipleInput({ setValue, completed, values }) {
+export function MultipleInput({ setInput, values }) {
   // const context = useContext(TranslationContext);
   const { width } = useWindowDimensions();
   return (
@@ -141,8 +143,7 @@ export function MultipleInput({ setValue, completed, values }) {
           activeOpacity={0.6}
           underlayColor="#DDDDDD"
           onPress={() => {
-            setValue(value[1]);
-            completed();
+            setInput(value[1]);
           }}
         >
           <Text style={styles(width).buttonText}>{value[0] || ""}</Text>
@@ -155,7 +156,6 @@ export function MultipleInput({ setValue, completed, values }) {
 const styles = (width) =>
   StyleSheet.create({
     textInputContainer: {
-      flex: 1,
       flexDirection: "row",
       flexWrap: "wrap",
       alignItems: "center",
@@ -178,7 +178,6 @@ const styles = (width) =>
       flexDirection: "row",
     },
     buttonContainer: {
-      flex: 1,
       flexDirection: "row",
       flexWrap: "wrap",
       alignItems: "center",
@@ -191,7 +190,8 @@ const styles = (width) =>
       borderRadius: 7,
       paddingHorizontal: 10,
       paddingVertical: 12,
-      width: 150,
+      justifyContent: "center",
+      width: isPhone(width) ? 100 : 150,
     },
     choiceButton: {
       backgroundColor: colors.primary,
@@ -204,23 +204,17 @@ const styles = (width) =>
       justifyContent: "center",
       flexDirection: "row",
       flexWrap: "wrap",
-      width: isPhone(width) ? "80%" : "50%",
+      width: isPhone(width) ? "100%" : "50%",
     },
     buttonText: {
       fontWeight: "bold",
       textAlign: "center",
       color: colors.white,
-      ...Platform.select({
-        web: {
-          fontSize: "1rem",
-        },
-        default: {
-          fontSize: 18,
-        },
-      }),
+      fontSize: isPhone(width) ? 14 : 14,
     },
     staticButtonContainer: {
       margin: 5,
+      marginTop: 50,
     },
     unit: {
       fontSize: 16,

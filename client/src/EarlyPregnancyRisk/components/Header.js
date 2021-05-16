@@ -25,7 +25,7 @@ export default function Header({
   return (
     <View style={styles(width).container}>
       <Text style={styles(width).text} onPress={() => changePage()}>
-        {context.title || "Early Pregnancy Risk"}
+        Early Pregnancy Risk
       </Text>
 
       <LanguageSelect
@@ -41,7 +41,6 @@ export default function Header({
 const styles = (width) =>
   StyleSheet.create({
     container: {
-      flex: 3,
       ...Platform.select({
         web: {
           alignItems: "center",
@@ -56,7 +55,6 @@ const styles = (width) =>
       }),
     },
     text: {
-      flex: 1,
       color: colors.primary,
       fontWeight: "bold",
       ...Platform.select({

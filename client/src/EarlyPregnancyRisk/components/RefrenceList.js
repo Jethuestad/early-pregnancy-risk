@@ -32,7 +32,6 @@ export default function ReferenceList({ factor_name, close, lang_code }) {
       </View>
     );
   }
-  console.log(references);
   return (
     <ScrollView style={styles.contentBox}>
       <Text style={styles.description}>
