@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import Loading from "./Loading";
 import { getReferences } from "../networking/Requests";
+import { TranslationContext } from "../contexts/TranslationContext";
 
 export default function ReferenceList({ factor_name, close, lang_code }) {
   const [isLoading, setIsLoading] = useState(true);
   const [references, setReferences] = useState([]);
+  const context = useContext(TranslationContext);
 
   useEffect(() => {
     setIsLoading(true);
@@ -34,11 +36,7 @@ export default function ReferenceList({ factor_name, close, lang_code }) {
   }
   return (
     <ScrollView style={styles.contentBox}>
-      <Text style={styles.description}>
-        This question is used to determine the average risk factor for the
-        complications below. Below all complications is a list of references,
-        which can give further information about the topic.
-      </Text>
+      <Text style={styles.description}>{context.reference_info}</Text>
       {references.length == 0
         ? null
         : references.map((e, i) => (

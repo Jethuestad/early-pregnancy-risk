@@ -31,5 +31,7 @@ module.exports = {
       "You skipped one question, this can affect your test results",
     skipped_warning_plural:
       "You skipped %d questions, this can affect your test results",
+    reference_info:
+      "This question is used to determine the average risk factor for the complications below. Below all complications is a list of references, which can give further information about the topic.",
   },
 };

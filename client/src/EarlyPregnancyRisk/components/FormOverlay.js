@@ -37,10 +37,10 @@ export default function FormOverlay({
             lang_code={lang_code}
           />
           <Pressable
-            style={[styles.button, styles.buttonClose]}
+            style={[styles.button]}
             onPress={() => setVisible(!visible)}
           >
-            <Text style={styles.textStyle}>Close reference list</Text>
+            <Text style={styles.textStyle}>X</Text>
           </Pressable>
         </View>
       </View>
@@ -53,21 +53,22 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: Platform.OS == "ios" ? 20 : 0,
+    width: "100%",
+    height: "100%",
   },
   modalView: {
     justifyContent: "center",
     margin: 35,
     backgroundColor: "white",
     borderRadius: 20,
-    paddingHorizontal: isTablet ? "2%" : "3%",
-    paddingVertical: isTablet ? 20 : 0,
     ...Platform.select({
       web: {
-        maxWidth: Platform.OS == "web" ? "60%" : "20%",
-        maxHeight: Platform.OS == "web" ? "60%" : "20%",
+        width: "80%",
+        height: "80%",
       },
       default: {
-        paddingVertical: 100,
+        width: "100%",
+        height: "100%",
       },
     }),
     alignItems: "center",
@@ -81,21 +82,15 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   button: {
-    borderRadius: 6,
-    padding: 15,
-    elevation: 2,
-    marginBottom: 30,
-    marginTop: Platform.OS == "web" ? 30 : 2,
-  },
-  buttonOpen: {
-    backgroundColor: colors.white,
-  },
-  buttonClose: {
-    backgroundColor: colors.primary,
+    position: "absolute",
+    top: 10,
+    right: 10,
+    padding: 30,
   },
   textStyle: {
-    color: colors.white,
+    color: colors.black,
     fontWeight: "bold",
     textAlign: "center",
+    fontSize: 20,
   },
 });

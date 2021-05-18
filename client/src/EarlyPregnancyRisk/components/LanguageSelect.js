@@ -71,11 +71,10 @@ export default function LanguageSelect({
         ))}
       </View>
       {language != COUNTRY_CODES.english ? (
-        <View style={{ flexDirection: "column" }}>
+        <View style={{ width: "80%" }}>
           <Text
             style={{
               color: "red",
-              width: "50%",
               fontSize: 15,
               alignSelf: "center",
               textAlign: "center",
@@ -95,6 +94,7 @@ export default function LanguageSelect({
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
+    flexDirection: "column",
   },
   languages: {
     flexDirection: "row",
@@ -104,15 +104,26 @@ const styles = StyleSheet.create({
   flag: {
     marginHorizontal: 5,
     padding: 10,
+    minWidth: 64,
+    height: 32,
+    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
   highlight: {
     borderColor: colors.primary,
+    backgroundColor: "#fff",
     borderStyle: "solid",
     borderRadius: 32,
     padding: 2,
     borderWidth: 1,
   },
   none: {
-    padding: 3,
+    borderColor: colors.grey,
+    backgroundColor: "#fff",
+    borderStyle: "solid",
+    borderRadius: 32,
+    padding: 2,
+    borderWidth: 1,
   },
 });

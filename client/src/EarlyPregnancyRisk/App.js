@@ -137,7 +137,9 @@ export default function App() {
             />
             <View>
               {isLoadingLanguage ? (
-                <Loading />
+                <View style={{ height: 800 }}>
+                  <Loading message={text.loading} />
+                </View>
               ) : (
                 <Animated.View
                   style={{
@@ -162,7 +164,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFF",
+    flexGrow: 1,
+    backgroundColor: "#F8F5F5",
     height: "100%",
   },
 });
