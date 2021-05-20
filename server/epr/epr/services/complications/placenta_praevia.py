@@ -7,7 +7,7 @@ def placenta_praevia_risk(risk_score: int) -> dict:
     # TODO: This needs to be specified.
     return
 
-# Calculating risk score unique for post-partum depression
+# Calculating risk score unique for placenta praevia
 
 
 def calculate(json_dict: dict) -> dict:
