@@ -5,6 +5,9 @@ import math
 
 # Returning the risk_score and the severity of the risk_score
 def ppd_risk(risk_score: int) -> dict:
+    base_risk = 10
+    percent = min(100, (base_risk * risk_score))
+
     severity = 0
     if 0 <= risk_score < 3:
         severity = 0
@@ -18,7 +21,7 @@ def ppd_risk(risk_score: int) -> dict:
         raise InternalServerError(
             "Invalid score when calculating post-partum depression")
 
-    return {"risk": risk_score, "severity": severity}
+    return {"risk": risk_score, "severity": severity, "percent": percent}
 
 # Calculating risk score unique for post-partum depression
 

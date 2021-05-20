@@ -1,11 +1,27 @@
 from typing import get_args
 from ...exceptions.api_exceptions import InternalServerError
 
-
+# TODO: This severity_risk is just assumed based on similar models.
 # Returning the risk_score and the severity of the risk_score
 def hyperemesis_gravidarum_risk(risk_score: int) -> dict:
-    # TODO: This needs to be specified.
-    return
+    base_risk = 2
+    percent = min(100, (base_risk * risk_score))
+
+    severity = 0
+    if 0 <= risk_score < 5:
+        severity = 0
+    elif 5 <= risk_score < 10:
+        severity = 1
+    elif 10 <= risk_score < 15:
+        severity = 2
+    elif 15 <= risk_score <= 25:
+        severity = 3
+    elif 25 < risk_score:
+        severity = 4
+    else:
+        raise InternalServerError("Invalid score when calculating hyperemesis gravidarum")
+
+    return {"risk": risk_score, "severity": severity, "percent": percent}
 
 # Calculating risk score unique for hyperemesis gravidarum
 def calculate(json_dict: dict) -> dict:

@@ -1,11 +1,27 @@
 from typing import get_args
 from ...exceptions.api_exceptions import InternalServerError
 
-
+# TODO: This severity_risk is just assumed based on similar models.
 # Returning the risk_score and the severity of the risk_score
 def antepartum_haemorrhage_risk(risk_score: int) -> dict:
-    # TODO: This needs to be specified.
-    return
+    base_risk = 3
+    percent = min(100, (base_risk * risk_score))
+
+    severity = 0
+    if 0 <= risk_score < 4:
+        severity = 0
+    elif 4 <= risk_score < 8:
+        severity = 1
+    elif 8 <= risk_score < 12:
+        severity = 2
+    elif 12 <= risk_score <= 20:
+        severity = 3
+    elif 20 < risk_score:
+        severity = 4
+    else:
+        raise InternalServerError("Invalid score when calculating antepartum haemorrhage")
+
+    return {"risk": risk_score, "severity": severity, "percent": percent}
 
 # Calculating risk score unique for antepartum haemorrhage
 def calculate(json_dict: dict) -> dict:

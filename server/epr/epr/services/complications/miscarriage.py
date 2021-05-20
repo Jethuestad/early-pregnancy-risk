@@ -4,6 +4,9 @@ import math
 
 # Returning the risk_score and the severity of the risk_score
 def miscarriage_risk(risk_score: int) -> dict:
+    base_risk = 10
+    percent = min(100, (base_risk * risk_score))
+
     severity = 0
     if 0 <= risk_score < 3:
         severity = 0
@@ -16,7 +19,7 @@ def miscarriage_risk(risk_score: int) -> dict:
     else:
         raise InternalServerError("Invalid score when calculating miscarriage")
     
-    return {"risk": risk_score, "severity": severity}
+    return {"risk": risk_score, "severity": severity, "percent": percent}
 
 # Calculating risk score unique for miscarriage
 def calculate(json_dict: dict) -> dict:

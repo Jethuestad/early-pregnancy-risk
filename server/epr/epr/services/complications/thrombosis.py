@@ -1,11 +1,27 @@
 from typing import get_args
 from ...exceptions.api_exceptions import InternalServerError
 
-
+# TODO: This severity_risk is just assumed based on similar models and based on max risk score (which is 135.5).
 # Returning the risk_score and the severity of the risk_score
 def thrombosis_risk(risk_score: int) -> dict:
-    # TODO: This needs to be specified.
-    return
+    base_risk = 0.1
+    percent = min(100, (base_risk * risk_score))
+
+    severity = 0
+    if 0 <= risk_score < 20:
+        severity = 0
+    elif 20 <= risk_score < 50:
+        severity = 1
+    elif 50 <= risk_score < 80:
+        severity = 2
+    elif 80 <= risk_score <= 120:
+        severity = 3
+    elif 120 < risk_score:
+        severity = 4
+    else:
+        raise InternalServerError("Invalid score when calculating thrombosis")
+
+    return {"risk": risk_score, "severity": severity, "percent": percent}
 
 # Calculating risk score unique for thrombosis
 def calculate(json_dict: dict) -> dict:
