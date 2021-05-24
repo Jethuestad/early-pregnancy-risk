@@ -1,4 +1,5 @@
-from ..services.complications import diabetes, preeclampsia, preterm_birth, miscarriage, stillbirth, postpartum_depression, caesarean_section
+from ..services.complications import diabetes, preeclampsia, preterm_birth, miscarriage, stillbirth, postpartum_depression, caesarean_section, placental_abruption, \
+    placenta_praevia, thrombosis, hyperemesis_gravidarum, antepartum_haemorrhage
 from ..exceptions.api_exceptions import InternalServerError
 from ..models import Translation, Complication_Risk
 
@@ -21,6 +22,16 @@ class Calculation:
             "postpartum_depression", postpartum_depression.calculate(json_dict), language_code)
         self.caesarean_section = risk_dict_constructor(
             "caesarean_section", caesarean_section.calculate(json_dict), language_code)
+        self.placental_abruption = risk_dict_constructor(
+            "placental_abruption", placental_abruption.calculate(json_dict), language_code)
+        self.placenta_praevia = risk_dict_constructor(
+            "placenta_praevia", placenta_praevia.calculate(json_dict), language_code)
+        self.thrombosis = risk_dict_constructor(
+            "thrombosis", thrombosis.calculate(json_dict), language_code)
+        self.hyperemesis_gravidarum = risk_dict_constructor(
+            "hyperemesis_gravidarum", hyperemesis_gravidarum.calculate(json_dict), language_code)
+        self.antepartum_haemorrhage = risk_dict_constructor(
+            "antepartum_haemorrhage", antepartum_haemorrhage.calculate(json_dict), language_code)
 
 
 def risk_dict_constructor(complication: str, risk_results: dict, language_code: str) -> dict:
@@ -56,4 +67,5 @@ def risk_dict_constructor(complication: str, risk_results: dict, language_code: 
     percentage_risk = Complication_Risk.objects.get(
         related_complication__name=complication, severity="{}".format(risk_results["severity"])).percentage
 
-    return {"complication": translated_comp, "severity_str": severity_string, "severity": risk_results["severity"], "risk_str": "{} {}".format(percentage_risk, percentage_translated), "risk_score": risk_results["risk"]}
+    return {"complication": translated_comp, "severity_str": severity_string, "severity": risk_results["severity"], "risk_str": "{} {}".format(risk_results["percent"],
+    percentage_translated), "risk_score": risk_results["risk"], "risk_percent": risk_results["percent"]}
