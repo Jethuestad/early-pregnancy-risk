@@ -23,6 +23,11 @@ def get_score(request, lang_code):
     stillbirth = calc.stillbirth
     postpartum_depression = calc.postpartum_depression
     caesarean_section = calc.caesarean_section
+    placental_abruption = calc.placental_abruption
+    placenta_praevia = calc.placenta_praevia
+    thrombosis = calc.thrombosis
+    hyperemesis_gravidarum = calc.hyperemesis_gravidarum
+    antepartum_haemorrhage = calc.antepartum_haemorrhage
 
 
     response = []
@@ -33,6 +38,11 @@ def get_score(request, lang_code):
     response.append(stillbirth)
     response.append(postpartum_depression)
     response.append(caesarean_section)
+    response.append(placental_abruption)
+    response.append(placenta_praevia)
+    response.append(thrombosis)
+    response.append(hyperemesis_gravidarum)
+    response.append(antepartum_haemorrhage)
     
     # TODO: Add proper json response
     return standard_json_response(True, response)
