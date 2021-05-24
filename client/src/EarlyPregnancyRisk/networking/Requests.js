@@ -1,6 +1,4 @@
 import Factors from "../constants/Factors";
-import Languages from "../constants/Languages";
-import Refrences from "../constants/Refrences";
 import Translations, { languages } from "../constants/Translations";
 
 let ENDPOINTS = require("../constants/Endpoints");
@@ -10,7 +8,8 @@ if (__DEV__) {
 export const getReferences = async (factor_name, lang_code) => {
   try {
     let response = await fetch(
-      [ENDPOINTS.references, factor_name, lang_code, "references"].join("/")
+      ENDPOINTS.base +
+        [ENDPOINTS.references, factor_name, lang_code, "references"].join("/")
     );
     let json = await response.text();
     if (!JSON.parse(json).success) {
@@ -23,19 +22,11 @@ export const getReferences = async (factor_name, lang_code) => {
   }
 };
 
-export const getTestJson = async () => {
-  try {
-    let response = await fetch(ENDPOINTS.test_request);
-    let json = await response.json();
-    return json;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
 export const getTranslation = async (country_code) => {
   try {
-    let response = await fetch([ENDPOINTS.translate, country_code].join("/"));
+    let response = await fetch(
+      ENDPOINTS.base + [ENDPOINTS.translate, country_code].join("/")
+    );
     let json = await response.text();
     if (!JSON.parse(json).success) return Translations.translation;
     return JSON.parse(json).payload.translation;
@@ -47,19 +38,21 @@ export const getTranslation = async (country_code) => {
 
 export const getLanguages = async () => {
   try {
-    let response = await fetch(ENDPOINTS.languages);
+    let response = await fetch(ENDPOINTS.base + ENDPOINTS.languages);
     let json = await response.text();
-    if (!JSON.parse(json).success) return Languages.languages;
+    if (!JSON.parse(json).success) return [];
     return JSON.parse(json).payload.languages;
   } catch (error) {
     console.error(error);
-    return Languages.languages;
+    return [];
   }
 };
 
 export const getFactors = async (country_code) => {
   try {
-    let response = await fetch([ENDPOINTS.factors, country_code].join("/"));
+    let response = await fetch(
+      ENDPOINTS.base + [ENDPOINTS.factors, country_code].join("/")
+    );
     let json = await response.text();
     if (!JSON.parse(json).success) return Factors.factors;
     return JSON.parse(json).payload.factors;
@@ -79,7 +72,10 @@ export const postFactors = async (factors) => {
   };
 
   try {
-    let response = await fetch([ENDPOINTS.calculate, "en"].join("/"), data);
+    let response = await fetch(
+      ENDPOINTS.base + [ENDPOINTS.calculate, "en"].join("/"),
+      data
+    );
     let json = await response.text();
     return JSON.parse(json);
   } catch (error) {

@@ -14,6 +14,7 @@ import {
   SkipInput,
   MultipleInput,
   BackInput,
+  CategoryInput,
 } from "./Input";
 import Progressbar from "./ProgressBar";
 import { isPhone } from "../modules/Device";
@@ -28,16 +29,31 @@ export default function Form({ changePage, factor_data, lang_code }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [nr, setNr] = useState(0);
   const [factors, setFactors] = useState(factor_data);
+  const [totalFactors, setTotalFactors] = useState(0);
   const [data, setData] = useState({});
   const [visible, setVisible] = useState(false);
-  const [totalSkipped, setTotalSkipped] = useState(0);
+  const [totalSkipped, setTotalSkipped] = useState([]);
 
   // [type, value]
   const [inputController, setInputController] = useState([null, null]);
 
+  function countFactors(f, n) {
+    f.forEach((v) => {
+      n += 1;
+      if (v.subfactors != null && v.answertype == "category") {
+        n = countFactors(v.subfactors, n);
+      }
+    });
+    return n;
+  }
+
+  useEffect(() => {
+    setTotalFactors(countFactors(factors, 0));
+  }, []);
+
   // TODO: Only add if they don't already exist
   function addSubFactors() {
-    if (factors[nr].subfactors != null && factors[nr].requirement != null) {
+    if (factors[nr].subfactors != null) {
       let shouldAdd = false;
       if (factors[nr].answertype === "integer") {
         shouldAdd = checkRequirement(
@@ -49,25 +65,31 @@ export default function Form({ changePage, factor_data, lang_code }) {
         shouldAdd = checkRequirement(
           factors[nr].requirement,
           inputController[1],
-          "multiple"
+          "integer"
         );
-      } else {
+      } else if (factors[nr].answertype === "boolean") {
         shouldAdd = checkRequirement(
           factors[nr].requirement,
           inputController[1],
           "boolean"
         );
+      } else if (factors[nr].answertype === "category") {
+        shouldAdd = true;
       }
+
       if (shouldAdd) {
         //remove null values first
-        let subfacors = factors[nr].subfactors.filter(
+        let subfactors = factors[nr].subfactors.filter(
           (el) => el != null && !factors.includes(el)
         );
+        if (factors[nr].answertype !== "category") {
+          setTotalFactors((v) => v + subfactors.length);
+        }
         let left = factors.slice(0, nr + 1);
         let right = factors.slice(nr + 1);
-        left.concat(subfacors);
+        left.concat(subfactors);
         left.concat(right);
-        let temp = left.concat(subfacors, right);
+        let temp = left.concat(subfactors, right);
         setFactors(temp);
       }
     }
@@ -106,7 +128,15 @@ export default function Form({ changePage, factor_data, lang_code }) {
             }}
           />
         );
-
+      case "category":
+        return (
+          <CategoryInput
+            setInput={(v) => {
+              setInputController(["category", v]);
+              setIsSubmitting(true);
+            }}
+          />
+        );
       default:
         break;
     }
@@ -114,20 +144,28 @@ export default function Form({ changePage, factor_data, lang_code }) {
 
   useEffect(() => {
     if (!isSubmitting) return;
-    if (inputController[0] == "back") {
+
+    if (inputController[0] == "category") {
+      addSubFactors();
+    } else if (inputController[0] == "back") {
       setNr((n) => (n - 1 > 0 ? n - 1 : 0));
       setInputController([null, null]);
       setIsSubmitting(false);
       return;
-    }
-
-    if (inputController[0] == "skip") {
+    } else if (inputController[0] == "skip") {
       let tData = data;
       delete tData[factors[nr].factor];
       setData(tData);
     } else {
       let tData = data;
       tData[factors[nr].factor] = inputController[1];
+      setTotalSkipped((s) => {
+        const index = s.indexOf(factors[nr].factor);
+        if (index > -1) {
+          s.splice(index, 1);
+        }
+        return s;
+      });
       setData(tData);
       addSubFactors();
     }
@@ -153,7 +191,7 @@ export default function Form({ changePage, factor_data, lang_code }) {
   return (
     <View style={styles(width).container}>
       <View style={styles(width).progressBarContainer}>
-        <Progressbar progress={nr} total={factors.length} />
+        <Progressbar progress={nr} total={totalFactors} />
       </View>
       <View style={styles(width).questionContainer}>
         <Text style={styles(width).question}>{factors[nr].question}</Text>
@@ -174,8 +212,12 @@ export default function Form({ changePage, factor_data, lang_code }) {
           <SkipInput
             setInput={() => {
               setInputController(["skip", null]);
+              setTotalSkipped((s) => {
+                s.push(factors[nr].factor);
+                let l = [...new Set(s)];
+                return l;
+              });
               setIsSubmitting(true);
-              setTotalSkipped((s) => s + 1);
             }}
           />
         ) : null}

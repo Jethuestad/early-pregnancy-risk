@@ -61,8 +61,11 @@ def serialize_factor(factor: Factor, questions: BaseManager, lang_code: str, isS
     queried_sub_factors = Factor.objects.filter(
         parent_factor=factor)
 
-    sub_factors = [serialize_factor(f, questions, lang_code, True)
-                   for f in queried_sub_factors]
+    sub_factors = []
+    for f in queried_sub_factors:
+        sub_factor = serialize_factor(f, questions, lang_code, True)
+        if sub_factor != None:
+            sub_factors.append(sub_factor)
 
     queried_factor_values = FactorValue.objects.filter(belongs_to=factor)
     multiple_choices = []
@@ -80,8 +83,8 @@ def serialize_factor(factor: Factor, questions: BaseManager, lang_code: str, isS
         "skippable": factor.skippable,
         "maxdigits": factor.max_digits,
         "requirement": factor.requirement,
-        "subfactors": sub_factors
-
+        "subfactors": sub_factors,
+        "sorting_number": factor.sorting_number
     }
 
 
@@ -96,5 +99,10 @@ def factor_handler(lang_code: str):
     for queried_object in queried_objects:
         if ((factor := serialize_factor(queried_object, questions, lang_code)) != None):
             json["factors"].append(factor)
+
+    # Sort factors
+
+    s = sorted(json["factors"], key=lambda factor: factor["sorting_number"])
+    json["factors"] = s
 
     return standard_json_response(True, json)

@@ -69,8 +69,9 @@ export default function Results({ data, skipped }) {
                   {item.complication}
                 </Text>
                 <ComplicationProgressbar
-                  progress={item.severity}
-                  total={4}
+                  severity={item.severity}
+                  progress={item.risk_percent}
+                  total={100}
                   title={item.severity_str}
                 />
                 <View style={styles(width).subtextContainer}>
@@ -106,17 +107,16 @@ export default function Results({ data, skipped }) {
   }
   return (
     <View>
-      {skipped > 0 ? (
+      {skipped.length > 0 ? (
         <View style={styles(width).skippedWarningContainer}>
           <Text style={styles(width).skippedWarningText}>
-            {skipped.current}
-            {skipped == 1
+            {skipped.length == 1
               ? context.skipped_warning_singular ||
                 "You skipped one question, this can affect your test results"
               : (
                   context.skipped_warning_plural ||
                   "You skipped %d questions, this can affect your test results"
-                ).replace("%d", skipped)}
+                ).replace("%d", skipped.length)}
           </Text>
         </View>
       ) : null}

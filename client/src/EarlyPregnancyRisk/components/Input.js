@@ -89,6 +89,29 @@ export function BooleanInput({ setInput }) {
   );
 }
 
+export function CategoryInput({ setInput }) {
+  const context = useContext(TranslationContext);
+  const { width } = useWindowDimensions();
+  return (
+    <View style={styles(width).buttonContainer}>
+      <View style={styles(width).buttonSpacer}>
+        <TouchableHighlight
+          style={styles(width).button}
+          activeOpacity={0.6}
+          underlayColor={colors.secondary}
+          onPress={() => {
+            setInput(true);
+          }}
+        >
+          <Text style={styles(width).buttonText}>
+            {context.button_continue || "Continue"}
+          </Text>
+        </TouchableHighlight>
+      </View>
+    </View>
+  );
+}
+
 export function SkipInput({ setInput }) {
   const context = useContext(TranslationContext);
   const { width } = useWindowDimensions();

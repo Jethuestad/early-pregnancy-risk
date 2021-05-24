@@ -1,4 +1,5 @@
 export function checkRequirement(requirement, value, type) {
+  if (requirement == null) return false;
   let [c, v] = requirement.split(";");
   if (type === "integer") {
     switch (c) {

@@ -83,6 +83,8 @@ class Factor(models.Model):
         Content, blank=True, related_name="comp")
     parent_factor = models.ForeignKey(
         "self", on_delete=models.CASCADE, null=True, blank=True)
+    sorting_number = models.PositiveIntegerField(
+        null=False, blank=False, default=0)
 
     def __str__(self) -> str:
         return f"{self.factor_name} ({self.answertype})"

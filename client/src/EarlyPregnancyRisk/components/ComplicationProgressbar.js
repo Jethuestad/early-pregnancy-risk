@@ -3,7 +3,12 @@ import { StyleSheet, View, Animated, Text } from "react-native";
 
 const colors = require("../style/colors");
 
-export default function ComplicationProgressbar({ progress, total, title }) {
+export default function ComplicationProgressbar({
+  severity,
+  progress,
+  total,
+  title,
+}) {
   const severityColors = [
     "#8ab7de",
     "#80cf61",
@@ -19,8 +24,8 @@ export default function ComplicationProgressbar({ progress, total, title }) {
           style={[
             StyleSheet.absoluteFill,
             {
-              backgroundColor: severityColors[Math.min(progress, total)],
-              width: `${100 - 20 * (total - progress)}%`,
+              backgroundColor: severityColors[Math.min(severity, 4)],
+              width: `${progress}%`,
             },
           ]}
         />
