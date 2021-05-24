@@ -32,3 +32,18 @@ def translation_handler(lang_code: str, content_type: str):
         translation["translation"][name] = queried_object.text
 
     return standard_json_response(True, translation)
+
+
+@csrf_exempt
+@exception_handler_request
+def get_langauges(request):
+    return languages_handler("Text")
+
+
+def languages_handler(content_type: str):
+    languages = {
+        "languages": [
+            # {"flag_url":  "", "country_code": "no"}
+        ]
+    }
+    return standard_json_response(True, languages)
