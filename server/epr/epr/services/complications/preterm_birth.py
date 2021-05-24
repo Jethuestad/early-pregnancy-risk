@@ -3,6 +3,9 @@ from ...exceptions.api_exceptions import InternalServerError
 
 # Returning the risk_score and the severity of the risk_score
 def preterm_birth_risk(risk_score: int) -> dict:
+    base_risk = 5
+    percent = min(100, (base_risk * risk_score))
+
     severity = 0
     if 0 <= risk_score < 3:
         severity = 0
@@ -17,7 +20,7 @@ def preterm_birth_risk(risk_score: int) -> dict:
     else:
         raise InternalServerError("Invalid score when calculating spontaneous pre-term delivery")
     
-    return {"risk": risk_score, "severity": severity}
+    return {"risk": risk_score, "severity": severity, "percent": percent}
 
 # Calculating risk score unique for spontaneous pre-term delivery
 def calculate(json_dict: dict) -> dict:
