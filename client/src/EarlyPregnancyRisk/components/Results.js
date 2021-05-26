@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, useWindowDimensions } from "react-native";
 import { TranslationContext } from "../contexts/TranslationContext";
 import { postFactors } from "../networking/Requests";
 import { isPhone, isTablet } from "../modules/Device";
-import ComplicationProgressbar from "./ComplicationProgressBar";
+import ComplicationProgressbar from "./ComplicationProgressbar";
 import Loading from "./Loading";
 
 const colors = require("../style/colors");

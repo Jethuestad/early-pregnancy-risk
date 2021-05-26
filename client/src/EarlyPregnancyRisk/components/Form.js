@@ -16,7 +16,7 @@ import {
   BackInput,
   CategoryInput,
 } from "./Input";
-import Progressbar from "./ProgressBar";
+import Progressbar from "./Progressbar";
 import { isPhone } from "../modules/Device";
 import Loading from "./Loading";
 import FormOverlay from "./FormOverlay";
